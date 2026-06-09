@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIFE for Relief and Development: Website Executive Review</title>
+<style>
+  @font-face{font-family:"Thmanyah Serif Text";src:url("fonts/thmanyahseriftext-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Thmanyah Serif Text";src:url("fonts/thmanyahseriftext-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Thmanyah Serif Text";src:url("fonts/thmanyahseriftext-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Thmanyah Serif Text";src:url("fonts/thmanyahseriftext-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap;}
+  @font-face{font-family:"Thmanyah Serif Text";src:url("fonts/thmanyahseriftext-Black.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap;}
+  :root{
+    --navy:#0e2a47; --navy2:#143a63; --blue:#2f6db0; --sky:#5b9bd5;
+    --ink:#1c2733; --muted:#5d6b7a; --line:#e3e8ee; --bg:#f4f6f9;
+    --good:#1f8a55; --warn:#d98a1f; --bad:#c0392b; --softgood:#e7f5ee; --softwarn:#fdf3e2; --softbad:#fbeceb;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"Thmanyah Serif Text",Georgia,"Times New Roman",serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;}
+  .slide{
+    position:relative;width:100%;max-width:1180px;margin:0 auto 26px;background:var(--card);
+    min-height:760px;padding:64px 72px;border-radius:6px;box-shadow:0 4px 22px rgba(20,40,70,.08);
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .slide::after{content:attr(data-no);position:absolute;bottom:26px;right:34px;font-size:12px;color:#aeb8c4;font-weight:600;letter-spacing:.04em;}
+  .slide::before{content:"LIFE • Website Executive Review";position:absolute;bottom:26px;left:72px;font-size:11px;color:#aeb8c4;letter-spacing:.08em;text-transform:uppercase;}
+  .kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:14px;}
+  h1{font-size:46px;line-height:1.08;letter-spacing:-.02em;color:var(--navy);margin-bottom:18px;font-weight:800;}
+  h2{font-size:34px;line-height:1.12;letter-spacing:-.015em;color:var(--navy);margin-bottom:20px;font-weight:800;}
+  h3{font-size:19px;color:var(--navy2);margin-bottom:10px;font-weight:700;}
+  p{font-size:16px;color:var(--ink);margin-bottom:12px;}
+  .lead{font-size:19px;color:var(--muted);max-width:62ch;}
+  .muted{color:var(--muted);}
+  .ar{direction:rtl;font-size:15px;color:var(--muted);border-right:3px solid var(--line);padding-right:14px;margin-top:6px;}
+  ul{margin:8px 0 8px 0;padding-left:22px;}
+  li{font-size:16px;margin-bottom:8px;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:20px;}
+  .stat{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;border-radius:10px;padding:22px 20px;}
+  .stat .num{font-size:40px;font-weight:800;letter-spacing:-.02em;line-height:1;}
+  .stat .lbl{font-size:13px;opacity:.82;margin-top:8px;}
+  .statlite{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:20px;}
+  .statlite .num{font-size:38px;font-weight:800;color:var(--navy);line-height:1;}
+  .statlite .lbl{font-size:13px;color:var(--muted);margin-top:8px;}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:6px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:11px 13px;font-weight:600;font-size:13px;letter-spacing:.02em;}
+  td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:nth-child(even) td{background:#fafbfd;}
+  .pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.03em;}
+  .p-bad{background:var(--softbad);color:var(--bad);}
+  .p-warn{background:var(--softwarn);color:var(--warn);}
+  .p-good{background:var(--softgood);color:var(--good);}
+  .shot{width:100%;border:1px solid var(--line);border-radius:8px;box-shadow:0 6px 18px rgba(20,40,70,.10);display:block;}
+  .shotcap{font-size:12.5px;color:var(--muted);margin-top:8px;font-style:italic;}
+  .evidence{background:#0f1b29;color:#d6e2f0;border-radius:8px;padding:16px 18px;font-family:"SF Mono",Menlo,Consolas,monospace;font-size:12.5px;line-height:1.55;overflow-x:auto;white-space:pre;}
+  .evidence .c{color:#7fd1a8;} .evidence .r{color:#f29b9b;} .evidence .y{color:#f0c674;}
+  .callout{border-left:4px solid var(--blue);background:#eef4fb;padding:14px 18px;border-radius:0 8px 8px 0;font-size:15px;}
+  .callout.bad{border-color:var(--bad);background:var(--softbad);}
+  .callout.good{border-color:var(--good);background:var(--softgood);}
+  .callout.warn{border-color:var(--warn);background:var(--softwarn);}
+  .tag{font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;}
+  .flexrow{display:flex;gap:14px;align-items:center;}
+  .spacer{flex:1;}
+  .footnote{font-size:12.5px;color:#8a96a4;margin-top:auto;padding-top:14px;}
+  .center{display:flex;flex-direction:column;justify-content:center;}
+  .cover{background:linear-gradient(155deg,#0b2238 0%,#143a63 55%,#2f6db0 130%);color:#fff;}
+  .cover h1{color:#fff;font-size:58px;}
+  .cover .kicker{color:#9ec7f0;}
+  .cover .lead{color:#cfe0f2;}
+  .divider{height:3px;width:60px;background:var(--blue);border-radius:3px;margin:0 0 22px;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:10px;}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;}
+  .bar{height:26px;border-radius:5px;background:linear-gradient(90deg,var(--blue),var(--sky));display:flex;align-items:center;color:#fff;font-size:12.5px;font-weight:700;padding-left:10px;min-width:40px;}
+  .barrow{display:grid;grid-template-columns:230px 1fr 70px;gap:12px;align-items:center;margin-bottom:11px;font-size:14px;}
+  .bartrack{background:var(--bg);border-radius:5px;overflow:hidden;}
+  .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:18px;}
+  .phase{padding:0 18px;border-top:4px solid var(--blue);position:relative;}
+  .phase:nth-child(2){border-color:var(--sky);} .phase:nth-child(3){border-color:var(--good);}
+  .phase h3{margin-top:14px;}
+  @media print{
+    body{background:#fff;}
+    .slide{box-shadow:none;border:none;margin:0;page-break-after:always;border-radius:0;min-height:auto;height:100vh;}
+    .slide::before,.slide::after{color:#b8c2cd;}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. COVER -->
+<section class="slide cover center" data-no="01">
+  <div class="kicker">Website &amp; Technical SEO Review</div>
+  <h1>What's Going On<br>With Your Website</h1>
+  <div class="divider" style="background:#9ec7f0;"></div>
+  <p class="lead" style="max-width:60ch;">An executive walkthrough of lifeusa.org, what is working, what is quietly costing you donors and visibility, and what to fix first. Grounded in live evidence and real screenshots, not opinions.</p>
+  <div style="margin-top:46px;font-size:15px;color:#cfe0f2;">
+    <strong style="color:#fff;">Prepared for:</strong> Life for Relief and Development &nbsp;•&nbsp; Tasneem Elridy &amp; team<br>
+    <strong style="color:#fff;">Prepared by:</strong> Saiaf Gamal &nbsp;•&nbsp; Freelance SEO &amp; Web Consultant<br>
+    <strong style="color:#fff;">Evidence captured:</strong> Screaming Frog + Ahrefs (7 May 2026) &nbsp;•&nbsp; Live re-verification &amp; Lighthouse (5 June 2026)
+  </div>
+</section>
+
+<!-- 2. EXECUTIVE SUMMARY -->
+<section class="slide" data-no="02">
+  <div class="kicker">Executive Summary</div>
+  <h2>The one-minute version</h2>
+  <p class="lead">Your domain has real authority and a working bilingual structure. The problems are not "you need a new website", they are fixable plumbing issues that fragment your equity and hide your content from search.</p>
+  <div class="grid3" style="margin-top:24px;">
+    <div class="stat"><div class="num">963</div><div class="lbl">Referring domains to www, genuine, hard-won authority</div></div>
+    <div class="stat" style="background:linear-gradient(160deg,#8a5a12,#d98a1f);"><div class="num">5</div><div class="lbl">Subdomains running in parallel, fragmenting your equity &amp; donor data</div></div>
+    <div class="stat" style="background:linear-gradient(160deg,#7a241b,#c0392b);"><div class="num">35%</div><div class="lbl">of crawled pages carry a "do not index" tag</div></div>
+  </div>
+  <div class="grid2" style="margin-top:26px;">
+    <div class="callout good"><strong>What's working:</strong> Strong backlink profile, a real Arabic/English structure, a correct apex redirect, and a hardened donations subdomain. You are building on solid ground.</div>
+    <div class="callout bad"><strong>What's hurting you:</strong> Subdomain sprawl, indexation leaks, images invisible to search, weak page-experience signals, and generic (for-profit) schema markup for a registered nonprofit.</div>
+  </div>
+  <p class="footnote">Sources: Ahrefs site structure export (7 May 2026); Screaming Frog full-site crawl; live header &amp; Lighthouse re-checks (5 June 2026). Every claim in this deck is backed by an evidence slide or appendix entry.</p>
+</section>
+
+<!-- 3. METHODOLOGY -->
+<section class="slide" data-no="03">
+  <div class="kicker">How We Know This</div>
+  <h2>Method &amp; evidence base</h2>
+  <p class="lead">Nothing here is a guess. Each finding was captured with an industry tool and re-verified live before this deck was built.</p>
+  <div class="grid4" style="margin-top:24px;">
+    <div class="card"><h3>Screaming Frog</h3><p class="muted" style="font-size:14px;">Full-site crawl of 345 crawlable URLs + 1,144 images. Source of the indexation, image, heading, and metadata findings.</p></div>
+    <div class="card"><h3>Ahrefs</h3><p class="muted" style="font-size:14px;">Backlink &amp; subdomain authority export. Source of referring-domain and organic-traffic numbers per subdomain.</p></div>
+    <div class="card"><h3>Live HTTP probes</h3><p class="muted" style="font-size:14px;">curl + dig against the live site and every subdomain. Source of language-header, redirect, schema and DNS evidence.</p></div>
+    <div class="card"><h3>Google Lighthouse</h3><p class="muted" style="font-size:14px;">Live mobile audit run 5 June 2026 in Chrome. Source of accessibility, best-practices and SEO scores in this deck.</p></div>
+  </div>
+  <div class="callout warn" style="margin-top:26px;"><strong>An honest note on dates:</strong> The deep audit was captured 7 May 2026. We re-ran the live checks on 5 June 2026 specifically so we would not present you with stale findings. Where the site has changed in the last month, this deck says so plainly (see the Language Signals slide).</div>
+</section>
+
+<!-- 4. WHAT'S WORKING -->
+<section class="slide" data-no="04">
+  <div class="kicker">Asset Inventory</div>
+  <h2>Start with what's working</h2>
+  <p class="lead">Before the problems, three real assets most charities your size do not have.</p>
+  <div class="grid3" style="margin-top:22px;">
+    <div class="card"><h3>1. Domain authority</h3><p class="muted" style="font-size:15px;">963 referring domains and ~1,069 monthly organic visits to www. This is years of earned trust. The fixes in this deck are about <em>using</em> it, not building it.</p></div>
+    <div class="card"><h3>2. Bilingual structure exists</h3><p class="muted" style="font-size:15px;">Arabic/English hreflang tags are already implemented in the homepage. They need a one-line locale fix, not a rebuild.</p></div>
+    <div class="card"><h3>3. Donations base</h3><p class="muted" style="font-size:15px;">donate.lifeusa.org has its own 214 referring domains and a hardened security setup (CSP + HSTS). A solid foundation to consolidate onto.</p></div>
+  </div>
+  <div class="callout good" style="margin-top:24px;">The strategic message: you are not starting from zero. You are unlocking authority you already paid for. <span class="ar" style="display:block;margin-top:8px;border:none;padding:0;">أنت لا تبدأ من الصفر, نحن نفتح قوة موقعك التي اكتسبتها بالفعل.</span></div>
+  <p class="footnote">Source: Ahrefs site structure export, file <code>site structure.png</code>, captured 7 May 2026.</p>
+</section>
+
+<!-- 5. AUTHORITY SNAPSHOT -->
+<section class="slide" data-no="05">
+  <div class="kicker">Authority Snapshot</div>
+  <h2>Where your equity actually lives</h2>
+  <div class="grid2" style="margin-top:8px;">
+    <div>
+      <table>
+        <tr><th>Subdomain</th><th>Ref. domains</th><th>Organic traffic</th><th>Pages</th></tr>
+        <tr><td>www.lifeusa.org</td><td>963</td><td>1,069</td><td>33</td></tr>
+        <tr><td>lifeusa.org (apex)</td><td>805</td><td>0</td><td>0</td></tr>
+        <tr><td>donate.lifeusa.org</td><td>214</td><td>4</td><td>1</td></tr>
+        <tr><td>staff.lifeusa.org</td><td>10</td><td>0</td><td>0</td></tr>
+        <tr><td>donation.lifeusa.org</td><td>4</td><td>0</td><td>0</td></tr>
+        <tr><td>arabic.lifeusa.org</td><td>1</td><td>0</td><td>0</td></tr>
+      </table>
+      <p class="shotcap">Ahrefs subdomain export, 7 May 2026.</p>
+    </div>
+    <div>
+      <h3>Read this carefully</h3>
+      <ul>
+        <li><strong>www</strong> is your engine: 963 domains, all your traffic, but only <strong>33 ranking pages</strong>.</li>
+        <li>The <strong>apex (805 domains)</strong> correctly 301-redirects to www, this is healthy, not a leak.</li>
+        <li><strong>donate</strong> holds a real, separate 214-domain asset worth protecting.</li>
+        <li>The bottom three subdomains hold backlinks that are <strong>doing nothing</strong> for you.</li>
+      </ul>
+      <div class="callout" style="margin-top:14px;">Only 33 of your pages rank. With 463 blog posts published, the gap between "content created" and "content visible" is the real story of this deck.</div>
+    </div>
+  </div>
+  <img class="shot" style="margin-top:18px;max-height:170px;object-fit:cover;object-position:top;" src="screenshots/site-structure.png" alt="Ahrefs site structure showing subdomain authority split">
+</section>
+
+<!-- 6. THE SITE TODAY -->
+<section class="slide" data-no="06">
+  <div class="kicker">The Site Today</div>
+  <h2>Your homepage, as a visitor sees it</h2>
+  <div class="grid2">
+    <div>
+      <img class="shot" src="screenshots/home.png" alt="lifeusa.org homepage, captured live 5 June 2026">
+      <p class="shotcap">Live capture, www.lifeusa.org homepage: 5 June 2026, 1440px desktop.</p>
+    </div>
+    <div class="center">
+      <h3>The front door is strong</h3>
+      <p>Clear brand, an emotional hero, prominent "Donate Now", a language switcher, and trust stats (33 years, $667M distributed, 1,318 water wells). Visitors land in a confident place.</p>
+      <div class="callout warn" style="margin-top:8px;"><strong>But:</strong> the hero now says "33 Years" while the page's hidden meta description still says "29+ years." Search engines and social previews read the old number. Small inconsistency, real signal of drift. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">الصفحة تقول 33 سنة، لكن الوصف المخفي لجوجل ما زال يقول 29 سنة.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. HEALTH SCORECARD -->
+<section class="slide" data-no="07">
+  <div class="kicker">Health Scorecard</div>
+  <h2>The whole site at a glance</h2>
+  <p class="lead">Every number below is a counted fact from the crawl, not an estimate.</p>
+  <div class="grid4" style="margin-top:20px;">
+    <div class="statlite"><div class="num" style="color:var(--bad);">122</div><div class="lbl">URLs with a "noindex" tag (35% of crawl)</div></div>
+    <div class="statlite"><div class="num" style="color:var(--bad);">471</div><div class="lbl">images with missing / empty alt text</div></div>
+    <div class="statlite"><div class="num" style="color:var(--warn);">1,035</div><div class="lbl">images with no width/height (90%)</div></div>
+    <div class="statlite"><div class="num" style="color:var(--warn);">543</div><div class="lbl">images over 100 KB (47%)</div></div>
+    <div class="statlite"><div class="num" style="color:var(--warn);">144</div><div class="lbl">pages missing a meta description</div></div>
+    <div class="statlite"><div class="num" style="color:var(--warn);">37</div><div class="lbl">pages with no H1 heading</div></div>
+    <div class="statlite"><div class="num" style="color:var(--bad);">5</div><div class="lbl">subdomains splitting your authority</div></div>
+    <div class="statlite"><div class="num" style="color:var(--bad);">463</div><div class="lbl">blog posts with no Article schema</div></div>
+  </div>
+  <div class="legend" style="margin-top:22px;">
+    <span><span class="dot" style="background:var(--bad);"></span>High priority, directly blocks ranking or donations</span>
+    <span><span class="dot" style="background:var(--warn);"></span>Medium, drags performance &amp; click-through</span>
+  </div>
+  <p class="footnote">Source: Screaming Frog issues overview (<code>issues_overview_report.csv</code>) + blog sitemap count (live, 463 posts, 5 June 2026).</p>
+</section>
+
+<!-- 8. SUBDOMAIN SPRAWL -->
+<section class="slide" data-no="08">
+  <div class="kicker">Problem 1: Subdomain Sprawl</div>
+  <h2>Five sites pretending to be one</h2>
+  <p class="lead">Google treats every subdomain as a separate website. Authority earned on one does not lift the others, so your equity is split five ways.</p>
+  <div class="grid3" style="margin-top:18px;">
+    <div>
+      <img class="shot" src="screenshots/staff.png" alt="staff.lifeusa.org public WordPress site">
+      <p class="shotcap">staff.lifeusa.org: a public WordPress site titled "My WordPress Blog".</p>
+    </div>
+    <div>
+      <img class="shot" src="screenshots/donation.png" alt="donation.lifeusa.org Givecloud platform">
+      <p class="shotcap">donation.lifeusa.org: a second donation platform (Givecloud).</p>
+    </div>
+    <div>
+      <img class="shot" src="screenshots/donate.png" alt="donate.lifeusa.org donor portal">
+      <p class="shotcap">donate.lifeusa.org: the primary donor portal (214 ref domains).</p>
+    </div>
+  </div>
+  <div class="callout bad" style="margin-top:20px;"><strong>Two donation platforms</strong> means your donor data is split and you cannot see your true conversion picture. A <strong>public staff WordPress site</strong> exposes internal content and competes with your brand. <strong>arabic.lifeusa.org is dead in DNS</strong>, its backlink is wasted entirely.</div>
+</section>
+
+<!-- 9. SUBDOMAIN DETAIL + RX -->
+<section class="slide" data-no="09">
+  <div class="kicker">Problem 1: Recommendation</div>
+  <h2>Consolidate to one clean structure</h2>
+  <table>
+    <tr><th>Subdomain</th><th>What it is</th><th>Status</th><th>Recommendation</th></tr>
+    <tr><td>www.lifeusa.org</td><td>Main Wix site</td><td><span class="pill p-good">Keep</span></td><td>Your single home. Everything points here.</td></tr>
+    <tr><td>donate.lifeusa.org</td><td>Donor portal (214 ref domains)</td><td><span class="pill p-good">Keep</span></td><td>Make this the one donations platform.</td></tr>
+    <tr><td>donation.lifeusa.org</td><td>2nd platform (Givecloud)</td><td><span class="pill p-warn">Merge</span></td><td>301-redirect into donate. Unify donor data.</td></tr>
+    <tr><td>staff.lifeusa.org</td><td>Public WordPress</td><td><span class="pill p-bad">Lock down</span></td><td>Put behind login + noindex. Not for the public.</td></tr>
+    <tr><td>arabic.lifeusa.org</td><td>Dead in DNS</td><td><span class="pill p-bad">Sunset</span></td><td>Remove; reclaim its backlink to www.</td></tr>
+  </table>
+  <div class="evidence" style="margin-top:22px;">$ dig +short arabic.lifeusa.org
+<span class="r">(empty, does not resolve)</span>
+
+$ curl -sI https://donation.lifeusa.org/   <span class="c"># separate platform</span>
+HTTP/2 200
+<span class="y">x-givecloud-app: 30e6db6e4f1287f56931e5f5ae6a5cf6648e5bee</span>
+
+$ curl -sI https://staff.lifeusa.org/   <span class="c"># public WordPress</span>
+&lt;title&gt;LIFE USA – My WordPress Blog&lt;/title&gt;</div>
+  <p class="footnote">Live re-verification, 5 June 2026. This single workstream delivers the largest structural SEO gain on the property.</p>
+</section>
+
+<!-- 10. LANGUAGE SIGNALS (honest update) -->
+<section class="slide" data-no="10">
+  <div class="kicker">Problem 2: Language Signals</div>
+  <h2>The language-header bug: then vs now</h2>
+  <div class="grid2">
+    <div>
+      <h3>What we found in May</h3>
+      <div class="evidence">URL: /        <span class="r">content-language: zh-CN</span>
+URL: /about   <span class="r">content-language: tr-TR</span>
+URL: /gaza    <span class="r">content-language: fr-FR</span>
+URL: /ar      <span class="y">content-language: en</span></div>
+      <p class="muted" style="font-size:14px;margin-top:8px;">Wix was telling Google your English pages were Chinese, Turkish and French, a strong explanation for why content did not surface in English search.</p>
+    </div>
+    <div>
+      <h3>What it returns now (5 June)</h3>
+      <div class="evidence">URL: /        <span class="c">content-language: en-GB</span>
+URL: /about   <span class="c">content-language: en-US</span>
+URL: /gaza    <span class="c">content-language: en-US</span>
+URL: /ar      <span class="r">content-language: en-US</span></div>
+      <p class="muted" style="font-size:14px;margin-top:8px;">The worst of the bug has cleared, pages now report English. <strong>But two issues remain:</strong> the locale flips between en-GB / en-US inconsistently, and your <strong>/ar Arabic page still reports English</strong>, not Arabic.</p>
+    </div>
+  </div>
+  <div class="callout warn" style="margin-top:18px;"><strong>Why this still matters:</strong> the /ar page declaring itself "en-US" tells Google your Arabic content is English. That directly feeds the original complaint, Arabic articles not showing up correctly. We should still open a Wix ticket to pin the header per language. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">صفحتك العربية ما زالت تخبر جوجل أنها إنجليزية, وهذا يفسر عدم ظهور مقالاتك العربية بشكل صحيح.</span></div>
+</section>
+
+<!-- 11. HREFLANG -->
+<section class="slide" data-no="11">
+  <div class="kicker">Problem 2: Continued</div>
+  <h2>Your Arabic is tagged "Jordanian only"</h2>
+  <div class="grid2">
+    <div class="center">
+      <p>Your hreflang tags exist, good. But the Arabic version is declared as <code>ar-jo</code> (Jordanian Arabic). For a global humanitarian charity serving Arabic speakers worldwide, this narrows the audience Google will show your content to.</p>
+      <div class="callout"><strong>The fix is one line</strong> in Wix Multilingual settings: change <code>ar-jo</code> → <code>ar</code>. This widens your Arabic reach from one country to the entire Arabic-speaking world. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">إصلاح من سطر واحد: تغيير ar-jo إلى ar يوسع وصولك لكل العالم العربي.</span></div>
+    </div>
+    <div>
+      <h3>Current homepage tags</h3>
+      <div class="evidence">&lt;link rel="alternate"
+  href="…/" hreflang="<span class="c">x-default</span>"/&gt;
+&lt;link rel="alternate"
+  href="…/ar" hreflang="<span class="r">ar-jo</span>"/&gt;
+&lt;link rel="alternate"
+  href="…/" hreflang="<span class="c">en-us</span>"/&gt;</div>
+      <img class="shot" style="margin-top:16px;" src="screenshots/arabic.png" alt="Arabic version of lifeusa.org">
+      <p class="shotcap">www.lifeusa.org/ar: the Arabic experience exists and renders well.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 12. INDEXATION -->
+<section class="slide" data-no="12">
+  <div class="kicker">Problem 3: Indexation</div>
+  <h2>35% of your pages say "don't list me"</h2>
+  <div class="grid2">
+    <div class="center">
+      <p class="lead">122 of 345 crawlable pages carry a <code>noindex</code> directive, an instruction telling Google to drop them from results.</p>
+      <p>On a site with only <strong>33 actively ranking pages</strong>, a 35% noindex rate almost certainly contains pages that <em>should</em> be visible. Every accidental noindex is a page that can never rank, never drive a donation, and never earn credit for its backlinks, no matter how good the content is.</p>
+      <div class="callout bad"><strong>Action:</strong> with Search Console access, we walk the 122-URL list and separate intentional from accidental. This is often the fastest "found money" fix on a site.</div>
+    </div>
+    <div>
+      <div class="barrow"><span>Crawlable pages</span><div class="bartrack"><div class="bar" style="width:100%;background:linear-gradient(90deg,#143a63,#2f6db0);">345</div></div><span>100%</span></div>
+      <div class="barrow"><span>Tagged "noindex"</span><div class="bartrack"><div class="bar" style="width:35%;background:linear-gradient(90deg,#7a241b,#c0392b);">122</div></div><span>35%</span></div>
+      <div class="barrow"><span>Actually ranking</span><div class="bartrack"><div class="bar" style="width:10%;background:linear-gradient(90deg,#8a5a12,#d98a1f);">33</div></div><span>10%</span></div>
+      <p class="shotcap" style="margin-top:16px;">Source: Screaming Frog directives report. The gap between "crawlable" and "ranking" is where the opportunity sits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 13. IMAGES INVISIBLE -->
+<section class="slide" data-no="13">
+  <div class="kicker">Problem 4: Images Invisible to Search</div>
+  <h2>Your images can't be read</h2>
+  <div class="grid2">
+    <div class="center">
+      <p>451 images have an empty alt attribute and 20 have none at all, 471 in total. When you publish an Arabic article with photos, search engines have no text describing what the image shows, so it cannot be indexed for image search <em>in any language</em>.</p>
+      <p class="muted">This is the second half of your original concern: "my images don't appear in search." This is exactly why.</p>
+      <div class="callout"><strong>Action:</strong> alt text on the top 50 traffic pages first, then a site-wide content workflow so every new upload gets described. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">نص بديل وصفي لكل صورة, يبدأ بأهم 50 صفحة ثم يصبح عادة عند كل رفع.</span></div>
+    </div>
+    <div>
+      <div class="grid2" style="gap:14px;">
+        <div class="statlite"><div class="num" style="color:var(--bad);">451</div><div class="lbl">images with empty alt text</div></div>
+        <div class="statlite"><div class="num" style="color:var(--bad);">20</div><div class="lbl">images with no alt attribute at all</div></div>
+      </div>
+      <div class="evidence" style="margin-top:16px;">"Images: Missing Alt Text"  <span class="r">451</span>  39.4%
+"Images: Missing Alt Attr"  <span class="r">20</span>   1.75%</div>
+      <p class="shotcap" style="margin-top:12px;">Screaming Frog issues overview. Affected URLs exported per image in <code>images_missing_alt_text.csv</code>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 14. PAGE EXPERIENCE -->
+<section class="slide" data-no="14">
+  <div class="kicker">Problem 5: Page Experience</div>
+  <h2>The page jumps, and it's slow</h2>
+  <div class="grid2">
+    <div class="center">
+      <p><strong>1,035 images (90%)</strong> have no width or height defined. The browser doesn't know how much space to reserve, so the layout jumps as the page loads, measured by Google as <em>Cumulative Layout Shift</em>, a ranking signal.</p>
+      <p><strong>543 images (47%)</strong> are over 100 KB, slowing down how fast the main content appears (<em>Largest Contentful Paint</em>). Both pull rankings down on every page and push donors on slow phones to leave before the Donate button loads.</p>
+      <div class="callout warn"><strong>Action:</strong> add dimensions site-wide (Wix can do this), compress images over 100 KB, and serve modern formats.</div>
+    </div>
+    <div>
+      <div class="statlite" style="margin-bottom:14px;"><div class="num" style="color:var(--warn);">90%</div><div class="lbl">of images have no dimensions → layout shift (CLS)</div></div>
+      <div class="statlite"><div class="num" style="color:var(--warn);">47%</div><div class="lbl">of images exceed 100 KB → slow load (LCP)</div></div>
+      <div class="evidence" style="margin-top:16px;">"Images: Missing Size Attributes"  <span class="y">1035</span>  90.5%
+"Images: Over 100 KB"               <span class="y">543</span>   47.5%</div>
+    </div>
+  </div>
+</section>
+
+<!-- 15. LIGHTHOUSE LIVE -->
+<section class="slide" data-no="15">
+  <div class="kicker">Live Audit: Google Lighthouse</div>
+  <h2>What Google's own tool says today</h2>
+  <p class="lead">Run live on your homepage, mobile, 5 June 2026, inside Chrome.</p>
+  <div class="grid4" style="margin-top:18px;">
+    <div class="stat" style="background:linear-gradient(160deg,#1f8a55,#27a065);"><div class="num">92</div><div class="lbl">SEO</div></div>
+    <div class="stat" style="background:linear-gradient(160deg,#2f6db0,#5b9bd5);"><div class="num">87</div><div class="lbl">Accessibility</div></div>
+    <div class="stat" style="background:linear-gradient(160deg,#8a5a12,#d98a1f);"><div class="num">54</div><div class="lbl">Best Practices</div></div>
+    <div class="stat" style="background:linear-gradient(160deg,#7a241b,#c0392b);"><div class="num">33</div><div class="lbl">Agentic / AI Readiness</div></div>
+  </div>
+  <div class="grid2" style="margin-top:24px;">
+    <div>
+      <h3>Concrete failures flagged</h3>
+      <ul>
+        <li>Buttons &amp; links without accessible names (screen readers can't use them)</li>
+        <li>7 links with non-descriptive text ("learn more", "click here")</li>
+        <li>Headings not in sequential order</li>
+        <li>Browser console errors logged on load</li>
+        <li>Deprecated APIs &amp; third-party cookies in use</li>
+        <li><code>llms.txt</code> missing, AI engines can't read your site cleanly</li>
+      </ul>
+    </div>
+    <div class="center">
+      <div class="callout bad"><strong>Best Practices at 54 and AI-readiness at 33</strong> are the weak spots. As donors increasingly find charities through AI assistants (ChatGPT, Gemini), these scores translate directly into lost discovery.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. SCHEMA -->
+<section class="slide" data-no="16">
+  <div class="kicker">Problem 6: Structured Data</div>
+  <h2>Google thinks you're a for-profit business</h2>
+  <div class="grid2">
+    <div class="center">
+      <p>Your homepage declares the organization as <code>ProfessionalService</code>, a for-profit business type in Google's vocabulary. The correct type for a registered nonprofit is <code>NGO</code>.</p>
+      <p>The wrong type blocks nonprofit-specific Google features: the <strong>donations panel, charity disambiguation, and trust badges</strong>. And your <strong>463 blog posts carry no Article schema</strong>, the single largest rich-result opportunity on the site (author, date, headline image in search).</p>
+      <div class="callout"><strong>Action:</strong> switch homepage to <code>NGO</code> + add <code>DonateAction</code>; enable Article schema in the Wix Blog SEO panel across all posts.</div>
+    </div>
+    <div>
+      <div class="evidence">$ curl -s https://www.lifeusa.org/ | grep @type
+"@type":"WebSite"
+"@type":"SearchAction"
+<span class="r">"@type":"ProfessionalService"</span>  <span class="c"># for-profit type</span>
+"@type":"PostalAddress"
+
+<span class="c"># should be:</span>
+<span class="c">"@type":"<span class="c">NGO</span>"</span></div>
+      <p class="shotcap" style="margin-top:12px;">Live extraction, 5 June 2026: type unchanged since May. Ref: schema.org/NGO</p>
+      <div class="statlite" style="margin-top:16px;"><div class="num" style="color:var(--bad);">463</div><div class="lbl">blog posts with zero Article schema</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 17. CONTENT HYGIENE -->
+<section class="slide" data-no="17">
+  <div class="kicker">Problem 7: Content &amp; Metadata Hygiene</div>
+  <h2>The small leaks that add up</h2>
+  <p class="lead">Individually minor, collectively they cost click-through and confuse search engines about what each page is.</p>
+  <table style="margin-top:14px;">
+    <tr><th>Issue</th><th>Pages</th><th>Why it matters</th><th>Priority</th></tr>
+    <tr><td>Missing meta description</td><td>144 (54%)</td><td>Google writes its own snippet, you lose control of the donor's first impression in search</td><td><span class="pill p-warn">Medium</span></td></tr>
+    <tr><td>Page title same as H1</td><td>97 (37%)</td><td>Missed chance to target additional keywords</td><td><span class="pill p-warn">Medium</span></td></tr>
+    <tr><td>Title over 60 characters</td><td>72 (27%)</td><td>Truncated in search results</td><td><span class="pill p-warn">Medium</span></td></tr>
+    <tr><td>Missing H1 heading</td><td>37 (14%)</td><td>One of the strongest on-page ranking signals, absent</td><td><span class="pill p-warn">Medium</span></td></tr>
+    <tr><td>Duplicate H2 headings</td><td>114 (43%)</td><td>Pages look the same to search engines</td><td><span class="pill p-good">Low</span></td></tr>
+    <tr><td>Exact-duplicate pages</td><td>7</td><td>Splits ranking signals between identical URLs</td><td><span class="pill p-bad">High</span></td></tr>
+    <tr><td>Mixed content (HTTP URLs)</td><td>5</td><td>"Not secure" warnings; erodes donor trust</td><td><span class="pill p-bad">High</span></td></tr>
+  </table>
+  <p class="footnote">Source: Screaming Frog issues overview (<code>issues_overview_report.csv</code>), full-site crawl.</p>
+</section>
+
+<!-- 18. STALE MESSAGING -->
+<section class="slide" data-no="18">
+  <div class="kicker">Problem 8: Drift &amp; Scaffolding</div>
+  <h2>Signs the site is drifting</h2>
+  <div class="grid2">
+    <div>
+      <h3>Stale "29+ years" claim</h3>
+      <div class="evidence">&lt;meta name="description"
+ content="…changing lives and offering
+ hope for <span class="r">29+ years</span>…"/&gt;</div>
+      <p class="muted" style="font-size:14px;margin-top:8px;">The hero banner already says <strong>33 years</strong> (founded 1992). The meta description Google reads still says 29+. Two different numbers about the same org.</p>
+    </div>
+    <div>
+      <h3>Scaffolding left in the sitemap</h3>
+      <div class="evidence">/no
+/copy-of-freewill-landing-page
+/b2s
+/fb-intl</div>
+      <p class="muted" style="font-size:14px;margin-top:8px;">Leftover test pages and internal codes are published in your sitemap and submitted to Google. They should be confirmed live or removed.</p>
+    </div>
+  </div>
+  <div class="callout warn" style="margin-top:22px;">These are not crises, they are symptoms of a site without a maintenance routine. The roadmap on the next slides builds that routine so drift stops accumulating. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">هذه أعراض غياب روتين صيانة, الخطة القادمة تبني هذا الروتين.</span></div>
+</section>
+
+<!-- 19. ANSWER THE ORIGINAL QUESTION -->
+<section class="slide" data-no="19">
+  <div class="kicker">Your Original Question</div>
+  <h2>"Why don't my Arabic articles and images show up?"</h2>
+  <p class="lead">Three causes stacked on top of each other. Each one alone would hurt; together they explain the complaint completely.</p>
+  <div class="grid3" style="margin-top:22px;">
+    <div class="card"><div class="tag">Cause 1</div><h3 style="margin-top:8px;">Language confusion</h3><p class="muted" style="font-size:15px;">The Arabic /ar page reports itself to Google as English (en-US). Google can't place it as Arabic content.</p></div>
+    <div class="card"><div class="tag">Cause 2</div><h3 style="margin-top:8px;">Narrow locale</h3><p class="muted" style="font-size:15px;">hreflang says <code>ar-jo</code>, Jordanian Arabic only, shrinking the audience Google shows it to.</p></div>
+    <div class="card"><div class="tag">Cause 3</div><h3 style="margin-top:8px;">Unreadable images</h3><p class="muted" style="font-size:15px;">471 images have no descriptive text, so they can't be indexed for image search in any language.</p></div>
+  </div>
+  <div class="callout good" style="margin-top:26px;"><strong>The good news:</strong> all three are fixable without a rebuild, one Wix ticket, one settings change, one content workflow. This is the highest-leverage cluster on the whole property. <span class="ar" style="display:block;margin-top:6px;border:none;padding:0;">الأسباب الثلاثة قابلة للإصلاح بدون إعادة بناء, تذكرة دعم، إعداد واحد، وروتين محتوى.</span></div>
+</section>
+
+<!-- 20. PRIORITY MATRIX -->
+<section class="slide" data-no="20">
+  <div class="kicker">Roadmap</div>
+  <h2>What to fix first, by impact vs effort</h2>
+  <table style="margin-top:10px;">
+    <tr><th>#</th><th>Fix</th><th>Impact</th><th>Effort</th><th>Owner</th></tr>
+    <tr><td>1</td><td>Fix /ar language signal + hreflang locale (ar-jo → ar)</td><td><span class="pill p-good">High</span></td><td><span class="pill p-good">Low</span></td><td>Wix admin + support ticket</td></tr>
+    <tr><td>2</td><td>Review the 122 noindex'd URLs, restore accidental ones</td><td><span class="pill p-good">High</span></td><td><span class="pill p-warn">Med</span></td><td>Consultant + GSC access</td></tr>
+    <tr><td>3</td><td>Sunset arabic., lock down staff., merge donation. → donate.</td><td><span class="pill p-good">High</span></td><td><span class="pill p-warn">Med</span></td><td>DNS / hosting owner</td></tr>
+    <tr><td>4</td><td>Switch schema to NGO + enable Article schema on all posts</td><td><span class="pill p-good">High</span></td><td><span class="pill p-good">Low</span></td><td>Wix admin</td></tr>
+    <tr><td>5</td><td>Alt text on top 50 pages, then site-wide workflow</td><td><span class="pill p-warn">Med</span></td><td><span class="pill p-warn">Med</span></td><td>Content team (Tasneem)</td></tr>
+    <tr><td>6</td><td>Image dimensions + compress images over 100 KB</td><td><span class="pill p-warn">Med</span></td><td><span class="pill p-warn">Med</span></td><td>Wix admin</td></tr>
+    <tr><td>7</td><td>Metadata sweep: titles, meta descriptions, the "29+ years" fix</td><td><span class="pill p-warn">Med</span></td><td><span class="pill p-good">Low</span></td><td>Content team</td></tr>
+    <tr><td>8</td><td>Remove sitemap scaffolding (/no, /b2s, etc.)</td><td><span class="pill p-good">Low</span></td><td><span class="pill p-good">Low</span></td><td>Wix admin</td></tr>
+  </table>
+  <div class="callout" style="margin-top:18px;"><strong>Sequence logic:</strong> start with the high-impact / low-effort wins (1, 4, 7) this week. Run the structural work (2, 3) in parallel once access lands. Build the content habits (5, 6) as the ongoing layer.</div>
+</section>
+
+<!-- 21. 90-DAY PLAN -->
+<section class="slide" data-no="21">
+  <div class="kicker">Roadmap</div>
+  <h2>A realistic 90-day plan</h2>
+  <div class="timeline">
+    <div class="phase">
+      <div class="tag">Weeks 1–3</div>
+      <h3>Quick wins &amp; access</h3>
+      <ul>
+        <li>Grant GSC + GA4 access</li>
+        <li>Fix hreflang locale → <code>ar</code></li>
+        <li>Open the Wix language-header ticket</li>
+        <li>Switch schema to NGO + DonateAction</li>
+        <li>Fix "29+ years" + remove scaffolding pages</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="tag">Weeks 4–8</div>
+      <h3>Structural cleanup</h3>
+      <ul>
+        <li>Walk &amp; resolve the 122 noindex URLs</li>
+        <li>Sunset arabic.; lock down staff.</li>
+        <li>Plan donation. → donate. merge</li>
+        <li>Enable Article schema across 463 posts</li>
+        <li>Alt text on top 50 traffic pages</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="tag">Weeks 9–12</div>
+      <h3>Performance &amp; habits</h3>
+      <ul>
+        <li>Image dimensions + compression site-wide</li>
+        <li>Metadata sweep (titles, descriptions)</li>
+        <li>Accessibility fixes from Lighthouse</li>
+        <li>Add <code>llms.txt</code> for AI discovery</li>
+        <li>Stand up a monthly maintenance review</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout good" style="margin-top:26px;">By day 90 you'll have stopped the equity leaks, made your Arabic content findable, claimed your nonprofit identity in Google, and built a routine so the site stops drifting.</div>
+</section>
+
+<!-- 22. WHAT WE NEED -->
+<section class="slide" data-no="22">
+  <div class="kicker">Next Steps</div>
+  <h2>What we need from you to start</h2>
+  <div class="grid2" style="margin-top:8px;">
+    <div>
+      <table>
+        <tr><th>Access</th><th>Why</th></tr>
+        <tr><td>Google Search Console (Owner/Full)</td><td>Review the 122 noindex URLs, validate sitemaps, check manual actions &amp; queries</td></tr>
+        <tr><td>Google Analytics 4 (Viewer)</td><td>See which pages convert donations and which traffic actually matters</td></tr>
+        <tr><td>Wix admin (or a 30-min screen-share)</td><td>Edit hreflang, schema, metadata, image settings</td></tr>
+        <tr><td>DNS / hosting access</td><td>Sunset arabic., lock staff., merge donation.</td></tr>
+        <tr><td>Wix support contact</td><td>Escalate the per-language header bug</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Decisions &amp; facts</h3>
+      <ul>
+        <li>Confirm the 122 noindex'd pages are/aren't intentional</li>
+        <li>Why does donation. exist alongside donate.? (campaigns? legacy?)</li>
+        <li>Who manages staff. and what's on it?</li>
+        <li>EIN / 501(c)(3) details for NGO schema</li>
+        <li>Wix plan tier (affects what's user-fixable vs. needs support)</li>
+        <li>Top 5 program priorities for 2026 (shapes content focus)</li>
+      </ul>
+      <div class="callout" style="margin-top:14px;">Give us access + these answers and the Weeks 1–3 quick wins can ship within days.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 23. APPENDIX / EVIDENCE -->
+<section class="slide" data-no="23">
+  <div class="kicker">Appendix</div>
+  <h2>Evidence index</h2>
+  <p class="lead">Every claim in this deck traces to a captured artifact. Nothing is asserted without proof.</p>
+  <table style="margin-top:12px;">
+    <tr><th>Claim</th><th>Source</th><th>Captured</th></tr>
+    <tr><td>963 / 214 ref domains, traffic split</td><td>Ahrefs site structure export</td><td>7 May 2026</td></tr>
+    <tr><td>122 noindex (35%), 471 alt issues, 1,035 no-dimension images, 543 &gt;100KB</td><td>Screaming Frog crawl (<code>issues_overview_report.csv</code>)</td><td>7 May 2026</td></tr>
+    <tr><td>arabic. dead in DNS; donation. = Givecloud; staff. = public WordPress</td><td>curl + dig live probes</td><td>5 June 2026</td></tr>
+    <tr><td>content-language now en-GB/en-US; /ar reports en-US</td><td>curl header probe (re-verified)</td><td>5 June 2026</td></tr>
+    <tr><td>hreflang ar-jo; ProfessionalService schema</td><td>Homepage HTML / JSON-LD extraction</td><td>5 June 2026</td></tr>
+    <tr><td>463 blog posts, no Article schema</td><td>blog-posts-sitemap.xml count</td><td>5 June 2026</td></tr>
+    <tr><td>SEO 92 / A11y 87 / Best-Practices 54 / AI 33</td><td>Google Lighthouse (mobile, live)</td><td>5 June 2026</td></tr>
+    <tr><td>Stale "29+ years" meta vs "33 years" hero</td><td>Homepage HTML + live screenshot</td><td>5 June 2026</td></tr>
+    <tr><td>Apex 301 to www works correctly</td><td>curl -sIL https://lifeusa.org/</td><td>5 June 2026</td></tr>
+  </table>
+  <p class="footnote">Full per-URL exports live in <code>LifeUSA Technical SEO [Master Sheet].xlsx</code> and the <code>screaming frog issues/</code> folder. Prepared by Saiaf Gamal for Life for Relief and Development.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿"Address","Content Type","Status Code","Status","HTTP Version","Indexability","Indexability Status","Canonical Link Element 1","Meta Robots 1","X-Robots-Tag 1"
+"http://www.lifeusa.org/","","301","Moved Permanently","1.1","Non-Indexable","Redirected","","",""
+"http://lifeusa.org/","","301","Moved Permanently","1.1","Non-Indexable","Redirected","","",""
+"http://lifeusa.org/orphans","text/html","404","Not Found","1.1","Non-Indexable","Client Error","","",""
+"http://lifeusa.org/refugee","text/html","404","Not Found","1.1","Non-Indexable","Client Error","","",""
+"http://lifeusa.org/ramadan","text/html","404","Not Found","1.1","Non-Indexable","Client Error","","",""

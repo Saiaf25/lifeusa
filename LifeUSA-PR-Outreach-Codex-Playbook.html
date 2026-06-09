@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل LifeUSA لتجهيز Codex وإدارة التواصل الإعلامي</title>
+  <style>
+    :root {
+      --ink: #17231e; --muted: #617067; --paper: #f4f1e9; --card: #fffdf7;
+      --green: #116149; --green2: #dbece5; --gold: #c79236; --red: #a63b32;
+      --line: #d9ddd6; --code: #14261f; --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: "thmanyah serif text", "Noto Naskh Arabic", Georgia, serif; line-height: 1.8; }
+    body:before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.35; background-image:radial-gradient(#b7b0a1 .6px,transparent .6px); background-size:10px 10px; }
+    .wrap { position:relative; max-width: 1120px; margin:auto; padding:32px 22px 80px; }
+    header { color:white; background:linear-gradient(135deg,#0b4b39,#153126); border-radius:28px; padding:52px; box-shadow:var(--shadow); overflow:hidden; position:relative; }
+    header:after { content:"PR"; position:absolute; left:25px; bottom:-72px; font:900 220px/1 Arial; color:rgba(255,255,255,.045); }
+    .eyebrow { display:inline-block; padding:5px 13px; border:1px solid rgba(255,255,255,.35); border-radius:99px; font-size:.82rem; letter-spacing:.08em; }
+    h1 { max-width:850px; margin:18px 0 8px; font-size:clamp(2.15rem,5vw,4.6rem); line-height:1.08; letter-spacing:-.04em; }
+    header p { max-width:760px; color:#d9ebe4; font-size:1.12rem; }
+    .meta { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+    .meta span { background:rgba(255,255,255,.1); padding:7px 12px; border-radius:8px; }
+    nav { position:sticky; top:10px; z-index:4; display:flex; gap:8px; overflow:auto; margin:18px 0 28px; padding:9px; background:rgba(255,253,247,.92); border:1px solid var(--line); border-radius:15px; backdrop-filter:blur(12px); }
+    nav a { white-space:nowrap; text-decoration:none; color:var(--green); padding:7px 12px; border-radius:8px; font-weight:700; }
+    nav a:hover { background:var(--green2); }
+    section { scroll-margin-top:90px; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:34px; margin:20px 0; box-shadow:0 7px 25px rgba(31,48,40,.045); }
+    h2 { color:var(--green); margin:0 0 18px; font-size:1.8rem; line-height:1.25; }
+    h3 { margin:28px 0 8px; font-size:1.18rem; }
+    p { margin:7px 0 14px; }
+    a { color:var(--green); }
+    .lede { font-size:1.13rem; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+    .card { border:1px solid var(--line); border-radius:15px; padding:18px; background:#fff; }
+    .card h3 { margin:0 0 6px; color:var(--green); }
+    .num { display:inline-grid; place-items:center; width:30px; height:30px; margin-left:6px; border-radius:50%; color:white; background:var(--green); font-weight:900; }
+    .callout { border-right:5px solid var(--gold); background:#fff7e7; padding:15px 18px; border-radius:12px; margin:16px 0; }
+    .danger { border-color:var(--red); background:#fff0ed; }
+    .ok { border-color:var(--green); background:#edf7f2; }
+    ul, ol { padding-right:24px; }
+    li { margin:6px 0; }
+    code { direction:ltr; unicode-bidi:embed; font-family:"SFMono-Regular",Consolas,monospace; font-size:.88em; }
+    pre { direction:ltr; text-align:left; overflow:auto; background:var(--code); color:#daf1e6; border-radius:12px; padding:16px; line-height:1.55; }
+    table { width:100%; border-collapse:collapse; direction:ltr; text-align:left; font-size:.88rem; }
+    th, td { border-bottom:1px solid var(--line); padding:10px 8px; vertical-align:top; }
+    th { color:var(--green); background:#edf4f0; }
+    .checklist { list-style:none; padding:0; }
+    .checklist li { position:relative; padding:8px 36px 8px 8px; border-bottom:1px dashed var(--line); }
+    .checklist li:before { content:"□"; position:absolute; right:5px; top:5px; color:var(--green); font-size:1.35rem; }
+    .phase { border-top:4px solid var(--green); }
+    .prompt { border:1px solid #a9cbbb; background:#f2faf6; border-radius:14px; padding:16px; margin:12px 0; }
+    .prompt strong { display:block; color:var(--green); margin-bottom:5px; }
+    .en { direction:ltr; text-align:left; color:var(--muted); }
+    footer { text-align:center; color:var(--muted); padding:22px; }
+    @media(max-width:760px){ header,section{padding:25px}.grid{grid-template-columns:1fr} h1{font-size:2.35rem} }
+    @media print { nav{display:none} body{background:white} body:before{display:none} .wrap{max-width:none;padding:0} header,section{box-shadow:none;break-inside:avoid} a{color:inherit;text-decoration:none} }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow">LIFE FOR RELIEF AND DEVELOPMENT · PR OPERATIONS</span>
+    <h1>تعليمات Codex لبناء وتشغيل نظام التواصل مع الصحفيين</h1>
+    <p>هذه التعليمات موجهة إلى Codex على جهاز تسنيم. نفّذ تجهيز المشروع، أنشئ الملفات، حضّر الرسائل، تابع الردود، وأصدر التقارير. وثّق النظام والنتائج من دون تعطيل التنفيذ بطلب موافقات غير لازمة.</p>
+    <div class="meta"><span>الإصدار 1.0</span><span>5 يونيو 2026</span><span>إعداد: Saiaf Gamal</span><span>مقدم إلى LifeUSA</span></div>
+  </header>
+
+  <nav>
+    <a href="#goal">الهدف</a><a href="#rules">قواعد الأمان</a><a href="#mac">تجهيز Mac</a><a href="#project">تجهيز المشروع</a>
+    <a href="#contacts">قاعدة الصحفيين</a><a href="#workflow">سير العمل</a><a href="#prompts">عقد التشغيل</a><a href="#launch">خطة التنفيذ</a>
+  </nav>
+
+  <section id="goal">
+    <h2>ما الذي سنبنيه فعلياً؟</h2>
+    <p class="lede">أنت Codex المسؤول عن بناء وتشغيل مساعد العمليات الإعلامية الشخصي لتسنيم. حوّل المقال وقاعدة الصحفيين إلى قائمة مستهدفة ورسائل شخصية وسجل متابعة وتقرير نتائج. نفّذ كل خطوة تستطيع تنفيذها بنفسك، وتوقف فقط قبل الإرسال النهائي لتعرض القائمة على تسنيم.</p>
+    <div class="grid">
+      <div class="card"><h3>يدخل إلى النظام</h3><p>المقال، الرابط أو الملف، هدف النشر، الموعد، وقاعدة بيانات الصحفيين.</p></div>
+      <div class="card"><h3>يخرج من النظام</h3><p>قائمة مستهدفة، مسودات مخصصة، قائمة إرسال جاهزة، وجدول ردود ونتائج.</p></div>
+      <div class="card"><h3>يوفّر الوقت في</h3><p>الفرز، التخصيص، تذكير المتابعة، تلخيص الردود، وتحديث السجل.</p></div>
+      <div class="card"><h3>لا يستبدل</h3><p>العلاقة الإنسانية، تقدير حساسية الخبر، الموافقة النهائية، أو الرد الشخصي على الصحفي.</p></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <h2>قواعد التشغيل والأمان قبل أي تثبيت</h2>
+    <div class="callout ok"><strong>طبيعة المهمة:</strong> هذا نظام عمل تنظيمي مقدم إلى LifeUSA ومصمم لاستخدام تسنيم اليومي. وثّق ما تنفذه ونتائجه بوضوح. لا تنتظر سلسلة موافقات داخلية لأن خطوات التنفيذ التشغيلية لا تتطلب موافقة؛ اطلب من تسنيم فقط تسجيل الدخول أو اختيار قائمة الإرسال النهائية.</div>
+    <ul class="checklist">
+      <li>استخدم حساب ChatGPT الخاص بتسنيم، ولا تطلب منها مشاركة كلمة المرور داخل المحادثة.</li>
+      <li>اربط البريد الذي تستخدمه تسنيم فعلياً للتواصل الإعلامي، واطلب منها إكمال شاشة تسجيل الدخول عند الحاجة.</li>
+      <li>ذكّر تسنيم بتفعيل المصادقة الثنائية، ثم واصل بقية الإعداد.</li>
+      <li>لا تستورد بيانات متبرعين أو مستفيدين أو قصصاً حساسة لا يحتاجها التواصل الإعلامي.</li>
+      <li>حضّر كل شيء تلقائياً، لكن اعرض رسائل الحملة الأولى وقائمة الإرسال على تسنيم قبل الإرسال.</li>
+      <li>سجّل تغييرات النظام والحملات والتقارير بحيث يمكن عرض العمل والنتائج على إدارة LifeUSA في أي وقت.</li>
+      <li>احترم طلبات عدم التواصل وحدّثها فوراً في قاعدة الصحفيين.</li>
+      <li>لا تخترع اقتباسات أو حقائق أو أرقام؛ اربط كل ادعاء بمصدر موثوق.</li>
+      <li>لا تتوقف عند غياب أداة أو موصل: ابحث عن القدرة المطلوبة، ثبّت أقرب خيار متاح، اختبره، ووثّق فقط العائق الذي يحتاج تدخلاً بشرياً فعلياً.</li>
+    </ul>
+    <div class="callout"><strong>WhatsApp:</strong> أداة <code>wacli</code> غير رسمية وتعمل كجهاز WhatsApp Web مرتبط. نبدأ بها كتجربة إشرافية محدودة، بلا إرسال جماعي أو تشغيل غير مراقب.</div>
+  </section>
+
+  <section id="mac">
+    <h2>المرحلة الأولى: جهّز جهاز Mac</h2>
+    <p>نفّذ الخطوات بالترتيب عبر Terminal. عندما تحتاج كلمة مرور الجهاز أو تسجيل دخول تفاعلي، اطلب من تسنيم إكماله ثم واصل التنفيذ والتحقق بنفسك.</p>
+
+    <h3><span class="num">1</span>تحديث الجهاز وتجهيز الحسابات</h3>
+    <ul>
+      <li>تحقق من إصدار macOS، ووجّه تسنيم إلى <span class="en">System Settings → General → Software Update</span> إذا احتاج تحديثاً.</li>
+      <li>تحقق من وجود Google Chrome وWhatsApp Desktop، وثبّتهما إن أمكن. اطلب من تسنيم تسجيل الدخول عند الحاجة.</li>
+      <li>أنشئ مجلد عمل منفصلاً داخل Documents، ولا تستخدم مجلداً عاماً أو مشتركاً.</li>
+    </ul>
+
+    <h3><span class="num">2</span>تثبيت Command Line Tools</h3>
+    <pre><code>xcode-select --install</code></pre>
+    <p>للتحقق بعد انتهاء التثبيت:</p>
+    <pre><code>xcode-select -p</code></pre>
+
+    <h3><span class="num">3</span>تثبيت Homebrew</h3>
+    <p>تحقق أولاً من وجود Homebrew. إن لم يكن موجوداً، استخدم أمر التثبيت الحالي من الموقع الرسمي <a href="https://brew.sh/" target="_blank" rel="noreferrer">brew.sh</a>، ثم نفّذ اختبارات التحقق:</p>
+    <pre><code>brew --version
+brew doctor</code></pre>
+
+    <h3><span class="num">4</span>تثبيت Python وأدوات مساعدة</h3>
+    <pre><code>brew install python git
+python3 --version
+git --version</code></pre>
+    <p>Python مفيد لتنظيف الجداول وإنشاء التقارير. Git يحفظ تاريخ تغييرات ملفات المشروع.</p>
+
+    <h3><span class="num">5</span>تثبيت Codex وتسجيل الدخول</h3>
+    <p>تحقق من أن تطبيق Codex لنظام macOS مثبت من مصدر OpenAI الرسمي. إن احتاج تسجيل الدخول، اطلب من تسنيم الدخول بحساب ChatGPT الخاص بها.</p>
+    <div class="callout ok">افتح مجلد المشروع فقط داخل Codex. لا تستخدم مجلد المنزل بالكامل ولا ملفات شخصية لا يحتاجها العمل.</div>
+
+    <h3><span class="num">6</span>ثبّت قدرات Codex المطلوبة واختبرها</h3>
+    <p>افحص الأدوات والـ plugins والموصلات المتاحة داخل Codex. ثبّت أو فعّل القدرات التالية، مستخدماً الاسم المتاح حالياً داخل Codex حتى لو تغيّر اسم المنتج:</p>
+    <ul>
+      <li><strong>Browser / browser-use:</strong> لفتح المواقع، التنقل، القراءة، تعبئة النماذج، استخدام جلسات المتصفح المسجلة عند الحاجة، وأخذ لقطات شاشة.</li>
+      <li><strong>Computer use:</strong> للتعامل مع نوافذ macOS والتطبيقات التي لا توفر موصلاً أو واجهة أوامر مناسبة.</li>
+      <li><strong>Email connector:</strong> ثبّت Gmail plugin فقط إذا كان البريد المستعمل مستضافاً على Gmail أو Google Workspace. إن لم يكن، اكتشف مزود البريد وثبّت الموصل المناسب أو جهّز طريقة IMAP/SMTP أو متصفح آمنة ومدعومة.</li>
+    </ul>
+    <div class="callout ok"><strong>قاعدة منع العوائق:</strong> بعد تثبيت كل قدرة، نفّذ اختباراً حقيقياً صغيراً وسجّل النتيجة في <code>implementation-report.md</code>. إذا لم تجد plugin بالاسم المذكور، ابحث عن الاسم البديل الذي يقدم نفس القدرة. لا تعتبر التثبيت ناجحاً قبل الاختبار.</div>
+
+    <h3><span class="num">7</span>اربط البريد الفعلي داخل Codex</h3>
+    <ol>
+      <li>اسأل تسنيم عن عنوان البريد الذي تستخدمه للتواصل الإعلامي، ثم اكتشف مزود الاستضافة الفعلي.</li>
+      <li>اربط الموصل المناسب واطلب من تسنيم إكمال تسجيل الدخول أو المصادقة فقط عند ظهور الشاشة التفاعلية.</li>
+      <li>اختبر البحث عن رسالة، قراءة سلسلة ردود، إنشاء مسودة، وإرسال رسالة اختبار إلى تسنيم.</li>
+      <li>إذا تعذر الربط المباشر، استخدم قدرات Browser/browser-use كمسار بديل ووثّق الطريقة.</li>
+    </ol>
+
+    <h3><span class="num">8</span>تثبيت wacli كتجربة WhatsApp</h3>
+    <pre><code>brew install openclaw/tap/wacli
+wacli --help
+wacli sync</code></pre>
+    <p>شغّل المزامنة واطلب من تسنيم مسح رمز QR من WhatsApp على الهاتف عبر الأجهزة المرتبطة. اترك <code>wacli sync</code> يعمل أثناء المزامنة، ولا تشارك مجلد <code>~/.wacli</code> لأنه يحتوي مفاتيح الجلسة.</p>
+    <p>مرجع التثبيت الحالي: <a href="https://wacli.sh/install.html" target="_blank" rel="noreferrer">wacli.sh/install</a>.</p>
+
+  </section>
+
+  <section id="project">
+    <h2>المرحلة الثانية: أنشئ مشروع العمل</h2>
+    <p>أنشئ هذا الهيكل داخل <code>~/Documents/LifeUSA-PR-Outreach</code> ثم افتح المجلد كمشروع Codex:</p>
+    <pre><code>LifeUSA-PR-Outreach/
+├── AGENTS.md
+├── contacts/
+│   └── journalists.csv
+├── campaigns/
+│   └── 2026-06-example-article/
+│       ├── article/
+│       ├── brief.md
+│       ├── target-list.csv
+│       ├── drafts.md
+│       └── results.csv
+├── templates/
+│   ├── email-pitch.md
+│   ├── whatsapp-pitch.md
+│   └── follow-up.md
+├── reports/
+├── CHANGELOG.md
+├── implementation-report.md
+└── do-not-contact.csv</code></pre>
+    <h3>ما وظيفة AGENTS.md؟</h3>
+    <p>أنشئ <code>AGENTS.md</code> كدستور دائم للمشروع. ضمّن فيه هوية LifeUSA، نبرة الرسائل، مصادر الحقائق الموثوقة، طريقة عمل تسنيم، وممنوعات الإرسال.</p>
+    <div class="callout ok"><strong>قاعدة ثابتة داخل AGENTS.md:</strong> جهّز المسودات وحدّث السجلات تلقائياً، لكن لا ترسل أي رسالة أو تعدّل حالة جهة اتصال إلى “تم الإرسال” إلا بعد أن تختار تسنيم قائمة الإرسال النهائية.</div>
+    <h3>وثّق التنفيذ</h3>
+    <p>أنشئ <code>implementation-report.md</code> لتسجيل ما تم بناؤه، الأدوات المرتبطة، حالة الاختبارات، وطريقة التشغيل. حدّث <code>CHANGELOG.md</code> عند كل تغيير مهم. اجعل التقارير مناسبة للمشاركة مع إدارة LifeUSA من دون أن تجعل المشاركة أو المراجعة شرطاً يوقف التنفيذ.</p>
+    <p>أضف إلى تقرير التنفيذ جدول قدرات يوضح: القدرة المطلوبة، الـ plugin أو الأداة المستخدمة، الحساب المرتبط، اختبار القبول، النتيجة، وأي عائق متبقٍ مع الإجراء المحدد لحله.</p>
+  </section>
+
+  <section id="contacts">
+    <h2>المرحلة الثالثة: ابنِ قاعدة بيانات الصحفيين</h2>
+    <p>اجمع ملفات الصحفيين التي تعطيها تسنيم لك في ملف CSV واحد نظيف. اجعل كل صف يمثل شخصاً واحداً، وكل وسيلة اتصال في عمود منفصل. لا تضع عدة أشخاص أو عدة إيميلات في خلية واحدة.</p>
+    <div style="overflow:auto">
+      <table>
+        <thead><tr><th>contact_id</th><th>name</th><th>outlet</th><th>role</th><th>topics</th><th>email</th><th>whatsapp</th><th>preferred_channel</th><th>language</th><th>relationship</th><th>last_contacted</th><th>status</th><th>notes</th></tr></thead>
+        <tbody><tr><td>J-0001</td><td>Example Name</td><td>Example News</td><td>Reporter</td><td>humanitarian aid; Gaza</td><td>name@example.org</td><td>+1...</td><td>email</td><td>en</td><td>warm</td><td>2026-05-10</td><td>active</td><td>Prefers concise pitches</td></tr></tbody>
+      </table>
+    </div>
+    <h3>قيم الحالة المقترحة</h3>
+    <p><code>active</code> صالح للتواصل · <code>needs_verification</code> يحتاج مراجعة · <code>bounced</code> البريد ارتد · <code>do_not_contact</code> ممنوع التواصل · <code>inactive</code> لم يعد مناسباً.</p>
+    <div class="callout danger">قبل استيراد أي ملفات قديمة: اكتشف التكرارات والحقول الناقصة، أصلح ما تستطيع بثقة، واعرض الحالات الملتبسة فقط على تسنيم. لا ترسل لأي جهة من ملف غير منظف.</div>
+  </section>
+
+  <section id="workflow">
+    <h2>سير العمل المتكرر لكل مقال</h2>
+    <div class="grid">
+      <div class="card phase"><h3>1. افتح الحملة</h3><p>أنشئ مجلد الحملة، ضع المقال والمصادر، واستخرج الهدف والموعد والجمهور إلى <code>brief.md</code>.</p></div>
+      <div class="card phase"><h3>2. افحص الجاهزية</h3><p>استخرج الزاوية والأرقام والاقتباسات والروابط، وضع علامة على أي ادعاء بلا مصدر.</p></div>
+      <div class="card phase"><h3>3. اختر الصحفيين</h3><p>طابق موضوع المقال وبلد التغطية واللغة وتاريخ العلاقة، ثم أنشئ <code>target-list.csv</code> مع سبب اختيار كل شخص.</p></div>
+      <div class="card phase"><h3>4. جهّز المسودات</h3><p>أنشئ رسالة مختلفة لكل صحفي حسب عمله وقناته، بلا مجاملات مختلقة أو تخصيص زائف.</p></div>
+      <div class="card phase"><h3>5. اعرض القائمة</h3><p>اعرض الحقائق والنبرة والجهات والمسودات على تسنيم، واطلب منها اختيار قائمة الإرسال النهائية.</p></div>
+      <div class="card phase"><h3>6. أرسل دفعة صغيرة</h3><p>بعد اختيار تسنيم، أرسل أول 5 إلى 10 رسائل، ثم افحص الأخطاء قبل توسيع الدفعة.</p></div>
+      <div class="card phase"><h3>7. تابع الردود</h3><p>افحص صندوق البريد المرتبط وسجل WhatsApp، ولخّص من رد وماذا يريد وما الموعد أو الإجراء التالي.</p></div>
+      <div class="card phase"><h3>8. أرسل متابعة واحدة</h3><p>بعد المدة المحددة، جهّز وأرسل متابعة قصيرة فقط لمن لم يرد ولم يطلب عدم التواصل.</p></div>
+      <div class="card phase"><h3>9. أغلق الحملة</h3><p>حدّث النتائج: رد، اهتمام، رفض، نشر، رابط منشور، أو لا رد. ثم أنشئ تقريراً مختصراً.</p></div>
+      <div class="card phase"><h3>10. حسّن النظام</h3><p>سجّل أفضل الزوايا والقنوات والتوقيتات، وحدّث تفضيلات كل صحفي للمرة القادمة.</p></div>
+    </div>
+  </section>
+
+  <section id="prompts">
+    <h2>عقد التشغيل الدائم لـ Codex</h2>
+    <div class="prompt"><strong>تنظيف قاعدة الصحفيين</strong>راجع <code>contacts/journalists.csv</code> باستمرار. أصلح التكرارات والحقول الواضحة، واعرض فقط الحالات الملتبسة على تسنيم. استبعد دائماً أي شخص حالته do_not_contact.</div>
+    <div class="prompt"><strong>بدء حملة مقال</strong>عندما تضيف تسنيم مقالاً جديداً، أنشئ له حملة تلقائياً. استخرج الزاوية، أهم 5 حقائق مع مصادرها، الجمهور المناسب، والمخاطر أو الادعاءات التي تحتاج تحقق. ثم أنشئ قائمة مستهدفة مع سبب اختيار كل شخص.</div>
+    <div class="prompt"><strong>صياغة الرسائل</strong>جهز مسودة شخصية لكل اسم في القائمة المختارة. استخدم القناة واللغة المفضلة، واجعل الرسالة قصيرة وواضحة، واشرح لماذا المقال مناسب لتغطية الصحفي. لا تخترع معرفة شخصية أو إشادة بمقال لم نتحقق منه.</div>
+    <div class="prompt"><strong>مراجعة ما قبل الإرسال</strong>اعرض جدول ما قبل الإرسال: الاسم، المؤسسة، القناة، سبب الاختيار، عنوان الرسالة، الرابط، وأي تحذير. استبعد do_not_contact والتكرارات ومن تواصلنا معه مؤخراً. انتظر طلبي النهائي للإرسال.</div>
+    <div class="prompt"><strong>تقرير الردود</strong>راجع ردود هذه الحملة في صندوق البريد المرتبط وسجل WhatsApp قراءة فقط. أنشئ تقريراً بمن رد، ملخص الرد، الإجراء المطلوب، المسؤول، والموعد. لا ترسل رداً ولا تغيّر أي سجل قبل مراجعتي.</div>
+    <div class="prompt"><strong>تقرير ختامي</strong>أغلق الحملة وأنشئ تقريراً يتضمن عدد المستهدفين والمرسل لهم والردود الإيجابية والرفض وعدم الرد والروابط المنشورة، ثم استخرج 3 دروس للحملة القادمة.</div>
+  </section>
+
+  <section id="launch">
+    <h2>تسلسل التنفيذ الكامل في جلسة واحدة</h2>
+    <ol>
+      <li><strong>الخطوة 1:</strong> افحص الجهاز وثبّت الأدوات والـ plugins المطلوبة، واختبر browser-use وcomputer use والبريد. اطلب تدخل تسنيم فقط لتسجيل الدخول.</li>
+      <li><strong>الخطوة 2:</strong> أنشئ المشروع واكتب <code>AGENTS.md</code> والقوالب وتقرير التنفيذ.</li>
+      <li><strong>الخطوة 3:</strong> استورد ملفات الصحفيين ونظفها، واعرض الحالات الملتبسة فقط على تسنيم.</li>
+      <li><strong>الخطوة 4:</strong> شغّل حملة تجريبية بلا إرسال، وأنشئ قائمة الاستهداف والمسودات.</li>
+      <li><strong>الخطوة 5:</strong> اعرض قائمة الإرسال النهائية على تسنيم. بعد اختيارها، أرسل أول دفعة إلى 5 جهات وافحص السجل والأخطاء.</li>
+      <li><strong>الخطوة 6:</strong> تحقق من قراءة الردود وتحديث النتائج وإصدار التقرير الختامي.</li>
+      <li><strong>الخطوة 7:</strong> وسّع التشغيل بعد نجاح الاختبارات، وحدّث تقرير التنفيذ وسجل التغييرات.</li>
+    </ol>
+    <h3>اختبار الجاهزية</h3>
+    <ul class="checklist">
+      <li>Codex يفتح مجلد المشروع الصحيح فقط.</li>
+      <li>موصل البريد الفعلي يستطيع البحث والقراءة وإنشاء مسودة وإرسال رسالة اختبار.</li>
+      <li>Browser/browser-use يستطيع فتح موقع والتنقل داخله والتقاط لقطة شاشة.</li>
+      <li>Computer use يستطيع تنفيذ مهمة بسيطة داخل تطبيق macOS عند الحاجة.</li>
+      <li>wacli مرتبط ومزامن، ومجلد جلسته غير مشارك.</li>
+      <li>قاعدة الصحفيين بلا تكرارات وبها حالات do_not_contact واضحة.</li>
+      <li>قوالب البريد وWhatsApp والمتابعة راجعتها تسنيم وأصبحت جاهزة.</li>
+      <li>تجربة كاملة نجحت من المقال إلى التقرير مع 5 جهات فقط.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>مراجع التثبيت الرسمية والحالية</h2>
+    <ul>
+      <li><a href="https://help.openai.com/en/articles/11369540" target="_blank" rel="noreferrer">OpenAI: استخدام Codex مع خطة ChatGPT</a></li>
+      <li><a href="https://help.openai.com/en/articles/11381614" target="_blank" rel="noreferrer">OpenAI: تسجيل دخول Codex عبر ChatGPT</a></li>
+      <li><a href="https://brew.sh/" target="_blank" rel="noreferrer">Homebrew</a></li>
+      <li><a href="https://wacli.sh/install.html" target="_blank" rel="noreferrer">wacli: التثبيت</a></li>
+      <li><a href="https://wacli.sh/quickstart.html" target="_blank" rel="noreferrer">wacli: البدء السريع</a></li>
+    </ul>
+    <p class="en">Installation commands and product availability can change. Re-check the linked official documentation on setup day.</p>
+  </section>
+
+  <footer>LifeUSA PR Outreach Playbook · Internal working document · Version 1.0</footer>
+</main>
+</body>
+</html>
