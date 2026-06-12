@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LifeUSA · Tracking System Optimization Audit / تدقيق وتحسين نظام التتبّع</title>
+<meta name="description" content="Tracking & analytics audit for lifeusa.org: what is happening, what we will do, and what it requires from the current teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:"thmanyah serif text";src:url("fonts/thmanyahseriftext-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+  @font-face{font-family:"thmanyah serif text";src:url("fonts/thmanyahseriftext-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"thmanyah serif text";src:url("fonts/thmanyahseriftext-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"thmanyah serif text";src:url("fonts/thmanyahseriftext-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"thmanyah serif text";src:url("fonts/thmanyahseriftext-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+  :root{
+    --ink:#17231e; --muted:#5d6b62; --paper:#f4f1e9; --card:#fffdf7;
+    --green:#116149; --green-d:#0b4b39; --green2:#dbece5; --gold:#c79236;
+    --red:#a63b32; --red2:#fff0ed; --amber:#fff7e7; --line:#d9ddd6;
+    --code:#14261f; --shadow:0 18px 55px rgba(31,48,40,.10);
+    --serif:"Fraunces",Georgia,serif; --ar:"thmanyah serif text","Noto Naskh Arabic",Georgia,serif;
+    --mono:"JetBrains Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--serif);line-height:1.7}
+  body.ar{font-family:var(--ar);line-height:1.95}
+  body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;
+    background-image:radial-gradient(#b7b0a1 .6px,transparent .6px);background-size:10px 10px;z-index:0}
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:auto;padding:26px 20px 90px}
+
+  /* language visibility */
+  .ar-only{display:none}
+  body.ar .en-only{display:none}
+  body.ar .ar-only{display:block}
+  span.ar-only,em.ar-only{display:none}
+  body.ar span.ar-only{display:inline}
+
+  /* language toggle */
+  .langbar{position:sticky;top:10px;z-index:9;display:flex;justify-content:flex-end;margin-bottom:14px}
+  .langbar button{font:600 .9rem/1 var(--serif);cursor:pointer;border:1px solid var(--line);
+    background:var(--card);color:var(--green);padding:9px 16px;border-radius:99px;box-shadow:var(--shadow)}
+  .langbar button b{color:var(--gold)}
+
+  header{color:#fff;background:linear-gradient(135deg,var(--green-d),#153126);border-radius:26px;
+    padding:48px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  header:after{content:"GA4";position:absolute;inset-inline-start:24px;bottom:-66px;
+    font:900 200px/1 Arial;color:rgba(255,255,255,.05)}
+  .eyebrow{display:inline-block;padding:5px 13px;border:1px solid rgba(255,255,255,.35);
+    border-radius:99px;font-size:.8rem;letter-spacing:.08em}
+  h1{max-width:840px;margin:16px 0 8px;font-size:clamp(2rem,4.6vw,3.9rem);line-height:1.07;letter-spacing:-.03em}
+  body.ar h1{letter-spacing:0}
+  header p{max-width:760px;color:#d9ebe4;font-size:1.1rem}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .meta span{background:rgba(255,255,255,.1);padding:6px 12px;border-radius:8px;font-size:.85rem}
+
+  nav{position:sticky;top:58px;z-index:6;display:flex;gap:6px;overflow:auto;margin:16px 0 26px;
+    padding:8px;background:rgba(255,253,247,.92);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px)}
+  nav a{white-space:nowrap;text-decoration:none;color:var(--green);padding:7px 11px;border-radius:8px;font-weight:600;font-size:.92rem}
+  nav a:hover{background:var(--green2)}
+
+  section{scroll-margin-top:120px;background:var(--card);border:1px solid var(--line);
+    border-radius:20px;padding:32px;margin:18px 0;box-shadow:0 7px 25px rgba(31,48,40,.045)}
+  h2{color:var(--green);margin:0 0 16px;font-size:1.7rem;line-height:1.25}
+  h2 .n{display:inline-grid;place-items:center;width:34px;height:34px;margin-inline-end:10px;
+    border-radius:50%;color:#fff;background:var(--green);font:900 1rem/1 var(--serif);vertical-align:middle}
+  h3{margin:24px 0 6px;font-size:1.15rem;color:var(--ink)}
+  p{margin:7px 0 13px}
+  .lede{font-size:1.12rem;color:var(--muted)}
+  a{color:var(--green)}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}
+  .card h3{margin:0 0 6px;color:var(--green);font-size:1.02rem}
+  .card .big{font:900 2rem/1 var(--serif);color:var(--green)}
+  .card.warn .big{color:var(--red)}
+  .card.good .big{color:var(--green)}
+
+  .callout{border-inline-start:5px solid var(--gold);background:var(--amber);padding:14px 18px;border-radius:12px;margin:16px 0}
+  .callout.danger{border-color:var(--red);background:var(--red2)}
+  .callout.ok{border-color:var(--green);background:#edf7f2}
+  .callout strong{color:var(--green)}
+  .callout.danger strong{color:var(--red)}
+
+  ul,ol{padding-inline-start:24px}
+  li{margin:6px 0}
+
+  table{width:100%;border-collapse:collapse;font-size:.83rem;margin:10px 0;overflow:hidden;border-radius:10px}
+  .scroll{overflow:auto;border:1px solid var(--line);border-radius:10px}
+  th,td{border-bottom:1px solid var(--line);padding:9px 10px;vertical-align:top;text-align:start}
+  th{color:#fff;background:var(--green);position:sticky;top:0;font-weight:600}
+  tr:nth-child(even) td{background:#faf8f2}
+  code{font-family:var(--mono);font-size:.85em;background:#eef3f0;padding:1px 5px;border-radius:5px;direction:ltr;unicode-bidi:embed}
+  .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.74rem;font-weight:700;font-family:var(--serif);white-space:nowrap}
+  .keep{background:#e4f3ea;color:#0b5a3c}
+  .retire{background:#fbe3df;color:#9a342b}
+  .review{background:#fdeccb;color:#8a5d12}
+  .dead{background:#e7e9e6;color:#5d6b62}
+
+  .phase{border-top:4px solid var(--green)}
+  .phase .tag{font:700 .78rem/1 var(--serif);color:var(--gold);letter-spacing:.05em}
+  .why{border-inline-start:4px solid var(--green);background:#f1f8f4;padding:10px 16px;border-radius:0 12px 12px 0;margin:10px 0}
+  body.ar .why{border-radius:12px 0 0 12px}
+  .why b{color:var(--green)}
+
+  footer{text-align:center;color:var(--muted);padding:24px;font-size:.9rem}
+  @media(max-width:760px){header,section{padding:24px}.grid,.grid3{grid-template-columns:1fr}h1{font-size:2.2rem}nav{top:54px}}
+  @media print{.langbar,nav{display:none}body{background:#fff}body:before{display:none}.wrap{max-width:none;padding:0}header,section{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body class="en">
+<main class="wrap">
+
+  <div class="langbar">
+    <button id="langBtn" onclick="toggleLang()"><span class="en-only">العربية <b>AR</b></span><span class="ar-only">English <b>EN</b></span></button>
+  </div>
+
+  <header>
+    <span class="eyebrow en-only">LIFE FOR RELIEF AND DEVELOPMENT · ANALYTICS & TRACKING</span>
+    <span class="eyebrow ar-only">مؤسسة لايف للإغاثة والتنمية · التحليلات ونظام التتبّع</span>
+    <h1 class="en-only">Tracking System Optimization Audit</h1>
+    <h1 class="ar-only">تدقيق وتحسين نظام التتبّع</h1>
+    <p class="en-only">A clear picture of what is currently tracking visitors on lifeusa.org, why the current setup creates risk, what we propose to fix it, and what we will need from the teams who own the existing tags.</p>
+    <p class="ar-only">صورة واضحة لما يتتبّع زوّار موقع lifeusa.org حالياً، ولماذا يشكّل الإعداد الراهن خطراً، وما الذي نقترحه لمعالجته، وما الذي نحتاجه من الفرق التي تملك الوسوم الحالية.</p>
+    <div class="meta">
+      <span class="en-only">Version 1.0</span><span class="ar-only">الإصدار 1.0</span>
+      <span class="en-only">12 June 2026</span><span class="ar-only">12 يونيو 2026</span>
+      <span class="en-only">Prepared by Saiaf Gamal</span><span class="ar-only">إعداد: Saiaf Gamal</span>
+      <span class="en-only">For LifeUSA leadership & marketing teams</span><span class="ar-only">إلى قيادة وفِرَق تسويق LifeUSA</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#summary"><span class="en-only">Summary</span><span class="ar-only">الخلاصة</span></a>
+    <a href="#now"><span class="en-only">What's happening</span><span class="ar-only">الوضع الحالي</span></a>
+    <a href="#why"><span class="en-only">Why it matters</span><span class="ar-only">لماذا يهم</span></a>
+    <a href="#plan"><span class="en-only">What we propose</span><span class="ar-only">خطة العمل</span></a>
+    <a href="#teams"><span class="en-only">What we need from teams</span><span class="ar-only">المطلوب من الفرق</span></a>
+    <a href="#inventory"><span class="en-only">Full tag inventory</span><span class="ar-only">جرد الوسوم</span></a>
+    <a href="#method"><span class="en-only">How we verified</span><span class="ar-only">طريقة التحقق</span></a>
+  </nav>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <h2><span class="n">1</span><span class="en-only">Bottom line</span><span class="ar-only">الخلاصة التنفيذية</span></h2>
+    <p class="lede en-only">Google Analytics and Tag Manager are in place and working. The problem is that the website is carrying <b>more than 30 separate tracking tags</b>, added by many different people over time, with duplicates, dead tags, and overlapping analytics systems. This slows the site, corrupts the data, and creates a privacy exposure. None of it is documented and no single team owns it.</p>
+    <p class="lede ar-only">حساب Google Analytics ونظام Tag Manager قائمان ويعملان. المشكلة أنّ الموقع يحمل <b>أكثر من 30 وسماً للتتبّع</b> أضافها أشخاص مختلفون عبر الوقت، مع تكرارات ووسوم ميتة وأنظمة تحليلات متداخلة. هذا يُبطئ الموقع، ويُفسد البيانات، ويُنشئ خطراً يتعلق بالخصوصية. ولا شيء من ذلك موثّق ولا تملكه جهة واحدة.</p>
+
+    <div class="callout danger">
+      <strong class="en-only">Significant issue: BigGorilla / BGA must be reviewed with the ads team before any change.</strong>
+      <strong class="ar-only">مشكلة مهمة: يجب مراجعة BigGorilla / BGA مع فريق الإعلانات قبل أي تغيير.</strong>
+      <span class="en-only"> Flagged for review with the ads team. A third-party vendor (BigGorilla / "BGA") runs analytics and session recording on the site and currently causes GA4 to count each page view twice. Because it may be tied to ad attribution, nothing about it will be changed until it is reviewed with the ads team.</span>
+      <span class="ar-only"> يُشغّل مزوّد خارجي (BigGorilla / "BGA") تحليلات وتسجيل جلسات على الموقع، ويتسبّب حالياً في احتساب GA4 لكل مشاهدة صفحة مرتين. ولأنّه قد يكون مرتبطاً بإسناد الإعلانات، لن يُغيَّر فيه أي شيء قبل مراجعته مع فريق الإعلانات.</span>
+    </div>
+
+    <div class="grid3">
+      <div class="card good"><h3 class="en-only">Working</h3><h3 class="ar-only">يعمل</h3><div class="big">GA4 ✓</div><p class="en-only">GA4 <code>G-5BSK8SRF9B</code> is the live property we keep and optimize.</p><p class="ar-only">حساب GA4 <code>G-5BSK8SRF9B</code> هو الحساب الحيّ الذي نُبقيه ونُحسّنه.</p></div>
+      <div class="card warn"><h3 class="en-only">Tracking tags found</h3><h3 class="ar-only">وسوم التتبّع</h3><div class="big">30+</div><p class="en-only">Across the Wix native slots and 22 manual code embeds.</p><p class="ar-only">موزّعة بين خانات Wix الأصلية و22 كوداً مُضافاً يدوياً.</p></div>
+      <div class="card warn"><h3 class="en-only">Duplicates &amp; conflicts</h3><h3 class="ar-only">تكرارات وتعارضات</h3><div class="big">High</div><p class="en-only">5 Meta pixels, 3 Google Ads, 2 Matomo, 2 GTM containers.</p><p class="ar-only">5 بكسلات Meta، و3 حسابات Google Ads، ونظامَي Matomo، وحاويتَي GTM.</p></div>
+    </div>
+
+    <div class="callout ok">
+      <strong class="en-only">Our recommendation in one line:</strong>
+      <strong class="ar-only">توصيتنا بسطر واحد:</strong>
+      <span class="en-only"> consolidate everything onto one managed Google Tag Manager container and one GA4 property, then retire the duplicates, but only after each owning team signs off. We will not remove anything blindly.</span>
+      <span class="ar-only"> توحيد كل شيء داخل حاوية Google Tag Manager واحدة مُدارة وحساب GA4 واحد، ثم إيقاف المكرّرات، على ألا يحدث ذلك إلا بعد موافقة كل فريق مالك. لن نحذف أي شيء بشكل أعمى.</span>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S HAPPENING ============ -->
+  <section id="now">
+    <h2><span class="n">2</span><span class="en-only">What's happening on the site right now</span><span class="ar-only">ما الذي يجري على الموقع الآن</span></h2>
+
+    <h3 class="en-only">a. The core we standardize on</h3>
+    <h3 class="ar-only">أ. النواة التي سنعتمدها</h3>
+    <p class="en-only">We standardize on the organization's existing setup: the Google Tag Manager container <code>GTM-TM7G4WZ</code> (installed in the Wix Marketing Integrations slot) serving the GA4 property <code>G-5BSK8SRF9B</code>. This is the single managed stack we keep and improve, and the foundation the rest of the work builds on.</p>
+    <p class="ar-only">نعتمد الإعداد القائم لدى المؤسسة: حاوية Google Tag Manager <code>GTM-TM7G4WZ</code> (المثبّتة في خانة تكاملات التسويق في Wix) وتُشغّل حساب GA4 رقم <code>G-5BSK8SRF9B</code>. هذا هو النظام الموحّد الذي نُبقيه ونُحسّنه، وهو الأساس الذي يُبنى عليه باقي العمل.</p>
+
+    <h3 class="en-only">b. Older and duplicate analytics to clean up</h3>
+    <h3 class="ar-only">ب. تحليلات قديمة ومكرّرة بحاجة إلى تنظيف</h3>
+    <p class="en-only">Around that core sits cruft to remove: a legacy Universal Analytics tag (<code>UA-120530494-1</code>) that stopped collecting when Google shut UA down in July 2023, a second leftover GTM container (<code>GTM-TC6LMKJ</code>), and a standalone copy of the GA4 tag firing outside the container, which double-counts against the managed setup.</p>
+    <p class="ar-only">حول هذه النواة توجد بقايا يجب إزالتها: وسم Universal Analytics قديم (<code>UA-120530494-1</code>) توقّف عن جمع البيانات حين أغلقت Google خدمة UA في يوليو 2023، وحاوية GTM ثانية متبقّية (<code>GTM-TC6LMKJ</code>)، ونسخة مستقلة من وسم GA4 تعمل خارج الحاوية وتُسبّب عدّاً مزدوجاً مقابل النظام الموحّد.</p>
+
+    <h3 class="en-only">c. Two layers: a managed container, and loose pixels pasted on the page</h3>
+    <h3 class="ar-only">ج. طبقتان: حاوية مُدارة، وبكسلات متفرّقة مُلصقة في الصفحة</h3>
+    <p class="en-only">Tracking sits in two layers. <b>Inside the Tag Manager container</b> the setup is reasonably organized: a donation conversion funnel, Google Ads conversions and remarketing with a Conversion Linker, TikTok, Twitter/X, and Microsoft Clarity, most of it managed by a third-party vendor (BigGorilla / "BGA"). <b>The clutter is the other layer</b>, pixels pasted straight into the page outside the container, with embed names that carry people's initials and dates ("Meta Pixel 10/2025", "A Haredy 1/27/26"), a sign of code added by hand with no coordination:</p>
+    <p class="ar-only">ينقسم التتبّع إلى طبقتين. <b>داخل حاوية Tag Manager</b> الإعداد منظّم إلى حدٍّ معقول: مسار تحويل للتبرعات، وتحويلات Google Ads وإعادة استهداف مع Conversion Linker، وTikTok، وTwitter/X، وMicrosoft Clarity، ومعظمها مُدار عبر مزوّد خارجي (BigGorilla / "BGA"). <b>أمّا الفوضى فهي الطبقة الأخرى</b> خارج الحاوية، بأسماء أكواد تحمل أحرف أسماء أشخاص وتواريخ (مثل "Meta Pixel 10/2025" و"A Haredy 1/27/26" و"1/22/26 meta pixel")، ما يدل على أنّ أكواد التتبّع تُلصق مباشرة في الموقع دون أي تنسيق:</p>
+    <ul>
+      <li><span class="en-only"><b>5 different Meta (Facebook) pixels</b>, one duplicated 3 times, another twice.</span><span class="ar-only"><b>5 بكسلات Meta (فيسبوك) مختلفة</b>، أحدها مكرّر 3 مرات وآخر مرتين.</span></li>
+      <li><span class="en-only"><b>3 separate Google Ads accounts</b> + a Floodlight (Campaign Manager) tag.</span><span class="ar-only"><b>3 حسابات Google Ads منفصلة</b> + وسم Floodlight (Campaign Manager).</span></li>
+      <li><span class="en-only"><b>Two separate Matomo analytics systems</b> (one on <code>lifeusa.matomo.cloud</code>, one on <code>analytics.biggorilla.app</code>), a third and fourth way the same traffic is being counted.</span><span class="ar-only"><b>نظاما Matomo منفصلان</b> (واحد على <code>lifeusa.matomo.cloud</code> وآخر على <code>analytics.biggorilla.app</code>)، وهما طريقة ثالثة ورابعة لعدّ الزيارات نفسها.</span></li>
+      <li><span class="en-only">TikTok and <b>two Snapchat</b> pixels, plus a MuslimAdNetwork retargeting pixel.</span><span class="ar-only">بكسل TikTok و<b>بكسلَي Snapchat</b>، إضافة إلى بكسل إعادة استهداف من MuslimAdNetwork.</span></li>
+      <li><span class="en-only">A <b>third-party session-recording tool</b> (<code>session-replays.io</code>) that records visitor sessions.</span><span class="ar-only">أداة <b>تسجيل جلسات</b> من طرف ثالث (<code>session-replays.io</code>) تُسجّل جلسات الزوّار.</span></li>
+    </ul>
+
+    <div class="callout ok">
+      <strong class="en-only">Search Console is verified at the domain level.</strong>
+      <strong class="ar-only">Search Console موثّق على مستوى النطاق.</strong>
+      <span class="en-only"> Google Search Console is verified through domain-level DNS in GoDaddy (set up by Saiaf), the permanent method that covers the whole domain. A leftover <code>google-site-verification</code> meta-tag also sits on a single page; it is redundant and can be safely removed, since the DNS verification does not depend on it.</span>
+      <span class="ar-only"> تم توثيق Google Search Console على مستوى النطاق عبر DNS في GoDaddy (أعدّه Saiaf)، وهي الطريقة الدائمة التي تغطّي النطاق كله. كما يوجد وسم <code>google-site-verification</code> متبقٍّ على صفحة واحدة؛ وهو زائد ويمكن إزالته بأمان لأنّ توثيق DNS لا يعتمد عليه.</span>
+    </div>
+
+    <div class="callout">
+      <strong class="en-only">Flagged for review with the ads team.</strong>
+      <strong class="ar-only">موضوع للمراجعة مع فريق الإعلانات.</strong>
+      <span class="en-only"> A third-party vendor (BigGorilla / "BGA") runs analytics and session recording on the site and currently causes GA4 to count each page view twice. Because it may be tied to ad attribution, nothing about it will be changed until it is reviewed with the ads team.</span>
+      <span class="ar-only"> يُشغّل مزوّد خارجي (BigGorilla / "BGA") تحليلات وتسجيل جلسات على الموقع، ويتسبّب حالياً في احتساب GA4 لكل مشاهدة صفحة مرتين. ولأنّه قد يكون مرتبطاً بإسناد الإعلانات، لن يُغيَّر فيه أي شيء قبل مراجعته مع فريق الإعلانات.</span>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section id="why">
+    <h2><span class="n">3</span><span class="en-only">Why this matters, the four reasons we act</span><span class="ar-only">لماذا يهم هذا، أربعة أسباب للتحرك</span></h2>
+
+    <div class="why"><b class="en-only">1. Site speed &amp; SEO.</b><b class="ar-only">1. سرعة الموقع وتحسين الظهور.</b>
+      <span class="en-only"> Every tag is extra code the browser must download and run. 30+ third-party scripts in the page header measurably slow loading (Core Web Vitals), and Google uses page speed as a ranking and a donation-conversion factor. Fewer, cleaner tags = a faster site that ranks and converts better.</span>
+      <span class="ar-only"> كل وسم هو كود إضافي يجب على المتصفح تنزيله وتشغيله. وجود أكثر من 30 سكربت خارجي في رأس الصفحة يُبطئ التحميل بشكل ملموس (مؤشرات Core Web Vitals)، وGoogle تستخدم سرعة الصفحة عاملاً في الترتيب وفي تحويل التبرعات. وسوم أقل وأنظف = موقع أسرع يحقّق ترتيباً وتحويلاً أفضل.</span></div>
+
+    <div class="why"><b class="en-only">2. Trustworthy data.</b><b class="ar-only">2. بيانات موثوقة.</b>
+      <span class="en-only"> With two Matomo systems and pixels firing the same event up to three times, no number on the site can be trusted today. A duplicated conversion looks like three donations when it was one. We cannot optimize what we cannot measure correctly.</span>
+      <span class="ar-only"> مع وجود نظامَي Matomo وبكسلات تُطلق الحدث نفسه حتى ثلاث مرات، لا يمكن الوثوق بأي رقم على الموقع اليوم. التحويل المكرّر يبدو كثلاث تبرعات وهو في الحقيقة تبرع واحد. لا يمكننا تحسين ما لا نستطيع قياسه بدقة.</span></div>
+
+    <div class="why"><b class="en-only">3. Donor privacy &amp; legal exposure.</b><b class="ar-only">3. خصوصية المتبرعين والمسؤولية القانونية.</b>
+      <span class="en-only"> A humanitarian organization carries a higher duty of care. A long list of advertising pixels plus a session-recording tool, with no clear consent control, exposes donor browsing behavior to many third parties and creates real legal and reputational risk, especially for EU and Arabic-region visitors. This needs a deliberate consent decision, not accidental accumulation.</span>
+      <span class="ar-only"> تتحمّل المؤسسة الإنسانية واجب عناية أعلى. قائمة طويلة من بكسلات الإعلانات إضافة إلى أداة تسجيل جلسات، دون تحكّم واضح بالموافقة، تكشف سلوك تصفّح المتبرعين لأطراف ثالثة كثيرة وتُنشئ خطراً قانونياً وسمعياً حقيقياً، خصوصاً لزوّار الاتحاد الأوروبي والمنطقة العربية. هذا يتطلب قراراً مدروساً بشأن الموافقة، لا تراكماً عرضياً.</span></div>
+
+    <div class="why"><b class="en-only">4. Governance &amp; safety.</b><b class="ar-only">4. الحوكمة والأمان.</b>
+      <span class="en-only"> Because tags were added directly into the site by many hands with no record, some of them are almost certainly tied to live ad campaigns. Removing the wrong one could break a team's live conversion tracking, which is why this audit only documents and recommends rather than changing anything now.</span>
+      <span class="ar-only"> لأنّ الوسوم أُضيفت مباشرة في الموقع بأيدٍ متعددة دون سجل، فبعضها مرتبط على الأرجح بحملات إعلانية نشطة. وحذف الوسم الخطأ قد يكسر تتبّع التحويلات لفريق ما. لهذا السبب بالذات يكتفي هذا التدقيق بالتوثيق والتوصية، دون تغيير أي شيء الآن.</span></div>
+  </section>
+
+  <!-- ============ PLAN ============ -->
+  <section id="plan">
+    <h2><span class="n">4</span><span class="en-only">What we propose, phased plan</span><span class="ar-only">ما الذي نقترحه، خطة مرحلية</span></h2>
+    <p class="en-only">Each phase ends with something verifiable, and nothing is deleted before the sign-off gate in Phase 3.</p>
+    <p class="ar-only">تنتهي كل مرحلة بنتيجة قابلة للتحقق، ولا يُحذف أي شيء قبل بوابة الموافقة في المرحلة الثالثة.</p>
+
+    <div class="grid">
+      <div class="card phase"><span class="tag">PHASE 0</span>
+        <h3 class="en-only">Establish the source of truth</h3><h3 class="ar-only">تثبيت المصدر الموثوق</h3>
+        <p class="en-only">Standardize on the existing <code>GTM-TM7G4WZ</code> + GA4 <code>G-5BSK8SRF9B</code> as the single managed stack and document it. <em>(In progress.)</em></p>
+        <p class="ar-only">اعتماد الإعداد القائم <code>GTM-TM7G4WZ</code> + حساب GA4 <code>G-5BSK8SRF9B</code> كنظام واحد مُدار وتوثيقه. <em>(قيد التنفيذ.)</em></p>
+      </div>
+      <div class="card phase"><span class="tag">PHASE 1</span>
+        <h3 class="en-only">Measurement plan &amp; Search Console</h3><h3 class="ar-only">خطة القياس وSearch Console</h3>
+        <p class="en-only">Define the events that matter (donations via Givecloud, form leads, key pages) and mark them as Key Events in GA4. Search Console is already verified via GoDaddy DNS, so link it to GA4 and submit the sitemap.</p>
+        <p class="ar-only">تحديد الأحداث المهمة (التبرعات عبر Givecloud، نماذج العملاء المحتملين، الصفحات الرئيسية) ووسمها كأحداث رئيسية في GA4. وSearch Console موثّق بالفعل عبر DNS في GoDaddy، لذا نربطه بـ GA4 ونرسل خريطة الموقع.</p>
+      </div>
+      <div class="card phase"><span class="tag">PHASE 2</span>
+        <h3 class="en-only">Owner map &amp; consolidation design</h3><h3 class="ar-only">خريطة الملكية وتصميم التوحيد</h3>
+        <p class="en-only">Identify who owns every ad account and pixel, then design which tags migrate <em>into</em> GTM and which are retired. Output: a keep / retire / review list per tag.</p>
+        <p class="ar-only">تحديد مالك كل حساب إعلاني وبكسل، ثم تصميم أي الوسوم تُنقل <em>إلى داخل</em> GTM وأيّها يُوقف. المخرَج: قائمة إبقاء/إيقاف/مراجعة لكل وسم.</p>
+      </div>
+      <div class="card phase"><span class="tag">PHASE 3</span>
+        <h3 class="en-only">Controlled cleanup (after sign-off)</h3><h3 class="ar-only">تنظيف مُحكم (بعد الموافقة)</h3>
+        <p class="en-only">Only after written approval: remove duplicates and dead tags, migrate the keepers into the managed GTM, and implement a proper consent banner (Consent Mode v2).</p>
+        <p class="ar-only">فقط بعد موافقة مكتوبة: إزالة المكرّرات والوسوم الميتة، ونقل الوسوم المُبقاة إلى GTM المُدار، وتطبيق لافتة موافقة سليمة (Consent Mode v2).</p>
+      </div>
+      <div class="card phase"><span class="tag">PHASE 4</span>
+        <h3 class="en-only">Verify &amp; govern</h3><h3 class="ar-only">التحقق والحوكمة</h3>
+        <p class="en-only">Re-test the live site (DevTools + Tag Assistant), confirm clean firing, and set one rule: no future tag goes directly into the site, everything through the managed GTM.</p>
+        <p class="ar-only">إعادة اختبار الموقع المباشر (DevTools + Tag Assistant)، وتأكيد الإطلاق النظيف، ووضع قاعدة واحدة: لا يُضاف أي وسم مستقبلاً مباشرة في الموقع، كل شيء عبر GTM المُدار.</p>
+      </div>
+      <div class="card phase"><span class="tag">OUTCOME</span>
+        <h3 class="en-only">The end state</h3><h3 class="ar-only">الحالة النهائية</h3>
+        <p class="en-only">One container, one GA4, trustworthy donation &amp; lead data, a faster site, a documented consent posture, and a governance rule that keeps it clean.</p>
+        <p class="ar-only">حاوية واحدة، وحساب GA4 واحد، وبيانات تبرعات وعملاء موثوقة، وموقع أسرع، وموقف موثّق تجاه الموافقة، وقاعدة حوكمة تحافظ على نظافته.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAMS ============ -->
+  <section id="teams">
+    <h2><span class="n">5</span><span class="en-only">What this requires from the current teams</span><span class="ar-only">ما يتطلبه هذا من الفرق الحالية</span></h2>
+    <p class="en-only">This is the part we cannot do alone. Several of these tags are likely tied to live campaigns owned by other teams or partners. We need the following from LifeUSA:</p>
+    <p class="ar-only">هذا هو الجزء الذي لا يمكننا إنجازه وحدنا. فبعض هذه الوسوم مرتبط على الأرجح بحملات نشطة تملكها فرق أو شركاء آخرون. نحتاج من LifeUSA ما يلي:</p>
+
+    <h3 class="en-only">a. A single point of contact per channel</h3>
+    <h3 class="ar-only">أ. نقطة تواصل واحدة لكل قناة</h3>
+    <p class="en-only">One named person (internal or agency) responsible for: Google Ads, Meta/Facebook, Snapchat, TikTok, and the Matomo / session-recording tools. We will coordinate every change through them.</p>
+    <p class="ar-only">شخص واحد محدّد (داخلي أو من وكالة) مسؤول عن: Google Ads، وMeta/فيسبوك، وSnapchat، وTikTok، وأدوات Matomo / تسجيل الجلسات. سننسّق كل تغيير عبره.</p>
+
+    <h3 class="en-only">b. Ownership confirmation for each account</h3>
+    <h3 class="ar-only">ب. تأكيد ملكية كل حساب</h3>
+    <p class="en-only">For each ID in the inventory below, we need to know: who owns it, is it still in active use, and can we have read access. Anything nobody recognizes is a strong candidate for safe removal.</p>
+    <p class="ar-only">لكل معرّف في الجرد أدناه نحتاج معرفة: من يملكه، وهل لا يزال مستخدَماً فعلياً، وهل يمكننا الحصول على صلاحية اطّلاع. وأي وسم لا يعرفه أحد يُعدّ مرشحاً قوياً للإزالة الآمنة.</p>
+
+    <h3 class="en-only">c. A privacy / consent decision-maker</h3>
+    <h3 class="ar-only">ج. صاحب قرار للخصوصية والموافقة</h3>
+    <p class="en-only">Someone authorized to approve how the site asks visitors for tracking consent, and to confirm the session-recording tool is acceptable for a donor-facing site.</p>
+    <p class="ar-only">شخص مخوّل بالموافقة على طريقة طلب الموقع موافقةَ الزوّار على التتبّع، وبتأكيد أنّ أداة تسجيل الجلسات مقبولة لموقع يتعامل مع المتبرعين.</p>
+
+    <h3 class="en-only">d. One agreement that keeps it clean</h3>
+    <h3 class="ar-only">د. اتفاق واحد يحافظ على النظافة</h3>
+    <div class="callout">
+      <span class="en-only">Going forward, <strong>no tracking code is pasted directly into the website.</strong> Every new pixel or tag is added through the managed Google Tag Manager container, by one accountable person. This single rule is what prevents the mess from returning.</span>
+      <span class="ar-only">من الآن فصاعداً، <strong>لا يُلصق أي كود تتبّع مباشرة في الموقع.</strong> كل بكسل أو وسم جديد يُضاف عبر حاوية Google Tag Manager المُدارة، وبواسطة شخص واحد مسؤول. هذه القاعدة وحدها هي ما يمنع عودة الفوضى.</span>
+    </div>
+  </section>
+
+  <!-- ============ INVENTORY ============ -->
+  <section id="inventory">
+    <h2><span class="n">6</span><span class="en-only">Full tag inventory (verified)</span><span class="ar-only">جرد الوسوم الكامل (مُتحقَّق منه)</span></h2>
+    <p class="en-only">Every tracking tag found on the live site, with our recommendation. <span class="pill keep">KEEP</span> = our managed stack · <span class="pill review">REVIEW</span> = confirm owner &amp; need · <span class="pill retire">RETIRE</span> = duplicate/obsolete · <span class="pill dead">DEAD</span> = already inactive.</p>
+    <p class="ar-only">كل وسم تتبّع وُجد على الموقع المباشر مع توصيتنا. <span class="pill keep">إبقاء</span> = نظامنا المُدار · <span class="pill review">مراجعة</span> = تأكيد المالك والحاجة · <span class="pill retire">إيقاف</span> = مكرّر/متقادم · <span class="pill dead">ميت</span> = غير نشط أصلاً.</p>
+    <div class="scroll">
+    <table>
+      <thead><tr>
+        <th><span class="en-only">Platform</span><span class="ar-only">المنصة</span></th>
+        <th>ID</th>
+        <th><span class="en-only">Source</span><span class="ar-only">المصدر</span></th>
+        <th><span class="en-only">Rec.</span><span class="ar-only">التوصية</span></th>
+        <th><span class="en-only">Note</span><span class="ar-only">ملاحظة</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>GTM</td><td><code>GTM-TM7G4WZ</code></td><td>Wix native slot</td><td><span class="pill keep">KEEP</span></td><td><span class="en-only">Existing container; the standard we build on.</span><span class="ar-only">الحاوية القائمة؛ المعيار الذي نبني عليه.</span></td></tr>
+        <tr><td>GA4</td><td><code>G-5BSK8SRF9B</code></td><td>Existing GTM + native slot</td><td><span class="pill keep">KEEP</span></td><td><span class="en-only">The GA4 we keep and optimize; remove the standalone duplicate embed.</span><span class="ar-only">حساب GA4 الذي نُبقيه ونُحسّنه؛ وتُزال النسخة المكرّرة المستقلة.</span></td></tr>
+        <tr><td>GTM</td><td><code>GTM-TC6LMKJ</code></td><td>Embed "GTM_lifeusa_main"</td><td><span class="pill retire">RETIRE</span></td><td><span class="en-only">Leftover container; standardize on TM7G4WZ.</span><span class="ar-only">حاوية متبقّية؛ نوحّد على TM7G4WZ.</span></td></tr>
+        <tr><td>Google Ads</td><td><code>AW-996417341</code></td><td>Wix slot + conversion embed</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Fires twice; confirm owner.</span><span class="ar-only">يُطلق مرتين؛ تأكيد المالك.</span></td></tr>
+        <tr><td>Google Ads</td><td><code>AW-11106808217</code></td><td>Embed (2/2026)</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm campaign owner.</span><span class="ar-only">تأكيد مالك الحملة.</span></td></tr>
+        <tr><td>Google Ads</td><td><code>AW-11370374518</code></td><td>Embed "Middle east GA"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm campaign owner.</span><span class="ar-only">تأكيد مالك الحملة.</span></td></tr>
+        <tr><td>Floodlight (CM360)</td><td><code>DC-13776505</code></td><td>Embed "M Ad Network"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Display/remarketing.</span><span class="ar-only">عرض/إعادة استهداف.</span></td></tr>
+        <tr><td>Meta Pixel</td><td><code>391693678914239</code></td><td>Wix native slot</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Pick ONE pixel to keep.</span><span class="ar-only">اختيار بكسل واحد للإبقاء.</span></td></tr>
+        <tr><td>Meta Pixel</td><td><code>299097059582016</code></td><td>Embed "Middle East fb Pixel"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm owner.</span><span class="ar-only">تأكيد المالك.</span></td></tr>
+        <tr><td>Meta Pixel</td><td><code>2060455934750171</code></td><td>2 embeds (10/2025, 1/2026)</td><td><span class="pill retire">RETIRE</span></td><td><span class="en-only">Duplicated x2.</span><span class="ar-only">مكرّر مرتين.</span></td></tr>
+        <tr><td>Meta Pixel</td><td><code>1948274442423429</code></td><td>3 embeds</td><td><span class="pill retire">RETIRE</span></td><td><span class="en-only">Duplicated x3.</span><span class="ar-only">مكرّر 3 مرات.</span></td></tr>
+        <tr><td>TikTok</td><td><code>CI9D58BC77U8RIVTM31G</code></td><td>Embed "Tiktok Analytics" + GTM</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">In both GTM and on-page; de-duplicate.</span><span class="ar-only">موجود في GTM وفي الصفحة؛ إزالة التكرار.</span></td></tr>
+        <tr><td>Twitter / X</td><td><code>BGA Twitter Base</code></td><td>GTM tag (All Pages)</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm active campaign.</span><span class="ar-only">تأكيد حملة نشطة.</span></td></tr>
+        <tr><td>Microsoft Clarity</td><td><code>Clarity (Official)</code></td><td>GTM tag (All Pages)</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Session analytics; confirm need.</span><span class="ar-only">تحليلات جلسات؛ تأكيد الحاجة.</span></td></tr>
+        <tr><td>Snapchat</td><td><code>77d35788-…-a3d2ab701264</code></td><td>Embed "Snapchat"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Two Snap orgs present.</span><span class="ar-only">جهتا Snap موجودتان.</span></td></tr>
+        <tr><td>Snapchat</td><td><code>b3cbe29b-…-fc1a0289e775</code></td><td>Embed "Snap Pixel 1/2026"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm which is live.</span><span class="ar-only">تأكيد الجهة النشطة.</span></td></tr>
+        <tr><td>Matomo</td><td><code>lifeusa.matomo.cloud · site 1</code></td><td>Embed "Motomo"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Parallel analytics.</span><span class="ar-only">تحليلات موازية.</span></td></tr>
+        <tr><td>Matomo</td><td><code>analytics.biggorilla.app · site 5</code></td><td>Embed "Matomo Analytics"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Actively sending; whose?</span><span class="ar-only">يرسل فعلياً؛ لمن؟</span></td></tr>
+        <tr><td><span class="en-only">Session recording</span><span class="ar-only">تسجيل جلسات</span></td><td><code>session-replays.io</code></td><td>Embed "Video Recording"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Privacy decision needed.</span><span class="ar-only">يحتاج قرار خصوصية.</span></td></tr>
+        <tr><td>MuslimAdNetwork</td><td><code>key suqzxrj</code></td><td>Embed "MAN retargeting"</td><td><span class="pill review">REVIEW</span></td><td><span class="en-only">Confirm active campaign.</span><span class="ar-only">تأكيد حملة نشطة.</span></td></tr>
+        <tr><td><span class="en-only">Donation funnel + Ads conversions</span><span class="ar-only">مسار التبرعات + تحويلات الإعلانات</span></td><td><code>GM / BGA / Conversion Linker</code></td><td>GTM tags</td><td><span class="pill keep">KEEP</span></td><td><span class="en-only">Functional conversion tracking; do not break.</span><span class="ar-only">تتبّع تحويلات وظيفي؛ يُحافظ عليه.</span></td></tr>
+        <tr><td>Givecloud</td><td><code>life.givecloud.co</code></td><td>Embed "Givecloud"</td><td><span class="pill keep">KEEP</span></td><td><span class="en-only">Donation widget, functional.</span><span class="ar-only">أداة التبرع، وظيفية.</span></td></tr>
+        <tr><td>Search Console</td><td><code>verification meta</code></td><td>Embed (single page only)</td><td><span class="pill retire">RETIRE</span></td><td><span class="en-only">Redundant; domain already verified via DNS.</span><span class="ar-only">زائد؛ النطاق موثّق بالفعل عبر DNS.</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="en-only" style="font-size:.82rem;color:var(--muted)">Snapchat/Matomo IDs shortened for readability; full values held in our working record.</p>
+    <p class="ar-only" style="font-size:.82rem;color:var(--muted)">اختُصرت معرّفات Snapchat/Matomo لسهولة القراءة؛ والقيم الكاملة محفوظة في سجلّنا.</p>
+  </section>
+
+  <!-- ============ METHOD ============ -->
+  <section id="method">
+    <h2><span class="n">7</span><span class="en-only">How we verified this</span><span class="ar-only">كيف تحقّقنا من ذلك</span></h2>
+    <p class="en-only">Every tag was confirmed through five independent sources, because no single tool sees everything:</p>
+    <p class="ar-only">تم تأكيد كل وسم عبر خمسة مصادر مستقلة، لأنّ أي أداة واحدة لا ترى كل شيء:</p>
+    <ol>
+      <li><span class="en-only"><b>Wix Marketing Tags API</b>, the native integration slots (GA, Ads, Pixel, GTM).</span><span class="ar-only"><b>واجهة Wix Marketing Tags</b>، خانات التكامل الأصلية (GA، Ads، Pixel، GTM).</span></li>
+      <li><span class="en-only"><b>Wix Custom Embeds API</b>, the 22 manual code snippets, the real source of the clutter.</span><span class="ar-only"><b>واجهة Wix Custom Embeds</b>، الأكواد الـ22 المُضافة يدوياً، وهي المصدر الحقيقي للفوضى.</span></li>
+      <li><span class="en-only"><b>Chrome DevTools live capture</b>, what actually fires on a real page load.</span><span class="ar-only"><b>التقاط مباشر عبر Chrome DevTools</b>، ما يُطلَق فعلياً عند تحميل صفحة حقيقية.</span></li>
+      <li><span class="en-only"><b>GA4 Realtime report</b>, to confirm GA4 is actively collecting standard events (page_view, session_start, scroll, user_engagement).</span><span class="ar-only"><b>تقرير GA4 اللحظي</b>، للتأكد من أنّ GA4 يجمع الأحداث القياسية فعلياً (page_view، session_start، scroll، user_engagement).</span></li>
+      <li><span class="en-only"><b>GTM container export</b>, the full list of tags managed inside the container (GTM-TM7G4WZ): the donation funnel, ads conversions, and the BigGorilla / Clarity / TikTok / Twitter tags.</span><span class="ar-only"><b>تصدير حاوية GTM</b>، القائمة الكاملة للوسوم المُدارة داخل الحاوية (GTM-TM7G4WZ): مسار التبرعات، وتحويلات الإعلانات، ووسوم BigGorilla / Clarity / TikTok / Twitter.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <p class="en-only">LifeUSA · Tracking System Optimization Audit · v1.0 · Prepared by Saiaf Gamal · 12 June 2026</p>
+    <p class="ar-only">LifeUSA · تدقيق وتحسين نظام التتبّع · الإصدار 1.0 · إعداد Saiaf Gamal · 12 يونيو 2026</p>
+  </footer>
+</main>
+
+<script>
+  function toggleLang(){
+    var b=document.body, ar=b.classList.toggle('ar');
+    document.documentElement.lang = ar ? 'ar' : 'en';
+    document.documentElement.dir  = ar ? 'rtl' : 'ltr';
+    try{localStorage.setItem('lifeusa_lang', ar?'ar':'en');}catch(e){}
+  }
+  (function(){
+    try{ if(localStorage.getItem('lifeusa_lang')==='ar'){ toggleLang(); } }catch(e){}
+  })();
+</script>
+</body>
+</html>
