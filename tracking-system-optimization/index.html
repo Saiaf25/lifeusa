@@ -38,7 +38,7 @@
   body.ar span.ar-only{display:inline}
 
   /* language toggle */
-  .langbar{position:sticky;top:10px;z-index:9;display:flex;justify-content:flex-end;margin-bottom:14px}
+  .langbar{position:relative;z-index:9;display:flex;justify-content:flex-end;margin-bottom:14px}
   .langbar button{font:600 .9rem/1 var(--serif);cursor:pointer;border:1px solid var(--line);
     background:var(--card);color:var(--green);padding:9px 16px;border-radius:99px;box-shadow:var(--shadow)}
   .langbar button b{color:var(--gold)}
@@ -55,9 +55,11 @@
   .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
   .meta span{background:rgba(255,255,255,.1);padding:6px 12px;border-radius:8px;font-size:.85rem}
 
-  nav{position:sticky;top:58px;z-index:6;display:flex;gap:6px;overflow:auto;margin:16px 0 26px;
-    padding:8px;background:rgba(255,253,247,.92);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(12px)}
-  nav a{white-space:nowrap;text-decoration:none;color:var(--green);padding:7px 11px;border-radius:8px;font-weight:600;font-size:.92rem}
+  nav{position:sticky;top:0;z-index:6;display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;
+    max-width:calc(100vw - 40px);margin:18px auto 28px;padding:10px 14px;
+    background:rgba(255,253,247,.95);border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 8px 24px rgba(31,48,40,.08);backdrop-filter:blur(12px);scrollbar-width:thin}
+  nav a{flex:0 0 auto;white-space:nowrap;text-decoration:none;color:var(--green);padding:8px 12px;border-radius:8px;font-weight:600;font-size:.92rem}
   nav a:hover{background:var(--green2)}
 
   section{scroll-margin-top:120px;background:var(--card);border:1px solid var(--line);
@@ -105,7 +107,7 @@
   .why b{color:var(--green)}
 
   footer{text-align:center;color:var(--muted);padding:24px;font-size:.9rem}
-  @media(max-width:760px){header,section{padding:24px}.grid,.grid3{grid-template-columns:1fr}h1{font-size:2.2rem}nav{top:54px}}
+  @media(max-width:760px){header,section{padding:24px}.grid,.grid3{grid-template-columns:1fr}h1{font-size:2.2rem}nav{max-width:calc(100vw - 28px);padding:9px 12px}}
   @media print{.langbar,nav{display:none}body{background:#fff}body:before{display:none}.wrap{max-width:none;padding:0}header,section{box-shadow:none;break-inside:avoid}}
 </style>
 </head>
