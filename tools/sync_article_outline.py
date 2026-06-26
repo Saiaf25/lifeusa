@@ -45,12 +45,17 @@ PAGES = (
 
 FORBIDDEN_CLIENT_TEXT = (
     "Adversarial Review",
+    "Technical Appendix",
+    "Ahrefs returned no populated SERP rows",
+    "<strong>Do not use:</strong>",
     'id="adversarial-review"',
     'href="#adversarial-review"',
+    'href="#appendix"',
 )
 
 INTERNAL_SECTION_IDS = (
     "adversarial-review",
+    "appendix",
 )
 
 

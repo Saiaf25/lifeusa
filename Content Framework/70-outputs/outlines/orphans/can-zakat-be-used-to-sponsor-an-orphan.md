@@ -194,7 +194,7 @@ Avoid repeating:
 
 Do not make sadaqah sound less valuable. This is not a hierarchy; it is a compliance distinction.
 
-## Section 6: How LifeUSA Should Frame Orphan Support and Zakat
+## Section 6: How To Support Orphans Through LifeUSA
 
 Why this section is here:
 
@@ -272,4 +272,3 @@ CTA wording:
 ## Final Writer Guardrail
 
 This article can be drafted now, but final publication needs LifeUSA confirmation before making any direct claim that the orphan donation designation is zakat-eligible.
-
