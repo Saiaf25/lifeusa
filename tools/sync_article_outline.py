@@ -35,6 +35,12 @@ PAGES = (
         live=Path("article-plans-and-outlines/how-to-help-orphans/index.html"),
         required_text=("Why Do Orphans Need Help?",),
     ),
+    OutlinePage(
+        name="can-zakat-be-used-to-sponsor-an-orphan",
+        source=Path("Content Framework/70-outputs/handoff/orphans/can-zakat-be-used-to-sponsor-an-orphan.html"),
+        live=Path("article-plans-and-outlines/can-zakat-be-used-to-sponsor-an-orphan/index.html"),
+        required_text=("Can Zakat Be Used To Sponsor an Orphan?", "Policy caution"),
+    ),
 )
 
 FORBIDDEN_CLIENT_TEXT = (
