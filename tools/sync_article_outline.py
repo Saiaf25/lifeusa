@@ -45,7 +45,7 @@ PAGES = (
         name="article-outline-template",
         source=Path("Content Framework/70-outputs/handoff/article-outline-template.html"),
         live=Path("article-plans-and-outlines/article-outline-template/index.html"),
-        required_text=("LifeUSA Article Outline Template", "Choose the Format That Fits the Topic"),
+        required_text=("LifeUSA Article Outline Template", "SERP And Competition", "Information Gain"),
     ),
 )
 
