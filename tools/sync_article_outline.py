@@ -41,6 +41,12 @@ PAGES = (
         live=Path("article-plans-and-outlines/can-zakat-be-used-to-sponsor-an-orphan/index.html"),
         required_text=("Can Zakat Be Used To Sponsor an Orphan?", "Policy caution"),
     ),
+    OutlinePage(
+        name="article-outline-template",
+        source=Path("Content Framework/70-outputs/handoff/article-outline-template.html"),
+        live=Path("article-plans-and-outlines/article-outline-template/index.html"),
+        required_text=("LifeUSA Article Outline Template", "Choose the Format That Fits the Topic"),
+    ),
 )
 
 FORBIDDEN_CLIENT_TEXT = (

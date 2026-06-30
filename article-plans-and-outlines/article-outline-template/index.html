@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>LifeUSA Article Outline Template</title>
+  <style>
+    :root {
+      --ink: #17231e; --muted: #617067; --paper: #f4f1e9; --card: #fffdf7;
+      --green: #116149; --green2: #dbece5; --gold: #c79236; --red: #a63b32;
+      --line: #d9ddd6; --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: "Thmanyah Serif Text", "Noto Naskh Arabic", Georgia, serif;
+      line-height: 1.75;
+    }
+    body:before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    .wrap { position: relative; max-width: 1160px; margin: auto; padding: 32px 22px 80px; }
+    header {
+      color: white; background: linear-gradient(135deg,#0b4b39,#153126);
+      border-radius: 28px; padding: 52px; box-shadow: var(--shadow);
+      overflow: hidden; position: relative;
+    }
+    header:after {
+      content: "T"; position: absolute; right: 28px; bottom: -62px;
+      font: 900 210px/1 Arial; color: rgba(255,255,255,.055);
+    }
+    .eyebrow {
+      display: inline-block; padding: 5px 13px;
+      border: 1px solid rgba(255,255,255,.35); border-radius: 99px;
+      font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
+    }
+    h1 {
+      max-width: 900px; margin: 18px 0 8px;
+      font-size: clamp(2.15rem,5vw,4.45rem); line-height: 1.08;
+    }
+    header p { max-width: 820px; color: #d9ebe4; font-size: 1.12rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .meta span { background: rgba(255,255,255,.1); padding: 7px 12px; border-radius: 8px; }
+    nav {
+      position: sticky; top: 10px; z-index: 4; display: flex; gap: 8px;
+      overflow: auto; margin: 18px 0 28px; padding: 9px;
+      background: rgba(255,253,247,.92); border: 1px solid var(--line);
+      border-radius: 15px; backdrop-filter: blur(12px);
+    }
+    nav a {
+      white-space: nowrap; text-decoration: none; color: var(--green);
+      padding: 7px 12px; border-radius: 8px; font-weight: 700;
+    }
+    nav a:hover { background: var(--green2); }
+    section {
+      scroll-margin-top: 90px; background: var(--card); border: 1px solid var(--line);
+      border-radius: 22px; padding: 34px; margin: 20px 0;
+      box-shadow: 0 7px 25px rgba(31,48,40,.045);
+    }
+    h2 { color: var(--green); margin: 0 0 18px; font-size: 1.8rem; line-height: 1.25; }
+    h3 { margin: 28px 0 8px; font-size: 1.18rem; color: #214336; }
+    p { margin: 7px 0 14px; }
+    a { color: var(--green); overflow-wrap: anywhere; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+    code { direction: ltr; unicode-bidi: embed; font-family: "SFMono-Regular", Consolas, monospace; font-size: .88em; }
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: .93rem; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px 8px; vertical-align: top; }
+    th { color: var(--green); background: #edf4f0; }
+    .lede { font-size: 1.13rem; }
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; }
+    .card { border: 1px solid var(--line); border-radius: 15px; padding: 18px; background: #fff; }
+    .card h3 { margin: 0 0 6px; color: var(--green); }
+    .callout { border-left: 5px solid var(--gold); background: #fff7e7; padding: 15px 18px; border-radius: 12px; margin: 16px 0; }
+    .ok { border-color: var(--green); background: #edf7f2; }
+    .danger { border-color: var(--red); background: #fff0ed; }
+    .template-block { border-top: 4px solid var(--green); }
+    .small { color: var(--muted); font-size: .95rem; }
+    footer { text-align: center; color: var(--muted); padding: 22px; }
+    @media(max-width:760px){ header,section{padding:25px}.grid{grid-template-columns:1fr}h1{font-size:2.35rem} }
+    @media print {
+      nav{display:none} body{background:white} body:before{display:none}
+      .wrap{max-width:none;padding:0} header,section{box-shadow:none;break-inside:avoid}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow">Life for Relief and Development · Article Planning</span>
+    <h1>LifeUSA Article Outline Template</h1>
+    <p>A simple guide for planning LifeUSA articles: why the outline is structured this way, how we choose the format, how we use research, and which tools help us get there.</p>
+    <div class="meta">
+      <span>Version 1.0</span>
+      <span>June 30, 2026</span>
+      <span>Prepared by Saiaf Gamal</span>
+      <span>For Angela Joyce and the LifeUSA content team</span>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#purpose">Purpose</a>
+    <a href="#flexibility">Flexibility</a>
+    <a href="#process">Process</a>
+    <a href="#tools">Tools</a>
+    <a href="#template">Template</a>
+    <a href="#review">Review</a>
+  </nav>
+
+  <section id="purpose">
+    <h2>Why We Use Article Outlines</h2>
+    <p class="lede">The outline is not meant to make every article sound the same. It is meant to make sure every article has a clear purpose before writing begins.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>It protects the reader</h3>
+        <p>The reader should quickly understand what question the article answers, what action they can take, and why LifeUSA is a relevant source.</p>
+      </div>
+      <div class="card">
+        <h3>It protects the writer</h3>
+        <p>The writer should not have to guess the keyword, the audience, the angle, the links, or the limits of what can be claimed.</p>
+      </div>
+      <div class="card">
+        <h3>It protects LifeUSA</h3>
+        <p>The outline catches sensitive claims early, especially around children, medical care, crisis facts, sponsorship, zakat, sadaqah, and program eligibility.</p>
+      </div>
+      <div class="card">
+        <h3>It protects the cluster</h3>
+        <p>Each article should have a job. Some pages answer broad questions. Others answer smaller supporting questions. Together, they help readers and search engines understand LifeUSA's work.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="flexibility">
+    <h2>Choose the Format That Fits the Topic</h2>
+    <p>Search research helps us understand what people want, but it should not flatten LifeUSA's voice. A list-style article is useful when the reader wants practical options. A story or feature article is useful when the reader needs to feel the human reality behind a program. Both can belong in the same content cluster.</p>
+    <table>
+      <thead>
+        <tr><th>Format</th><th>Best when</th><th>Example use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Practical guide</td><td>The reader is asking "how do I do this?"</td><td>How To Help Orphans</td></tr>
+        <tr><td>Question answer article</td><td>The reader has one clear concern before giving or acting.</td><td>Can Zakat Be Used To Sponsor an Orphan?</td></tr>
+        <tr><td>Story or feature blog</td><td>The topic needs a human example, field context, or program narrative.</td><td>A child, family, country, or campaign story tied to a verified LifeUSA program.</td></tr>
+        <tr><td>Historical or educational article</td><td>The topic explains background, history, or a donor concept.</td><td>When Zakat (Islamic Charity) Almost Eradicated Poverty</td></tr>
+        <tr><td>Report-to-blog article</td><td>A report, gallery, or field update can be turned into a clearer public article.</td><td>Program updates, photo stories, annual reports, and campaign recaps.</td></tr>
+      </tbody>
+    </table>
+    <div class="callout ok">
+      <strong>Important:</strong>
+      The structure changes by article type. The principles stay the same: clear reader need, verified facts, useful headings, internal links, and a natural next step.
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How We Get From Topic To Outline</h2>
+    <ol>
+      <li><strong>Start with a real topic.</strong> We begin with a LifeUSA program, campaign, existing article, donor question, meeting note, or keyword opportunity.</li>
+      <li><strong>Check whether the topic deserves a page.</strong> We ask whether people search for it, whether LifeUSA has something real to offer, and whether an existing page already covers it.</li>
+      <li><strong>Choose the article's job.</strong> The page may be a pillar, a supporting article, a story, a feature blog, a campaign update, or an existing article refresh.</li>
+      <li><strong>Map the reader journey.</strong> We write the reader's path before the outline: what they know, what they need next, what might block trust, and what action fits.</li>
+      <li><strong>Build the section order.</strong> Each section should move the reader forward. If two sections do the same job, one should be removed or changed.</li>
+      <li><strong>Add LifeUSA examples carefully.</strong> We connect the topic to real programs, source pages, donation options, reports, or stories without overclaiming.</li>
+      <li><strong>Separate writing notes from technical notes.</strong> Angela should see what helps her write. Technical notes, dead links, and tool details should stay in an appendix or internal note unless they affect the draft.</li>
+      <li><strong>Review before writing.</strong> We check for repeated donation language, unsupported claims, weak transitions, missing links, and sensitive wording.</li>
+    </ol>
+  </section>
+
+  <section id="tools">
+    <h2>Tools And Sources We Use</h2>
+    <p>Tools help us make better decisions, but they do not write the article for us. The final outline still needs editorial judgment.</p>
+    <table>
+      <thead>
+        <tr><th>Tool or source</th><th>What it helps with</th><th>How we use it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>LifeUSA website and sitemap</td><td>Existing pages, live URLs, article examples, and internal links.</td><td>We check what already exists before proposing a new article.</td></tr>
+        <tr><td>LifeUSA program pages and donation pages</td><td>Program facts and safe calls to action.</td><td>We link only where the page is relevant and live.</td></tr>
+        <tr><td>Existing LifeUSA articles</td><td>Editorial examples and cluster reuse.</td><td>We decide whether to refresh, link, or build a supporting article around them.</td></tr>
+        <tr><td>Keyword sheet or Google Keyword Planner export</td><td>Search volume and keyword demand.</td><td>We use this to see whether people are actually searching for a topic.</td></tr>
+        <tr><td>Ahrefs</td><td>Search result shape, competing pages, People Also Ask, snippets, ads, and ranking URLs.</td><td>We use it to understand what kind of article Google is rewarding.</td></tr>
+        <tr><td>Google Search Console</td><td>Existing LifeUSA impressions, clicks, pages, and queries.</td><td>We use it to find pages that can be improved or expanded.</td></tr>
+        <tr><td>Zoho Mail and meeting notes</td><td>Team decisions, client concerns, and live feedback.</td><td>We use them to make sure the outline reflects current direction.</td></tr>
+        <tr><td>Live URL checks</td><td>Redirects, broken links, noindex pages, and correct URL patterns.</td><td>We avoid sending writers toward dead or unsafe links.</td></tr>
+        <tr><td>Content Framework</td><td>Strategy, clusters, briefs, outlines, handoff pages, and review rules.</td><td>We keep the planning system consistent across articles.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="template">
+    <h2>The Outline Template</h2>
+    <p>Use this structure as a starting point. It can be shortened for simple articles or expanded for major pillar pages.</p>
+
+    <section class="template-block">
+      <h3>1. Article Setup</h3>
+      <ul>
+        <li><strong>Working title:</strong> The plain-language article title.</li>
+        <li><strong>Proposed URL:</strong> The likely Wix post URL or existing URL to update.</li>
+        <li><strong>Article type:</strong> New post, article refresh, pillar, supporting article, story, feature, report-to-blog, or FAQ.</li>
+        <li><strong>Writer:</strong> Who writes the draft.</li>
+        <li><strong>Review owner:</strong> Who checks SEO, links, wording, and sensitive claims.</li>
+      </ul>
+    </section>
+
+    <section class="template-block">
+      <h3>2. Audience And Reader Need</h3>
+      <ul>
+        <li><strong>Audience:</strong> Who is this for?</li>
+        <li><strong>Reader question:</strong> What are they trying to understand or do?</li>
+        <li><strong>Reader stage:</strong> Learning, comparing, deciding, donating, volunteering, or verifying trust.</li>
+        <li><strong>What would make them leave:</strong> Confusing answer, weak proof, repeated donation pitch, vague claim, or missing next step.</li>
+      </ul>
+    </section>
+
+    <section class="template-block">
+      <h3>3. Keywords And Search Demand</h3>
+      <ul>
+        <li><strong>Primary keyword:</strong> Main search phrase and volume.</li>
+        <li><strong>Secondary keywords:</strong> Related phrases and where they fit naturally.</li>
+        <li><strong>Search intent:</strong> What the searcher wants from the page.</li>
+        <li><strong>Format signal:</strong> What the search results suggest: list, guide, answer, story, definition, or comparison.</li>
+      </ul>
+    </section>
+
+    <section class="template-block">
+      <h3>4. Format Decision</h3>
+      <p>Explain why this article should be written in its chosen shape. This is where we decide whether the article should be a practical list, a careful explanation, a feature story, a historical case study, or an update to an existing article.</p>
+      <div class="callout">
+        <strong>Example:</strong>
+        A broad search like "how to help orphans" usually needs a practical guide. A topic like a field update from Iraq may work better as a story. Both can link into the same orphan support cluster.
+      </div>
+    </section>
+
+    <section class="template-block">
+      <h3>5. Reader Journey</h3>
+      <p>Write the reader journey in one line before drafting headings.</p>
+      <p><code>I want to help -> what are my options? -> which option is trustworthy? -> what can LifeUSA do? -> what should I do next?</code></p>
+    </section>
+
+    <section class="template-block">
+      <h3>6. Section Outline</h3>
+      <p>For each H2 or major section, include:</p>
+      <ul>
+        <li><strong>Heading:</strong> Clear enough to understand without body text.</li>
+        <li><strong>Why this section is here:</strong> The job of the section.</li>
+        <li><strong>Reader stage:</strong> What the reader needs at this point.</li>
+        <li><strong>What to write:</strong> Practical direction for the writer.</li>
+        <li><strong>What to avoid:</strong> Repetition, unsupported claims, sensitive wording, or wrong links.</li>
+        <li><strong>LifeUSA connection:</strong> Program, story, campaign, or source page.</li>
+        <li><strong>Internal links:</strong> Suggested target and anchor text.</li>
+      </ul>
+    </section>
+
+    <section class="template-block">
+      <h3>7. Internal Links And Next Step</h3>
+      <ul>
+        <li><strong>Primary internal link:</strong> The most important related LifeUSA page.</li>
+        <li><strong>Supporting links:</strong> Related articles, program pages, campaign pages, or donation pages.</li>
+        <li><strong>CTA:</strong> The action that fits the article. Not every article needs the same donation push.</li>
+      </ul>
+    </section>
+
+    <section class="template-block">
+      <h3>8. Metadata And FAQ</h3>
+      <ul>
+        <li><strong>Meta title:</strong> Clear, search-friendly title.</li>
+        <li><strong>Meta description:</strong> One sentence that tells the reader what the article answers.</li>
+        <li><strong>FAQs:</strong> Real reader questions, especially where People Also Ask or donor concerns show demand.</li>
+      </ul>
+    </section>
+  </section>
+
+  <section id="review">
+    <h2>Review Checklist Before Sending To Draft</h2>
+    <ul>
+      <li>Does the article have a clear job in the cluster?</li>
+      <li>Does the format fit the topic, not just the keyword?</li>
+      <li>Does the first section answer the reader quickly?</li>
+      <li>Does each section move the reader forward?</li>
+      <li>Are LifeUSA examples specific and sourced?</li>
+      <li>Are any child, medical, crisis, sponsorship, zakat, or sadaqah claims safe to publish?</li>
+      <li>Are internal links live and relevant?</li>
+      <li>Is the writer free to use voice, story, and creativity within the article's purpose?</li>
+    </ul>
+    <div class="callout danger">
+      <strong>Plain rule:</strong>
+      The outline should guide the writing, not handcuff it. If the best article is a story, make it a story. If the best article is a list, make it a list. The reason for choosing the format should always be clear.
+    </div>
+  </section>
+
+  <footer>
+    LifeUSA article planning template. Keep this page noindex and use it as a team handoff reference.
+  </footer>
+</main>
+</body>
+</html>

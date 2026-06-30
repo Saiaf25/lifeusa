@@ -18,6 +18,18 @@ The live preview is:
 article-plans-and-outlines/how-to-help-orphans/index.html
 ```
 
+The educational outline-template source is:
+
+```text
+Content Framework/70-outputs/handoff/article-outline-template.html
+```
+
+The live template preview is:
+
+```text
+article-plans-and-outlines/article-outline-template/index.html
+```
+
 After editing the source file, run:
 
 ```bash
@@ -32,4 +44,3 @@ The sync script:
 - keeps the live page `noindex`;
 - removes internal-only review sections from the client-facing page;
 - fails if required client-facing sections are missing.
-
