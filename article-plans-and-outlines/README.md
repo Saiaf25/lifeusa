@@ -42,6 +42,18 @@ The live preview is:
 article-plans-and-outlines/what-is-an-orphan-causes-statistics-how-you-can-help/index.html
 ```
 
+For the orphan sponsorship coverage outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/what-does-orphan-sponsorship-cover.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/what-does-orphan-sponsorship-cover/index.html
+```
+
 For the zakat and orphan sponsorship outline, the source of truth is:
 
 ```text

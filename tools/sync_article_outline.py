@@ -40,6 +40,17 @@ PAGES = (
             "Can Zakat Be Used To Sponsor an Orphan?",
             "Do not publish as a new standalone article",
             "What Is an Orphan? Causes, Statistics, and How You Can Help",
+            "What Does Orphan Sponsorship Cover? A Guide for Donors",
+        ),
+    ),
+    OutlinePage(
+        name="what-does-orphan-sponsorship-cover",
+        source=Path("Content Framework/70-outputs/handoff/orphans/what-does-orphan-sponsorship-cover.html"),
+        live=Path("article-plans-and-outlines/what-does-orphan-sponsorship-cover/index.html"),
+        required_text=(
+            "What Does Orphan Sponsorship Cover?",
+            "orphans sponsorship",
+            "Do not overpromise",
         ),
     ),
     OutlinePage(
