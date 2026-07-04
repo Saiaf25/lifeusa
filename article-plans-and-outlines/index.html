@@ -1,47 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <title>LifeUSA Article Plans and Outlines</title>
   <style>
     :root {
-      --green: #116149;
-      --gold: #c79236;
-      --bg: #ffffff;
-      --surface: #f6f7f5;
-      --border: #d9ddd6;
-      --text: #17231e;
-      --text-muted: #617067;
+      --ink: #17231e; --muted: #617067; --paper: #f4f1e9; --card: #fffdf7;
+      --green: #116149; --green2: #dbece5; --gold: #c79236; --line: #d9ddd6;
+      --shadow: 0 18px 55px rgba(31,48,40,.10);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", "Noto Naskh Arabic", Georgia, serif;
+      line-height: 1.75;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
     }
     .banner {
-      background: var(--green);
-      padding: 48px 0;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(135deg,#0b4b39,#153126);
+      box-shadow: var(--shadow);
     }
     .banner-inner {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 24px;
+      padding: 52px 24px;
+      position: relative;
+    }
+    .banner:after {
+      content: "L";
+      position: absolute;
+      right: 34px;
+      bottom: -72px;
+      font: 900 220px/1 Arial;
+      color: rgba(255,255,255,.055);
     }
     .banner h1 {
-      color: #fff;
-      font-size: 38px;
+      margin: 0 0 10px;
+      font-size: 42px;
       font-weight: 700;
-      margin-bottom: 10px;
+      line-height: 1.1;
     }
     .banner p {
-      color: rgba(255,255,255,0.78);
+      max-width: 740px;
+      margin: 0;
+      color: #d9ebe4;
       font-size: 17px;
     }
     .container {
+      position: relative;
       max-width: 900px;
       margin: 0 auto;
       padding: 48px 24px;
@@ -53,11 +74,11 @@
     .page-card {
       display: block;
       padding: 24px 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--card);
+      border: 1px solid var(--line);
       border-left: 4px solid var(--gold);
-      border-radius: 10px;
-      color: var(--text);
+      border-radius: 15px;
+      color: var(--ink);
       text-decoration: none;
       transition: transform 0.15s, box-shadow 0.15s, border-left-color 0.15s;
     }
@@ -76,13 +97,12 @@
       text-transform: uppercase;
     }
     .page-title {
-      color: var(--text);
-      font-size: 20px;
+      color: #214336;
+      font-size: 22px;
       font-weight: 600;
     }
     .footer {
-      background: var(--green);
-      color: rgba(255,255,255,0.64);
+      color: var(--muted);
       font-size: 14px;
       padding: 28px 24px;
       text-align: center;
@@ -112,6 +132,11 @@
       <a href="can-zakat-be-used-to-sponsor-an-orphan/" class="page-card">
         <div class="page-num">Page #003</div>
         <div class="page-title">Can Zakat Be Used To Sponsor an Orphan?</div>
+      </a>
+
+      <a href="what-is-an-orphan-causes-statistics-how-you-can-help/" class="page-card">
+        <div class="page-num">Page #004</div>
+        <div class="page-title">What Is an Orphan? Causes, Statistics, and How You Can Help</div>
       </a>
     </div>
   </div>

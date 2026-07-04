@@ -6,6 +6,18 @@ Do not edit live preview HTML manually unless the matching source handoff file i
 
 ## Publishing Rule
 
+The index source is:
+
+```text
+Content Framework/70-outputs/handoff/article-plans-and-outlines-index.html
+```
+
+The live index is:
+
+```text
+article-plans-and-outlines/index.html
+```
+
 For the orphan pillar outline, the source of truth is:
 
 ```text
@@ -16,6 +28,30 @@ The live preview is:
 
 ```text
 article-plans-and-outlines/how-to-help-orphans/index.html
+```
+
+For the orphan definition rewrite outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/what-is-an-orphan-causes-statistics-how-you-can-help.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/what-is-an-orphan-causes-statistics-how-you-can-help/index.html
+```
+
+For the zakat and orphan sponsorship outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/can-zakat-be-used-to-sponsor-an-orphan.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/can-zakat-be-used-to-sponsor-an-orphan/index.html
 ```
 
 The educational outline-template source is:

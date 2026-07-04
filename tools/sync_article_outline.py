@@ -30,6 +30,24 @@ ROOT = Path(__file__).resolve().parents[1]
 
 PAGES = (
     OutlinePage(
+        name="article-plans-and-outlines-index",
+        source=Path("Content Framework/70-outputs/handoff/article-plans-and-outlines-index.html"),
+        live=Path("article-plans-and-outlines/index.html"),
+        required_text=(
+            "LifeUSA Article Plans and Outlines",
+            "LifeUSA Article Outline Template",
+            "10 Ways To Help Orphans",
+            "Can Zakat Be Used To Sponsor an Orphan?",
+            "What Is an Orphan? Causes, Statistics, and How You Can Help",
+        ),
+    ),
+    OutlinePage(
+        name="what-is-an-orphan-causes-statistics-how-you-can-help",
+        source=Path("Content Framework/70-outputs/handoff/orphans/what-is-an-orphan-causes-statistics-how-you-can-help.html"),
+        live=Path("article-plans-and-outlines/what-is-an-orphan-causes-statistics-how-you-can-help/index.html"),
+        required_text=("What Is an Orphan?", "Causes, Statistics, and How You Can Help"),
+    ),
+    OutlinePage(
         name="how-to-help-orphans",
         source=Path("Content Framework/70-outputs/handoff/orphans/how-to-help-orphans-brief-outline.html"),
         live=Path("article-plans-and-outlines/how-to-help-orphans/index.html"),
