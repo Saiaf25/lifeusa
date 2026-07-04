@@ -38,6 +38,7 @@ PAGES = (
             "LifeUSA Article Outline Template",
             "10 Ways To Help Orphans",
             "Can Zakat Be Used To Sponsor an Orphan?",
+            "Do not publish as a new standalone article",
             "What Is an Orphan? Causes, Statistics, and How You Can Help",
         ),
     ),
@@ -57,7 +58,12 @@ PAGES = (
         name="can-zakat-be-used-to-sponsor-an-orphan",
         source=Path("Content Framework/70-outputs/handoff/orphans/can-zakat-be-used-to-sponsor-an-orphan.html"),
         live=Path("article-plans-and-outlines/can-zakat-be-used-to-sponsor-an-orphan/index.html"),
-        required_text=("Can Zakat Be Used To Sponsor an Orphan?", "Policy caution"),
+        required_text=(
+            "Can Zakat Be Used To Sponsor an Orphan?",
+            "Policy caution",
+            "Do not publish this as a new standalone article",
+            "LIFE positioned as a relief organization",
+        ),
     ),
     OutlinePage(
         name="article-outline-template",
