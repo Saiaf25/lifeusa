@@ -6,6 +6,17 @@
     The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
     ```
 
+    ## Article Thesis
+
+    War orphanhood is not only the death of a parent; in Gaza it can mean the collapse of the care systems a child depends on: safe shelter, food, school, medical access, family routine, and trusted adults.
+
+    ## Searcher Promise
+
+    - Define war orphans without repeating the general orphan-definition article.
+- Explain the Gaza-specific layers of risk: caregiver loss, displacement, hunger, school disruption, winter exposure, and fear.
+- Show how LifeUSA examples map to concrete needs rather than dropping links as decoration.
+- End with a focused Gaza/orphan support path, not a generic donation close.
+
     ## Search Demand
 
     Primary keywords:
@@ -28,7 +39,15 @@
 
     ## Intro
 
+    Guidance:
+
     Open with the human problem of war orphanhood: loss of parent or caregiver, family separation, hunger, displacement, interrupted school, and fear. Use `gaza orphans` naturally once and avoid political overreach.
+
+    Draft intro:
+
+    When people search for war orphans or Gaza orphans, they are usually trying to understand more than a label. They are trying to understand what happens to a child when violence breaks the circle of adults, routines, homes, schools, and community support that normally protects childhood.
+
+In Gaza, that question becomes painfully concrete. A child may lose a parent, become separated from relatives, move from place to place, miss school, sleep without reliable warmth, or depend on already-overstretched caregivers for food and safety. This article should explain those layers clearly and humanely, then show how relief work can respond to immediate needs while preserving dignity.
 
     ## H2 1: What Makes War Orphans Different?
 
@@ -47,6 +66,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Explain caregiver loss, family separation, displacement, hunger, school disruption, and loss of routine.
+
+Depth requirements:
+
+- Define war orphanhood as loss of parental/caregiver protection in conflict, then link out for general orphan definitions.
+- Name the specific disruptions war creates: separation, displacement, food insecurity, interrupted school, fear, and unstable caregiving.
+- Use `war orphans` and `gaza orphans` once each in natural sentences, not as repeated labels.
 
 What to avoid:
 
@@ -70,6 +95,12 @@ What Saiaf should write:
 
 Discuss unsafe shelter, disrupted aid access, caregiver strain, food scarcity, winter exposure, and emotional distress. Keep claims cautious and source-backed.
 
+Depth requirements:
+
+- Make Gaza the setting of the risks, not a vague crisis backdrop.
+- Use cautious phrasing for facts that may change; leave placeholders for Saiaf to add current verified figures if needed.
+- Explain layered vulnerability: a child can have a surviving relative and still lack stable care, shelter, food, or schooling.
+
 What to avoid:
 
 Do not make unsupported casualty/statistical claims unless Saiaf adds current sourced figures before publishing.
@@ -91,6 +122,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Organize support into food, essentials, caregiver support, winter relief, education continuity when possible, and moments of dignity/joy.
+
+Depth requirements:
+
+- Organize aid by need category: food, essentials, caregiver support, winter relief, education continuity, and moments of dignity.
+- Explain why each category matters for a child, not only what the charity provides.
+- Link to the broader how-to-help pillar only after this article has answered the Gaza-specific question.
 
 What to avoid:
 
@@ -114,6 +151,12 @@ What Saiaf should write:
 
 Use food packs, baby formula and essentials, winter relief, Eid support, and the Gaza orphan campaign.
 
+Depth requirements:
+
+- Use 3 to 5 LifeUSA examples and connect each to a need category.
+- Prioritize Gaza food packs, baby formula/essentials, winter relief, Eid support, and the Gaza orphan campaign.
+- Avoid a recap dump; each example should prove one point in the argument.
+
 What to avoid:
 
 Do not list examples mechanically; tie each example to a need category.
@@ -135,6 +178,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Point to the Gaza orphan campaign and the established orphan support CTA. Keep it direct and relief-focused.
+
+Depth requirements:
+
+- Close with a clear next step for readers who want to help Gaza orphans.
+- Use the Gaza orphan campaign and established orphan donation path.
+- Keep the CTA relief-focused and avoid drifting into sponsorship mechanics.
 
 What to avoid:
 

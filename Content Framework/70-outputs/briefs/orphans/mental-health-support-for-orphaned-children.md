@@ -3,10 +3,21 @@
     ## Article Setup
 
     - **Content type:** New informational guide; Angela-owned draft
-    - **Owner:** Saiaf
+    - **Owner:** Angela draft; Saiaf SEO planning/review
     - **Proposed/live URL:** `https://www.lifeusa.org/post/mental-health-support-for-orphaned-children`
     - **Status note:** This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
+
+    ## Thesis
+
+    Mental health support for orphaned children should be framed as safety, routine, trusted care, school connection, play, and dignity after loss or trauma, while avoiding medical advice or unsupported therapy claims.
+
+    ## Searcher Promise
+
+    - Explain emotional needs after orphanhood without diagnosing children.
+- Connect conflict and war-orphan contexts to trauma carefully and non-politically.
+- Define supportive conditions donors can understand: stable adults, routine, school, safe spaces, play, and basic-needs security.
+- Use Somaliland and joy/play examples as proof while staying inside claim-safe language.
 
     ## Reader Problem
 
@@ -36,6 +47,39 @@
     ## Intro Guidance
 
     Open by saying orphaned children may need more than material support, especially after loss or crisis. Then set the boundary: this article is not medical advice, but explains supportive conditions that can help children feel safer and more stable.
+
+    ## Working Intro Draft
+
+    When a child loses a parent or caregiver, the need for help is not only material. Food, clothing, shelter, and school matter deeply, but children also need safety, routine, trusted adults, and moments where they can feel like children again.
+
+This guide should explain mental health support for orphaned children in non-clinical language. It should not diagnose children or promise healing. Instead, it should show how stable care, school connection, play, dignity, and consistent support can help create the conditions children need after loss, displacement, or trauma.
+
+    ## Depth Plan
+
+    ### 1. Why Mental Health Support Matters After Loss
+- Frame emotional support as part of care after loss, not as a clinical treatment article.
+- Mention grief, fear, disrupted routine, isolation, and the need for trusted adults.
+- Use `orphan mental health` once in a natural sentence.
+
+### 2. How War And Crisis Can Affect Children
+- Use `war orphans` carefully to explain why conflict can intensify fear, instability, displacement, and school disruption.
+- Avoid current casualty claims unless Saiaf adds verified sources.
+- Link to the Gaza article for the conflict-specific angle instead of repeating it.
+
+### 3. Supportive Conditions That Help Children Feel Safer
+- Define supportive conditions: routine, safe shelter, school attendance, trusted caregivers, peer connection, play, food security, and dignity.
+- Make this the most substantial section; it is the article's practical heart.
+- Avoid therapy language unless LifeUSA confirms professional services.
+
+### 4. Where Sponsorship And Program Support Fit
+- Explain how sponsorship or program support can create consistency around material needs, school, and caregiver support.
+- Link to the sponsorship coverage article for details.
+- Avoid saying sponsorship provides mental-health treatment.
+
+### 5. LifeUSA Examples To Use Carefully
+- Use Somaliland mental-health and stability posts, plus Ghana/play/Eid examples.
+- State what each example can support as evidence: care, stability, joy, routine, or social connection.
+- Add a final claim-safety reminder before publication.
 
     ## Internal Links And Proof Examples
 

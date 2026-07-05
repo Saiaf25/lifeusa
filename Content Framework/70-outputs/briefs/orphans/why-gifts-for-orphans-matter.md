@@ -3,10 +3,21 @@
     ## Article Setup
 
     - **Content type:** Existing article enrichment; Saiaf-owned rewrite
-    - **Owner:** Saiaf
+    - **Owner:** Saiaf rewrite/enrichment
     - **Proposed/live URL:** `https://www.lifeusa.org/post/why-one-gift-means-the-world-to-an-orphaned-child`
     - **Status note:** Rewrite means add depth, keyword coverage, and internal links. It does not mean deleting the article or turning it into a generic gift list.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
+
+    ## Thesis
+
+    Gifts for orphans matter when they protect dignity, joy, belonging, and the right to childhood alongside food, safety, school, and long-term care.
+
+    ## Searcher Promise
+
+    - Answer the reader's skepticism: gifts are not replacements for urgent needs, but they are not meaningless extras.
+- Explain joy, play, Eid, memory, and being remembered as part of emotional care.
+- Show what responsible gift programs should consider: safety, age, dignity, privacy, and coordination.
+- Use LifeUSA joy/gift examples without turning the article into a simple event recap.
 
     ## Reader Problem
 
@@ -35,6 +46,39 @@
     ## Intro Guidance
 
     Start by acknowledging the obvious concern: orphaned children need food, safety, school, and care first. Then explain why joy and gifts still matter when they restore dignity, normalcy, and a sense of being remembered.
+
+    ## Working Intro Draft
+
+    It is reasonable to ask whether gifts for orphans should matter when children also need food, shelter, school, healthcare, and safety. The answer should not pretend that a toy or Eid gift solves loss. It does not.
+
+But a gift can still carry meaning. For a child who has lost a parent or lives with instability, a thoughtful gift can say: you are remembered, you are included, and your childhood still matters. This article should make that case carefully, showing how joy and dignity fit beside practical support rather than competing with it.
+
+    ## Depth Plan
+
+    ### 1. Why Gifts Are Not Just Extras
+- Open by acknowledging the basic-needs objection directly.
+- Explain gifts as dignity and belonging, not as a substitute for care.
+- Use `gifts for orphans` naturally in the first paragraph and one H2.
+
+### 2. Joy As Part Of Childhood Stability
+- Discuss play, celebration, memory, and social connection as childhood needs.
+- Avoid clinical claims; say gifts can support normalcy and belonging, not cure trauma.
+- Tie this to the phrase 'right to childhood' so the angle is distinct.
+
+### 3. Eid Gifts And Seasonal Care
+- Treat Eid gifts as a concrete seasonal example, not a religious tangent.
+- Use `eid gifts for orphans` once in the Eid section.
+- Keep religious language light and inclusive for a US donor audience.
+
+### 4. What Makes A Gift Responsible?
+- Define responsible gifting: useful, age-appropriate, safe, locally coordinated, and privacy-conscious.
+- Warn against uncoordinated direct gifts or photo-driven charity framing.
+- Explain that programs should avoid making children feel like props.
+
+### 5. LifeUSA Gift And Joy Examples
+- Use LifeUSA joy examples as proof of the argument: Ghana, Gaza Eid, global orphan parties, and play-focused articles.
+- Choose examples that illustrate dignity and joy, not just distribution numbers.
+- Close by connecting gifts to broader orphan support.
 
     ## Internal Links And Proof Examples
 

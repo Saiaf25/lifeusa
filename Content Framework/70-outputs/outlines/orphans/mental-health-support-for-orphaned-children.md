@@ -6,6 +6,17 @@
     The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
     ```
 
+    ## Article Thesis
+
+    Mental health support for orphaned children should be framed as safety, routine, trusted care, school connection, play, and dignity after loss or trauma, while avoiding medical advice or unsupported therapy claims.
+
+    ## Searcher Promise
+
+    - Explain emotional needs after orphanhood without diagnosing children.
+- Connect conflict and war-orphan contexts to trauma carefully and non-politically.
+- Define supportive conditions donors can understand: stable adults, routine, school, safe spaces, play, and basic-needs security.
+- Use Somaliland and joy/play examples as proof while staying inside claim-safe language.
+
     ## Search Demand
 
     Primary keywords:
@@ -27,7 +38,15 @@
 
     ## Intro
 
+    Guidance:
+
     Open by saying orphaned children may need more than material support, especially after loss or crisis. Then set the boundary: this article is not medical advice, but explains supportive conditions that can help children feel safer and more stable.
+
+    Draft intro:
+
+    When a child loses a parent or caregiver, the need for help is not only material. Food, clothing, shelter, and school matter deeply, but children also need safety, routine, trusted adults, and moments where they can feel like children again.
+
+This guide should explain mental health support for orphaned children in non-clinical language. It should not diagnose children or promise healing. Instead, it should show how stable care, school connection, play, dignity, and consistent support can help create the conditions children need after loss, displacement, or trauma.
 
     ## H2 1: Why Mental Health Support Matters After Loss
 
@@ -43,9 +62,15 @@ Keyword ownership:
 
 `orphan mental health` 10/mo.
 
-What Saiaf should write:
+What Angela should write:
 
 Explain grief, fear, disrupted routine, isolation, and the need for safe relationships. Keep this non-clinical.
+
+Depth requirements:
+
+- Frame emotional support as part of care after loss, not as a clinical treatment article.
+- Mention grief, fear, disrupted routine, isolation, and the need for trusted adults.
+- Use `orphan mental health` once in a natural sentence.
 
 What to avoid:
 
@@ -65,9 +90,15 @@ Keyword ownership:
 
 `war orphans` 390/mo as support.
 
-What Saiaf should write:
+What Angela should write:
 
 Discuss exposure to violence, displacement, caregiver loss, school interruption, and uncertainty.
+
+Depth requirements:
+
+- Use `war orphans` carefully to explain why conflict can intensify fear, instability, displacement, and school disruption.
+- Avoid current casualty claims unless Saiaf adds verified sources.
+- Link to the Gaza article for the conflict-specific angle instead of repeating it.
 
 What to avoid:
 
@@ -87,9 +118,15 @@ Keyword ownership:
 
 `orphan mental health` 10/mo.
 
-What Saiaf should write:
+What Angela should write:
 
 Cover routine, school attendance, trusted caregivers, safe spaces, play, peer connection, food security, and dignity.
+
+Depth requirements:
+
+- Define supportive conditions: routine, safe shelter, school attendance, trusted caregivers, peer connection, play, food security, and dignity.
+- Make this the most substantial section; it is the article's practical heart.
+- Avoid therapy language unless LifeUSA confirms professional services.
 
 What to avoid:
 
@@ -109,9 +146,15 @@ Keyword ownership:
 
 `orphan crisis` 10/mo if natural.
 
-What Saiaf should write:
+What Angela should write:
 
 Explain that material stability can support emotional stability when programs provide consistent care, school support, and safe routines.
+
+Depth requirements:
+
+- Explain how sponsorship or program support can create consistency around material needs, school, and caregiver support.
+- Link to the sponsorship coverage article for details.
+- Avoid saying sponsorship provides mental-health treatment.
 
 What to avoid:
 
@@ -131,9 +174,15 @@ Keyword ownership:
 
 `orphan mental health` 10/mo.
 
-What Saiaf should write:
+What Angela should write:
 
 Use the Somaliland mental-health post, stability/sponsorship post, and joy/play examples.
+
+Depth requirements:
+
+- Use Somaliland mental-health and stability posts, plus Ghana/play/Eid examples.
+- State what each example can support as evidence: care, stability, joy, routine, or social connection.
+- Add a final claim-safety reminder before publication.
 
 What to avoid:
 

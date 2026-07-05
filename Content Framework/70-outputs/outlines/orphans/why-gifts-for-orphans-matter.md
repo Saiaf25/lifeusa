@@ -6,6 +6,17 @@
     The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
     ```
 
+    ## Article Thesis
+
+    Gifts for orphans matter when they protect dignity, joy, belonging, and the right to childhood alongside food, safety, school, and long-term care.
+
+    ## Searcher Promise
+
+    - Answer the reader's skepticism: gifts are not replacements for urgent needs, but they are not meaningless extras.
+- Explain joy, play, Eid, memory, and being remembered as part of emotional care.
+- Show what responsible gift programs should consider: safety, age, dignity, privacy, and coordination.
+- Use LifeUSA joy/gift examples without turning the article into a simple event recap.
+
     ## Search Demand
 
     Primary keywords:
@@ -26,7 +37,15 @@
 
     ## Intro
 
+    Guidance:
+
     Start by acknowledging the obvious concern: orphaned children need food, safety, school, and care first. Then explain why joy and gifts still matter when they restore dignity, normalcy, and a sense of being remembered.
+
+    Draft intro:
+
+    It is reasonable to ask whether gifts for orphans should matter when children also need food, shelter, school, healthcare, and safety. The answer should not pretend that a toy or Eid gift solves loss. It does not.
+
+But a gift can still carry meaning. For a child who has lost a parent or lives with instability, a thoughtful gift can say: you are remembered, you are included, and your childhood still matters. This article should make that case carefully, showing how joy and dignity fit beside practical support rather than competing with it.
 
     ## H2 1: Why Gifts Are Not Just Extras
 
@@ -45,6 +64,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Explain that gifts do not replace food, school, or safety, but can restore dignity, normalcy, and belonging.
+
+Depth requirements:
+
+- Open by acknowledging the basic-needs objection directly.
+- Explain gifts as dignity and belonging, not as a substitute for care.
+- Use `gifts for orphans` naturally in the first paragraph and one H2.
 
 What to avoid:
 
@@ -68,6 +93,12 @@ What Saiaf should write:
 
 Discuss play, celebration, being remembered, and the emotional weight of ordinary childhood moments.
 
+Depth requirements:
+
+- Discuss play, celebration, memory, and social connection as childhood needs.
+- Avoid clinical claims; say gifts can support normalcy and belonging, not cure trauma.
+- Tie this to the phrase 'right to childhood' so the angle is distinct.
+
 What to avoid:
 
 Do not claim therapy, trauma recovery, or clinical outcomes.
@@ -89,6 +120,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Explain Eid and seasonal gifts as moments of community, dignity, and shared celebration.
+
+Depth requirements:
+
+- Treat Eid gifts as a concrete seasonal example, not a religious tangent.
+- Use `eid gifts for orphans` once in the Eid section.
+- Keep religious language light and inclusive for a US donor audience.
 
 What to avoid:
 
@@ -112,6 +149,12 @@ What Saiaf should write:
 
 Cover age-appropriate items, dignity, local procurement when possible, safety, privacy, and program coordination.
 
+Depth requirements:
+
+- Define responsible gifting: useful, age-appropriate, safe, locally coordinated, and privacy-conscious.
+- Warn against uncoordinated direct gifts or photo-driven charity framing.
+- Explain that programs should avoid making children feel like props.
+
 What to avoid:
 
 Do not recommend direct unsolicited gifts to children or orphanages without program guidance.
@@ -133,6 +176,12 @@ Keyword ownership:
 What Saiaf should write:
 
 Use Ghana, Gaza, global orphan party, Dhaka/Bangladesh, and older Eid party examples selectively.
+
+Depth requirements:
+
+- Use LifeUSA joy examples as proof of the argument: Ghana, Gaza Eid, global orphan parties, and play-focused articles.
+- Choose examples that illustrate dignity and joy, not just distribution numbers.
+- Close by connecting gifts to broader orphan support.
 
 What to avoid:
 

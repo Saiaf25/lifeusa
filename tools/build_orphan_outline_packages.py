@@ -81,6 +81,22 @@ def owner_risk_note(topic: Topic) -> str:
     return "this is Saiaf rewrite/enrichment work, not an Angela draft assignment."
 
 
+def brief_owner(topic: Topic) -> str:
+    if is_new_guide(topic):
+        return "Angela draft; Saiaf SEO planning/review"
+    return "Saiaf rewrite/enrichment"
+
+
+def outline_heading(topic: Topic) -> str:
+    if is_new_guide(topic):
+        return "Writer Outline For Angela"
+    return "Rewrite Outline For Saiaf"
+
+
+def section_write_label(topic: Topic) -> str:
+    return "What Angela should write" if is_new_guide(topic) else "What Saiaf should write"
+
+
 COMMON_LINKS = (
     Link("What Is an Orphan?", "https://www.lifeusa.org/post/what-is-an-orphan", "what an orphan is", "Definition and context article."),
     Link("How To Help Orphans", "https://saiaf25.github.io/lifeusa/article-plans-and-outlines/how-to-help-orphans/", "how to help orphans", "Planned pillar outline until the Wix URL is live."),
@@ -228,6 +244,90 @@ TOPICS: tuple[Topic, ...] = (
 )
 
 
+DEEPENING = {
+    "gaza-orphans-war-care-safety-support": {
+        "thesis": "War orphanhood is not only the death of a parent; in Gaza it can mean the collapse of the care systems a child depends on: safe shelter, food, school, medical access, family routine, and trusted adults.",
+        "promise": (
+            "Define war orphans without repeating the general orphan-definition article.",
+            "Explain the Gaza-specific layers of risk: caregiver loss, displacement, hunger, school disruption, winter exposure, and fear.",
+            "Show how LifeUSA examples map to concrete needs rather than dropping links as decoration.",
+            "End with a focused Gaza/orphan support path, not a generic donation close.",
+        ),
+        "intro": (
+            "When people search for war orphans or Gaza orphans, they are usually trying to understand more than a label. They are trying to understand what happens to a child when violence breaks the circle of adults, routines, homes, schools, and community support that normally protects childhood.\n\n"
+            "In Gaza, that question becomes painfully concrete. A child may lose a parent, become separated from relatives, move from place to place, miss school, sleep without reliable warmth, or depend on already-overstretched caregivers for food and safety. This article should explain those layers clearly and humanely, then show how relief work can respond to immediate needs while preserving dignity."
+        ),
+        "depth": (
+            ("Define war orphanhood as loss of parental/caregiver protection in conflict, then link out for general orphan definitions.", "Name the specific disruptions war creates: separation, displacement, food insecurity, interrupted school, fear, and unstable caregiving.", "Use `war orphans` and `gaza orphans` once each in natural sentences, not as repeated labels."),
+            ("Make Gaza the setting of the risks, not a vague crisis backdrop.", "Use cautious phrasing for facts that may change; leave placeholders for Saiaf to add current verified figures if needed.", "Explain layered vulnerability: a child can have a surviving relative and still lack stable care, shelter, food, or schooling."),
+            ("Organize aid by need category: food, essentials, caregiver support, winter relief, education continuity, and moments of dignity.", "Explain why each category matters for a child, not only what the charity provides.", "Link to the broader how-to-help pillar only after this article has answered the Gaza-specific question."),
+            ("Use 3 to 5 LifeUSA examples and connect each to a need category.", "Prioritize Gaza food packs, baby formula/essentials, winter relief, Eid support, and the Gaza orphan campaign.", "Avoid a recap dump; each example should prove one point in the argument."),
+            ("Close with a clear next step for readers who want to help Gaza orphans.", "Use the Gaza orphan campaign and established orphan donation path.", "Keep the CTA relief-focused and avoid drifting into sponsorship mechanics."),
+        ),
+    },
+    "why-gifts-for-orphans-matter": {
+        "thesis": "Gifts for orphans matter when they protect dignity, joy, belonging, and the right to childhood alongside food, safety, school, and long-term care.",
+        "promise": (
+            "Answer the reader's skepticism: gifts are not replacements for urgent needs, but they are not meaningless extras.",
+            "Explain joy, play, Eid, memory, and being remembered as part of emotional care.",
+            "Show what responsible gift programs should consider: safety, age, dignity, privacy, and coordination.",
+            "Use LifeUSA joy/gift examples without turning the article into a simple event recap.",
+        ),
+        "intro": (
+            "It is reasonable to ask whether gifts for orphans should matter when children also need food, shelter, school, healthcare, and safety. The answer should not pretend that a toy or Eid gift solves loss. It does not.\n\n"
+            "But a gift can still carry meaning. For a child who has lost a parent or lives with instability, a thoughtful gift can say: you are remembered, you are included, and your childhood still matters. This article should make that case carefully, showing how joy and dignity fit beside practical support rather than competing with it."
+        ),
+        "depth": (
+            ("Open by acknowledging the basic-needs objection directly.", "Explain gifts as dignity and belonging, not as a substitute for care.", "Use `gifts for orphans` naturally in the first paragraph and one H2."),
+            ("Discuss play, celebration, memory, and social connection as childhood needs.", "Avoid clinical claims; say gifts can support normalcy and belonging, not cure trauma.", "Tie this to the phrase 'right to childhood' so the angle is distinct."),
+            ("Treat Eid gifts as a concrete seasonal example, not a religious tangent.", "Use `eid gifts for orphans` once in the Eid section.", "Keep religious language light and inclusive for a US donor audience."),
+            ("Define responsible gifting: useful, age-appropriate, safe, locally coordinated, and privacy-conscious.", "Warn against uncoordinated direct gifts or photo-driven charity framing.", "Explain that programs should avoid making children feel like props."),
+            ("Use LifeUSA joy examples as proof of the argument: Ghana, Gaza Eid, global orphan parties, and play-focused articles.", "Choose examples that illustrate dignity and joy, not just distribution numbers.", "Close by connecting gifts to broader orphan support."),
+        ),
+    },
+    "orphan-education-after-loss": {
+        "thesis": "Orphan education is not only about school supplies; after the loss of a parent or caregiver, school can become one of the few stable structures that keeps a child connected to routine, adults, peers, meals, safety, and future possibility.",
+        "promise": (
+            "Explain why school stability matters after loss.",
+            "Identify the barriers that commonly interrupt orphan education.",
+            "Show what education support can include without promising unconfirmed scholarships or tuition coverage.",
+            "Give Angela a clear article path that links to LifeUSA school-support examples and avoids repeating the broad orphan-help pillar.",
+        ),
+        "intro": (
+            "After a child loses a parent or caregiver, school can become more than a classroom. It can be the place where a child returns to routine, sees familiar adults, connects with other children, receives supplies or support, and keeps a sense of future from disappearing.\n\n"
+            "That is why orphan education deserves its own guide. This article should explain what can interrupt school after loss, what support can help a child stay enrolled and prepared, and how donors can think about education as part of stability rather than a separate luxury."
+        ),
+        "depth": (
+            ("Explain school as routine, safety, social connection, and future opportunity.", "Avoid generic 'education is important' language; make it specific to orphaned children after loss.", "Use `orphan education` in the intro and first H2."),
+            ("Break barriers into practical categories: costs, supplies, uniforms, transport, displacement, caregiver stress, health, and documentation.", "Use LifeUSA examples later; first make the barrier logic clear.", "Avoid implying every barrier exists in every country."),
+            ("List possible support areas: backpacks, notebooks, uniforms, fees where applicable, transport, tutoring/program support, and health support that keeps children in school.", "Use cautious language: 'can include' and 'depending on the program.'", "Do not promise tuition, scholarships, or named benefits unless LifeUSA confirms them."),
+            ("Explain how sponsorship may support education indirectly or directly depending on program design.", "Link to the sponsorship coverage guide for the full mechanics.", "Keep this section short enough that it does not cannibalize the sponsorship article."),
+            ("Use Syria, Lebanon, Afghanistan, Bangladesh, and Kenya examples as proof points.", "Organize examples by education function: supplies, school access, health/school continuity, classroom stability.", "End with a donor-facing bridge to support orphan education through LifeUSA."),
+        ),
+    },
+    "mental-health-support-for-orphaned-children": {
+        "thesis": "Mental health support for orphaned children should be framed as safety, routine, trusted care, school connection, play, and dignity after loss or trauma, while avoiding medical advice or unsupported therapy claims.",
+        "promise": (
+            "Explain emotional needs after orphanhood without diagnosing children.",
+            "Connect conflict and war-orphan contexts to trauma carefully and non-politically.",
+            "Define supportive conditions donors can understand: stable adults, routine, school, safe spaces, play, and basic-needs security.",
+            "Use Somaliland and joy/play examples as proof while staying inside claim-safe language.",
+        ),
+        "intro": (
+            "When a child loses a parent or caregiver, the need for help is not only material. Food, clothing, shelter, and school matter deeply, but children also need safety, routine, trusted adults, and moments where they can feel like children again.\n\n"
+            "This guide should explain mental health support for orphaned children in non-clinical language. It should not diagnose children or promise healing. Instead, it should show how stable care, school connection, play, dignity, and consistent support can help create the conditions children need after loss, displacement, or trauma."
+        ),
+        "depth": (
+            ("Frame emotional support as part of care after loss, not as a clinical treatment article.", "Mention grief, fear, disrupted routine, isolation, and the need for trusted adults.", "Use `orphan mental health` once in a natural sentence."),
+            ("Use `war orphans` carefully to explain why conflict can intensify fear, instability, displacement, and school disruption.", "Avoid current casualty claims unless Saiaf adds verified sources.", "Link to the Gaza article for the conflict-specific angle instead of repeating it."),
+            ("Define supportive conditions: routine, safe shelter, school attendance, trusted caregivers, peer connection, play, food security, and dignity.", "Make this the most substantial section; it is the article's practical heart.", "Avoid therapy language unless LifeUSA confirms professional services."),
+            ("Explain how sponsorship or program support can create consistency around material needs, school, and caregiver support.", "Link to the sponsorship coverage article for details.", "Avoid saying sponsorship provides mental-health treatment."),
+            ("Use Somaliland mental-health and stability posts, plus Ghana/play/Eid examples.", "State what each example can support as evidence: care, stability, joy, routine, or social connection.", "Add a final claim-safety reminder before publication."),
+        ),
+    },
+}
+
+
 def md_table(rows: tuple[tuple[str, str, str, str], ...]) -> str:
     lines = ["| Keyword | Avg. monthly searches | Competition | Use |", "|---|---:|---|---|"]
     for kw, volume, comp, use in rows:
@@ -242,6 +342,24 @@ def link_table(links: tuple[Link, ...]) -> str:
     return "\n".join(lines)
 
 
+def deep(topic: Topic, key: str):
+    return DEEPENING[topic.slug][key]
+
+
+def bullet_md(items: tuple[str, ...]) -> str:
+    return "\n".join(f"- {item}" for item in items)
+
+
+def depth_plan_md(topic: Topic) -> str:
+    out: list[str] = []
+    for idx, section in enumerate(topic.sections, 1):
+        out.append(f"### {idx}. {section.title}")
+        for item in deep(topic, "depth")[idx - 1]:
+            out.append(f"- {item}")
+        out.append("")
+    return "\n".join(out).strip()
+
+
 def outline_sections_md(topic: Topic) -> str:
     out: list[str] = []
     for idx, section in enumerate(topic.sections, 1):
@@ -249,7 +367,11 @@ def outline_sections_md(topic: Topic) -> str:
         out.append(f"Why this section is here:\n\n{section.why}\n")
         out.append(f"Reader stage:\n\n{section.stage}\n")
         out.append(f"Keyword ownership:\n\n{section.keywords}\n")
-        out.append(f"What Saiaf should write:\n\n{section.write}\n")
+        out.append(f"{section_write_label(topic)}:\n\n{section.write}\n")
+        out.append("Depth requirements:\n")
+        for item in deep(topic, "depth")[idx - 1]:
+            out.append(f"- {item}")
+        out.append("")
         out.append(f"What to avoid:\n\n{section.avoid}\n")
         if section.links:
             out.append("Suggested internal links:\n")
@@ -266,10 +388,18 @@ def build_brief(topic: Topic) -> str:
     ## Article Setup
 
     - **Content type:** {topic.content_type}
-    - **Owner:** Saiaf
+    - **Owner:** {brief_owner(topic)}
     - **Proposed/live URL:** `{topic.live_url}`
     - **Status note:** {topic.status_note}
     - **Keyword source:** `{KW_EXACT}` and `{KW_REWRITE}`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
+
+    ## Thesis
+
+    {deep(topic, "thesis")}
+
+    ## Searcher Promise
+
+    {bullet_md(deep(topic, "promise"))}
 
     ## Reader Problem
 
@@ -294,6 +424,14 @@ def build_brief(topic: Topic) -> str:
     ## Intro Guidance
 
     {topic.intro_guidance}
+
+    ## Working Intro Draft
+
+    {deep(topic, "intro")}
+
+    ## Depth Plan
+
+    {depth_plan_md(topic)}
 
     ## Internal Links And Proof Examples
 
@@ -333,6 +471,14 @@ def build_outline(topic: Topic) -> str:
     The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
     ```
 
+    ## Article Thesis
+
+    {deep(topic, "thesis")}
+
+    ## Searcher Promise
+
+    {bullet_md(deep(topic, "promise"))}
+
     ## Search Demand
 
     Primary keywords:
@@ -349,7 +495,13 @@ def build_outline(topic: Topic) -> str:
 
     ## Intro
 
+    Guidance:
+
     {topic.intro_guidance}
+
+    Draft intro:
+
+    {deep(topic, "intro")}
 
     {outline_sections_md(topic)}
 
@@ -439,6 +591,29 @@ def links_html(links: tuple[Link, ...]) -> str:
     )
 
 
+def bullets_html(items: tuple[str, ...]) -> str:
+    return "<ul>" + "\n".join(f"<li>{html_escape(item)}</li>" for item in items) + "</ul>"
+
+
+def paragraphs_html(text: str, class_name: str = "") -> str:
+    class_attr = f' class="{class_name}"' if class_name else ""
+    return "".join(
+        f"<p{class_attr}>{html_escape(part.strip())}</p>"
+        for part in text.strip().split("\n\n")
+        if part.strip()
+    )
+
+
+def depth_plan_html(topic: Topic) -> str:
+    chunks: list[str] = []
+    for idx, section in enumerate(topic.sections, 1):
+        chunks.append(
+            f"<article class=\"way\"><h3>{idx}. {html_escape(section.title)}</h3>"
+            f"{bullets_html(deep(topic, 'depth')[idx - 1])}</article>"
+        )
+    return "\n".join(chunks)
+
+
 def sections_html(topic: Topic) -> str:
     chunks: list[str] = []
     for idx, section in enumerate(topic.sections, 1):
@@ -454,7 +629,9 @@ def sections_html(topic: Topic) -> str:
           <p><strong>Why here:</strong> {html_escape(section.why)}</p>
           <p><strong>Reader stage:</strong> {html_escape(section.stage)}</p>
           <p><strong>Keywords:</strong> {html_escape(section.keywords)}</p>
-          <p><strong>Write:</strong> {html_escape(section.write)}</p>
+          <p><strong>{html_escape(section_write_label(topic))}:</strong> {html_escape(section.write)}</p>
+          <p><strong>Depth requirements:</strong></p>
+          {bullets_html(deep(topic, "depth")[idx - 1])}
           <p><strong>Avoid:</strong> {html_escape(section.avoid)}</p>
           {extra}
         </article>
@@ -492,6 +669,7 @@ def build_html(topic: Topic) -> str:
         <a href="#setup">Setup</a>
         <a href="#keywords">Keywords</a>
         <a href="#intent">Intent</a>
+        <a href="#depth">Depth</a>
         <a href="#links">Links</a>
         <a href="#outline">Outline</a>
         <a href="#faq">FAQ</a>
@@ -522,8 +700,20 @@ def build_html(topic: Topic) -> str:
         <h2>Intent And Boundary</h2>
         <p class="lede">{html_escape(topic.reader_problem)}</p>
         <div class="callout danger"><strong>Do not cannibalize:</strong> {html_escape(topic.cluster_boundary)}</div>
+        <h3>Article Thesis</h3>
+        <p>{html_escape(deep(topic, "thesis"))}</p>
+        <h3>Searcher Promise</h3>
+        {bullets_html(deep(topic, "promise"))}
         <p><strong>Format decision:</strong> {html_escape(topic.format_decision)}</p>
         <p><strong>Intro guidance:</strong> {html_escape(topic.intro_guidance)}</p>
+      </section>
+
+      <section id="depth">
+        <h2>Working Intro And Depth Plan</h2>
+        <h3>Working Intro Draft</h3>
+        {paragraphs_html(deep(topic, "intro"), "lede")}
+        <h3>Section Depth Requirements</h3>
+        {depth_plan_html(topic)}
       </section>
 
       <section id="links">
@@ -532,7 +722,7 @@ def build_html(topic: Topic) -> str:
       </section>
 
       <section id="outline">
-        <h2>Writer Outline For Saiaf</h2>
+        <h2>{html_escape(outline_heading(topic))}</h2>
         {sections_html(topic)}
       </section>
 
