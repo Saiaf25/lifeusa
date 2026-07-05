@@ -54,6 +54,54 @@ The live preview is:
 article-plans-and-outlines/what-does-orphan-sponsorship-cover/index.html
 ```
 
+For the Gaza orphans enrichment outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/gaza-orphans-war-care-safety-support.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/gaza-orphans-war-care-safety-support/index.html
+```
+
+For the gifts for orphans enrichment outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/why-gifts-for-orphans-matter.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/why-gifts-for-orphans-matter/index.html
+```
+
+For the orphan education guide outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/orphan-education-after-loss.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/orphan-education-after-loss/index.html
+```
+
+For the orphan mental-health support guide outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/orphans/mental-health-support-for-orphaned-children.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/mental-health-support-for-orphaned-children/index.html
+```
+
 For the zakat and orphan sponsorship outline, the source of truth is:
 
 ```text

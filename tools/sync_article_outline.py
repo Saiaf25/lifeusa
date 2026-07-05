@@ -41,6 +41,54 @@ PAGES = (
             "Do not publish as a new standalone article",
             "What Is an Orphan? Causes, Statistics, and How You Can Help",
             "What Does Orphan Sponsorship Cover? A Guide for Donors",
+            "Gaza Orphans: How War Leaves Children Without Care, Safety, and Support",
+            "Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood",
+            "Orphan Education After Loss: Why School Stability Matters",
+            "Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
+        ),
+    ),
+    OutlinePage(
+        name="gaza-orphans-war-care-safety-support",
+        source=Path("Content Framework/70-outputs/handoff/orphans/gaza-orphans-war-care-safety-support.html"),
+        live=Path("article-plans-and-outlines/gaza-orphans-war-care-safety-support/index.html"),
+        required_text=(
+            "Gaza Orphans: How War Leaves Children Without Care, Safety, and Support",
+            "war orphans",
+            "gaza orphans",
+            "Owner: Saiaf",
+        ),
+    ),
+    OutlinePage(
+        name="why-gifts-for-orphans-matter",
+        source=Path("Content Framework/70-outputs/handoff/orphans/why-gifts-for-orphans-matter.html"),
+        live=Path("article-plans-and-outlines/why-gifts-for-orphans-matter/index.html"),
+        required_text=(
+            "Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood",
+            "gifts for orphans",
+            "eid gifts for orphans",
+            "Owner: Saiaf",
+        ),
+    ),
+    OutlinePage(
+        name="orphan-education-after-loss",
+        source=Path("Content Framework/70-outputs/handoff/orphans/orphan-education-after-loss.html"),
+        live=Path("article-plans-and-outlines/orphan-education-after-loss/index.html"),
+        required_text=(
+            "Orphan Education After Loss: Why School Stability Matters",
+            "orphan education",
+            "school continuity",
+            "Owner: Saiaf",
+        ),
+    ),
+    OutlinePage(
+        name="mental-health-support-for-orphaned-children",
+        source=Path("Content Framework/70-outputs/handoff/orphans/mental-health-support-for-orphaned-children.html"),
+        live=Path("article-plans-and-outlines/mental-health-support-for-orphaned-children/index.html"),
+        required_text=(
+            "Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
+            "orphan mental health",
+            "non-clinical",
+            "Owner: Saiaf",
         ),
     ),
     OutlinePage(
@@ -51,6 +99,18 @@ PAGES = (
             "What Does Orphan Sponsorship Cover?",
             "orphans sponsorship",
             "Do not overpromise",
+        ),
+    ),
+    OutlinePage(
+        name="technical-seo-fixes-index",
+        source=Path("Content Framework/70-outputs/handoff/technical-seo-fixes-index.html"),
+        live=Path("technical-seo-fixes/index.html"),
+        required_text=(
+            "LifeUSA Technical SEO Fixes",
+            "Old orphan article slug redirects to the new evergreen guide",
+            "Blog article body spacing and link styling fixed through Wix Custom Code",
+            "Robots.txt cleanup published through Wix SEO tools",
+            "Copy-of gallery URL cleanup is mapped but waiting for client exception review",
         ),
     ),
     OutlinePage(
