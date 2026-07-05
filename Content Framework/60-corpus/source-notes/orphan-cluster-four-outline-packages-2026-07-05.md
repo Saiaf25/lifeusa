@@ -6,9 +6,9 @@
 
     Saiaf approved four directions with clarifications:
 
-    - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article, forcing a new title, or assuming Angela owns the work.
-    - `Orphan Education After Loss` and `Mental Health Support for Orphaned Children` can be new informational guides. They do not have to replace existing recap posts.
-    - Owner is Saiaf, not Angela.
+    - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article or forcing a new title. Saiaf owns these rewrites.
+    - `Orphan Education After Loss` and `Mental Health Support for Orphaned Children` are new informational guides for Angela to draft. They do not have to replace existing recap posts.
+    - Ownership split: rewrites are done by Saiaf; new guide drafts are done by Angela, with Saiaf handling SEO planning and review.
 
     ## Keyword Sources
 
@@ -25,8 +25,8 @@
     |---|---|---|---|
     | Gaza Orphans: How War Leaves Children Without Care, Safety, and Support | Existing article enrichment; Saiaf-owned rewrite | `war orphans` 390/mo, `gaza orphans` 170/mo | https://www.lifeusa.org/post/who-will-watch-over-the-orphans-of-gaza |
 | Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood | Existing article enrichment; Saiaf-owned rewrite | `gifts for orphans` 20/mo | https://www.lifeusa.org/post/why-one-gift-means-the-world-to-an-orphaned-child |
-| Orphan Education After Loss: Why School Stability Matters | New informational guide; Saiaf-owned draft | `orphan education` 10/mo | https://www.lifeusa.org/post/orphan-education-after-loss |
-| Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma | New informational guide; Saiaf-owned draft | `orphan mental health` 10/mo | https://www.lifeusa.org/post/mental-health-support-for-orphaned-children |
+| Orphan Education After Loss: Why School Stability Matters | New informational guide; Angela-owned draft | `orphan education` 10/mo | https://www.lifeusa.org/post/orphan-education-after-loss |
+| Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma | New informational guide; Angela-owned draft | `orphan mental health` 10/mo | https://www.lifeusa.org/post/mental-health-support-for-orphaned-children |
 
     ## Rejected Ideas
 

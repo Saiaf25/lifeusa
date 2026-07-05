@@ -2,10 +2,10 @@
 
     ## Article Setup
 
-    - **Content type:** New informational guide; Saiaf-owned draft
+    - **Content type:** New informational guide; Angela-owned draft
     - **Owner:** Saiaf
     - **Proposed/live URL:** `https://www.lifeusa.org/post/orphan-education-after-loss`
-    - **Status note:** This can be a new guide because it owns school continuity only. It should not become the general orphan-help pillar.
+    - **Status note:** This can be a new guide because it owns school continuity only. Angela drafts it; Saiaf reviews SEO structure, keyword usage, links, and claim safety.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
 
     ## Reader Problem
@@ -58,7 +58,7 @@
 
     ## Review Note
 
-    Keep this as a new school-continuity guide. It should link to the pillar and sponsorship guide, not repeat them.
+    Angela should draft this as a new school-continuity guide. Saiaf should review SEO structure, links, and claim safety before publication.
 
     ## Source Note
 

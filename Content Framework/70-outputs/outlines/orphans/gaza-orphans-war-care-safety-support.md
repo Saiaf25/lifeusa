@@ -168,4 +168,4 @@ Do not pivot into broad sponsorship mechanics.
     - **Claim risk:** avoid medical, legal, adoption, custody, direct-child-contact, or guaranteed-outcome claims unless LifeUSA confirms them.
     - **Keyword risk:** do not force low-volume phrases repeatedly. Use them once where natural and let the article's distinct angle carry the page.
     - **Link risk:** use the planned `How To Help Orphans` GitHub outline until the Wix URL is live; do not link to the 404 Wix URL yet.
-    - **Owner risk:** these briefs are for Saiaf, not Angela.
+    - **Owner risk:** this is Saiaf rewrite/enrichment work, not an Angela draft assignment.

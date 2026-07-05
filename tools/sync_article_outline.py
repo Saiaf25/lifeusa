@@ -77,7 +77,7 @@ PAGES = (
             "Orphan Education After Loss: Why School Stability Matters",
             "orphan education",
             "school continuity",
-            "Owner: Saiaf",
+            "Writer: Angela",
         ),
     ),
     OutlinePage(
@@ -88,7 +88,7 @@ PAGES = (
             "Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
             "orphan mental health",
             "non-clinical",
-            "Owner: Saiaf",
+            "Writer: Angela",
         ),
     ),
     OutlinePage(

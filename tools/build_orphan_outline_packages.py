@@ -61,6 +61,26 @@ class Topic:
     source_note: str
 
 
+def is_new_guide(topic: Topic) -> bool:
+    return topic.content_type.startswith("New informational guide")
+
+
+def owner_meta(topic: Topic) -> str:
+    return "Writer: Angela" if is_new_guide(topic) else "Owner: Saiaf"
+
+
+def owner_card(topic: Topic) -> str:
+    if is_new_guide(topic):
+        return "Angela draft. Saiaf SEO planning/review."
+    return "Saiaf rewrite/enrichment. Not Angela."
+
+
+def owner_risk_note(topic: Topic) -> str:
+    if is_new_guide(topic):
+        return "this is an Angela draft assignment; Saiaf owns SEO planning and review."
+    return "this is Saiaf rewrite/enrichment work, not an Angela draft assignment."
+
+
 COMMON_LINKS = (
     Link("What Is an Orphan?", "https://www.lifeusa.org/post/what-is-an-orphan", "what an orphan is", "Definition and context article."),
     Link("How To Help Orphans", "https://saiaf25.github.io/lifeusa/article-plans-and-outlines/how-to-help-orphans/", "how to help orphans", "Planned pillar outline until the Wix URL is live."),
@@ -141,9 +161,9 @@ TOPICS: tuple[Topic, ...] = (
         slug="orphan-education-after-loss",
         title="Orphan Education After Loss: Why School Stability Matters",
         subtitle="New informational guide. It can use existing back-to-school posts as proof, but it does not need to replace them.",
-        content_type="New informational guide; Saiaf-owned draft",
+        content_type="New informational guide; Angela-owned draft",
         live_url="https://www.lifeusa.org/post/orphan-education-after-loss",
-        status_note="This can be a new guide because it owns school continuity only. It should not become the general orphan-help pillar.",
+        status_note="This can be a new guide because it owns school continuity only. Angela drafts it; Saiaf reviews SEO structure, keyword usage, links, and claim safety.",
         primary_keywords=(("orphan education", "10", "Low", "Use in title, intro, one H2, and metadata."),),
         secondary_keywords=(("support orphans education", "10", "Not provided", "Use corrected phrasing as `support orphan education` or `support education for orphans`."), ("sponsoring the education of an orphan", "10", "Low", "Use in sponsorship/education section.")),
         reader_problem="The reader wants to understand why school matters after a child loses a parent or caregiver, and how education support stabilizes more than academics.",
@@ -168,16 +188,16 @@ TOPICS: tuple[Topic, ...] = (
         faq=("Why is education important for orphaned children?", "What can interrupt orphan education?", "How can donors support orphan education?", "Can orphan sponsorship help with school?", "Does education support include uniforms and supplies?"),
         meta_title="Orphan Education After Loss: Why School Stability Matters",
         meta_description="Learn why orphan education matters after loss, what barriers can interrupt school, and how support can help children stay equipped, present, and hopeful.",
-        review_note="Keep this as a new school-continuity guide. It should link to the pillar and sponsorship guide, not repeat them.",
+        review_note="Angela should draft this as a new school-continuity guide. Saiaf should review SEO structure, links, and claim safety before publication.",
         source_note="Google Ads CLI source: orphan education 10/mo, support orphans education 10/mo, sponsoring the education of an orphan 10/mo.",
     ),
     Topic(
         slug="mental-health-support-for-orphaned-children",
         title="Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
         subtitle="New informational guide. It can use Somaliland and conflict examples as proof, but it does not have to replace the existing Somaliland post.",
-        content_type="New informational guide; Saiaf-owned draft",
+        content_type="New informational guide; Angela-owned draft",
         live_url="https://www.lifeusa.org/post/mental-health-support-for-orphaned-children",
-        status_note="This should be a new informational guide focused on psychosocial support. It must avoid medical advice and unsupported clinical claims.",
+        status_note="This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.",
         primary_keywords=(("orphan mental health", "10", "Low", "Use in title, intro, one H2, metadata, and FAQ."),),
         secondary_keywords=(("war orphans", "390", "Low", "Use carefully in trauma/conflict section, not as the main topic."), ("orphan crisis", "10", "Low", "Use only if natural in crisis context.")),
         reader_problem="The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.",
@@ -202,7 +222,7 @@ TOPICS: tuple[Topic, ...] = (
         faq=("Why do orphaned children need mental health support?", "How can war affect orphaned children emotionally?", "What helps orphaned children feel safe after trauma?", "Can school and routine support mental health?", "Is this the same as therapy?"),
         meta_title="Mental Health Support for Orphaned Children After Loss",
         meta_description="Learn why orphaned children may need emotional support after loss or crisis, and how routine, safety, school, play, and trusted care can help.",
-        review_note="Saiaf should review this for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.",
+        review_note="Angela should draft this as a new informational guide. Saiaf should review it for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.",
         source_note="Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.",
     ),
 )
@@ -347,7 +367,7 @@ def build_outline(topic: Topic) -> str:
     - **Claim risk:** avoid medical, legal, adoption, custody, direct-child-contact, or guaranteed-outcome claims unless LifeUSA confirms them.
     - **Keyword risk:** do not force low-volume phrases repeatedly. Use them once where natural and let the article's distinct angle carry the page.
     - **Link risk:** use the planned `How To Help Orphans` GitHub outline until the Wix URL is live; do not link to the 404 Wix URL yet.
-    - **Owner risk:** these briefs are for Saiaf, not Angela.
+    - **Owner risk:** {owner_risk_note(topic)}
     """)
 
 
@@ -464,7 +484,7 @@ def build_html(topic: Topic) -> str:
           <span>Version 1.0</span>
           <span>{DATE}</span>
           <span>Prepared by Saiaf Gamal</span>
-          <span>Owner: Saiaf</span>
+          <span>{html_escape(owner_meta(topic))}</span>
         </div>
       </header>
 
@@ -484,7 +504,7 @@ def build_html(topic: Topic) -> str:
           <div class="card"><h3>Content type</h3><p>{html_escape(topic.content_type)}</p></div>
           <div class="card"><h3>URL</h3><p><code>{html_escape(topic.live_url)}</code></p></div>
           <div class="card"><h3>Demand source</h3><p><code>{html_escape(KW_EXACT)}</code></p></div>
-          <div class="card"><h3>Owner</h3><p>Saiaf rewrite/draft. Not Angela.</p></div>
+          <div class="card"><h3>Owner</h3><p>{html_escape(owner_card(topic))}</p></div>
         </div>
         <div class="callout ok"><strong>Status:</strong> {html_escape(topic.status_note)}</div>
       </section>
@@ -556,9 +576,9 @@ def build_source_notes() -> str:
 
     Saiaf approved four directions with clarifications:
 
-    - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article, forcing a new title, or assuming Angela owns the work.
-    - `Orphan Education After Loss` and `Mental Health Support for Orphaned Children` can be new informational guides. They do not have to replace existing recap posts.
-    - Owner is Saiaf, not Angela.
+    - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article or forcing a new title. Saiaf owns these rewrites.
+    - `Orphan Education After Loss` and `Mental Health Support for Orphaned Children` are new informational guides for Angela to draft. They do not have to replace existing recap posts.
+    - Ownership split: rewrites are done by Saiaf; new guide drafts are done by Angela, with Saiaf handling SEO planning and review.
 
     ## Keyword Sources
 

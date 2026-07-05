@@ -46,13 +46,13 @@ Use this as a small checkpoint when LifeUSA content work is active.
 ---
 
 - Source checked: Google Ads CLI exact/expanded pulls in `Content Framework/80-Keywords/orphan-cluster-2026-07-05/`, orphan sweep inventory, verified live LifeUSA proof URLs, and user corrections about rewrite ownership.
-- Content batch: four Saiaf-owned orphan-cluster outline packages.
+- Content batch: four orphan-cluster outline packages with split ownership.
 - Stage reached: source notes, MD briefs, MD outlines, HTML handoff pages, local article-plans preview folders, local article-plans index entry, sync-script registration, and output inventory update.
 - Approved package 1: `Gaza Orphans: How War Leaves Children Without Care, Safety, and Support`; existing article enrichment for `Who Will Watch Over the Orphans of Gaza?`; targets `war orphans` 390/mo and `gaza orphans` 170/mo.
 - Approved package 2: `Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood`; existing article enrichment for `Why One Gift Means the World to an Orphaned Child`; targets `gifts for orphans` 20/mo and `eid gifts for orphans` 10/mo.
-- Approved package 3: `Orphan Education After Loss: Why School Stability Matters`; new informational guide; targets `orphan education` 10/mo and supporting school-continuity variants.
-- Approved package 4: `Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma`; new informational guide; targets `orphan mental health` 10/mo with careful `war orphans` 390/mo support in conflict sections.
-- Decision: rewrite means enrichment with keywords, depth, internal links, and structure. It does not require deleting old articles, forcing new titles, or assigning the work to Angela.
+- Approved package 3: `Orphan Education After Loss: Why School Stability Matters`; new informational guide for Angela to draft; targets `orphan education` 10/mo and supporting school-continuity variants.
+- Approved package 4: `Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma`; new informational guide for Angela to draft; targets `orphan mental health` 10/mo with careful `war orphans` 390/mo support in conflict sections.
+- Decision: rewrite means enrichment with keywords, depth, internal links, and structure and is Saiaf-owned. New informational guides are Angela draft assignments, with Saiaf handling SEO planning/review.
 - Rejected: `Creating Beautiful Tomorrows in Orphans Today` as a broad orphan-relief rewrite because it duplicates the planned `How To Help Orphans` pillar. Full rewrite of `Rebuilding After Loss` is also rejected; internal-link improvement only.
 - Next action: Saiaf to review/edit these four outlines and choose which to turn into Wix rewrites/new guides first. No GitHub push was performed in this pass.
 

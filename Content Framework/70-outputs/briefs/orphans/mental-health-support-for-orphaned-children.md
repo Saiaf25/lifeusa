@@ -2,10 +2,10 @@
 
     ## Article Setup
 
-    - **Content type:** New informational guide; Saiaf-owned draft
+    - **Content type:** New informational guide; Angela-owned draft
     - **Owner:** Saiaf
     - **Proposed/live URL:** `https://www.lifeusa.org/post/mental-health-support-for-orphaned-children`
-    - **Status note:** This should be a new informational guide focused on psychosocial support. It must avoid medical advice and unsupported clinical claims.
+    - **Status note:** This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
 
     ## Reader Problem
@@ -58,7 +58,7 @@
 
     ## Review Note
 
-    Saiaf should review this for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.
+    Angela should draft this as a new informational guide. Saiaf should review it for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.
 
     ## Source Note
 
