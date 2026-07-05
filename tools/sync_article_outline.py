@@ -28,6 +28,22 @@ class OutlinePage:
 
 ROOT = Path(__file__).resolve().parents[1]
 
+TEMPLATE_REQUIRED_TEXT = (
+    "1. Article Setup",
+    "2. Audience And Reader Need",
+    "3. Keywords And Search Demand",
+    "4. SERP And Competition",
+    "5. Format Decision",
+    "6. Reader Profile And Journey",
+    "7. Intro Guidance",
+    "8. ",
+    "9. Internal Links And Next Step",
+    "10. Metadata, FAQ, Images, And Schema",
+    "11. Information Gain",
+    "12. Internal Appendix",
+    "Review Checklist Before Sending To Draft",
+)
+
 PAGES = (
     OutlinePage(
         name="article-plans-and-outlines-index",
@@ -56,6 +72,7 @@ PAGES = (
             "war orphans",
             "gaza orphans",
             "Owner: Saiaf",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(
@@ -67,6 +84,7 @@ PAGES = (
             "gifts for orphans",
             "eid gifts for orphans",
             "Owner: Saiaf",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(
@@ -78,6 +96,7 @@ PAGES = (
             "orphan education",
             "school continuity",
             "Writer: Angela",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(
@@ -89,6 +108,7 @@ PAGES = (
             "orphan mental health",
             "non-clinical",
             "Writer: Angela",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(
@@ -151,12 +171,10 @@ FORBIDDEN_CLIENT_TEXT = (
     "<strong>Do not use:</strong>",
     'id="adversarial-review"',
     'href="#adversarial-review"',
-    'href="#appendix"',
 )
 
 INTERNAL_SECTION_IDS = (
     "adversarial-review",
-    "appendix",
 )
 
 

@@ -328,6 +328,135 @@ DEEPENING = {
 }
 
 
+TEMPLATE_DATA = {
+    "gaza-orphans-war-care-safety-support": {
+        "audience": "US donors and supporters trying to understand how war affects orphaned children in Gaza and what kind of aid is relevant.",
+        "reader_stage": "Learning and deciding: the reader is trying to understand the crisis before choosing a support path.",
+        "trust_blockers": "Unsourced casualty claims, political overreach, generic donation language, or treating Gaza orphans as the same topic as general orphan support.",
+        "journey": "I hear about Gaza orphans -> what does war orphanhood actually mean? -> what risks do children face? -> what support helps? -> what LifeUSA proof exists? -> where should I help?",
+        "serp_competitors": (
+            Link("World Care Foundation - Gaza's Orphans", "https://www.worldcarefoundation.org/appeal/gza-orphans/", "Gaza orphan appeal", "Campaign/sponsorship page with food, shelter, medical care, and essential-needs framing."),
+            Link("PCRF - Orphan Sponsorship Helps Children in Gaza", "https://www.pcrf.net/information-you-should-know/how-orphan-sponsorship-helps-children-in-gaza.html", "orphan sponsorship in Gaza", "Explains immediate needs and psychological impact."),
+            Link("UNRWA USA - Gaza orphan support", "https://www.unrwausa.org/orphans", "Gaza orphan support", "Donation page with cash-assistance framing and donation amounts."),
+            Link("Islamic Relief Worldwide - Sponsor an Orphan in Gaza", "https://islamic-relief.org/orphan-sponsorship-programme/sponsor-an-orphan-in-gaza/", "sponsor an orphan in Gaza", "Sponsorship page with stipend, seasonal distributions, Eid gifts, and winter items."),
+            Link("UNICEF - Children in Gaza need life-saving support", "https://www.unicef.org/emergencies/children-gaza-need-lifesaving-support", "children in Gaza need support", "Authoritative crisis context around health, displacement, and basic care."),
+        ),
+        "serp_features": "SERP snapshot includes charity campaign pages, sponsorship pages, UNICEF crisis context, social posts, and news results. News/current-affairs results appear for Gaza child trauma and education disruption.",
+        "paid_ads": "Paid ads were not verified in this browser snapshot. Do not make a paid-ads claim without Ahrefs or live Google Ads preview evidence.",
+        "content_pattern": "Ranking/visible pages are mostly donation appeals and sponsorship pages. Strong pages quickly move from crisis description to monthly support, stipend, or emergency relief.",
+        "serp_notes": "LifeUSA can win a more useful middle ground: not just a donation page and not just news. The page should explain the child-care problem in Gaza, then prove LifeUSA's relevant relief examples.",
+        "current_rank": "Existing LifeUSA Gaza article is the rewrite target. Current ranking for `war orphans` / `gaza orphans` was not verified through GSC in this pass.",
+        "image_notes": "Use real Gaza relief or orphan-support imagery only if LifeUSA has publishing rights and child-safety approval. Avoid identifiable child closeups if consent/privacy is unclear.",
+        "schema_notes": "Use Article schema. FAQ schema is optional only if Wix allows clean FAQ markup and the final article includes visible FAQs.",
+        "info_gain": (
+            "Connect war orphanhood to care-system collapse, not only parent death.",
+            "Map LifeUSA Gaza examples to concrete needs: food, formula/essentials, winter relief, Eid joy, and the Gaza orphan campaign.",
+            "Use claim-safe Gaza language with room for Saiaf to add verified current figures before publishing.",
+            "Create a bridge between crisis education and a focused support path.",
+        ),
+        "appendix_sources": (
+            "Google Ads CLI: `war orphans` 390/mo, `gaza orphans` 170/mo.",
+            "Existing LifeUSA rewrite target: https://www.lifeusa.org/post/who-will-watch-over-the-orphans-of-gaza",
+            "SERP snapshot sources: World Care Foundation, PCRF, UNRWA USA, Islamic Relief Worldwide, UNICEF.",
+            "Open question: add current Gaza statistics only from verified sources before publication.",
+        ),
+    },
+    "why-gifts-for-orphans-matter": {
+        "audience": "Donors who wonder whether gifts, Eid gifts, and joy programs are meaningful when orphaned children also need urgent practical care.",
+        "reader_stage": "Learning and deciding: the reader wants to know whether gift giving is responsible and worth supporting.",
+        "trust_blockers": "A shallow gift list, exaggerated emotional claims, implying gifts replace food/school/safety, or using children as donation props.",
+        "journey": "I see gifts for orphans -> is this actually helpful? -> what kind of need does joy meet? -> what makes gifting responsible? -> how has LifeUSA done this? -> how can I support it?",
+        "serp_competitors": (
+            Link("Basmah - Eid Gifts for Children", "https://basmah.org/eid-gifts-for-children/", "Eid gifts for children", "Donation packages for Eid gift packs, toys, clothes, and shoes."),
+            Link("Orphans in Need - Eid al-Adha Gifts", "https://www.orphansinneed.org.uk/appeals/eid-al-adha-gifts/", "Eid gifts matter", "Explains gifts as remembered, new outfit, toy, school supplies, and lasting memory."),
+            Link("Al Mustafa Welfare Trust - Eid Gift for Orphan", "https://www.almustafausa.org/ramadan/orphan-eid-gift/", "Eid gift for orphan", "Religious/seasonal appeal with celebration framing."),
+            Link("LifeUSA - Why One Gift Means the World", "https://www.lifeusa.org/post/why-one-gift-means-the-world-to-an-orphaned-child", "one gift means the world", "Existing LifeUSA article and enrichment target."),
+        ),
+        "serp_features": "SERP snapshot is dominated by charity/Eid campaign pages, donation cards, seasonal appeals, and social posts about dignity, smiles, and children feeling remembered.",
+        "paid_ads": "Paid ads were not verified in this browser snapshot. Treat ad presence as unknown unless checked in Ahrefs or Google.",
+        "content_pattern": "Most pages are transactional seasonal gift appeals. Few explain the dignity/childhood argument in depth.",
+        "serp_notes": "LifeUSA should not write another generic gift-card page. The information gain is explaining why gifts matter responsibly, then tying that to LifeUSA proof examples.",
+        "current_rank": "LifeUSA's existing gift article appeared in the sampled search results for this topic. Exact rank should be checked in GSC/Ahrefs before final prioritization.",
+        "image_notes": "Use celebration/gift images that show dignity and group joy. Avoid close-up identifiable child imagery unless LifeUSA has consent and approval.",
+        "schema_notes": "Use Article schema. FAQ schema can support gift/Eid questions if the final page includes visible FAQs.",
+        "info_gain": (
+            "Answer the donor objection that gifts are secondary without dismissing joy and dignity.",
+            "Separate responsible gift programs from uncoordinated direct gifting.",
+            "Use LifeUSA's Global Orphan Parties, Gaza Eid support, and gift-program examples as proof.",
+            "Frame gifts as part of childhood, not as a cure or replacement for urgent needs.",
+        ),
+        "appendix_sources": (
+            "Google Ads CLI: `gifts for orphans` 20/mo, `eid gifts for orphans` 10/mo.",
+            "Existing LifeUSA rewrite target: https://www.lifeusa.org/post/why-one-gift-means-the-world-to-an-orphaned-child",
+            "SERP snapshot sources: Basmah, Orphans in Need, Al Mustafa Welfare Trust, LifeUSA.",
+            "Open question: confirm which LifeUSA gift/donation CTA should be used if separate from the orphan donation designation.",
+        ),
+    },
+    "orphan-education-after-loss": {
+        "audience": "Donors and supporters who want to understand why school continuity matters for orphaned children after loss.",
+        "reader_stage": "Learning and deciding: the reader understands education matters but needs the orphan-specific case and support path.",
+        "trust_blockers": "Generic education-is-important language, overpromising tuition/scholarships, or repeating the broad orphan-help pillar.",
+        "journey": "I care about orphan education -> why is school stability urgent after loss? -> what interrupts school? -> what support helps? -> what LifeUSA examples prove this? -> how can donors help responsibly?",
+        "serp_competitors": (
+            Link("PMC - School Support Intervention", "https://pmc.ncbi.nlm.nih.gov/articles/PMC5693735/", "school support intervention for orphaned adolescents", "Research result showing school support can affect educational outcomes."),
+            Link("Restore Hope Today - Orphan Education Program", "https://www.restorehopetoday.org/oep/", "orphan education program", "Program page listing tutoring, vocational training, and college tuition/fees assistance."),
+            Link("Pakistan Children Relief - Education for Orphaned Children", "https://www.pakcr.org/blog/the-role-of-education-in-empowering-orphaned-children-for-a-better-future/", "education for orphaned children", "Broad empowerment article with cognitive/social development framing."),
+        ),
+        "serp_features": "SERP snapshot mixes research, program pages, broad nonprofit articles, and social/forum-style education advice.",
+        "paid_ads": "Paid ads were not verified in this browser snapshot.",
+        "content_pattern": "Visible pages either sell an education program or explain education broadly. Few focus on school stability after bereavement/loss.",
+        "serp_notes": "LifeUSA can make the topic more specific: after loss, school is routine, adult contact, supplies, peers, safety, and future continuity. Use LifeUSA country examples as proof.",
+        "current_rank": "This is a proposed new guide. Current LifeUSA ranking for `orphan education` was not verified in GSC in this pass.",
+        "image_notes": "Use school supplies, classroom, backpack, or group learning images with consent-safe framing. Alt text should describe the educational support, not exploit child vulnerability.",
+        "schema_notes": "Use Article schema and optional FAQ schema. Avoid HowTo schema unless the final article becomes a step-by-step donor process.",
+        "info_gain": (
+            "Position school as stability after loss, not only academic achievement.",
+            "Connect barriers to practical support categories without overpromising tuition.",
+            "Use LifeUSA Syria, Lebanon, Afghanistan, Bangladesh, and Kenya examples to prove school-continuity work.",
+            "Keep the page narrow enough that it does not cannibalize the orphan-help pillar or sponsorship guide.",
+        ),
+        "appendix_sources": (
+            "Google Ads CLI: `orphan education` 10/mo, `support orphans education` 10/mo, `sponsoring the education of an orphan` 10/mo.",
+            "SERP snapshot sources: PMC school support study, Restore Hope Today, Pakistan Children Relief.",
+            "LifeUSA proof pages: Syria, Lebanon, Afghanistan, Bangladesh, and Kenya education/orphan posts.",
+            "Open question: confirm exact LifeUSA education-related CTA if different from general orphan support.",
+        ),
+    },
+    "mental-health-support-for-orphaned-children": {
+        "audience": "Donors and supporters who understand material orphan support but want to understand emotional safety, trauma, routine, and psychosocial support after loss.",
+        "reader_stage": "Learning and verifying trust: the reader needs a careful, non-clinical explanation before supporting or sharing.",
+        "trust_blockers": "Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.",
+        "journey": "I know orphaned children need material support -> what about emotional needs? -> how do loss and war affect stability? -> what support is safe to discuss? -> what LifeUSA examples exist? -> what should be reviewed before publishing?",
+        "serp_competitors": (
+            Link("Duke Global Health - Mental Health Services Critical for Orphans", "https://globalhealth.duke.edu/news/protective-and-mental-health-services-critical-orphans-worldwide", "mental health services for orphans", "Research/news result emphasizing protection and mental health services."),
+            Link("PMC - Childhood trauma and depressive symptoms", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12642290/", "childhood trauma among orphaned children", "Research result linking trauma exposure and depressive symptoms."),
+            Link("BMJ Global Health - Care environment and mental health", "https://gh.bmj.com/content/6/3/e003644", "care environment and mental health of orphaned children", "Research result on care environment and mental health risk."),
+            Link("A Child's Hope Foundation - Mental Health Needs", "https://achildshopefoundation.org/2021/05/20/addressing-mental-health-needs-of-orphaned-children/", "mental health needs of orphaned children", "Nonprofit page that leans toward counseling/healing language."),
+            Link("Embrace Relief - Emotional Well-Being", "https://www.embracerelief.org/mental-health-matters-addressing-emotional-well-being-in-orphaned-children/", "emotional well-being in orphaned children", "Nonprofit article discussing therapeutic support, belonging, and nurturing environments."),
+        ),
+        "serp_features": "SERP snapshot mixes academic/research pages and nonprofit articles. Some competing pages use clinical or therapy language.",
+        "paid_ads": "Paid ads were not verified in this browser snapshot.",
+        "content_pattern": "Ranking/visible content often discusses trauma, counseling, protective services, and care environments. The risk is overclaiming beyond LifeUSA's confirmed program details.",
+        "serp_notes": "LifeUSA's page should be explicitly non-clinical: safety, routine, trusted adults, school connection, play, dignity, and stable support. That is the safer information gain.",
+        "current_rank": "This is a proposed new guide. Current LifeUSA ranking for `orphan mental health` was not verified in GSC in this pass.",
+        "image_notes": "Use non-clinical, dignity-first imagery: safe group activities, school, play, or caregiver-supported environments. Avoid sad-child closeups and therapy-implying photos unless program details support them.",
+        "schema_notes": "Use Article schema and optional FAQ schema. Do not use MedicalWebPage or medical schema unless LifeUSA publishes clinically reviewed medical content.",
+        "info_gain": (
+            "Translate mental-health need into donor-safe support conditions rather than medical treatment claims.",
+            "Use LifeUSA Somaliland mental-health/stability examples while clearly separating confirmed program details from general psychosocial principles.",
+            "Connect war orphans to trauma carefully, then link out to the Gaza-specific page instead of repeating it.",
+            "Give Angela explicit claim guardrails so the article stays useful and safe.",
+        ),
+        "appendix_sources": (
+            "Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.",
+            "SERP snapshot sources: Duke Global Health, PMC, BMJ Global Health, A Child's Hope Foundation, Embrace Relief.",
+            "LifeUSA proof pages: Somaliland mental-health post, Somaliland stability/sponsorship post, Gaza orphan article, Ghana/global play examples.",
+            "Open question: confirm whether LifeUSA provides counseling, psychosocial support, referrals, or only broader stability/mental-health programming before final wording.",
+        ),
+    },
+}
+
+
 def md_table(rows: tuple[tuple[str, str, str, str], ...]) -> str:
     lines = ["| Keyword | Avg. monthly searches | Competition | Use |", "|---|---:|---|---|"]
     for kw, volume, comp, use in rows:
@@ -346,6 +475,10 @@ def deep(topic: Topic, key: str):
     return DEEPENING[topic.slug][key]
 
 
+def tdata(topic: Topic, key: str):
+    return TEMPLATE_DATA[topic.slug][key]
+
+
 def bullet_md(items: tuple[str, ...]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
@@ -358,6 +491,14 @@ def depth_plan_md(topic: Topic) -> str:
             out.append(f"- {item}")
         out.append("")
     return "\n".join(out).strip()
+
+
+def serp_competitors_md(topic: Topic) -> str:
+    return link_table(tdata(topic, "serp_competitors"))
+
+
+def appendix_md(topic: Topic) -> str:
+    return bullet_md(tdata(topic, "appendix_sources"))
 
 
 def outline_sections_md(topic: Topic) -> str:
@@ -385,15 +526,48 @@ def build_brief(topic: Topic) -> str:
     return dedent(f"""\
     # Brief: {topic.title}
 
-    ## Article Setup
+    ## 1. Article Setup
 
     - **Content type:** {topic.content_type}
     - **Owner:** {brief_owner(topic)}
     - **Proposed/live URL:** `{topic.live_url}`
+    - **Current rank:** {tdata(topic, "current_rank")}
     - **Status note:** {topic.status_note}
     - **Keyword source:** `{KW_EXACT}` and `{KW_REWRITE}`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
 
-    ## Thesis
+    ## 2. Audience And Reader Need
+
+    - **Audience:** {tdata(topic, "audience")}
+    - **Reader question:** {topic.reader_problem}
+    - **Reader stage:** {tdata(topic, "reader_stage")}
+    - **What would make them leave:** {tdata(topic, "trust_blockers")}
+
+    ## 3. Keywords And Search Demand
+
+    ### Primary Keywords
+
+    {md_table(topic.primary_keywords)}
+
+    ### Secondary Keywords
+
+    {md_table(topic.secondary_keywords)}
+
+    ## 4. SERP And Competition
+
+    ### Top competing / visible URLs
+
+    {serp_competitors_md(topic)}
+
+    - **Search result features:** {tdata(topic, "serp_features")}
+    - **Paid ads:** {tdata(topic, "paid_ads")}
+    - **Content pattern:** {tdata(topic, "content_pattern")}
+    - **SERP notes:** {tdata(topic, "serp_notes")}
+
+    ## 5. Format Decision
+
+    {topic.format_decision}
+
+    ## Article Thesis
 
     {deep(topic, "thesis")}
 
@@ -401,27 +575,20 @@ def build_brief(topic: Topic) -> str:
 
     {bullet_md(deep(topic, "promise"))}
 
-    ## Reader Problem
+    ## 6. Reader Profile And Journey
 
-    {topic.reader_problem}
+    - **Who they are:** {tdata(topic, "audience")}
+    - **What they already believe:** They care about orphaned children but need a clearer explanation of this specific topic.
+    - **What they need next:** {topic.reader_problem}
+    - **What could block trust:** {tdata(topic, "trust_blockers")}
 
-    ## Cluster Boundary
+    `{tdata(topic, "journey")}`
+
+    ## Non-Cannibalization Rule
 
     {topic.cluster_boundary}
 
-    ## Primary Keywords
-
-    {md_table(topic.primary_keywords)}
-
-    ## Secondary Keywords
-
-    {md_table(topic.secondary_keywords)}
-
-    ## Format Decision
-
-    {topic.format_decision}
-
-    ## Intro Guidance
+    ## 7. Intro Guidance
 
     {topic.intro_guidance}
 
@@ -429,18 +596,29 @@ def build_brief(topic: Topic) -> str:
 
     {deep(topic, "intro")}
 
-    ## Depth Plan
+    ## 8. Section Outline / Depth Plan
 
     {depth_plan_md(topic)}
 
-    ## Internal Links And Proof Examples
+    ## 9. Internal Links And Next Step
 
     {link_table(topic.links)}
 
-    ## Metadata
+    ## 10. Metadata, FAQ, Images, And Schema
 
     - **Meta title:** {topic.meta_title}
     - **Meta description:** {topic.meta_description}
+    - **FAQ targets:** {", ".join(topic.faq)}
+    - **Image notes:** {tdata(topic, "image_notes")}
+    - **Schema notes:** {tdata(topic, "schema_notes")}
+
+    ## 11. Information Gain
+
+    {bullet_md(tdata(topic, "info_gain"))}
+
+    ## 12. Internal Appendix
+
+    {appendix_md(topic)}
 
     ## Review Note
 
@@ -465,21 +643,23 @@ def build_outline(topic: Topic) -> str:
     return dedent(f"""\
     # Outline: {topic.title}
 
-    ## Reader Journey
+    ## 1. Article Setup
 
-    ```text
-    The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
-    ```
+    - **Working title:** {topic.title}
+    - **Proposed/live URL:** `{topic.live_url}`
+    - **Article type:** {topic.content_type}
+    - **Current rank:** {tdata(topic, "current_rank")}
+    - **Writer:** {"Angela" if is_new_guide(topic) else "Saiaf"}
+    - **Review owner:** Saiaf for SEO, links, sensitive claims, and final LifeUSA fit.
 
-    ## Article Thesis
+    ## 2. Audience And Reader Need
 
-    {deep(topic, "thesis")}
+    - **Audience:** {tdata(topic, "audience")}
+    - **Reader question:** {topic.reader_problem}
+    - **Reader stage:** {tdata(topic, "reader_stage")}
+    - **What would make them leave:** {tdata(topic, "trust_blockers")}
 
-    ## Searcher Promise
-
-    {bullet_md(deep(topic, "promise"))}
-
-    ## Search Demand
+    ## 3. Keywords And Search Demand
 
     Primary keywords:
 
@@ -489,11 +669,38 @@ def build_outline(topic: Topic) -> str:
 
     {md_table(topic.secondary_keywords)}
 
+    ## 4. SERP And Competition
+
+    {serp_competitors_md(topic)}
+
+    - **Search result features:** {tdata(topic, "serp_features")}
+    - **Paid ads:** {tdata(topic, "paid_ads")}
+    - **Content pattern:** {tdata(topic, "content_pattern")}
+    - **Notes about the results page:** {tdata(topic, "serp_notes")}
+
+    ## 5. Format Decision
+
+    {topic.format_decision}
+
+    ## Article Thesis
+
+    {deep(topic, "thesis")}
+
+    ## Searcher Promise
+
+    {bullet_md(deep(topic, "promise"))}
+
+    ## 6. Reader Profile And Journey
+
+    ```text
+    {tdata(topic, "journey")}
+    ```
+
     ## Non-Cannibalization Rule
 
     {topic.cluster_boundary}
 
-    ## Intro
+    ## 7. Intro Guidance
 
     Guidance:
 
@@ -503,15 +710,32 @@ def build_outline(topic: Topic) -> str:
 
     {deep(topic, "intro")}
 
+    ## 8. Section Outline
+
     {outline_sections_md(topic)}
 
-    ## FAQ Targets
+    ## 9. Internal Links And Next Step
+
+    {link_table(topic.links)}
+
+    ## 10. Metadata, FAQ, Images, And Schema
+
+    - **Meta title:** {topic.meta_title}
+    - **Meta description:** {topic.meta_description}
+    - **Image notes:** {tdata(topic, "image_notes")}
+    - **Schema notes:** {tdata(topic, "schema_notes")}
+
+    FAQ targets:
 
     {faqs}
 
-    ## Internal Links
+    ## 11. Information Gain
 
-    {link_table(topic.links)}
+    {bullet_md(tdata(topic, "info_gain"))}
+
+    ## 12. Internal Appendix
+
+    {appendix_md(topic)}
 
     ## Adversarial Review
 
@@ -587,6 +811,13 @@ def rows_html(rows: tuple[tuple[str, str, str, str], ...]) -> str:
 def links_html(links: tuple[Link, ...]) -> str:
     return "\n".join(
         f'<tr><td>{html_escape(link.label)}</td><td><a href="{html_escape(link.url)}">{html_escape(link.anchor)}</a></td><td>{html_escape(link.note)}</td></tr>'
+        for link in links
+    )
+
+
+def source_links_html(links: tuple[Link, ...]) -> str:
+    return "\n".join(
+        f'<tr><td><a href="{html_escape(link.url)}">{html_escape(link.label)}</a></td><td>{html_escape(link.note)}</td></tr>'
         for link in links
     )
 
@@ -667,28 +898,45 @@ def build_html(topic: Topic) -> str:
 
       <nav>
         <a href="#setup">Setup</a>
+        <a href="#audience">Audience</a>
         <a href="#keywords">Keywords</a>
-        <a href="#intent">Intent</a>
-        <a href="#depth">Depth</a>
+        <a href="#serp">SERP</a>
+        <a href="#format">Format</a>
+        <a href="#journey">Journey</a>
+        <a href="#intro">Intro</a>
         <a href="#links">Links</a>
-        <a href="#outline">Outline</a>
+        <a href="#outline">Sections</a>
         <a href="#faq">FAQ</a>
+        <a href="#gain">Info Gain</a>
+        <a href="#appendix">Appendix</a>
         <a href="#review">Review</a>
       </nav>
 
       <section id="setup">
-        <h2>Article Setup</h2>
+        <h2>1. Article Setup</h2>
         <div class="grid">
+          <div class="card"><h3>Working title</h3><p>{html_escape(topic.title)}</p></div>
           <div class="card"><h3>Content type</h3><p>{html_escape(topic.content_type)}</p></div>
           <div class="card"><h3>URL</h3><p><code>{html_escape(topic.live_url)}</code></p></div>
+          <div class="card"><h3>Current rank</h3><p>{html_escape(tdata(topic, "current_rank"))}</p></div>
           <div class="card"><h3>Demand source</h3><p><code>{html_escape(KW_EXACT)}</code></p></div>
           <div class="card"><h3>Owner</h3><p>{html_escape(owner_card(topic))}</p></div>
         </div>
         <div class="callout ok"><strong>Status:</strong> {html_escape(topic.status_note)}</div>
       </section>
 
+      <section id="audience">
+        <h2>2. Audience And Reader Need</h2>
+        <div class="grid">
+          <div class="card"><h3>Audience</h3><p>{html_escape(tdata(topic, "audience"))}</p></div>
+          <div class="card"><h3>Reader stage</h3><p>{html_escape(tdata(topic, "reader_stage"))}</p></div>
+        </div>
+        <p class="lede"><strong>Reader question:</strong> {html_escape(topic.reader_problem)}</p>
+        <div class="callout danger"><strong>What would make them leave:</strong> {html_escape(tdata(topic, "trust_blockers"))}</div>
+      </section>
+
       <section id="keywords">
-        <h2>Keywords And Search Demand</h2>
+        <h2>3. Keywords And Search Demand</h2>
         <p><strong>Google Ads CLI is the source of truth for search demand.</strong> Ahrefs may only be used later as a SERP-shape helper.</p>
         <h3>Primary Keywords</h3>
         <table><thead><tr><th>Keyword</th><th>Avg. monthly searches</th><th>Competition</th><th>Use</th></tr></thead><tbody>{rows_html(topic.primary_keywords)}</tbody></table>
@@ -696,45 +944,93 @@ def build_html(topic: Topic) -> str:
         <table><thead><tr><th>Keyword</th><th>Avg. monthly searches</th><th>Competition</th><th>Use</th></tr></thead><tbody>{rows_html(topic.secondary_keywords)}</tbody></table>
       </section>
 
-      <section id="intent">
-        <h2>Intent And Boundary</h2>
-        <p class="lede">{html_escape(topic.reader_problem)}</p>
-        <div class="callout danger"><strong>Do not cannibalize:</strong> {html_escape(topic.cluster_boundary)}</div>
+      <section id="serp">
+        <h2>4. SERP And Competition</h2>
+        <p class="lede"><strong>SERP means Search Engine Results Page.</strong> This snapshot explains what visible results suggest about reader expectations and article format.</p>
+        <table><thead><tr><th>Visible source</th><th>What it shows</th></tr></thead><tbody>{source_links_html(tdata(topic, "serp_competitors"))}</tbody></table>
+        <div class="grid">
+          <div class="card"><h3>Search result features</h3><p>{html_escape(tdata(topic, "serp_features"))}</p></div>
+          <div class="card"><h3>Paid ads</h3><p>{html_escape(tdata(topic, "paid_ads"))}</p></div>
+          <div class="card"><h3>Content pattern</h3><p>{html_escape(tdata(topic, "content_pattern"))}</p></div>
+          <div class="card"><h3>Writer takeaway</h3><p>{html_escape(tdata(topic, "serp_notes"))}</p></div>
+        </div>
+      </section>
+
+      <section id="format">
+        <h2>5. Format Decision</h2>
+        <p><strong>Format decision:</strong> {html_escape(topic.format_decision)}</p>
         <h3>Article Thesis</h3>
         <p>{html_escape(deep(topic, "thesis"))}</p>
         <h3>Searcher Promise</h3>
         {bullets_html(deep(topic, "promise"))}
-        <p><strong>Format decision:</strong> {html_escape(topic.format_decision)}</p>
-        <p><strong>Intro guidance:</strong> {html_escape(topic.intro_guidance)}</p>
       </section>
 
-      <section id="depth">
-        <h2>Working Intro And Depth Plan</h2>
+      <section id="journey">
+        <h2>6. Reader Profile And Journey</h2>
+        <ul>
+          <li><strong>Who they are:</strong> {html_escape(tdata(topic, "audience"))}</li>
+          <li><strong>What they already believe:</strong> They care about orphaned children but need a clearer explanation of this specific topic.</li>
+          <li><strong>What they need next:</strong> {html_escape(topic.reader_problem)}</li>
+          <li><strong>What could block trust:</strong> {html_escape(tdata(topic, "trust_blockers"))}</li>
+        </ul>
+        <p><code>{html_escape(tdata(topic, "journey"))}</code></p>
+        <div class="callout danger"><strong>Do not cannibalize:</strong> {html_escape(topic.cluster_boundary)}</div>
+      </section>
+
+      <section id="intro">
+        <h2>7. Intro Guidance</h2>
+        <p><strong>Guidance:</strong> {html_escape(topic.intro_guidance)}</p>
         <h3>Working Intro Draft</h3>
         {paragraphs_html(deep(topic, "intro"), "lede")}
-        <h3>Section Depth Requirements</h3>
-        {depth_plan_html(topic)}
-      </section>
-
-      <section id="links">
-        <h2>Internal Links And Proof Examples</h2>
-        <table><thead><tr><th>Page</th><th>Suggested anchor</th><th>Note</th></tr></thead><tbody>{links_html(topic.links)}</tbody></table>
       </section>
 
       <section id="outline">
-        <h2>{html_escape(outline_heading(topic))}</h2>
+        <h2>8. {html_escape(outline_heading(topic))}</h2>
+        <h3>Section Depth Requirements</h3>
+        {depth_plan_html(topic)}
         {sections_html(topic)}
       </section>
 
+      <section id="links">
+        <h2>9. Internal Links And Next Step</h2>
+        <table><thead><tr><th>Page</th><th>Suggested anchor</th><th>Note</th></tr></thead><tbody>{links_html(topic.links)}</tbody></table>
+      </section>
+
       <section id="faq">
-        <h2>FAQ Targets</h2>
+        <h2>10. Metadata, FAQ, Images, And Schema</h2>
+        <p><strong>Meta title:</strong> {html_escape(topic.meta_title)}</p>
+        <p><strong>Meta description:</strong> {html_escape(topic.meta_description)}</p>
+        <p><strong>Image notes:</strong> {html_escape(tdata(topic, "image_notes"))}</p>
+        <p><strong>Schema notes:</strong> {html_escape(tdata(topic, "schema_notes"))}</p>
+        <h3>FAQ Targets</h3>
         <ul>{faq_items}</ul>
       </section>
 
+      <section id="gain">
+        <h2>11. Information Gain</h2>
+        <p>This is what LifeUSA can add beyond the search results instead of producing a rewritten version of competitor pages.</p>
+        {bullets_html(tdata(topic, "info_gain"))}
+      </section>
+
+      <section id="appendix">
+        <h2>12. Internal Appendix</h2>
+        {bullets_html(tdata(topic, "appendix_sources"))}
+      </section>
+
       <section id="review">
-        <h2>Metadata And Review Checklist</h2>
-        <p><strong>Meta title:</strong> {html_escape(topic.meta_title)}</p>
-        <p><strong>Meta description:</strong> {html_escape(topic.meta_description)}</p>
+        <h2>Review Checklist Before Sending To Draft</h2>
+        <ul>
+          <li>Does the article have a clear job in the orphan cluster?</li>
+          <li>Does the format fit the topic, not just the keyword?</li>
+          <li>Does the intro answer the reader quickly?</li>
+          <li>Does the SERP section explain what the writer should learn from competing pages?</li>
+          <li>Does the article add LifeUSA-specific information gain?</li>
+          <li>Does each section move the reader forward?</li>
+          <li>Are LifeUSA examples specific and sourced?</li>
+          <li>Are child, medical, crisis, sponsorship, zakat, or sadaqah claims safe to publish?</li>
+          <li>Are internal links live and relevant?</li>
+        </ul>
+        <p><strong>Suggested slug:</strong> <code>{html_escape(topic.slug)}</code></p>
         <p><strong>Review note:</strong> {html_escape(topic.review_note)}</p>
         <div class="callout"><strong>Source note:</strong> {html_escape(topic.source_note)}</div>
       </section>

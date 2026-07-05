@@ -54,6 +54,7 @@ Use this as a small checkpoint when LifeUSA content work is active.
 - Approved package 4: `Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma`; new informational guide for Angela to draft; targets `orphan mental health` 10/mo with careful `war orphans` 390/mo support in conflict sections.
 - Decision: rewrite means enrichment with keywords, depth, internal links, and structure and is Saiaf-owned. New informational guides are Angela draft assignments, with Saiaf handling SEO planning/review.
 - Correction: initial pushed outlines were too shallow because they contained `Intro guidance` and short section notes instead of writer-ready depth. The generator and all four packages were upgraded with `Article Thesis`, `Searcher Promise`, `Working Intro Draft`, and section-level depth requirements.
+- Template correction: all four outline packages were rebuilt to follow the published `LifeUSA Article Outline Template` sections 1-12, including SERP/competition, metadata/images/schema, information gain, and internal appendix. Sync validation now requires those sections for these four pages.
 - Rejected: `Creating Beautiful Tomorrows in Orphans Today` as a broad orphan-relief rewrite because it duplicates the planned `How To Help Orphans` pillar. Full rewrite of `Rebuilding After Loss` is also rejected; internal-link improvement only.
 - Next action: Saiaf to review/edit these four outlines and choose which to turn into Wix rewrites/new guides first. No GitHub push was performed in this pass.
 

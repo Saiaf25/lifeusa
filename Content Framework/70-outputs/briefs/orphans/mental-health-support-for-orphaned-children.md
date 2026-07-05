@@ -1,14 +1,58 @@
     # Brief: Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma
 
-    ## Article Setup
+    ## 1. Article Setup
 
     - **Content type:** New informational guide; Angela-owned draft
     - **Owner:** Angela draft; Saiaf SEO planning/review
     - **Proposed/live URL:** `https://www.lifeusa.org/post/mental-health-support-for-orphaned-children`
+    - **Current rank:** This is a proposed new guide. Current LifeUSA ranking for `orphan mental health` was not verified in GSC in this pass.
     - **Status note:** This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
 
-    ## Thesis
+    ## 2. Audience And Reader Need
+
+    - **Audience:** Donors and supporters who understand material orphan support but want to understand emotional safety, trauma, routine, and psychosocial support after loss.
+    - **Reader question:** The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.
+    - **Reader stage:** Learning and verifying trust: the reader needs a careful, non-clinical explanation before supporting or sharing.
+    - **What would make them leave:** Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.
+
+    ## 3. Keywords And Search Demand
+
+    ### Primary Keywords
+
+    | Keyword | Avg. monthly searches | Competition | Use |
+|---|---:|---|---|
+| `orphan mental health` | 10 | Low | Use in title, intro, one H2, metadata, and FAQ. |
+
+    ### Secondary Keywords
+
+    | Keyword | Avg. monthly searches | Competition | Use |
+|---|---:|---|---|
+| `war orphans` | 390 | Low | Use carefully in trauma/conflict section, not as the main topic. |
+| `orphan crisis` | 10 | Low | Use only if natural in crisis context. |
+
+    ## 4. SERP And Competition
+
+    ### Top competing / visible URLs
+
+    | Page | URL | Suggested anchor | Note |
+|---|---|---|---|
+| Duke Global Health - Mental Health Services Critical for Orphans | `https://globalhealth.duke.edu/news/protective-and-mental-health-services-critical-orphans-worldwide` | mental health services for orphans | Research/news result emphasizing protection and mental health services. |
+| PMC - Childhood trauma and depressive symptoms | `https://pmc.ncbi.nlm.nih.gov/articles/PMC12642290/` | childhood trauma among orphaned children | Research result linking trauma exposure and depressive symptoms. |
+| BMJ Global Health - Care environment and mental health | `https://gh.bmj.com/content/6/3/e003644` | care environment and mental health of orphaned children | Research result on care environment and mental health risk. |
+| A Child's Hope Foundation - Mental Health Needs | `https://achildshopefoundation.org/2021/05/20/addressing-mental-health-needs-of-orphaned-children/` | mental health needs of orphaned children | Nonprofit page that leans toward counseling/healing language. |
+| Embrace Relief - Emotional Well-Being | `https://www.embracerelief.org/mental-health-matters-addressing-emotional-well-being-in-orphaned-children/` | emotional well-being in orphaned children | Nonprofit article discussing therapeutic support, belonging, and nurturing environments. |
+
+    - **Search result features:** SERP snapshot mixes academic/research pages and nonprofit articles. Some competing pages use clinical or therapy language.
+    - **Paid ads:** Paid ads were not verified in this browser snapshot.
+    - **Content pattern:** Ranking/visible content often discusses trauma, counseling, protective services, and care environments. The risk is overclaiming beyond LifeUSA's confirmed program details.
+    - **SERP notes:** LifeUSA's page should be explicitly non-clinical: safety, routine, trusted adults, school connection, play, dignity, and stable support. That is the safer information gain.
+
+    ## 5. Format Decision
+
+    New informational guide with strong medical-claim guardrails.
+
+    ## Article Thesis
 
     Mental health support for orphaned children should be framed as safety, routine, trusted care, school connection, play, and dignity after loss or trauma, while avoiding medical advice or unsupported therapy claims.
 
@@ -19,32 +63,20 @@
 - Define supportive conditions donors can understand: stable adults, routine, school, safe spaces, play, and basic-needs security.
 - Use Somaliland and joy/play examples as proof while staying inside claim-safe language.
 
-    ## Reader Problem
+    ## 6. Reader Profile And Journey
 
-    The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.
+    - **Who they are:** Donors and supporters who understand material orphan support but want to understand emotional safety, trauma, routine, and psychosocial support after loss.
+    - **What they already believe:** They care about orphaned children but need a clearer explanation of this specific topic.
+    - **What they need next:** The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.
+    - **What could block trust:** Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.
 
-    ## Cluster Boundary
+    `I know orphaned children need material support -> what about emotional needs? -> how do loss and war affect stability? -> what support is safe to discuss? -> what LifeUSA examples exist? -> what should be reviewed before publishing?`
+
+    ## Non-Cannibalization Rule
 
     This page owns psychosocial support, routine, safety, trusted adults, school connection, play, and dignity. It must not become a clinical mental-health article, a general orphan needs guide, or a sponsorship coverage article.
 
-    ## Primary Keywords
-
-    | Keyword | Avg. monthly searches | Competition | Use |
-|---|---:|---|---|
-| `orphan mental health` | 10 | Low | Use in title, intro, one H2, metadata, and FAQ. |
-
-    ## Secondary Keywords
-
-    | Keyword | Avg. monthly searches | Competition | Use |
-|---|---:|---|---|
-| `war orphans` | 390 | Low | Use carefully in trauma/conflict section, not as the main topic. |
-| `orphan crisis` | 10 | Low | Use only if natural in crisis context. |
-
-    ## Format Decision
-
-    New informational guide with strong medical-claim guardrails.
-
-    ## Intro Guidance
+    ## 7. Intro Guidance
 
     Open by saying orphaned children may need more than material support, especially after loss or crisis. Then set the boundary: this article is not medical advice, but explains supportive conditions that can help children feel safer and more stable.
 
@@ -54,7 +86,7 @@
 
 This guide should explain mental health support for orphaned children in non-clinical language. It should not diagnose children or promise healing. Instead, it should show how stable care, school connection, play, dignity, and consistent support can help create the conditions children need after loss, displacement, or trauma.
 
-    ## Depth Plan
+    ## 8. Section Outline / Depth Plan
 
     ### 1. Why Mental Health Support Matters After Loss
 - Frame emotional support as part of care after loss, not as a clinical treatment article.
@@ -81,7 +113,7 @@ This guide should explain mental health support for orphaned children in non-cli
 - State what each example can support as evidence: care, stability, joy, routine, or social connection.
 - Add a final claim-safety reminder before publication.
 
-    ## Internal Links And Proof Examples
+    ## 9. Internal Links And Next Step
 
     | Page | URL | Suggested anchor | Note |
 |---|---|---|---|
@@ -95,10 +127,27 @@ This guide should explain mental health support for orphaned children in non-cli
 | Sponsorship coverage guide | `https://saiaf25.github.io/lifeusa/article-plans-and-outlines/what-does-orphan-sponsorship-cover/` | what orphan sponsorship can cover | Supporting sponsorship guide. |
 | Orphan donation CTA | `https://donate.lifeusa.org/donorportal/project-designations?Program=11WVy000001QlE5MAK` | support orphaned children through LifeUSA | Established orphan sponsorship/donation CTA. |
 
-    ## Metadata
+    ## 10. Metadata, FAQ, Images, And Schema
 
     - **Meta title:** Mental Health Support for Orphaned Children After Loss
     - **Meta description:** Learn why orphaned children may need emotional support after loss or crisis, and how routine, safety, school, play, and trusted care can help.
+    - **FAQ targets:** Why do orphaned children need mental health support?, How can war affect orphaned children emotionally?, What helps orphaned children feel safe after trauma?, Can school and routine support mental health?, Is this the same as therapy?
+    - **Image notes:** Use non-clinical, dignity-first imagery: safe group activities, school, play, or caregiver-supported environments. Avoid sad-child closeups and therapy-implying photos unless program details support them.
+    - **Schema notes:** Use Article schema and optional FAQ schema. Do not use MedicalWebPage or medical schema unless LifeUSA publishes clinically reviewed medical content.
+
+    ## 11. Information Gain
+
+    - Translate mental-health need into donor-safe support conditions rather than medical treatment claims.
+- Use LifeUSA Somaliland mental-health/stability examples while clearly separating confirmed program details from general psychosocial principles.
+- Connect war orphans to trauma carefully, then link out to the Gaza-specific page instead of repeating it.
+- Give Angela explicit claim guardrails so the article stays useful and safe.
+
+    ## 12. Internal Appendix
+
+    - Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.
+- SERP snapshot sources: Duke Global Health, PMC, BMJ Global Health, A Child's Hope Foundation, Embrace Relief.
+- LifeUSA proof pages: Somaliland mental-health post, Somaliland stability/sponsorship post, Gaza orphan article, Ghana/global play examples.
+- Open question: confirm whether LifeUSA provides counseling, psychosocial support, referrals, or only broader stability/mental-health programming before final wording.
 
     ## Review Note
 

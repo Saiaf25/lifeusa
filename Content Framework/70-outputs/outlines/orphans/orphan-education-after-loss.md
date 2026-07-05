@@ -1,23 +1,22 @@
     # Outline: Orphan Education After Loss: Why School Stability Matters
 
-    ## Reader Journey
+    ## 1. Article Setup
 
-    ```text
-    The reader has a specific orphan-related question -> they need a focused answer, not the broad orphan pillar -> they see LifeUSA proof examples -> they understand the right next step -> they can support through the relevant LifeUSA article, campaign, or donation path.
-    ```
+    - **Working title:** Orphan Education After Loss: Why School Stability Matters
+    - **Proposed/live URL:** `https://www.lifeusa.org/post/orphan-education-after-loss`
+    - **Article type:** New informational guide; Angela-owned draft
+    - **Current rank:** This is a proposed new guide. Current LifeUSA ranking for `orphan education` was not verified in GSC in this pass.
+    - **Writer:** Angela
+    - **Review owner:** Saiaf for SEO, links, sensitive claims, and final LifeUSA fit.
 
-    ## Article Thesis
+    ## 2. Audience And Reader Need
 
-    Orphan education is not only about school supplies; after the loss of a parent or caregiver, school can become one of the few stable structures that keeps a child connected to routine, adults, peers, meals, safety, and future possibility.
+    - **Audience:** Donors and supporters who want to understand why school continuity matters for orphaned children after loss.
+    - **Reader question:** The reader wants to understand why school matters after a child loses a parent or caregiver, and how education support stabilizes more than academics.
+    - **Reader stage:** Learning and deciding: the reader understands education matters but needs the orphan-specific case and support path.
+    - **What would make them leave:** Generic education-is-important language, overpromising tuition/scholarships, or repeating the broad orphan-help pillar.
 
-    ## Searcher Promise
-
-    - Explain why school stability matters after loss.
-- Identify the barriers that commonly interrupt orphan education.
-- Show what education support can include without promising unconfirmed scholarships or tuition coverage.
-- Give Angela a clear article path that links to LifeUSA school-support examples and avoids repeating the broad orphan-help pillar.
-
-    ## Search Demand
+    ## 3. Keywords And Search Demand
 
     Primary keywords:
 
@@ -32,11 +31,45 @@
 | `support orphans education` | 10 | Not provided | Use corrected phrasing as `support orphan education` or `support education for orphans`. |
 | `sponsoring the education of an orphan` | 10 | Low | Use in sponsorship/education section. |
 
+    ## 4. SERP And Competition
+
+    | Page | URL | Suggested anchor | Note |
+|---|---|---|---|
+| PMC - School Support Intervention | `https://pmc.ncbi.nlm.nih.gov/articles/PMC5693735/` | school support intervention for orphaned adolescents | Research result showing school support can affect educational outcomes. |
+| Restore Hope Today - Orphan Education Program | `https://www.restorehopetoday.org/oep/` | orphan education program | Program page listing tutoring, vocational training, and college tuition/fees assistance. |
+| Pakistan Children Relief - Education for Orphaned Children | `https://www.pakcr.org/blog/the-role-of-education-in-empowering-orphaned-children-for-a-better-future/` | education for orphaned children | Broad empowerment article with cognitive/social development framing. |
+
+    - **Search result features:** SERP snapshot mixes research, program pages, broad nonprofit articles, and social/forum-style education advice.
+    - **Paid ads:** Paid ads were not verified in this browser snapshot.
+    - **Content pattern:** Visible pages either sell an education program or explain education broadly. Few focus on school stability after bereavement/loss.
+    - **Notes about the results page:** LifeUSA can make the topic more specific: after loss, school is routine, adult contact, supplies, peers, safety, and future continuity. Use LifeUSA country examples as proof.
+
+    ## 5. Format Decision
+
+    New educational guide with program examples and a focused donor angle.
+
+    ## Article Thesis
+
+    Orphan education is not only about school supplies; after the loss of a parent or caregiver, school can become one of the few stable structures that keeps a child connected to routine, adults, peers, meals, safety, and future possibility.
+
+    ## Searcher Promise
+
+    - Explain why school stability matters after loss.
+- Identify the barriers that commonly interrupt orphan education.
+- Show what education support can include without promising unconfirmed scholarships or tuition coverage.
+- Give Angela a clear article path that links to LifeUSA school-support examples and avoids repeating the broad orphan-help pillar.
+
+    ## 6. Reader Profile And Journey
+
+    ```text
+    I care about orphan education -> why is school stability urgent after loss? -> what interrupts school? -> what support helps? -> what LifeUSA examples prove this? -> how can donors help responsibly?
+    ```
+
     ## Non-Cannibalization Rule
 
     This page owns school continuity, supplies, uniforms, transportation, attendance, routine, and future opportunity. It must not become a broad 10-ways guide or a sponsorship-coverage page.
 
-    ## Intro
+    ## 7. Intro Guidance
 
     Guidance:
 
@@ -47,6 +80,8 @@
     After a child loses a parent or caregiver, school can become more than a classroom. It can be the place where a child returns to routine, sees familiar adults, connects with other children, receives supplies or support, and keeps a sense of future from disappearing.
 
 That is why orphan education deserves its own guide. This article should explain what can interrupt school after loss, what support can help a child stay enrolled and prepared, and how donors can think about education as part of stability rather than a separate luxury.
+
+    ## 8. Section Outline
 
     ## H2 1: Why School Stability Matters After Loss
 
@@ -188,15 +223,7 @@ What to avoid:
 
 Do not turn examples into a country-by-country recap dump.
 
-    ## FAQ Targets
-
-    - Why is education important for orphaned children?
-- What can interrupt orphan education?
-- How can donors support orphan education?
-- Can orphan sponsorship help with school?
-- Does education support include uniforms and supplies?
-
-    ## Internal Links
+    ## 9. Internal Links And Next Step
 
     | Page | URL | Suggested anchor | Note |
 |---|---|---|---|
@@ -209,6 +236,35 @@ Do not turn examples into a country-by-country recap dump.
 | How To Help Orphans | `https://saiaf25.github.io/lifeusa/article-plans-and-outlines/how-to-help-orphans/` | how to help orphans | Planned pillar outline until the Wix URL is live. |
 | Sponsorship coverage guide | `https://saiaf25.github.io/lifeusa/article-plans-and-outlines/what-does-orphan-sponsorship-cover/` | what orphan sponsorship can cover | Supporting sponsorship guide. |
 | Orphan donation CTA | `https://donate.lifeusa.org/donorportal/project-designations?Program=11WVy000001QlE5MAK` | support orphaned children through LifeUSA | Established orphan sponsorship/donation CTA. |
+
+    ## 10. Metadata, FAQ, Images, And Schema
+
+    - **Meta title:** Orphan Education After Loss: Why School Stability Matters
+    - **Meta description:** Learn why orphan education matters after loss, what barriers can interrupt school, and how support can help children stay equipped, present, and hopeful.
+    - **Image notes:** Use school supplies, classroom, backpack, or group learning images with consent-safe framing. Alt text should describe the educational support, not exploit child vulnerability.
+    - **Schema notes:** Use Article schema and optional FAQ schema. Avoid HowTo schema unless the final article becomes a step-by-step donor process.
+
+    FAQ targets:
+
+    - Why is education important for orphaned children?
+- What can interrupt orphan education?
+- How can donors support orphan education?
+- Can orphan sponsorship help with school?
+- Does education support include uniforms and supplies?
+
+    ## 11. Information Gain
+
+    - Position school as stability after loss, not only academic achievement.
+- Connect barriers to practical support categories without overpromising tuition.
+- Use LifeUSA Syria, Lebanon, Afghanistan, Bangladesh, and Kenya examples to prove school-continuity work.
+- Keep the page narrow enough that it does not cannibalize the orphan-help pillar or sponsorship guide.
+
+    ## 12. Internal Appendix
+
+    - Google Ads CLI: `orphan education` 10/mo, `support orphans education` 10/mo, `sponsoring the education of an orphan` 10/mo.
+- SERP snapshot sources: PMC school support study, Restore Hope Today, Pakistan Children Relief.
+- LifeUSA proof pages: Syria, Lebanon, Afghanistan, Bangladesh, and Kenya education/orphan posts.
+- Open question: confirm exact LifeUSA education-related CTA if different from general orphan support.
 
     ## Adversarial Review
 
