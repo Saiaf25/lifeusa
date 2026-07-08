@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <title>LifeUSA Reports</title>
+  <style>
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../deck/fonts/thmanyahseriftext-Regular.woff2") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../deck/fonts/thmanyahseriftext-Bold.woff2") format("woff2");
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../deck/fonts/thmanyahseriftext-Black.woff2") format("woff2");
+      font-weight: 900;
+    }
+    :root {
+      --ink: #17231e;
+      --muted: #617067;
+      --paper: #f4f1e9;
+      --card: #fffdf7;
+      --green: #116149;
+      --green2: #dbece5;
+      --gold: #c79236;
+      --line: #d9ddd6;
+      --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", Georgia, serif;
+      line-height: 1.7;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    .banner {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(135deg,#0b4b39,#153126);
+      box-shadow: var(--shadow);
+    }
+    .banner:after {
+      content: "REPORTS";
+      position: absolute;
+      right: -18px;
+      bottom: -46px;
+      font: 900 118px/1 Arial, sans-serif;
+      color: rgba(255,255,255,.05);
+    }
+    .banner-inner {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 52px 24px;
+      z-index: 1;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.3rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .banner p {
+      max-width: 720px;
+      margin: 0;
+      color: #d9ebe4;
+      font-size: 1.08rem;
+    }
+    .container {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 42px 24px 72px;
+    }
+    .report-card {
+      display: block;
+      padding: 26px 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--gold);
+      border-radius: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(23,35,30,.05);
+      transition: transform .16s ease, box-shadow .16s ease, border-left-color .16s ease;
+    }
+    .report-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(23,35,30,.09);
+      border-left-color: var(--green);
+    }
+    .label {
+      display: block;
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+    }
+    .title {
+      color: #214336;
+      display: block;
+      font-size: 1.45rem;
+      font-weight: 900;
+      line-height: 1.25;
+    }
+    .note {
+      color: var(--muted);
+      display: block;
+      margin-top: 9px;
+    }
+    footer {
+      color: var(--muted);
+      font-size: .9rem;
+      padding: 28px 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-inner">
+      <h1>LifeUSA Reports</h1>
+      <p>Client-facing progress reports for Life for Relief and Development.</p>
+    </div>
+  </header>
+  <main class="container">
+    <a class="report-card" href="./2026-06-initial-month/">
+      <span class="label">Initial month report</span>
+      <span class="title">June 5 to July 4, 2026</span>
+      <span class="note">Foundation, achievements, barriers, and next priorities for the LifeUSA SEO engagement.</span>
+    </a>
+  </main>
+  <footer>LifeUSA reports</footer>
+</body>
+</html>

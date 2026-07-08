@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:,">
+  <title>LifeUSA Initial Month SEO Report 2026</title>
+  <style>
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../../deck/fonts/thmanyahseriftext-Regular.woff2") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../../deck/fonts/thmanyahseriftext-Bold.woff2") format("woff2");
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("../../deck/fonts/thmanyahseriftext-Black.woff2") format("woff2");
+      font-weight: 900;
+    }
+    :root {
+      --ink: #17231e;
+      --muted: #617067;
+      --paper: #f4f1e9;
+      --card: #fffdf7;
+      --white: #ffffff;
+      --green: #116149;
+      --green2: #dbece5;
+      --green3: #0b4b39;
+      --gold: #c79236;
+      --gold2: #fff7e7;
+      --red: #a63b32;
+      --red2: #fff0ed;
+      --blue: #0a2b47;
+      --line: #d9ddd6;
+      --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", Georgia, serif;
+      line-height: 1.68;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    a { color: var(--green); font-weight: 700; }
+    .wrap {
+      position: relative;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 22px 80px;
+    }
+    header {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(135deg,#0b4b39,#153126);
+      border-radius: 24px;
+      padding: 50px;
+      box-shadow: var(--shadow);
+    }
+    header:after {
+      content: "2026";
+      position: absolute;
+      right: -16px;
+      bottom: -54px;
+      font: 900 145px/1 Arial, sans-serif;
+      color: rgba(255,255,255,.055);
+      letter-spacing: 0;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 13px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 99px;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 18px 0 12px;
+      font-size: clamp(2.35rem, 6vw, 4.8rem);
+      font-weight: 900;
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+    header p {
+      max-width: 820px;
+      margin: 0;
+      color: #d9ebe4;
+      font-size: 1.14rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .meta span {
+      background: rgba(255,255,255,.10);
+      border-radius: 8px;
+      padding: 7px 12px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      display: flex;
+      gap: 3px;
+      overflow: auto;
+      margin: 0 0 28px;
+      padding: 6px;
+      background: rgba(255,253,247,.94);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+      justify-content: space-between;
+    }
+    nav a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: var(--green);
+      padding: 7px 9px;
+      border-radius: 7px;
+      font-weight: 900;
+      font-size: clamp(.78rem, 1.4vw, .95rem);
+      line-height: 1.2;
+    }
+    nav a:hover { background: var(--green2); }
+    section {
+      scroll-margin-top: 90px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 32px;
+      margin: 20px 0;
+      box-shadow: 0 7px 25px rgba(31,48,40,.045);
+    }
+    h2 {
+      color: var(--green);
+      margin: 0 0 18px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 7px;
+      color: var(--green);
+      font-size: 1.12rem;
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+    p { margin: 7px 0 14px; }
+    .lede {
+      max-width: 900px;
+      font-size: 1.14rem;
+    }
+    .muted { color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .metric {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.7rem, 3.4vw, 2.65rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin: 6px 0;
+      overflow-wrap: anywhere;
+    }
+    .label {
+      color: var(--muted);
+      display: block;
+      font-size: .96rem;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-width: max-content;
+      border-radius: 999px;
+      padding: 5px 12px;
+      background: var(--green2);
+      color: var(--green);
+      font-size: .9rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .status.warn { background: var(--gold2); color: #7a4b06; }
+    .status.danger { background: var(--red2); color: var(--red); }
+    .callout {
+      border-left: 5px solid var(--gold);
+      background: var(--gold2);
+      padding: 15px 18px;
+      border-radius: 12px;
+      margin: 16px 0;
+    }
+    .callout.ok {
+      border-color: var(--green);
+      background: #edf7f2;
+    }
+    .callout.danger {
+      border-color: var(--red);
+      background: var(--red2);
+    }
+    .stack {
+      display: grid;
+      gap: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: .94rem;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 11px 9px;
+      vertical-align: top;
+    }
+    th {
+      color: var(--green);
+      background: #edf4f0;
+      font-weight: 900;
+    }
+    .table-wrap { overflow-x: auto; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 18px;
+      padding: 15px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .date {
+      color: var(--green);
+      font-weight: 900;
+    }
+    .source-list {
+      display: grid;
+      gap: 10px;
+      padding-left: 0;
+      list-style: none;
+    }
+    .source-list li {
+      margin: 0;
+      padding: 13px 15px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .footer {
+      color: var(--muted);
+      font-size: .9rem;
+      padding: 22px 8px 0;
+      text-align: center;
+    }
+    @media (max-width: 860px) {
+      header { padding: 34px 28px; }
+      .grid, .grid.three, .grid.four { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 1fr; gap: 3px; }
+      section { padding: 24px; }
+    }
+    @media print {
+      body { background: white; }
+      body:before, nav { display: none; }
+      .wrap { max-width: none; padding: 0; }
+      header, section { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <span class="eyebrow">Life for Relief and Development - Initial Month Report</span>
+      <h1>Initial Month SEO Progress Report</h1>
+      <p>From audit findings to an execution system for search visibility, content planning, and donor-path clarity.</p>
+      <div class="meta">
+        <span>Period: June 5 to July 4, 2026</span>
+        <span>Prepared for LifeUSA leadership</span>
+        <span>Prepared by Saiaf Gamal</span>
+        <span>Search Console checked July 8, 2026</span>
+      </div>
+    </header>
+
+    <nav aria-label="Report sections">
+      <a href="#summary">Summary</a>
+      <a href="#starting-point">Starting Point</a>
+      <a href="#progress">Progress</a>
+      <a href="#search">Search Data</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#barriers">Barriers</a>
+      <a href="#next">Next Month</a>
+      <a href="#sources">Sources</a>
+    </nav>
+
+    <section id="summary">
+      <h2>Executive Summary</h2>
+      <p class="lede">LifeUSA entered this engagement with real public trust, active programs, and strong search potential. The website did not need random SEO activity. It needed a clear operating system: access, evidence, priorities, safe content workflow, and clear ownership for decisions that affect donors, analytics, and search visibility.</p>
+      <div class="grid four">
+        <div class="card">
+          <h3>Status</h3>
+          <span class="metric">On Track</span>
+          <span class="label">The first month built the foundation for execution.</span>
+        </div>
+        <div class="card">
+          <h3>Main Achievement</h3>
+          <span class="metric">Foundation</span>
+          <span class="label">We moved from broad findings to a practical work queue.</span>
+        </div>
+        <div class="card">
+          <h3>Main Barrier</h3>
+          <span class="metric">Ownership</span>
+          <span class="label">Several fixes need LifeUSA access owners or web-team decisions.</span>
+        </div>
+        <div class="card">
+          <h3>Next Focus</h3>
+          <span class="metric">Ship Fixes</span>
+          <span class="label">The next month should convert plans into implemented changes.</span>
+        </div>
+      </div>
+      <div class="callout ok">
+        <strong>Plain-language takeaway:</strong> Month one gave LifeUSA the structure it needed before serious SEO execution. We now know what to fix, who must approve each sensitive change, and where content can start helping donors and search engines understand LifeUSA more clearly.
+      </div>
+    </section>
+
+    <section id="starting-point">
+      <h2>Where LifeUSA Started</h2>
+      <p class="lede">LifeUSA did not start from weakness. It started from fragmentation. The organization has authority, campaigns, programs, galleries, reports, and stories. Search engines and donors need a cleaner path through that material.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Technical baseline</h3>
+          <p>The initial audit logged 54 SEO issues. Five major gaps shaped the first remediation queue: domain and subdomain structure, noindex coverage, language signals, nonprofit schema, and image/page experience.</p>
+        </div>
+        <div class="card">
+          <h3>Search visibility</h3>
+          <p>Search Console showed visibility and rankings, but many important results failed to earn enough clicks. That points to page titles, descriptions, page roles, and search-result clarity.</p>
+        </div>
+        <div class="card">
+          <h3>Donor-path clarity</h3>
+          <p>Multiple website and donation surfaces split attention and reporting. That matters for SEO, but it also matters for leadership because donor data and campaign performance need one clear story.</p>
+        </div>
+        <div class="card">
+          <h3>Content workflow</h3>
+          <p>The content team needed a repeatable way to choose topics, turn program knowledge into useful articles, and connect blog work back to donor decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="progress">
+      <h2>What Changed In Month One</h2>
+      <p class="lede">This month converted access, audit findings, and team conversations into an organized work program.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Access and measurement foundation</h3>
+          <p>We confirmed Wix and GoDaddy access, clarified that Wix hosts the site, and verified Search Console domain-property access. We also identified the Analytics and Tag Manager cleanup that LifeUSA still needs to settle.</p>
+        </div>
+        <div class="card">
+          <h3>Search and website risk map</h3>
+          <p>We reviewed the search baseline, identified high-opportunity pages, mapped branded search fragmentation, and kept noindex, schema, image, language, and subdomain issues in the first execution queue.</p>
+        </div>
+        <div class="card">
+          <h3>Content operating system</h3>
+          <p>We built the LifeUSA content framework, mapped the orphan sponsorship and child welfare cluster, and prepared writer-ready handoffs so future articles follow a clear structure.</p>
+        </div>
+        <div class="card">
+          <h3>Early fixes and practical support</h3>
+          <p>We verified redirects, supported the orphan article rewrite, improved blog reading style, published a Windows image-to-WebP workflow, and prepared gallery cleanup decisions without rushing risky URL changes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="search">
+      <h2>Search Data Snapshot</h2>
+      <p class="lede">I pulled the report-period numbers directly from the Search Console domain property on July 8, 2026. These numbers cover June 5 to July 4, 2026.</p>
+      <div class="grid four">
+        <div class="card">
+          <h3>Clicks</h3>
+          <span class="metric">705</span>
+          <span class="label">Visits from Google Search during the report period.</span>
+        </div>
+        <div class="card">
+          <h3>Impressions</h3>
+          <span class="metric">74,173</span>
+          <span class="label">Times Google showed LifeUSA results.</span>
+        </div>
+        <div class="card">
+          <h3>Click Rate</h3>
+          <span class="metric">0.95%</span>
+          <span class="label">The share of impressions that became clicks.</span>
+        </div>
+        <div class="card">
+          <h3>Avg. Position</h3>
+          <span class="metric">10.33</span>
+          <span class="label">Average Google result position.</span>
+        </div>
+      </div>
+      <div class="callout">
+        <strong>What this means:</strong> Google already shows LifeUSA in search. The low click rate tells us to improve how key pages appear, what they promise, and where they send donors. We should improve page titles, descriptions, page clarity, and internal routing before we chase more disconnected articles.
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Top page during the report period</th>
+              <th>Clicks</th>
+              <th>Impressions</th>
+              <th>Click rate</th>
+              <th>Avg. position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Homepage</td>
+              <td>270</td>
+              <td>15,317</td>
+              <td>1.76%</td>
+              <td>8.56</td>
+            </tr>
+            <tr>
+              <td>Earthquake article</td>
+              <td>96</td>
+              <td>10,416</td>
+              <td>0.92%</td>
+              <td>11.42</td>
+            </tr>
+            <tr>
+              <td>Giving article</td>
+              <td>91</td>
+              <td>8,985</td>
+              <td>1.01%</td>
+              <td>8.27</td>
+            </tr>
+            <tr>
+              <td>HTTP homepage variant</td>
+              <td>64</td>
+              <td>2,091</td>
+              <td>3.06%</td>
+              <td>5.65</td>
+            </tr>
+            <tr>
+              <td>Gaza page</td>
+              <td>32</td>
+              <td>1,901</td>
+              <td>1.68%</td>
+              <td>14.18</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <p class="lede">Month one created the conditions for faster and safer execution. These achievements matter because they reduce guesswork and give LifeUSA a clearer path from website work to donor impact.</p>
+      <div class="stack">
+        <div class="card">
+          <h3>We converted access into an active work program</h3>
+          <p>Wix and GoDaddy access gave us the website and domain context. Search Console domain access gave us live search data. The next measurement step will confirm Analytics and Tag Manager ownership.</p>
+        </div>
+        <div class="card">
+          <h3>We turned technical risk into a priority queue</h3>
+          <p>The audit no longer sits as a long list. It now points to a sequence: noindex and indexation, domain and donor-path consolidation, nonprofit schema, language signals, image readiness, and high-click-potential page rewrites.</p>
+        </div>
+        <div class="card">
+          <h3>We built the first content workflow</h3>
+          <p>The content framework gives Angela and the team a repeatable way to choose topics from real search demand, create outlines, connect articles to programs, and keep claims safe for a nonprofit context.</p>
+        </div>
+        <div class="card">
+          <h3>We moved the orphan cluster forward</h3>
+          <p>The How To Help Orphans pillar handoff, the sponsorship-cover guide, and the What Is an Orphan? rewrite now give LifeUSA a stronger base for donor education around orphan sponsorship and child welfare.</p>
+        </div>
+        <div class="card">
+          <h3>We shipped practical support for the content team</h3>
+          <p>The Windows image-to-WebP workflow gives the team one simple process for regular blog image compression. It supports faster pages, cleaner image handling, and more consistent publishing.</p>
+        </div>
+        <div class="card">
+          <h3>We prepared risky cleanup without forcing it</h3>
+          <p>The live sitemap showed 26 duplicate copy-of gallery URLs. We prepared the cleanup review, but we paused action until Humza confirms which URLs LifeUSA still uses in campaigns, donor journeys, or internal workflows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="barriers">
+      <h2>Barriers And Decisions Needed</h2>
+      <p class="lede">The work has not stalled, but several next steps need the right owner. I want to keep these visible so leadership can remove blockers quickly.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Barrier</th>
+              <th>Why it matters</th>
+              <th>Owner</th>
+              <th>Next step</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Analytics cleanup</td>
+              <td>Reliable reporting depends on a confirmed Google Analytics setup and a clear decision about the old deleted account.</td>
+              <td>Saiaf + LifeUSA access owner</td>
+              <td>Confirm the active Analytics property and decide whether to restore or retire the old account.</td>
+            </tr>
+            <tr>
+              <td>Tag Manager ownership</td>
+              <td>Tracking changes affect donor and campaign measurement, so the team should not change tags blindly.</td>
+              <td>LifeUSA web or analytics owner</td>
+              <td>Confirm ownership and access for the known Tag Manager container.</td>
+            </tr>
+            <tr>
+              <td>Gallery duplicate URLs</td>
+              <td>Duplicate gallery URLs can confuse search engines and users, but some URLs may still support campaigns or internal workflows.</td>
+              <td>Humza</td>
+              <td>Approve exceptions before redirect, noindex, or removal work begins.</td>
+            </tr>
+            <tr>
+              <td>Salesforce-hosted subdomains</td>
+              <td>Robots, redirect, and sitemap fixes on donation-related subdomains may need Salesforce or dev-team access.</td>
+              <td>Abdullah / dev team + Saiaf</td>
+              <td>Hold the working session and focus it on robots, redirects, and XML sitemap optimization.</td>
+            </tr>
+            <tr>
+              <td>Writer drafts</td>
+              <td>SEO briefs create direction, but publication impact needs drafts, review, links, and claim checks.</td>
+              <td>Angela + Saiaf</td>
+              <td>Angela drafts from the shared outlines; Saiaf reviews structure, links, donor clarity, and claim safety.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout danger">
+        <strong>Important distinction:</strong> Some items remain blocked. Others remain correctly paused. For example, gallery cleanup should wait for Humza because LifeUSA may use some URLs in active campaigns or donor journeys.
+      </div>
+    </section>
+
+    <section id="meaning">
+      <h2>What This Means For LifeUSA</h2>
+      <div class="grid three">
+        <div class="card">
+          <h3>Search visibility already exists</h3>
+          <p>The opportunity now lies in converting visibility into better clicks, clearer donor journeys, and stronger page roles.</p>
+        </div>
+        <div class="card">
+          <h3>The biggest risks now have owners</h3>
+          <p>We can move faster because we know which items Saiaf can execute, which items the web team must implement, and which items LifeUSA must approve.</p>
+        </div>
+        <div class="card">
+          <h3>Content can become more strategic</h3>
+          <p>LifeUSA can now build content around real donor questions, program evidence, and search demand instead of disconnected blog ideas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="next">
+      <h2>Next Month Plan</h2>
+      <div class="timeline">
+        <div class="step">
+          <div class="date">Priority 1</div>
+          <div>
+            <h3>Confirm measurement ownership</h3>
+            <p>Confirm the active Analytics setup, Tag Manager access, and reporting ownership so future reports can connect search visibility to donor behavior more clearly.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="date">Priority 2</div>
+          <div>
+            <h3>Sequence the five major website gaps</h3>
+            <p>Agree the remediation order with the web team. I recommend starting with indexation, domain/donor-path consolidation, and nonprofit schema.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="date">Priority 3</div>
+          <div>
+            <h3>Improve high-opportunity pages</h3>
+            <p>Start with page titles, descriptions, and page clarity for the About, Programs, Projects, Ways To Give, Orphans, and donation-related pages.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="date">Priority 4</div>
+          <div>
+            <h3>Move approved cleanup forward</h3>
+            <p>Complete gallery URL decisions once Humza confirms exceptions, then redirect, noindex, or remove only the URLs that LifeUSA can safely change.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="date">Priority 5</div>
+          <div>
+            <h3>Advance the orphan content cluster</h3>
+            <p>Review Angela's drafts, strengthen internal links, check donor-facing claims, and move approved content from handoff to publication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Source Notes</h2>
+      <p class="lede">I kept the main report plain and executive-facing. These source notes show what grounded the report.</p>
+      <ul class="source-list">
+        <li><strong>Live Search Console check:</strong> I verified LifeUSA domain-property access on July 8, 2026 and pulled report-period performance directly from Search Console.</li>
+        <li><strong>Technical SEO master sheet:</strong> Audit baseline with the 54 issue register and the five major remediation gaps.</li>
+        <li><strong>180-day Search Console audit:</strong> Earlier performance baseline that showed stronger visibility but weak click-through performance.</li>
+        <li><strong>Worklog and mail log:</strong> Engagement timeline, access status, client communication, sent handoffs, and current blockers.</li>
+        <li><strong>Content framework:</strong> Strategy, pipeline, cluster architecture, article handoffs, and review workflow for LifeUSA content.</li>
+        <li><strong>Public handoff pages:</strong> Article plans, technical fixes, and team resources published under the LifeUSA GitHub Pages site.</li>
+      </ul>
+      <div class="footer">LifeUSA initial month SEO report - prepared July 8, 2026</div>
+    </section>
+  </main>
+</body>
+</html>
