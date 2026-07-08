@@ -283,7 +283,7 @@
     </ol>
 
     <h3>The script to use</h3>
-    <p>This is the only script needed. It keeps the original batch-file structure and adds only the WebP file-size target to the <code>magick</code> conversion line.</p>
+    <p>Copy this script into Notepad. It will create WebP copies in the <code>output</code> folder and target about 80 KB per image.</p>
     <pre>@echo off
 set output_folder="output"
 
@@ -299,10 +299,6 @@ for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
 
 echo All image files have been converted to WEBP and saved in %output_folder%.
 pause</pre>
-
-    <div class="callout ok">
-      <strong>Trust note:</strong> the folder creation, loop, file types, output folder, and filenames stay the same as the tested script. The only functional addition is <code>-define webp:target-size=80000 -define webp:method=6</code> on the <code>magick</code> line.
-    </div>
 
     <div class="callout danger">
       <strong>Important:</strong> if the saved file becomes <code>Convert_to_webp.bat.txt</code>, Windows will treat it as a text file instead of a script. In File Explorer, turn on file name extensions and make sure the file ends with <code>.bat</code>.
