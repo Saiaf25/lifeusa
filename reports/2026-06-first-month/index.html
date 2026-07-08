@@ -329,7 +329,7 @@
 
     <section id="summary">
       <h2>Executive Summary</h2>
-      <p class="lede">Month one turned a fragmented SEO situation into a usable work program. We mapped the technical risks, built the content planning system, prepared the article-outline library, and named the constraints around measurement, gallery cleanup, and Salesforce-hosted donor pages.</p>
+      <p class="lede">Month one turned a fragmented SEO situation into a usable work program. We mapped the technical risks, built the content planning system, prepared the article-outline library, advanced gallery cleanup, and added search-result logo appearance to the next work queue.</p>
       <div class="grid four">
         <div class="card">
           <h3>Status</h3>
@@ -353,7 +353,7 @@
         </div>
       </div>
       <div class="callout ok">
-        <strong>Leadership takeaway:</strong> LifeUSA now has the priority queue and content handoffs needed to ship. Month two can focus on controllable surfaces: Wix pages, metadata, schema, internal links, image handling, redirects, sitemaps, and measurement ownership.
+        <strong>Leadership takeaway:</strong> LifeUSA now has the priority queue and content handoffs needed to ship. Month two can focus on controllable surfaces: Wix pages, metadata, schema, internal links, image handling, redirects, sitemaps, search-result logo cleanup, and measurement ownership.
       </div>
     </section>
 
@@ -367,7 +367,7 @@
         </div>
         <div class="card">
           <h3>Search visibility</h3>
-          <p>Google showed LifeUSA pages in search. Low click rates pointed to page titles, descriptions, page roles, and search-result clarity.</p>
+          <p>Google showed LifeUSA pages in search. Low click rates pointed to page titles, descriptions, page roles, search-result clarity, and image appearance.</p>
         </div>
         <div class="card">
           <h3>Donor routing</h3>
@@ -505,7 +505,11 @@
         </div>
         <div class="card">
           <h3>Gallery cleanup review</h3>
-          <p>We identified 26 duplicate copy-of gallery URLs and paused cleanup until Humza confirms campaign, donor-path, or workflow exceptions.</p>
+          <p>We identified 26 duplicate copy-of gallery URLs. Humza reviewed them, removed the copied pages, and started creating one gallery page.</p>
+        </div>
+        <div class="card">
+          <h3>Search-result logo issue</h3>
+          <p>Dr. Hany reported that an old LifeUSA logo, retired about ten years ago, appears in Google image results. We added this to the search-appearance workstream for research and cleanup.</p>
         </div>
         <div class="card">
           <h3>Orphan article support</h3>
@@ -589,16 +593,22 @@
               <td>Confirm ownership and access for the known Tag Manager container.</td>
             </tr>
             <tr>
-              <td>Gallery duplicate URLs</td>
-              <td>Some duplicate gallery URLs may still support campaigns or internal workflows.</td>
-              <td>Humza</td>
-              <td>Approve exceptions before redirect, noindex, or removal work begins.</td>
+              <td>Gallery redirect follow-through</td>
+              <td>Humza removed copied gallery pages while creating one gallery page. Removed URLs that Google indexed, users shared, or the site linked to need clean redirects.</td>
+              <td>Humza + Saiaf</td>
+              <td>Humza sends the final gallery URL; Saiaf checks crawl, indexing, and redirects.</td>
             </tr>
             <tr>
               <td>Donor Portal pages</td>
               <td>Salesforce does not allow page-level SEO optimization on Donor Portal pages.</td>
               <td>Abdullah / dev team + Saiaf</td>
               <td>Improve controllable Wix pages, internal links, redirects, sitemaps, and campaign paths around the Donor Portal.</td>
+            </tr>
+            <tr>
+              <td>Old logo in Google image results</td>
+              <td>Leadership flagged a retired LifeUSA logo appearing in Google image results. That affects brand trust before users reach the website.</td>
+              <td>Saiaf</td>
+              <td>Find the source images, fix controllable assets, and report what Google may need time to refresh.</td>
             </tr>
             <tr>
               <td>Writer drafts</td>
@@ -610,7 +620,7 @@
         </table>
       </div>
       <div class="callout danger">
-        <strong>Decision rule:</strong> Ship fixes on surfaces LifeUSA controls. Pause URL cleanup and donor-path changes where campaigns, Salesforce, or internal workflows may depend on the current setup.
+        <strong>Decision rule:</strong> Ship fixes on surfaces LifeUSA controls. For deleted gallery URLs, the next check should protect users and search engines from dead paths.
       </div>
     </section>
 
@@ -641,12 +651,19 @@
         <div class="step">
           <div class="date">Priority 4</div>
           <div>
-            <h3>Resolve gallery cleanup decisions</h3>
-            <p>Get Humza's exception list, then redirect, noindex, or remove URLs LifeUSA can change without breaking campaigns or workflows.</p>
+            <h3>Complete gallery redirect QA</h3>
+            <p>Get the final single-gallery URL from Humza, then check removed URLs for redirects, crawl status, and indexing risk.</p>
           </div>
         </div>
         <div class="step">
           <div class="date">Priority 5</div>
+          <div>
+            <h3>Investigate old logo in Google image results</h3>
+            <p>Find where Google may be picking up the retired logo, update controllable image signals, and explain what may take time to refresh.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="date">Priority 6</div>
           <div>
             <h3>Move outlines into drafts</h3>
             <p>Review Angela's drafts against the outline library, strengthen internal links, and check donor-facing claims before publication.</p>
@@ -663,6 +680,7 @@
         <li><strong>Technical SEO master sheet:</strong> Audit baseline with the 54 issue register and the five major remediation gaps.</li>
         <li><strong>180-day Search Console audit:</strong> Earlier performance baseline that showed stronger visibility but weak click-through performance.</li>
         <li><strong>Worklog and mail log:</strong> Engagement timeline, access status, client communication, sent handoffs, and current blockers.</li>
+        <li><strong>Zoho Mail:</strong> Humza's gallery cleanup reply and Dr. Hany's old-logo search appearance concern.</li>
         <li><strong>Content framework:</strong> Strategy, pipeline, cluster architecture, article handoffs, and review workflow for LifeUSA content.</li>
         <li><strong>Article planning library:</strong> First-month outline set at <a href="https://saiaf25.github.io/lifeusa/article-plans-and-outlines/">LifeUSA Article Plans and Outlines</a>.</li>
       </ul>
