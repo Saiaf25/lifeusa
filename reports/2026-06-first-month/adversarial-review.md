@@ -6,7 +6,7 @@ Report page: LifeUSA first month report
 
 ## Verdict
 
-Pass after email-grounded rewrite. The report now separates enablers from deliverables, reflects Humza's latest gallery cleanup reply, names Dr. Hany's old-logo search concern, and keeps the Salesforce Donor Portal constraint visible.
+Pass after email-grounded rewrite and deliverable-category correction. The report separates enablers from deliverables, reflects Humza's latest gallery cleanup reply, keeps Dr. Hany's old-logo concern in next-month work, and keeps the Salesforce Donor Portal constraint visible.
 
 ## Accuracy Check
 
@@ -16,7 +16,7 @@ Pass after email-grounded rewrite. The report now separates enablers from delive
 - The report presents the 54 SEO issue count as an audit baseline, not as a new live claim.
 - The report reflects Humza's latest gallery update: he reviewed the copied gallery pages, removed them, and started creating one gallery page.
 - The report reflects Saiaf's reply: next step is the final gallery URL, then crawl, indexing, and redirect QA.
-- The report includes Dr. Hany's old-logo concern as search-appearance work for next month.
+- The report includes Dr. Hany's old-logo concern as search-appearance work for next month, not as a completed deliverable.
 - The report states the Salesforce Donor Portal constraint: Salesforce does not allow page-level SEO optimization on Donor Portal pages.
 - The report links to the first-month article planning library and links all nine planning rows to their public pages.
 - The report links the published orphan rewrite to the live LifeUSA article and links the matching article plan.
@@ -84,7 +84,7 @@ The report captures the major first-month effort areas:
 - Technical SEO evidence: master sheet and technical fixes index.
 - Practical publishing support: Windows image-to-WebP workflow.
 - Gallery cleanup: Humza removed copied pages; Saiaf needs the final single-gallery URL for redirect and indexing QA.
-- Search appearance: Dr. Hany flagged an old LifeUSA logo in Google image results.
+- Search appearance: Dr. Hany flagged an old LifeUSA logo in Google image results; the report treats it as next-month work, not completed work.
 - Platform constraint: Salesforce Donor Portal page-level SEO limitation.
 - Writer workflow: Angela drafts plus Saiaf review for structure, links, donor clarity, and claim safety.
 
@@ -103,13 +103,16 @@ The report captures the major first-month effort areas:
    - Action taken: replaced the stale pending-review wording with the current status: copied pages removed, one gallery page in progress, final URL and redirect QA next.
 
 5. The report missed the CEO's old-logo concern.
-   - Action taken: added old-logo search appearance as a deliverable/focus area and next-month priority.
+   - Action taken: added old-logo search appearance as a constraint and next-month priority.
 
 6. The report carried repeated and padded phrasing.
    - Action taken: cut the “meaning” section, renamed “achievements” to “deliverables,” removed repeated access framing, and tightened the summary, search note, constraints, and next-month plan.
 
 7. The report did not expose enough completed deliverables through links.
    - Action taken: linked the technical SEO master sheet, technical SEO fixes index, Windows image-to-WebP workflow, Tracking System Optimization Audit, live orphan rewrite, and matching orphan article plan.
+
+8. The report incorrectly placed the old-logo search issue under completed deliverables.
+   - Action taken: removed the old-logo card from Deliverables Completed and kept the issue in Constraints and Next Month Plan.
 
 ## Final QA Checklist
 
@@ -120,6 +123,7 @@ The report captures the major first-month effort areas:
 - Stop-slop rewrite: pass.
 - Latest Humza email reflected: pass.
 - Dr. Hany old-logo email reflected: pass.
+- Old-logo issue excluded from completed deliverables: pass.
 - No private reasoning or unnecessary implementation detail: pass.
 - Comprehensiveness of first-month effort: pass.
 - Deliverable link coverage: pass.
