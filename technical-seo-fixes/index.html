@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>LifeUSA Technical SEO Fixes</title>
+  <style>
+    :root {
+      --ink: #17231e; --muted: #617067; --paper: #f4f1e9; --card: #fffdf7;
+      --green: #116149; --green2: #dbece5; --gold: #c79236; --line: #d9ddd6;
+      --red: #9f3d2f; --blue: #0a2b47; --teal: #0d766b; --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", "Noto Naskh Arabic", Georgia, serif;
+      line-height: 1.75;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    .banner {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(135deg,#0b4b39,#153126);
+      box-shadow: var(--shadow);
+    }
+    .banner-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 52px 24px;
+      position: relative;
+    }
+    .banner:after {
+      content: "L";
+      position: absolute;
+      right: 34px;
+      bottom: -72px;
+      font: 900 220px/1 Arial;
+      color: rgba(255,255,255,.055);
+    }
+    .banner h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .banner p {
+      max-width: 760px;
+      margin: 0;
+      color: #d9ebe4;
+      font-size: 17px;
+    }
+    .container {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+    .metric {
+      padding: 18px 20px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+    }
+    .metric strong {
+      display: block;
+      color: #214336;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .fix-list {
+      display: grid;
+      gap: 18px;
+    }
+    .fix-card {
+      padding: 24px 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(23,35,30,0.04);
+    }
+    .fix-card.done { border-left-color: var(--green); }
+    .fix-card.pending { border-left-color: var(--gold); }
+    .fix-card.watch { border-left-color: var(--blue); }
+    .fix-card.resource { border-left-color: var(--teal); }
+    .fix-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: #fffaf0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      text-transform: uppercase;
+    }
+    .pill.done { color: var(--green); background: var(--green2); }
+    .pill.pending { color: #775119; background: #fbefd9; }
+    .pill.watch { color: var(--blue); background: #e3ecf3; }
+    .pill.resource { color: var(--teal); background: #dff3ef; }
+    .fix-title {
+      margin: 0;
+      color: #214336;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .fix-note {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .fix-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .detail {
+      padding: 14px 16px;
+      background: #fffaf0;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .detail b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+    .detail span,
+    .detail a {
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+    a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+    .footer {
+      color: var(--muted);
+      font-size: 14px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .banner h1 { font-size: 34px; }
+      .summary { grid-template-columns: 1fr 1fr; }
+      .fix-details { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .summary { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="banner-inner">
+      <h1>LifeUSA Technical SEO Fixes</h1>
+      <p>A public noindex log of technical SEO fixes, publishing fixes, and implementation follow-ups completed or tracked for lifeusa.org.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="summary">
+      <div class="metric"><strong>4</strong><span>verified fixes</span></div>
+      <div class="metric"><strong>1</strong><span>confirmed style system fix</span></div>
+      <div class="metric"><strong>1</strong><span>client-review blocker</span></div>
+      <div class="metric"><strong>2026-07-08</strong><span>last updated</span></div>
+    </div>
+
+    <div class="fix-list">
+      <section class="fix-card done">
+        <div class="fix-meta">
+          <span class="pill done">Verified</span>
+          <span class="pill">Redirect</span>
+          <span class="pill">2026-07-05</span>
+        </div>
+        <h2 class="fix-title">Old orphan article slug redirects to the new evergreen guide</h2>
+        <p class="fix-note">The old article URL now resolves to the rewritten evergreen guide so links and search signals do not point at a dead or outdated slug.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>From</b>
+            <a href="https://www.lifeusa.org/post/the-leading-causes-of-orphans-today">/post/the-leading-causes-of-orphans-today</a>
+          </div>
+          <div class="detail">
+            <b>To</b>
+            <a href="https://www.lifeusa.org/post/what-is-an-orphan">/post/what-is-an-orphan</a>
+          </div>
+          <div class="detail">
+            <b>Verification</b>
+            <span>Live redirect check returned 301, then final status 200 on the new URL.</span>
+          </div>
+          <div class="detail">
+            <b>Local source</b>
+            <span>reports/redirects.md</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card done">
+        <div class="fix-meta">
+          <span class="pill done">Verified</span>
+          <span class="pill">Wix Blog</span>
+          <span class="pill">2026-07-05</span>
+        </div>
+        <h2 class="fix-title">Blog article body spacing and link styling fixed through Wix Custom Code</h2>
+        <p class="fix-note">The Wix Blog body now has a reusable styling rule for article headings, paragraphs, and body links, reducing the need for manual empty paragraphs while editing.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>Scope</b>
+            <span>Wix Blog post page type only</span>
+          </div>
+          <div class="detail">
+            <b>Selector pattern</b>
+            <span>Targets Wix viewer nodes such as main p[id^="viewer-"] and main h2[id^="viewer-"].</span>
+          </div>
+          <div class="detail">
+            <b>Verification</b>
+            <span>Live browser test showed paragraph and heading margins changing from zero to comfortable spacing.</span>
+          </div>
+          <div class="detail">
+            <b>Local source</b>
+            <span>Content Framework/90-ops/changelog.md</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card done">
+        <div class="fix-meta">
+          <span class="pill done">Verified</span>
+          <span class="pill">Robots.txt</span>
+          <span class="pill">2026-06-20</span>
+        </div>
+        <h2 class="fix-title">Robots.txt cleanup published through Wix SEO tools</h2>
+        <p class="fix-note">The live robots file allows the main site, blocks selected Wix crawl traps, keeps PetalBot blocked, applies crawl delays for heavy bots, and declares the main XML sitemaps.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>Live file</b>
+            <a href="https://www.lifeusa.org/robots.txt">https://www.lifeusa.org/robots.txt</a>
+          </div>
+          <div class="detail">
+            <b>Platform</b>
+            <span>Wix SEO Tools / Robots.txt Editor</span>
+          </div>
+          <div class="detail">
+            <b>Verification</b>
+            <span>Live robots.txt was updated and checked after publication.</span>
+          </div>
+          <div class="detail">
+            <b>Local source</b>
+            <span>worklog.md</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card done">
+        <div class="fix-meta">
+          <span class="pill done">Verified</span>
+          <span class="pill">Redirect</span>
+          <span class="pill">2026-06-20</span>
+        </div>
+        <h2 class="fix-title">Mistyped programs URL redirects to the correct programs page</h2>
+        <p class="fix-note">Both slash and no-slash versions of the typo URL redirect to the canonical programs page.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>From</b>
+            <a href="https://www.lifeusa.org/programsss">/programsss</a>
+          </div>
+          <div class="detail">
+            <b>To</b>
+            <a href="https://www.lifeusa.org/programs">/programs</a>
+          </div>
+          <div class="detail">
+            <b>Verification</b>
+            <span>Live checks confirmed 301 redirects for both variants.</span>
+          </div>
+          <div class="detail">
+            <b>Local source</b>
+            <span>reports/redirects.md</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card pending">
+        <div class="fix-meta">
+          <span class="pill pending">Pending review</span>
+          <span class="pill">Duplicate URLs</span>
+          <span class="pill">2026-06-20</span>
+        </div>
+        <h2 class="fix-title">Copy-of gallery URL cleanup is mapped but waiting for client exception review</h2>
+        <p class="fix-note">A sitemap sweep found 26 copy-style gallery URLs. The redirect/delete/noindex recommendations are prepared, but campaign and internal-use exceptions must be reviewed before implementation.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>URL set</b>
+            <span>26 copy-of URLs in English and Arabic sitemap paths</span>
+          </div>
+          <div class="detail">
+            <b>Recommended action</b>
+            <span>Verify content equivalence, then redirect, delete, or noindex copy pages.</span>
+          </div>
+          <div class="detail">
+            <b>Blocker</b>
+            <span>Client-side exception review is still needed before changing live URLs.</span>
+          </div>
+          <div class="detail">
+            <b>Local source</b>
+            <span>reports/copy-url-urgent-action.md</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card resource">
+        <div class="fix-meta">
+          <span class="pill resource">Resource</span>
+          <span class="pill">Images</span>
+          <span class="pill">2026-07-08</span>
+        </div>
+        <h2 class="fix-title">Windows image-to-WebP workflow for blog publishing</h2>
+        <p class="fix-note">A Windows-friendly technical resource for converting blog images into WebP files with ImageMagick before uploading to Wix or the website editor.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>Open resource</b>
+            <a href="./windows-image-compression-workflow/">Windows Image to WebP Workflow</a>
+          </div>
+          <div class="detail">
+            <b>Workflow</b>
+            <span>Install ImageMagick once, place a batch file in an image folder, and generate WebP copies in an output folder.</span>
+          </div>
+          <div class="detail">
+            <b>Includes</b>
+            <span>Copyable batch scripts, Windows setup steps, and troubleshooting notes.</span>
+          </div>
+          <div class="detail">
+            <b>Audience</b>
+            <span>LifeUSA content and publishing team.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="fix-card watch">
+        <div class="fix-meta">
+          <span class="pill watch">Tracked</span>
+          <span class="pill">Search Console</span>
+          <span class="pill">2026-06-13</span>
+        </div>
+        <h2 class="fix-title">Technical SEO priorities are tied to the 180-day GSC audit</h2>
+        <p class="fix-note">The audit identified the next technical and SERP workstreams: CTR improvements, canonical consistency, noindex cleanup, schema, Arabic hreflang, and page-role clarity.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>Primary report</b>
+            <span>reports/LifeUSA-GSC-180-day-audit.md</span>
+          </div>
+          <div class="detail">
+            <b>Top workstreams</b>
+            <span>CTR, canonical consolidation, schema, noindex, hreflang, sitemap hygiene.</span>
+          </div>
+          <div class="detail">
+            <b>Status</b>
+            <span>Tracked as the source for future technical fixes.</span>
+          </div>
+          <div class="detail">
+            <b>Next action</b>
+            <span>Add each implementation here after it is verified live.</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="footer">LifeUSA technical SEO fixes</div>
+</body>
+</html>

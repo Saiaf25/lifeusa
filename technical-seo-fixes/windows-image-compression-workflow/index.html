@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Windows Image to WebP Workflow for LifeUSA Blog Images</title>
+  <style>
+    :root {
+      --ink: #17231e;
+      --muted: #617067;
+      --paper: #f4f1e9;
+      --card: #fffdf7;
+      --green: #116149;
+      --green2: #dbece5;
+      --gold: #c79236;
+      --red: #a63b32;
+      --line: #d9ddd6;
+      --code: #14261f;
+      --shadow: 0 18px 55px rgba(31, 48, 40, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", Georgia, serif;
+      line-height: 1.75;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    .wrap { position: relative; max-width: 1120px; margin: auto; padding: 32px 22px 80px; }
+    header {
+      color: white;
+      background: linear-gradient(135deg, #0b4b39, #153126);
+      border-radius: 28px;
+      padding: 52px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    header:after {
+      content: "WP";
+      position: absolute;
+      right: 24px;
+      bottom: -72px;
+      font: 900 220px/1 Arial, sans-serif;
+      color: rgba(255, 255, 255, .045);
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 13px;
+      border: 1px solid rgba(255, 255, 255, .35);
+      border-radius: 99px;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 850px;
+      margin: 18px 0 8px;
+      font-size: clamp(2.15rem, 5vw, 4.6rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    header p { max-width: 760px; color: #d9ebe4; font-size: 1.12rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .meta span { background: rgba(255, 255, 255, .1); padding: 7px 12px; border-radius: 8px; }
+    nav {
+      position: sticky;
+      top: 10px;
+      z-index: 4;
+      display: flex;
+      gap: 8px;
+      overflow: auto;
+      margin: 18px 0 28px;
+      padding: 9px;
+      background: rgba(255, 253, 247, .92);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      backdrop-filter: blur(12px);
+    }
+    nav a {
+      white-space: nowrap;
+      text-decoration: none;
+      color: var(--green);
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    nav a:hover { background: var(--green2); }
+    section {
+      scroll-margin-top: 90px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 34px;
+      margin: 20px 0;
+      box-shadow: 0 7px 25px rgba(31, 48, 40, .045);
+    }
+    h2 { color: var(--green); margin: 0 0 18px; font-size: 1.8rem; line-height: 1.25; }
+    h3 { margin: 28px 0 8px; font-size: 1.18rem; color: var(--green); }
+    p { margin: 7px 0 14px; }
+    a { color: var(--green); }
+    .lede { font-size: 1.13rem; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+    .card { border: 1px solid var(--line); border-radius: 8px; padding: 18px; background: #fff; }
+    .card h3 { margin-top: 0; }
+    .callout { border-left: 5px solid var(--gold); background: #fff7e7; padding: 15px 18px; border-radius: 12px; margin: 16px 0; }
+    .callout.ok { border-color: var(--green); background: #edf7f2; }
+    .callout.danger { border-color: var(--red); background: #fff0ed; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+    code {
+      direction: ltr;
+      unicode-bidi: embed;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: .88em;
+      color: #0c4938;
+    }
+    pre {
+      direction: ltr;
+      text-align: left;
+      overflow: auto;
+      background: var(--code);
+      color: #daf1e6;
+      border-radius: 12px;
+      padding: 16px;
+      line-height: 1.55;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: .88rem;
+    }
+    .code-block {
+      position: relative;
+      margin: 12px 0 18px;
+    }
+    .code-block pre {
+      margin: 0;
+      padding-top: 48px;
+    }
+    .copy-code {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid rgba(218, 241, 230, .28);
+      border-radius: 8px;
+      color: #daf1e6;
+      background: rgba(255, 255, 255, .08);
+      font: 700 .78rem/1.1 "SFMono-Regular", Consolas, monospace;
+      cursor: pointer;
+    }
+    .copy-code:hover,
+    .copy-code:focus {
+      outline: none;
+      background: rgba(255, 255, 255, .16);
+    }
+    .copy-code.copied {
+      color: #14261f;
+      background: #dbece5;
+      border-color: #dbece5;
+    }
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding: 16px 16px 16px 58px;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+    .steps li:before {
+      content: counter(step);
+      position: absolute;
+      left: 16px;
+      top: 17px;
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--green);
+      font-weight: 700;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    th, td { border-bottom: 1px solid var(--line); padding: 10px 8px; vertical-align: top; text-align: left; }
+    th { color: var(--green); background: #edf4f0; }
+    footer { text-align: center; color: var(--muted); padding: 22px; }
+    @media (max-width: 760px) {
+      header, section { padding: 25px; }
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.35rem; }
+      .steps li { padding-left: 52px; }
+    }
+    @media print {
+      nav { display: none; }
+      body { background: white; }
+      body:before { display: none; }
+      .wrap { max-width: none; padding: 0; }
+      header, section { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <span class="eyebrow">LifeUSA content workflow</span>
+    <h1>Windows Image to WebP Workflow</h1>
+    <p>A simple Windows folder workflow for converting blog images into WebP files before uploading them to the LifeUSA website.</p>
+    <div class="meta">
+      <span>Version 1.0</span>
+      <span>July 8, 2026</span>
+      <span>Prepared by Saiaf Gamal</span>
+      <span>For Angela Joyce</span>
+    </div>
+  </header>
+
+  <nav aria-label="Document sections">
+    <a href="#overview">Overview</a>
+    <a href="#install">Install</a>
+    <a href="#script">Script</a>
+    <a href="#use">Use</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <section id="overview">
+    <h2>Overview</h2>
+    <p class="lede">This method uses ImageMagick on Windows. After it is installed once, you can place a small <code>.bat</code> file inside any folder of images, double-click it, and it will create WebP copies in a new folder called <code>output</code>.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>What it does</h3>
+        <p>Converts common image files such as PNG, JPG, JPEG, BMP, TIFF, and GIF into WebP files.</p>
+      </div>
+      <div class="card">
+        <h3>What it does not do</h3>
+        <p>It does not delete, overwrite, or rename the original images. The originals stay in the same folder.</p>
+      </div>
+    </div>
+    <div class="callout ok">
+      <strong>Recommended habit:</strong> keep the original images in one folder, use the WebP files from <code>output</code> for upload, and only delete originals after the blog is fully published and checked.
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>One-Time Setup on Windows</h2>
+    <ol class="steps">
+      <li>
+        <strong>Download ImageMagick for Windows.</strong>
+        Open the official download page: <a href="https://imagemagick.org/download/" target="_blank" rel="noopener">https://imagemagick.org/download/</a>. Scroll to the Windows Binary Release section and download the recommended 64-bit Windows installer.
+      </li>
+      <li>
+        <strong>Install it normally.</strong>
+        During installation, if Windows shows an option to add ImageMagick to the system path, keep that option selected. This lets the <code>magick</code> command work from a batch file.
+      </li>
+      <li>
+        <strong>Check that it works.</strong>
+        Open Command Prompt, type the command below, and press Enter:
+        <pre>magick -version</pre>
+        If Windows prints ImageMagick version information, the setup is ready.
+      </li>
+    </ol>
+    <div class="callout">
+      <strong>Alternative install option:</strong> if you already use Windows Package Manager, ImageMagick also lists this command: <code>winget install ImageMagick.Q16-HDRI</code>.
+    </div>
+  </section>
+
+  <section id="script">
+    <h2>Create the Batch File</h2>
+    <ol class="steps">
+      <li>Open Notepad on Windows.</li>
+      <li>Copy the script below into the empty Notepad file.</li>
+      <li>Save it as <code>Convert_to_webp.bat</code>.</li>
+      <li>Place the file inside the same folder as the images you want to convert.</li>
+    </ol>
+
+    <h3>Simple conversion script</h3>
+    <p>This version keeps the image dimensions as they are and converts each image to WebP.</p>
+    <pre>@echo off
+set output_folder="output"
+
+rem Create the output folder if it does not exist
+if not exist %output_folder% (
+    mkdir %output_folder%
+)
+
+rem Convert all image files to WEBP format and save in the output folder
+for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
+    magick "%%f" "%output_folder%\%%~nf.webp"
+)
+
+echo All image files have been converted to WEBP and saved in %output_folder%.
+pause</pre>
+
+    <h3>Recommended blog version</h3>
+    <p>This version is better for website uploads because it also limits very large images to a maximum of 1600 pixels wide or high and uses a practical WebP quality level.</p>
+    <pre>@echo off
+set output_folder="output"
+
+rem Create the output folder if it does not exist
+if not exist %output_folder% (
+    mkdir %output_folder%
+)
+
+rem Convert common image files to WEBP, auto-rotate, resize oversized images, and save in output
+for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
+    magick "%%f" -auto-orient -resize "1600x1600&gt;" -quality 75 "%output_folder%\%%~nf.webp"
+)
+
+echo All image files have been converted to WEBP and saved in %output_folder%.
+pause</pre>
+
+    <div class="callout danger">
+      <strong>Important:</strong> if the saved file becomes <code>Convert_to_webp.bat.txt</code>, Windows will treat it as a text file instead of a script. In File Explorer, turn on file name extensions and make sure the file ends with <code>.bat</code>.
+    </div>
+  </section>
+
+  <section id="use">
+    <h2>How To Use It Each Time</h2>
+    <ol class="steps">
+      <li>Create a folder for the blog images, for example <code>Friday Blog Images</code>.</li>
+      <li>Put all the images for that blog post in the folder.</li>
+      <li>Place <code>Convert_to_webp.bat</code> inside that same folder.</li>
+      <li>Double-click <code>Convert_to_webp.bat</code>.</li>
+      <li>Wait until the black Command Prompt window says the images have been converted.</li>
+      <li>Open the new <code>output</code> folder.</li>
+      <li>Upload the WebP files from <code>output</code> to Wix or the website editor.</li>
+    </ol>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Before upload</h3>
+        <p>Open a few WebP files and make sure they look normal. Pay attention to faces, text in images, logos, and maps.</p>
+      </div>
+      <div class="card">
+        <h3>After upload</h3>
+        <p>Preview the blog page and confirm that the images load correctly on desktop and mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="troubleshooting">
+    <h2>Troubleshooting</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>What to do</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Double-clicking the file opens Notepad.</td>
+          <td>The file was probably saved as <code>.bat.txt</code>. Rename it so it ends with <code>.bat</code>.</td>
+        </tr>
+        <tr>
+          <td>The window says <code>magick is not recognized</code>.</td>
+          <td>ImageMagick is not installed correctly, or it was not added to the system path. Reinstall ImageMagick and keep the path option selected.</td>
+        </tr>
+        <tr>
+          <td>No output folder appears.</td>
+          <td>Make sure the batch file is inside the same folder as the images and that the image extensions are PNG, JPG, JPEG, BMP, TIFF, or GIF.</td>
+        </tr>
+        <tr>
+          <td>The image is still too large.</td>
+          <td>Use the recommended blog version of the script. If needed, lower <code>-quality 75</code> to <code>-quality 65</code> and run it again from the original images.</td>
+        </tr>
+        <tr>
+          <td>The image looks blurry or poor.</td>
+          <td>Use a higher quality number such as <code>-quality 82</code>, or keep the image larger if it is a detailed donor-facing photo.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="sources">
+    <h2>Sources</h2>
+    <p>This workflow is based on ImageMagick's official Windows installer and command-line documentation.</p>
+    <ul>
+      <li><a href="https://imagemagick.org/download/" target="_blank" rel="noopener">ImageMagick Download: Windows Binary Release</a></li>
+      <li><a href="https://imagemagick.org/convert/" target="_blank" rel="noopener">ImageMagick <code>magick</code> conversion command</a></li>
+      <li><a href="https://imagemagick.org/command-line-processing/" target="_blank" rel="noopener">ImageMagick command-line processing notes</a></li>
+      <li><a href="https://imagemagick.org/webp/" target="_blank" rel="noopener">ImageMagick WebP encoding options</a></li>
+    </ul>
+  </section>
+
+  <footer>LifeUSA - Windows Image to WebP Workflow - Version 1.0</footer>
+</main>
+<script>
+  document.querySelectorAll("pre").forEach(function(pre, index) {
+    var wrapper = document.createElement("div");
+    wrapper.className = "code-block";
+    pre.parentNode.insertBefore(wrapper, pre);
+    wrapper.appendChild(pre);
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "copy-code";
+    button.textContent = "Copy";
+    button.setAttribute("aria-label", "Copy code block " + (index + 1));
+    wrapper.appendChild(button);
+
+    button.addEventListener("click", function() {
+      var code = pre.textContent;
+      navigator.clipboard.writeText(code).then(function() {
+        button.textContent = "Copied";
+        button.classList.add("copied");
+        window.setTimeout(function() {
+          button.textContent = "Copy";
+          button.classList.remove("copied");
+        }, 1600);
+      }).catch(function() {
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(pre);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        button.textContent = "Selected";
+      });
+    });
+  });
+</script>
+</body>
+</html>
