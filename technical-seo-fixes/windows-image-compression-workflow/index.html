@@ -245,7 +245,7 @@
       </div>
       <div class="card">
         <h3>What it does not do</h3>
-        <p>It does not delete, overwrite, or rename the original images. The originals stay in the same folder.</p>
+        <p>It does not delete, overwrite, or rename the original images. The simple script also does not guarantee that every image will be under 80 KB.</p>
       </div>
     </div>
     <div class="callout ok">
@@ -280,13 +280,13 @@
     <h2>Create the Batch File</h2>
     <ol class="steps">
       <li>Open Notepad on Windows.</li>
-      <li>Copy the script below into the empty Notepad file.</li>
+      <li>Choose one of the scripts below and copy it into the empty Notepad file.</li>
       <li>Save it as <code>Convert_to_webp.bat</code>.</li>
       <li>Place the file inside the same folder as the images you want to convert.</li>
     </ol>
 
     <h3>Simple conversion script</h3>
-    <p>This version keeps the image dimensions as they are and converts each image to WebP.</p>
+    <p>This version keeps the image dimensions as they are and converts each image to WebP. It is useful for format conversion, but it does not intentionally target 80 KB.</p>
     <pre>@echo off
 set output_folder="output"
 
@@ -303,8 +303,12 @@ for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
 echo All image files have been converted to WEBP and saved in %output_folder%.
 pause</pre>
 
+    <div class="callout danger">
+      <strong>Answer to the 80 KB question:</strong> this simple script does not guarantee a good image under 80 KB. It keeps the original dimensions and lets ImageMagick use its normal WebP settings, so a large or detailed image may still be much larger than 80 KB.
+    </div>
+
     <h3>Recommended blog version</h3>
-    <p>This version is better for website uploads because it also limits very large images to a maximum of 1600 pixels wide or high and uses a practical WebP quality level.</p>
+    <p>This version is better for general website uploads because it also limits very large images to a maximum of 1600 pixels wide or high and uses a practical WebP quality level. It usually gives a good balance, but it is still not a hard 80 KB target.</p>
     <pre>@echo off
 set output_folder="output"
 
@@ -320,6 +324,28 @@ for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
 
 echo All image files have been converted to WEBP and saved in %output_folder%.
 pause</pre>
+
+    <h3>80 KB target version</h3>
+    <p>Use this version when the goal is to keep blog images near or under 80 KB. It resizes oversized images, asks WebP to target about 80,000 bytes, and uses a slower compression method for better results.</p>
+    <pre>@echo off
+set output_folder="output"
+
+rem Create the output folder if it does not exist
+if not exist %output_folder% (
+    mkdir %output_folder%
+)
+
+rem Convert images to WEBP and try to keep each output near 80 KB
+for %%f in (*.png *.jpg *.jpeg *.bmp *.tiff *.gif) do (
+    magick "%%f" -auto-orient -resize "1200x1200&gt;" -define webp:target-size=80000 -define webp:method=6 "%output_folder%\%%~nf.webp"
+)
+
+echo Images have been converted to WEBP. Check the output folder and preview quality before uploading.
+pause</pre>
+
+    <div class="callout ok">
+      <strong>Best practical rule:</strong> use the 80 KB target version first, then open the output folder and preview the images. If a donor-facing photo looks too soft, use the recommended blog version instead and accept a slightly larger file.
+    </div>
 
     <div class="callout danger">
       <strong>Important:</strong> if the saved file becomes <code>Convert_to_webp.bat.txt</code>, Windows will treat it as a text file instead of a script. In File Explorer, turn on file name extensions and make sure the file ends with <code>.bat</code>.
