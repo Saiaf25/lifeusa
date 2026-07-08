@@ -4,6 +4,17 @@ Append-only; newest at top. Source for reports, invoices, and closeout. Entries
 through 2026-06-09 reconstructed from the "Lifeusa | SEO Services | Thread" email
 thread (meeting-intake), not live-tracked at the time.
 
+## 2026-07-08
+- **Done:** Checked Zoho Mail account `hello@saiaf.me` for unreplied/recent LifeUSA threads and drafted replies for gallery cleanup, article planning/image compression, Salesforce meeting scheduling, and Angela's shared blog note. No emails were sent in this pass.
+- **Done:** Created and published the LifeUSA Windows image-to-WebP technical resource at `https://saiaf25.github.io/lifeusa/technical-seo-fixes/windows-image-compression-workflow/` and added it to the technical fixes index at `https://saiaf25.github.io/lifeusa/technical-seo-fixes/`.
+- **Correction:** The first workflow draft offered too many beginner choices and temporarily added unrequested image-processing flags. Final public version now gives one script only, keeps the original image dimensions, and only adds ImageMagick WebP file-size targeting: `-define webp:target-size=80000 -define webp:method=6`.
+- **Correction:** Removed internal/meta wording from the client-facing guide. Angela-facing copy now stays practical: copy the script into Notepad, save it as `Convert_to_webp.bat`, place it beside the images, run it, and use the WebP files from `output`.
+- **Verified:** Live GitHub Pages resource contains the copy button and the `target-size=80000` command, and does not contain `resize`, `strip`, or `auto-orient`. Local ImageMagick syntax test kept dimensions unchanged (`1600x1000` input -> `1600x1000` output) and produced a `76,358` byte WebP sample.
+- **Done:** Updated the vault source handoff `Content Framework/70-outputs/handoff/technical-seo-fixes-index.html` so future sync runs keep the Windows image workflow card instead of overwriting it. Added validation text to `tools/sync_article_outline.py`.
+- **Done:** Saved the Angela image-compression reply draft at `Content Framework/70-outputs/emails/lifeusa-angela-image-compression-options-draft-2026-07-08.md`. The recommended framing is: local Windows workflow as the regular weekly-blog option; TinyPNG and Squoosh as one-off backup tools.
+- **Done:** Added source note `Content Framework/60-corpus/source-notes/webp-image-compression-workflow-2026-07-08.md` with Zoho message/thread evidence, final script constraint, public URLs, and open sent-mail status.
+- **Open:** If/when the Angela reply is sent, verify the sent Zoho message and update the source note/changelog. The reply is currently draft-only.
+
 ## 2026-07-05
 - **Done:** Completed the approved four-package orphan-cluster outline batch after correcting the topic logic: two Saiaf-owned enrichment plans for existing articles and two new informational guide plans for Angela to draft.
 - **Correction:** The first pushed version of the four orphan outlines was too shallow: it had keyword/link scaffolds and `Intro guidance`, but no usable intro draft, article thesis, searcher promise, or section-level depth requirements. Upgraded the generator and regenerated all four brief/outline/HTML packages with a working intro draft and deeper writer instructions.

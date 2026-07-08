@@ -131,6 +131,7 @@ PAGES = (
             "Blog article body spacing and link styling fixed through Wix Custom Code",
             "Robots.txt cleanup published through Wix SEO tools",
             "Copy-of gallery URL cleanup is mapped but waiting for client exception review",
+            "Windows image-to-WebP workflow for blog publishing",
         ),
     ),
     OutlinePage(

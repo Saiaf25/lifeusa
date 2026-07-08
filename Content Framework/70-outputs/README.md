@@ -45,6 +45,19 @@ If a draft fails final review, return to the exact failed stage:
 | Orphan Education After Loss: Why School Stability Matters | `briefs/orphans/orphan-education-after-loss.md` | `outlines/orphans/orphan-education-after-loss.md` | `handoff/orphans/orphan-education-after-loss.html` | `article-plans-and-outlines/orphan-education-after-loss/` | New informational guide for Angela to draft; Saiaf SEO review |
 | Mental Health Support for Orphaned Children | `briefs/orphans/mental-health-support-for-orphaned-children.md` | `outlines/orphans/mental-health-support-for-orphaned-children.md` | `handoff/orphans/mental-health-support-for-orphaned-children.html` | `article-plans-and-outlines/mental-health-support-for-orphaned-children/` | New informational guide for Angela to draft; Saiaf medical-claim/SEO review |
 
+## Active technical resources
+
+| Resource | Local source | Public URL | Status |
+|---|---|---|---|
+| Windows Image to WebP Workflow | `technical-seo-fixes/windows-image-compression-workflow/index.html` | `https://saiaf25.github.io/lifeusa/technical-seo-fixes/windows-image-compression-workflow/` | Published 2026-07-08. One beginner-facing batch script only; keeps dimensions unchanged and targets about 80 KB through ImageMagick WebP settings. |
+| Technical SEO Fixes Index | `Content Framework/70-outputs/handoff/technical-seo-fixes-index.html` -> `technical-seo-fixes/index.html` | `https://saiaf25.github.io/lifeusa/technical-seo-fixes/` | Sync-managed. Includes verified fixes, pending gallery cleanup blocker, GSC workstream, and the Windows image workflow resource. |
+
+## Active email drafts
+
+| Draft | File | Status |
+|---|---|---|
+| Angela image-compression workflow options | `emails/lifeusa-angela-image-compression-options-draft-2026-07-08.md` | Draft only; not yet verified as sent in Zoho. |
+
 ## What goes here
 
 - Content briefs
