@@ -795,17 +795,28 @@
           "GATE-A": { status: "in_progress", note: "Brief confirmed. Exact screenshot and reproducible result details remain open." },
           "GATE-B": { status: "not_started", note: "" }
         };
-        const matchesPreviousPublished = (saved, previous) => previous && saved && saved.status === previous.status && cleanText(saved.note) === previous.note;
         for (const item of actions) {
           const saved = raw.items && raw.items[item.id];
-          if (saved && !(isPreviousVersion && matchesPreviousPublished(saved, previousItems[item.id]))) {
-            base.items[item.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          if (saved) {
+            const previous = previousItems[item.id];
+            const upgradeStatus = isPreviousVersion && previous && saved.status === previous.status;
+            const upgradeNote = isPreviousVersion && previous && cleanText(saved.note) === previous.note;
+            base.items[item.id] = {
+              status: upgradeStatus ? item.status : cleanStatus(saved.status),
+              note: upgradeNote ? item.note : cleanText(saved.note)
+            };
           }
         }
         for (const gate of gates) {
           const saved = raw.gates && raw.gates[gate.id];
-          if (saved && !(isPreviousVersion && matchesPreviousPublished(saved, previousGates[gate.id]))) {
-            base.gates[gate.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          if (saved) {
+            const previous = previousGates[gate.id];
+            const upgradeStatus = isPreviousVersion && previous && saved.status === previous.status;
+            const upgradeNote = isPreviousVersion && previous && cleanText(saved.note) === previous.note;
+            base.gates[gate.id] = {
+              status: upgradeStatus ? gate.status : cleanStatus(saved.status),
+              note: upgradeNote ? gate.note : cleanText(saved.note)
+            };
           }
         }
         return base;
