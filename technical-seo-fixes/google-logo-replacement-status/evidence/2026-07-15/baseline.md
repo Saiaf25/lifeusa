@@ -27,6 +27,7 @@ Captured July 15, 2026 at 1280 px desktop width.
 - `first-20-source-inventory.csv`: machine-readable first-20 source register.
 - `wix-implementation-spec.md`: stable asset and structured-data publication specification.
 - `publisher-correction-pack.md`: correction drafts and acceptance checks for verified retired-logo sources.
+- `wix-owned-logo-change-log.md`: verified Wix Media Manager upload and Business Profile logo before-and-after record.
 
 ## Approved current logo evidence
 

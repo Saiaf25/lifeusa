@@ -1,12 +1,12 @@
 # LifeUSA retired-logo publisher correction pack
 
-Prepared July 15, 2026. These messages are ready for review and sending after the stable square logo URL is published. No outreach has been sent from this document.
+Prepared July 15, 2026. The official square logo URL is now live, so these messages are ready for review and sending. No outreach has been sent from this document.
 
 ## Evidence bundle to attach
 
 - Official website: `https://www.lifeusa.org/`
 - Official social directory: `https://linktr.ee/LIFEUSA`
-- Proposed stable square asset: `https://www.lifeusa.org/brand/lifeusa-official-logo-square.png` (not live yet)
+- Official Wix square asset: `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
 - Current square candidate: `current-square-favicon-source.png`
 - Source audit: `source-audit.md`
 
@@ -33,7 +33,7 @@ Please replace the image on this page:
 
 with our current official square logo:
 
-`https://www.lifeusa.org/brand/lifeusa-official-logo-square.png`
+`https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
 
 Our official website is `https://www.lifeusa.org/`, where the current brand can be verified. Please confirm when the profile and any cached thumbnail have been updated.
 
@@ -63,7 +63,7 @@ Please update the logo on this profile:
 
 using our current official square logo:
 
-`https://www.lifeusa.org/brand/lifeusa-official-logo-square.png`
+`https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
 
 Our current official website is `https://www.lifeusa.org/`. Because the profile includes older organizational details in addition to the logo, please either provide a profile-editing route or confirm which fields your team can correct. If the profile can no longer be maintained, please remove it from public access.
 

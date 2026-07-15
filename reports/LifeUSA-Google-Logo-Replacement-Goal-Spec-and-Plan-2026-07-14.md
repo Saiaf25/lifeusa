@@ -13,6 +13,8 @@
 - The old WordPress site, Kids That Do Good, and Arab Info Mall were rechecked directly. All three still serve the retired crescent logo from live public image URLs.
 - The homepage logo signals were rechecked. The visible header, `NGO.logo`, and favicon still use three Wix assets. The `NGO.logo` file is white-on-transparent, while the current favicon source provides a stronger 1800 x 1800 colored square candidate.
 - The `NGO` node still lacks `@id` and `sameAs`, and the homepage still emits two `WebSite` nodes.
+- The verified 1800 x 1800 current square logo was uploaded directly to the published LifeUSA Wix site and assigned to the previously empty Wix Business Profile logo field. The before-and-after Site Properties versions are recorded.
+- A post-change live homepage check confirmed that the separate custom `NGO.logo` value did not change, so its white-logo replacement remains an independent Wix SEO task.
 - Source evidence, first-20 Markdown and CSV inventories, dimensions, checksums, and the three retired-logo files are stored under `technical-seo-fixes/google-logo-replacement-status/evidence/2026-07-15/`.
 
 The broad top 20 is healthier than the older targeted-query sample, but the campaign is not complete because the retired source files remain live and the owned canonical logo signal is not yet consolidated.

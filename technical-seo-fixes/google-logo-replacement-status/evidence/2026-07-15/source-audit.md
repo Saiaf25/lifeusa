@@ -56,13 +56,14 @@ The live homepage was rechecked on July 15, 2026.
 |---|---|---|---|
 | Visible header logo | Wix asset `6df904_1fd130d48c554b8c8109e6acd206c435` | Current horizontal mark, 4101 x 1201 source | Retain as horizontal master candidate; publish under a stable owned brand URL |
 | `NGO.logo` | Wix asset `6df904_2bb6857d9c8b49ae91789ad75efbc8b8` | Current white-on-transparent variant, 4250 x 2514; weak on white surfaces | Replace with a colored square logo that stays visible on white |
-| Favicon source | Wix asset `6df904_3ba0b63af7e945f0a92fbe9978934569` | Current blue square mark, 1800 x 1800 source | Strong canonical square candidate; publish a stable production copy |
+| Favicon source | Wix asset `6df904_3ba0b63af7e945f0a92fbe9978934569` | Current blue square mark, 1800 x 1800 source | Used as the verified source for the dedicated official square upload |
+| Wix Business Profile logo | Wix asset `af2a6c_49a4190c354746b493c123d311222fb5` | Current square mark, 1800 x 1800; assigned July 15 | Complete; use this official asset for corrections and remaining owned signals |
 | `NGO.@id` | Missing | Entity graph lacks a stable identifier | Add `https://www.lifeusa.org/#organization` |
 | `NGO.sameAs` | Missing | Official profiles are not connected from the entity node | Add only verified official LifeUSA profile URLs |
 | `WebSite` nodes | Two separate nodes | Duplicated website identity | Consolidate if Wix permits |
 | Open Graph image | Program photograph | Appropriate for sharing, but not a canonical logo | Keep separate from `NGO.logo` |
 
-The current square favicon source is a candidate, not yet a production canonical asset. It still needs an owned stable URL, usage rules, and publication through Wix.
+The current square source was uploaded to the LifeUSA Wix Media Manager and assigned to the site's Business Profile logo field on July 15. The dedicated Wix URL is live. The custom homepage `NGO.logo` still points to the separate white asset and remains a distinct correction task.
 
 ## Confirmed live retired-logo sources
 
@@ -88,6 +89,7 @@ These sources do not appear in the broad-query first 20 captured above, but they
 
 - [Wix implementation specification](wix-implementation-spec.md): stable asset contract, corrected NGO markup, website-node cleanup, and acceptance checklist.
 - [Publisher correction pack](publisher-correction-pack.md): ready-to-review drafts and acceptance checks for the three verified retired-logo sources.
+- [Wix owned-logo change log](wix-owned-logo-change-log.md): before-and-after proof for the Media Manager upload and Business Profile logo assignment.
 
 ## Evidence asset checksums
 

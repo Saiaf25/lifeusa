@@ -8,10 +8,10 @@ Publish these files on `lifeusa.org` under stable URLs that will not change when
 
 | Purpose | Proposed production URL | Source candidate | Requirement |
 |---|---|---|---|
-| Canonical square logo | `https://www.lifeusa.org/brand/lifeusa-official-logo-square.png` | `current-square-favicon-source.png` | Colored mark, square, transparent or solid branded background, visible on white |
+| Canonical square logo | `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png` | `current-square-favicon-source.png` | Live, Wix-owned, 1800 by 1800, colored mark visible on white |
 | Canonical horizontal logo | `https://www.lifeusa.org/brand/lifeusa-official-logo-horizontal.png` | `lifeusa-current-logo-source.png` | Current horizontal mark used in the live header |
 
-The proposed URLs are not live yet. Confirm the final public paths before publishing the structured data. Both URLs should return `200`, serve an image content type, remain crawlable, and avoid redirect chains.
+The square URL is live and assigned to the Wix Business Profile logo field. The proposed custom-domain horizontal URL is not live yet. Confirm the final horizontal path before replacing the live header source.
 
 ## Consolidated NGO node
 
@@ -27,8 +27,8 @@ Use one stable entity identifier and one canonical square logo URL. Add only pro
   "url": "https://www.lifeusa.org/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://www.lifeusa.org/brand/lifeusa-official-logo-square.png",
-    "contentUrl": "https://www.lifeusa.org/brand/lifeusa-official-logo-square.png",
+    "url": "https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png",
+    "contentUrl": "https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png",
     "width": 1800,
     "height": 1800,
     "caption": "Life for Relief and Development official logo"
@@ -55,7 +55,7 @@ Use one stable entity identifier and one canonical square logo URL. Add only pro
 }
 ```
 
-Do not publish the snippet until the square logo URL is live. Replace the proposed URL and dimensions if the production asset differs from the audited 1800 by 1800 candidate.
+The square logo URL and dimensions are verified live. The snippet is ready for the homepage custom structured-data control; validate the rendered source after publication.
 
 ## Website node cleanup
 
@@ -86,8 +86,8 @@ If Wix automatically generates a `WebSite` node that cannot be removed, do not a
 
 ## Wix publication checklist
 
-1. Publish the square and horizontal masters at the final stable URLs.
-2. Confirm both files return `200` without authentication or a redirect chain.
+1. Keep the published square master at its verified Wix URL and publish the horizontal master at its final stable URL.
+2. Confirm both files return `200` without authentication or a redirect chain. The square check already passes.
 3. Use the square file for the favicon source, `NGO.logo`, Google Business Profile, and authority profiles.
 4. Use the horizontal file for the site header and other wide placements.
 5. Replace the current white-on-transparent `NGO.logo` source.
