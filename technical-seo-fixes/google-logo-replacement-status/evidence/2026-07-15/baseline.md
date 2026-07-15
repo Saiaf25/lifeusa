@@ -29,6 +29,7 @@ Captured July 15, 2026 at 1280 px desktop width.
 - `publisher-correction-pack.md`: correction drafts and acceptance checks for verified retired-logo sources.
 - `wix-owned-logo-change-log.md`: verified Wix Media Manager upload and Business Profile logo before-and-after record.
 - `outreach-approval-queue.md`: human-gated external-action register with two sent-message records and eight pending approval packages.
+- `monitoring-log.md`: scheduled monitoring protocol, July 15 control check, reply state, public-source comparison, canonical-asset health, and stability counter.
 
 ## Approved current logo evidence
 

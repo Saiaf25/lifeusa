@@ -16,7 +16,7 @@ Do not attach the old logo unless the publisher asks for a visual comparison. Le
 
 ## 1. Kids That Do Good
 
-**Status:** Sent July 15, 2026, from `hello@saiaf.me` to `info@kidsthatdogood.com`. Zoho message ID: `1784122643723013500`. Awaiting reply and public correction.
+**Status:** Delivered July 15, 2026, from `hello@saiaf.me` to `info@kidsthatdogood.com`. Zoho message ID: `1784122643723013500`. The July 15 read-only check found no reply, and the public page still references the pixel-identical retired image.
 
 **Verified outdated page**
 
@@ -128,7 +128,7 @@ Please confirm that the public GuideStar profile and its image preview have refr
 
 ## 5. GreatNonprofits
 
-**Status:** Sent July 15, 2026, from `hello@saiaf.me` to `support@greatnonprofits.org`. Zoho message ID: `1784122678410013500`. Awaiting reply and public correction.
+**Status:** Delivered July 15, 2026, from `hello@saiaf.me` to `support@greatnonprofits.org`. Zoho message ID: `1784122678410013500`. The July 15 read-only check found no reply, and the public page and CDN image remain unchanged.
 
 **Verified outdated profile**
 
