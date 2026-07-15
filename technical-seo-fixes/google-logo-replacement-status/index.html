@@ -453,6 +453,11 @@
       padding: 18px;
       background: #132c45;
     }
+    .evidence-card.square-card img {
+      object-fit: contain;
+      padding: 28px;
+      background: #f4f1e9;
+    }
     .evidence-card.social-card img { object-position: center; }
     .evidence-copy { padding: 16px 17px 18px; }
     .evidence-copy h3 { margin: 0 0 6px; color: var(--green-dark); font-size: 1.15rem; }
@@ -466,6 +471,52 @@
       border: 1px solid #bdd8cd;
       border-radius: var(--radius-sm);
     }
+    .audit-panel {
+      margin-top: 18px;
+      padding: 20px;
+      color: #17231e;
+      background: #fff9ec;
+      border: 1px solid #dccb9e;
+      border-radius: var(--radius-md);
+    }
+    .audit-panel h3 { margin: 0 0 7px; color: var(--green-dark); font-size: 1.25rem; }
+    .audit-panel > p { margin: 0; color: var(--muted); }
+    .audit-totals {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin: 16px 0;
+    }
+    .audit-total {
+      padding: 12px;
+      color: #17231e;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+    .audit-total strong { display: block; color: var(--green-dark); font-size: 1.55rem; line-height: 1; }
+    .audit-total span { display: block; margin-top: 5px; color: var(--muted); font-size: .79rem; }
+    .audit-links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .retired-heading { margin: 24px 0 10px; color: var(--green-dark); font-size: 1.25rem; }
+    .retired-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .retired-card {
+      overflow: hidden;
+      color: #17231e;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+    .retired-card img {
+      display: block;
+      width: 100%;
+      height: 210px;
+      padding: 18px;
+      object-fit: contain;
+      background: #f2efe8;
+    }
+    .retired-card div { padding: 14px 15px 16px; }
+    .retired-card h4 { margin: 0 0 5px; color: var(--green-dark); font-size: 1rem; }
+    .retired-card p { margin: 0 0 8px; color: var(--muted); font-size: .88rem; }
     .source-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
     .source-list a {
       display: block;
@@ -490,6 +541,8 @@
       .action-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gate-grid { grid-template-columns: 1fr; }
       .evidence-card img { height: 280px; }
+      .audit-totals { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .retired-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .shell { width: min(100% - 20px, 760px); padding-top: 10px; }
@@ -501,6 +554,7 @@
       .action-details { grid-template-columns: 1fr; }
       .gate-controls { grid-template-columns: 1fr; }
       .evidence-grid { grid-template-columns: 1fr; }
+      .audit-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .source-list { grid-template-columns: 1fr; }
       .save-state { width: 100%; margin-left: 0; }
     }
@@ -513,6 +567,7 @@
       .progress-label { text-align: left; }
       .button { width: 100%; }
       .evidence-card img { height: 240px; }
+      .audit-totals { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -561,9 +616,9 @@
     <section id="overview" class="section">
       <div class="section-heading">
         <h2>Current status</h2>
-        <p>The Google baseline and current logo are confirmed. Asset normalization and source corrections are now in progress.</p>
+        <p>The first-20 source audit is complete. Three live retired-logo sources and an owned-site logo-signal defect remain open.</p>
       </div>
-      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The approved current mark is the logo used on lifeusa.org and LifeUSA's official social presence. A personalization-disabled Google Search and Images baseline is attached below. Highest priority now goes to owned assets, Google-controlled surfaces, and authoritative profiles that still show conflicting marks.</p>
+      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The broad LifeUSA Google Images top 20 contained 14 official results, four unrelated same-name business results, two current-branded marketplace results, and no retired crescent mark. However, the old WordPress site, Kids That Do Good, and Arab Info Mall still serve the retired logo directly. The homepage also points its NGO structured data to a white-on-transparent logo instead of the stronger colored square asset.</p>
       <div class="metrics" aria-label="Status summary">
         <div class="metric"><strong id="metricDone">0</strong><span>actions done</span></div>
         <div class="metric"><strong id="metricProgress">2</strong><span>actions in progress</span></div>
@@ -660,7 +715,7 @@
         <h2>Captured evidence</h2>
         <p>Public evidence collected independently on July 15, 2026.</p>
       </div>
-      <p class="evidence-summary">The broad branded query already shows the current LifeUSA identity in several owned results, but Google Images also mixes in a similarly named company, marketplace products, and other unrelated entities. The corrective work therefore focuses on consistent owned and authoritative signals.</p>
+      <p class="evidence-summary">The broad branded query currently favors official LifeUSA sources, but three separate public pages still serve the retired crescent logo directly. The program therefore separates harmless same-name results from actionable source defects.</p>
       <div class="evidence-grid">
         <article class="evidence-card">
           <a href="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg" alt="Google Search baseline for LifeUSA showing the official Life for Relief and Development website and other similarly named results" loading="lazy"></a>
@@ -674,7 +729,7 @@
           <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Google Images baseline for LifeUSA showing a mixture of official LifeUSA imagery and unrelated similarly named sources" loading="lazy"></a>
           <div class="evidence-copy">
             <h3>Google Images baseline</h3>
-            <p>The first viewport mixes current LifeUSA website and social imagery with unrelated entities and marketplace content. The full first-20 source inventory remains in progress.</p>
+            <p>The first 20 contain 14 official results, four unrelated same-name business results, and two current-branded marketplace results. No retired crescent mark appears in this exact broad-query sample.</p>
             <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Open the repeatable image query</a>
           </div>
         </article>
@@ -693,6 +748,46 @@
             <p>The official Linktree connects LifeUSA's Facebook, Instagram, TikTok, YouTube, X, Threads, and LinkedIn accounts and displays the current logo family.</p>
             <a href="https://linktr.ee/LIFEUSA">Verify the official social directory</a>
           </div>
+        </article>
+        <article class="evidence-card square-card">
+          <a href="./evidence/2026-07-15/current-square-favicon-source.png"><img src="./evidence/2026-07-15/current-square-favicon-source.png" alt="Current LifeUSA square logo candidate on a blue background" loading="lazy"></a>
+          <div class="evidence-copy">
+            <h3>Canonical square candidate</h3>
+            <p>The public favicon source is a current 1800 by 1800 square asset that remains visible on white. It is a strong candidate for the stable owned logo URL and NGO markup.</p>
+            <a href="./evidence/2026-07-15/source-audit.md">Read the owned-signal audit</a>
+          </div>
+        </article>
+      </div>
+      <div class="audit-panel">
+        <h3>First-20 source audit complete</h3>
+        <p>Result order was recorded from the same personalization-disabled Google Images session, then ambiguous domains were checked directly before classification.</p>
+        <div class="audit-totals" aria-label="First 20 Google Images source classification">
+          <div class="audit-total"><strong>9</strong><span>owned LifeUSA pages</span></div>
+          <div class="audit-total"><strong>5</strong><span>official social results</span></div>
+          <div class="audit-total"><strong>4</strong><span>unrelated businesses</span></div>
+          <div class="audit-total"><strong>2</strong><span>current marketplace results</span></div>
+          <div class="audit-total"><strong>0</strong><span>retired marks in this top 20</span></div>
+        </div>
+        <div class="audit-links">
+          <a href="./evidence/2026-07-15/source-audit.md">Open the full source audit</a>
+          <a href="./evidence/2026-07-15/first-20-source-inventory.csv">Open the CSV inventory</a>
+          <a href="./evidence/2026-07-15/wix-implementation-spec.md">Open the Wix implementation specification</a>
+          <a href="./evidence/2026-07-15/publisher-correction-pack.md">Open the publisher correction pack</a>
+        </div>
+      </div>
+      <h3 class="retired-heading">Retired-logo sources still live</h3>
+      <div class="retired-grid">
+        <article class="retired-card">
+          <a href="./evidence/2026-07-15/retired-wordpress-logo.png"><img src="./evidence/2026-07-15/retired-wordpress-logo.png" alt="Retired crescent LifeUSA logo still served by the old WordPress site" loading="lazy"></a>
+          <div><h4>Old WordPress site</h4><p>1500 by 1500 retired logo remains live on the 2015 archive.</p><a href="https://lifeusaorg.wordpress.com/where-we-are/">Verify the source page</a></div>
+        </article>
+        <article class="retired-card">
+          <a href="./evidence/2026-07-15/retired-kids-that-do-good-logo.png"><img src="./evidence/2026-07-15/retired-kids-that-do-good-logo.png" alt="Retired crescent LifeUSA logo still served by Kids That Do Good" loading="lazy"></a>
+          <div><h4>Kids That Do Good</h4><p>200 by 200 retired profile logo remains live and requires a publisher correction.</p><a href="https://kidsthatdogood.com/causes/life-relief-development/">Verify the source page</a></div>
+        </article>
+        <article class="retired-card">
+          <a href="./evidence/2026-07-15/retired-arab-info-mall-logo.gif"><img src="./evidence/2026-07-15/retired-arab-info-mall-logo.gif" alt="Retired crescent LifeUSA logo still served by Arab Info Mall" loading="lazy"></a>
+          <div><h4>Arab Info Mall</h4><p>200 by 200 retired organization logo remains live with an outdated profile.</p><a href="https://arabinfomall.bibalex.org/En/Index.aspx?orgid=879&amp;sectionid=1">Verify the source page</a></div>
         </article>
       </div>
       <p class="evidence-protocol"><strong>Capture protocol:</strong> 1280 px desktop viewport, English, United States, <code>pws=0</code>. Google reported “Results are not personalized.” Personal account controls were excluded from the published captures. <a href="./evidence/2026-07-15/baseline.md">Read the evidence record</a>.</p>
@@ -713,7 +808,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.1 · Page updated July 15, 2026</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.2 · Page updated July 15, 2026</footer>
   </main>
 
   <script>
@@ -726,7 +821,10 @@
       const TARGET_DATE = "2026-10-04";
       const DEFAULT_HERO_SUMMARY = document.getElementById("heroSummary").textContent.trim();
       const DEFAULT_OVERVIEW_TEXT = document.getElementById("overviewText").textContent.trim();
-      const PREVIOUS_OVERVIEW_TEXT = "The plan treats directories as source correction, not mass submission. Highest priority goes to owned LifeUSA assets, Google-controlled surfaces, and existing high-authority profiles that still show the retired mark.";
+      const PREVIOUS_OVERVIEW_TEXTS = [
+        "The plan treats directories as source correction, not mass submission. Highest priority goes to owned LifeUSA assets, Google-controlled surfaces, and existing high-authority profiles that still show the retired mark.",
+        "The approved current mark is the logo used on lifeusa.org and LifeUSA's official social presence. A personalization-disabled Google Search and Images baseline is attached below. Highest priority now goes to owned assets, Google-controlled surfaces, and authoritative profiles that still show conflicting marks."
+      ];
       const VALID_STATUSES = ["not_started", "in_progress", "waiting", "blocked", "done"];
       const STATUS_LABELS = {
         not_started: "Not started",
@@ -739,19 +837,19 @@
       const actions = [
         { id: "LOGO-001", title: "Capture a reproducible Google Search and Images baseline", phase: 0, owner: "SEO lead", dependency: "None", evidence: "Dated screenshots, query parameters, and evidence record", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Completed July 15. Captured Google Search and Google Images for LifeUSA at 1280 px, hl=en, gl=us, pws=0. Google reported that results were not personalized. See the Captured evidence section." },
         { id: "LOGO-002", title: "Confirm the current and retired logo marks", phase: 0, owner: "SEO lead and client", dependency: "Live website and official social references", evidence: "Written decision plus public source assets", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Completed July 15. Client confirmed that the logo used on lifeusa.org and official LifeUSA social media is the approved current mark. Any conflicting legacy mark is treated as retired." },
-        { id: "LOGO-003", title: "Produce the canonical logo asset kit", phase: 0, owner: "Designer or brand owner", dependency: "LOGO-002", evidence: "Asset register, square and horizontal files", start: "2026-07-13", end: "2026-07-17", status: "in_progress", note: "Recovered the public website logo source at 4101 x 1201 px and the official social reference at 1000 x 1000 px. Next: normalize production-ready square and horizontal masters and document usage rules." },
+        { id: "LOGO-003", title: "Produce the canonical logo asset kit", phase: 0, owner: "Designer or brand owner", dependency: "LOGO-002", evidence: "Asset register, square and horizontal files", start: "2026-07-13", end: "2026-07-17", status: "in_progress", note: "Recovered the 4101 x 1201 current horizontal source and the 1800 x 1800 current blue square source. Dimensions and checksums are recorded. Next: publish stable production copies and document usage rules." },
         { id: "LOGO-004", title: "Publish the owned LifeUSA brand page and stable logo URLs", phase: 1, owner: "Wix administrator", dependency: "LOGO-003", evidence: "Live page and successful 200 checks", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
-        { id: "LOGO-005", title: "Repair Organization and NGO structured data", phase: 1, owner: "Wix administrator and SEO lead", dependency: "LOGO-004", evidence: "Live JSON-LD and validation", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
-        { id: "LOGO-006", title: "Align favicon, header, and footer logo variants", phase: 1, owner: "Wix administrator", dependency: "LOGO-003", evidence: "Screenshots and live source URLs", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
-        { id: "LOGO-007", title: "Remove or replace the retired WordPress logo asset", phase: 2, owner: "WordPress owner", dependency: "WordPress disposition decision", evidence: "Old URL state and archive screenshot", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
-        { id: "LOGO-008", title: "Correct the Kids That Do Good source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and current image", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
-        { id: "LOGO-009", title: "Correct the Arab Info Mall source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and corrected profile", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
-        { id: "LOGO-010", title: "Audit the first 20 Google image sources for branded queries", phase: 0, owner: "SEO lead", dependency: "LOGO-001", evidence: "Repeatable source inventory", start: "2026-07-12", end: "2026-07-17", status: "in_progress", note: "The first Google Images viewport is captured and shows official LifeUSA imagery mixed with LifeUSA International, marketplace products, and other unrelated entities. The structured first-20 source inventory remains in progress." },
+        { id: "LOGO-005", title: "Repair Organization and NGO structured data", phase: 1, owner: "Wix administrator and SEO lead", dependency: "LOGO-004", evidence: "Live JSON-LD and validation", start: "2026-07-14", end: "2026-07-17", status: "in_progress", note: "Live audit completed July 15. NGO.logo uses a white-on-transparent 4250 x 2514 asset, NGO.@id and sameAs are missing, and two WebSite nodes are present. A ready-to-paste corrected NGO node, WebSite cleanup specification, and acceptance checklist are attached. Wix publication remains." },
+        { id: "LOGO-006", title: "Align favicon, header, and footer logo variants", phase: 1, owner: "Wix administrator", dependency: "LOGO-003", evidence: "Screenshots and live source URLs", start: "2026-07-14", end: "2026-07-17", status: "in_progress", note: "Live audit completed July 15. Header, NGO schema, and favicon use three Wix files. The favicon source is a current 1800 x 1800 blue square candidate; alignment through stable owned URLs remains." },
+        { id: "LOGO-007", title: "Remove or replace the retired WordPress logo asset", phase: 2, owner: "WordPress owner", dependency: "WordPress disposition decision", evidence: "Old URL state and archive screenshot", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Reverified July 15. The old WordPress page and its 1500 x 1500 retired crescent logo remain live. Exact page, image URL, local evidence copy, dimensions, and checksum are recorded. Ownership and archive disposition are the remaining dependencies." },
+        { id: "LOGO-008", title: "Correct the Kids That Do Good source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and current image", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Reverified July 15. The profile still serves a 200 x 200 retired crescent logo. Exact evidence, the public contact route, a ready-to-send correction draft, and the acceptance check are attached. Sending remains pending until the stable square logo URL is live." },
+        { id: "LOGO-009", title: "Correct the Arab Info Mall source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and corrected profile", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Reverified July 15. The organization profile still serves a 200 x 200 retired crescent GIF and stale profile data. Exact evidence, a ready-to-send full-profile correction draft, and the acceptance check are attached. Sending remains pending until the stable square logo URL is live." },
+        { id: "LOGO-010", title: "Audit the first 20 Google image sources for branded queries", phase: 0, owner: "SEO lead", dependency: "LOGO-001", evidence: "Repeatable source inventory", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Completed July 15. The broad LifeUSA query produced 14 official results, four unrelated same-name business results, two current-branded marketplace results, and zero retired crescent marks in the first 20. The full Markdown and CSV inventories are attached." },
         { id: "LOGO-011", title: "Update Google Business Profile logo and photo inventory", phase: 3, owner: "Google property owner", dependency: "LOGO-003", evidence: "Profile screenshot and asset state", start: "2026-07-15", end: "2026-07-22", status: "not_started", note: "" },
         { id: "LOGO-012", title: "Claim or update the Knowledge Panel", phase: 3, owner: "Verified representative", dependency: "LOGO-004", evidence: "Claim state and feedback receipt", start: "2026-07-15", end: "2026-07-22", status: "not_started", note: "" },
         { id: "LOGO-013", title: "Submit valid indexing and image removal requests", phase: 3, owner: "Search Console owner", dependency: "Source changes live", evidence: "Request IDs and dated status", start: "2026-07-17", end: "2026-07-22", status: "not_started", note: "Submit only after each source change has been verified live." },
         { id: "LOGO-014", title: "Align Tier 1 nonprofit, social, and authority profiles", phase: 4, owner: "Platform administrators", dependency: "LOGO-003", evidence: "URL and screenshot matrix", start: "2026-07-17", end: "2026-08-02", status: "not_started", note: "Priority set: Candid, Charity Navigator, GreatNonprofits, ReliefWeb, LinkedIn, Facebook, Instagram, and YouTube." },
-        { id: "LOGO-015", title: "Audit and correct Tier 2 profiles already ranking for LifeUSA", phase: 2, owner: "SEO lead and client communications", dependency: "LOGO-010", evidence: "Resolution and outreach matrix", start: "2026-07-18", end: "2026-07-26", status: "not_started", note: "" },
+        { id: "LOGO-015", title: "Audit and correct Tier 2 profiles already ranking for LifeUSA", phase: 2, owner: "SEO lead and client communications", dependency: "LOGO-010", evidence: "Resolution and outreach matrix", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Source audit opened July 15. The broad first 20 contains no retired mark, but direct checks confirm the old WordPress site, Kids That Do Good, and Arab Info Mall still publish the retired crescent logo. Those three sources form the active correction queue." },
         { id: "LOGO-016", title: "Audit Google Ads and Ad Grants business information assets", phase: 3, owner: "Ads administrator", dependency: "LOGO-003", evidence: "Asset report and verification state", start: "2026-07-17", end: "2026-07-22", status: "not_started", note: "" },
         { id: "LOGO-017", title: "Run an optional branded paid visibility test", phase: 5, owner: "Ads administrator", dependency: "Separate budget or Ad Grants approval", evidence: "30-day campaign report", start: "2026-07-20", end: "2026-08-18", status: "waiting", note: "Optional bridge only. It does not change organic Google Images or Knowledge Panel selection." },
         { id: "LOGO-018", title: "Monitor branded Google surfaces weekly for 12 weeks", phase: 6, owner: "SEO lead", dependency: "Major updates live", evidence: "Dated monitoring log and three stable checks", start: "2026-07-19", end: "2026-10-04", status: "not_started", note: "Check US desktop and mobile results at weeks 1, 2, 4, 8, and 12, with weekly checks for priority surfaces." }
@@ -766,7 +864,7 @@
       ];
 
       const defaultState = () => ({
-        version: 2,
+        version: 3,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -779,28 +877,42 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 2;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 3;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
-        if (!(isPreviousVersion && raw.overviewText === PREVIOUS_OVERVIEW_TEXT)) {
+        if (!(isPreviousVersion && PREVIOUS_OVERVIEW_TEXTS.includes(raw.overviewText))) {
           base.overviewText = cleanText(raw.overviewText || base.overviewText, 1600);
         }
         const previousItems = {
-          "LOGO-001": { status: "in_progress", note: "Zoho brief confirmed. Exact screenshot, query, device, location, and result surface still need to be captured." },
-          "LOGO-002": { status: "not_started", note: "" },
-          "LOGO-003": { status: "not_started", note: "" },
-          "LOGO-010": { status: "in_progress", note: "Initial source review is complete. The full repeatable top-20 baseline follows once the exact CEO result is reproduced." }
+          "LOGO-001": [
+            { status: "in_progress", note: "Zoho brief confirmed. Exact screenshot, query, device, location, and result surface still need to be captured." }
+          ],
+          "LOGO-002": [{ status: "not_started", note: "" }],
+          "LOGO-003": [
+            { status: "not_started", note: "" },
+            { status: "in_progress", note: "Recovered the public website logo source at 4101 x 1201 px and the official social reference at 1000 x 1000 px. Next: normalize production-ready square and horizontal masters and document usage rules." }
+          ],
+          "LOGO-005": [{ status: "not_started", note: "" }],
+          "LOGO-006": [{ status: "not_started", note: "" }],
+          "LOGO-007": [{ status: "not_started", note: "" }],
+          "LOGO-008": [{ status: "not_started", note: "" }],
+          "LOGO-009": [{ status: "not_started", note: "" }],
+          "LOGO-010": [
+            { status: "in_progress", note: "Initial source review is complete. The full repeatable top-20 baseline follows once the exact CEO result is reproduced." },
+            { status: "in_progress", note: "The first Google Images viewport is captured and shows official LifeUSA imagery mixed with LifeUSA International, marketplace products, and other unrelated entities. The structured first-20 source inventory remains in progress." }
+          ],
+          "LOGO-015": [{ status: "not_started", note: "" }]
         };
         const previousGates = {
-          "GATE-A": { status: "in_progress", note: "Brief confirmed. Exact screenshot and reproducible result details remain open." },
-          "GATE-B": { status: "not_started", note: "" }
+          "GATE-A": [{ status: "in_progress", note: "Brief confirmed. Exact screenshot and reproducible result details remain open." }],
+          "GATE-B": [{ status: "not_started", note: "" }]
         };
         for (const item of actions) {
           const saved = raw.items && raw.items[item.id];
           if (saved) {
-            const previous = previousItems[item.id];
-            const upgradeStatus = isPreviousVersion && previous && saved.status === previous.status;
-            const upgradeNote = isPreviousVersion && previous && cleanText(saved.note) === previous.note;
+            const previous = previousItems[item.id] || [];
+            const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
+            const upgradeNote = isPreviousVersion && previous.some(value => cleanText(saved.note) === value.note);
             base.items[item.id] = {
               status: upgradeStatus ? item.status : cleanStatus(saved.status),
               note: upgradeNote ? item.note : cleanText(saved.note)
@@ -810,9 +922,9 @@
         for (const gate of gates) {
           const saved = raw.gates && raw.gates[gate.id];
           if (saved) {
-            const previous = previousGates[gate.id];
-            const upgradeStatus = isPreviousVersion && previous && saved.status === previous.status;
-            const upgradeNote = isPreviousVersion && previous && cleanText(saved.note) === previous.note;
+            const previous = previousGates[gate.id] || [];
+            const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
+            const upgradeNote = isPreviousVersion && previous.some(value => cleanText(saved.note) === value.note);
             base.gates[gate.id] = {
               status: upgradeStatus ? gate.status : cleanStatus(saved.status),
               note: upgradeNote ? gate.note : cleanText(saved.note)
@@ -1043,7 +1155,7 @@
         save("Status prepared for export");
         const payload = {
           project: PROJECT_NAME,
-          version: 2,
+          version: 3,
           exportedAt: new Date().toISOString(),
           startDate: START_DATE,
           targetDate: TARGET_DATE,

@@ -18,6 +18,15 @@ Captured July 15, 2026 at 1280 px desktop width.
 - `lifeusa-website-current-logo.jpg`: live website header capture, 1280 x 245 px.
 - `lifeusa-current-logo-source.png`: public website logo source, 4101 x 1201 px.
 - `lifeusa-official-social-avatar.png`: official social directory reference, 1000 x 1000 px.
+- `current-square-favicon-source.png`: current square Wix source, 1800 x 1800 px.
+- `current-schema-logo-white-transparent.png`: live `NGO.logo` source, 4250 x 2514 px.
+- `retired-wordpress-logo.png`: retired crescent source from the old WordPress site, 1500 x 1500 px.
+- `retired-kids-that-do-good-logo.png`: retired crescent source from Kids That Do Good, 200 x 200 px.
+- `retired-arab-info-mall-logo.gif`: retired crescent source from Arab Info Mall, 200 x 200 px.
+- `source-audit.md`: first-20 inventory, owned-signal audit, retired-source verification, and checksums.
+- `first-20-source-inventory.csv`: machine-readable first-20 source register.
+- `wix-implementation-spec.md`: stable asset and structured-data publication specification.
+- `publisher-correction-pack.md`: correction drafts and acceptance checks for verified retired-logo sources.
 
 ## Approved current logo evidence
 

@@ -1,0 +1,21 @@
+rank,source_url,domain,relationship,logo_state,required_action,status
+1,https://www.lifeusa.org/,lifeusa.org,owned,current,Strengthen canonical logo signals,verified
+2,https://www.lifeusa.org/media,lifeusa.org,owned,current,Align image metadata,verified
+3,https://lifeusa.international/,lifeusa.international,unrelated,different organization,Exclude from correction campaign,verified
+4,https://www.lifeusa.org/,lifeusa.org,owned,current,Use one canonical asset URL,verified
+5,https://www.lifeusa.org/,lifeusa.org,owned,current,No removal action,verified
+6,https://www.lifeusa.org/about,lifeusa.org,owned,current,No removal action,verified
+7,https://www.lifeusa.org/lebanon-emergency-relief,lifeusa.org,owned,current,No removal action,verified
+8,https://www.lifeusa.org/post/building-a-better-world-for-33-years,lifeusa.org,owned,current,No removal action,verified
+9,https://www.instagram.com/life4relief/,instagram.com,official social,current,Keep profile and website aligned,verified
+10,https://lifeusa.international/,lifeusa.international,unrelated,different organization,Exclude from correction campaign,verified
+11,https://lifeusa.international/,lifeusa.international,unrelated,different organization,Exclude from correction campaign,verified
+12,https://www.ebay.com/itm/267626351569,ebay.com,third party,current,Monitor only,verified
+13,https://www.instagram.com/p/DYCx5sVGgfD/,instagram.com,official social,current,No removal action,verified
+14,https://www.lifeusa.org/,lifeusa.org,owned,current,No removal action,verified
+15,https://lifeusaonline.com/,lifeusaonline.com,unrelated,different organization,Exclude from correction campaign,verified
+16,https://www.instagram.com/life4relief/,instagram.com,official social,current,Keep aligned,verified
+17,https://www.ebay.com/itm/267626351569,ebay.com,third party,current,Monitor only duplicate source,verified
+18,https://linktr.ee/LIFEUSA,linktr.ee,official social,current,Keep official destinations aligned,verified
+19,https://www.lifeusa.org/gaza,lifeusa.org,owned,current,No removal action,verified
+20,https://www.instagram.com/p/DYCx5sVGgfD/,instagram.com,official social,current,No removal action,verified
