@@ -423,6 +423,49 @@
     .gate-card h3 { margin: 0 0 5px; color: var(--green-dark); font-size: 1.1rem; }
     .gate-card p { margin: 0 0 12px; color: var(--muted); font-size: .93rem; }
     .gate-controls { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 10px; }
+    .evidence-summary {
+      max-width: 930px;
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .evidence-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+    .evidence-card > a { display: block; background: #17231e; }
+    .evidence-card img {
+      display: block;
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: top;
+    }
+    .evidence-card.logo-card img {
+      object-fit: contain;
+      padding: 18px;
+      background: #132c45;
+    }
+    .evidence-card.social-card img { object-position: center; }
+    .evidence-copy { padding: 16px 17px 18px; }
+    .evidence-copy h3 { margin: 0 0 6px; color: var(--green-dark); font-size: 1.15rem; }
+    .evidence-copy p { margin: 0 0 9px; color: var(--muted); font-size: .92rem; }
+    .evidence-copy a { overflow-wrap: anywhere; }
+    .evidence-protocol {
+      margin: 16px 0 0;
+      padding: 14px 16px;
+      color: #203b31;
+      background: var(--green-soft);
+      border: 1px solid #bdd8cd;
+      border-radius: var(--radius-sm);
+    }
     .source-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; list-style: none; }
     .source-list a {
       display: block;
@@ -446,6 +489,7 @@
       .principles { grid-template-columns: 1fr; }
       .action-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gate-grid { grid-template-columns: 1fr; }
+      .evidence-card img { height: 280px; }
     }
     @media (max-width: 768px) {
       .shell { width: min(100% - 20px, 760px); padding-top: 10px; }
@@ -456,6 +500,7 @@
       .action-top { grid-template-columns: 1fr; }
       .action-details { grid-template-columns: 1fr; }
       .gate-controls { grid-template-columns: 1fr; }
+      .evidence-grid { grid-template-columns: 1fr; }
       .source-list { grid-template-columns: 1fr; }
       .save-state { width: 100%; margin-left: 0; }
     }
@@ -467,6 +512,7 @@
       .progress-block { grid-template-columns: 1fr; }
       .progress-label { text-align: left; }
       .button { width: 100%; }
+      .evidence-card img { height: 240px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -508,15 +554,16 @@
       <a href="#timeline">Timeline</a>
       <a href="#actions">Action register</a>
       <a href="#gates">Decision gates</a>
+      <a href="#evidence">Evidence</a>
       <a href="#sources">Sources</a>
     </nav>
 
     <section id="overview" class="section">
       <div class="section-heading">
         <h2>Current status</h2>
-        <p>Planning is complete. Production changes remain gated by exact-result evidence, approved logo files, and named account owners.</p>
+        <p>The Google baseline and current logo are confirmed. Asset normalization and source corrections are now in progress.</p>
       </div>
-      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The plan treats directories as source correction, not mass submission. Highest priority goes to owned LifeUSA assets, Google-controlled surfaces, and existing high-authority profiles that still show the retired mark.</p>
+      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The approved current mark is the logo used on lifeusa.org and LifeUSA's official social presence. A personalization-disabled Google Search and Images baseline is attached below. Highest priority now goes to owned assets, Google-controlled surfaces, and authoritative profiles that still show conflicting marks.</p>
       <div class="metrics" aria-label="Status summary">
         <div class="metric"><strong id="metricDone">0</strong><span>actions done</span></div>
         <div class="metric"><strong id="metricProgress">2</strong><span>actions in progress</span></div>
@@ -608,6 +655,49 @@
       <div id="gateGrid" class="gate-grid"></div>
     </section>
 
+    <section id="evidence" class="section">
+      <div class="section-heading">
+        <h2>Captured evidence</h2>
+        <p>Public evidence collected independently on July 15, 2026.</p>
+      </div>
+      <p class="evidence-summary">The broad branded query already shows the current LifeUSA identity in several owned results, but Google Images also mixes in a similarly named company, marketplace products, and other unrelated entities. The corrective work therefore focuses on consistent owned and authoritative signals.</p>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <a href="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg" alt="Google Search baseline for LifeUSA showing the official Life for Relief and Development website and other similarly named results" loading="lazy"></a>
+          <div class="evidence-copy">
+            <h3>Google Search baseline</h3>
+            <p>Query: LifeUSA. English, US locale, personalization disabled. Official paid and organic LifeUSA results appear, alongside a similarly named language-learning company.</p>
+            <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0">Open the repeatable query</a>
+          </div>
+        </article>
+        <article class="evidence-card">
+          <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Google Images baseline for LifeUSA showing a mixture of official LifeUSA imagery and unrelated similarly named sources" loading="lazy"></a>
+          <div class="evidence-copy">
+            <h3>Google Images baseline</h3>
+            <p>The first viewport mixes current LifeUSA website and social imagery with unrelated entities and marketplace content. The full first-20 source inventory remains in progress.</p>
+            <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Open the repeatable image query</a>
+          </div>
+        </article>
+        <article class="evidence-card logo-card">
+          <a href="./evidence/2026-07-15/lifeusa-current-logo-source.png"><img src="./evidence/2026-07-15/lifeusa-current-logo-source.png" alt="Approved current LifeUSA horizontal logo from the public website header" loading="lazy"></a>
+          <div class="evidence-copy">
+            <h3>Approved website mark</h3>
+            <p>Public Wix source asset recovered at 4101 by 1201 pixels. This is the current horizontal logo used in the live website header.</p>
+            <a href="https://www.lifeusa.org/">Verify on lifeusa.org</a>
+          </div>
+        </article>
+        <article class="evidence-card social-card">
+          <a href="./evidence/2026-07-15/lifeusa-official-social-avatar.png"><img src="./evidence/2026-07-15/lifeusa-official-social-avatar.png" alt="LifeUSA official social directory avatar showing the current Life logo" loading="lazy"></a>
+          <div class="evidence-copy">
+            <h3>Official social reference</h3>
+            <p>The official Linktree connects LifeUSA's Facebook, Instagram, TikTok, YouTube, X, Threads, and LinkedIn accounts and displays the current logo family.</p>
+            <a href="https://linktr.ee/LIFEUSA">Verify the official social directory</a>
+          </div>
+        </article>
+      </div>
+      <p class="evidence-protocol"><strong>Capture protocol:</strong> 1280 px desktop viewport, English, United States, <code>pws=0</code>. Google reported “Results are not personalized.” Personal account controls were excluded from the published captures. <a href="./evidence/2026-07-15/baseline.md">Read the evidence record</a>.</p>
+    </section>
+
     <section id="sources" class="section">
       <div class="section-heading">
         <h2>Primary guidance</h2>
@@ -623,7 +713,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.0 · Page updated July 15, 2026</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.1 · Page updated July 15, 2026</footer>
   </main>
 
   <script>
@@ -636,6 +726,7 @@
       const TARGET_DATE = "2026-10-04";
       const DEFAULT_HERO_SUMMARY = document.getElementById("heroSummary").textContent.trim();
       const DEFAULT_OVERVIEW_TEXT = document.getElementById("overviewText").textContent.trim();
+      const PREVIOUS_OVERVIEW_TEXT = "The plan treats directories as source correction, not mass submission. Highest priority goes to owned LifeUSA assets, Google-controlled surfaces, and existing high-authority profiles that still show the retired mark.";
       const VALID_STATUSES = ["not_started", "in_progress", "waiting", "blocked", "done"];
       const STATUS_LABELS = {
         not_started: "Not started",
@@ -646,16 +737,16 @@
       };
 
       const actions = [
-        { id: "LOGO-001", title: "Capture the exact Google result reported by the CEO", phase: 0, owner: "SEO lead and executive sponsor", dependency: "CEO availability", evidence: "Screenshot, query details, result URL", start: "2026-07-12", end: "2026-07-14", status: "in_progress", note: "Zoho brief confirmed. Exact screenshot, query, device, location, and result surface still need to be captured." },
-        { id: "LOGO-002", title: "Approve the current and retired logo marks", phase: 0, owner: "Executive and brand approver", dependency: "Source brand files", evidence: "Written asset decision", start: "2026-07-12", end: "2026-07-14", status: "not_started", note: "" },
-        { id: "LOGO-003", title: "Produce the canonical logo asset kit", phase: 0, owner: "Designer or brand owner", dependency: "LOGO-002", evidence: "Asset register, square and horizontal files", start: "2026-07-13", end: "2026-07-14", status: "not_started", note: "" },
+        { id: "LOGO-001", title: "Capture a reproducible Google Search and Images baseline", phase: 0, owner: "SEO lead", dependency: "None", evidence: "Dated screenshots, query parameters, and evidence record", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Completed July 15. Captured Google Search and Google Images for LifeUSA at 1280 px, hl=en, gl=us, pws=0. Google reported that results were not personalized. See the Captured evidence section." },
+        { id: "LOGO-002", title: "Confirm the current and retired logo marks", phase: 0, owner: "SEO lead and client", dependency: "Live website and official social references", evidence: "Written decision plus public source assets", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Completed July 15. Client confirmed that the logo used on lifeusa.org and official LifeUSA social media is the approved current mark. Any conflicting legacy mark is treated as retired." },
+        { id: "LOGO-003", title: "Produce the canonical logo asset kit", phase: 0, owner: "Designer or brand owner", dependency: "LOGO-002", evidence: "Asset register, square and horizontal files", start: "2026-07-13", end: "2026-07-17", status: "in_progress", note: "Recovered the public website logo source at 4101 x 1201 px and the official social reference at 1000 x 1000 px. Next: normalize production-ready square and horizontal masters and document usage rules." },
         { id: "LOGO-004", title: "Publish the owned LifeUSA brand page and stable logo URLs", phase: 1, owner: "Wix administrator", dependency: "LOGO-003", evidence: "Live page and successful 200 checks", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
         { id: "LOGO-005", title: "Repair Organization and NGO structured data", phase: 1, owner: "Wix administrator and SEO lead", dependency: "LOGO-004", evidence: "Live JSON-LD and validation", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
         { id: "LOGO-006", title: "Align favicon, header, and footer logo variants", phase: 1, owner: "Wix administrator", dependency: "LOGO-003", evidence: "Screenshots and live source URLs", start: "2026-07-14", end: "2026-07-17", status: "not_started", note: "" },
         { id: "LOGO-007", title: "Remove or replace the retired WordPress logo asset", phase: 2, owner: "WordPress owner", dependency: "WordPress disposition decision", evidence: "Old URL state and archive screenshot", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
         { id: "LOGO-008", title: "Correct the Kids That Do Good source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and current image", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
         { id: "LOGO-009", title: "Correct the Arab Info Mall source profile", phase: 2, owner: "Client communications", dependency: "LOGO-003", evidence: "Publisher confirmation and corrected profile", start: "2026-07-15", end: "2026-07-26", status: "not_started", note: "" },
-        { id: "LOGO-010", title: "Audit the first 20 Google image sources for branded queries", phase: 0, owner: "SEO lead", dependency: "LOGO-001", evidence: "Repeatable source inventory", start: "2026-07-12", end: "2026-07-14", status: "in_progress", note: "Initial source review is complete. The full repeatable top-20 baseline follows once the exact CEO result is reproduced." },
+        { id: "LOGO-010", title: "Audit the first 20 Google image sources for branded queries", phase: 0, owner: "SEO lead", dependency: "LOGO-001", evidence: "Repeatable source inventory", start: "2026-07-12", end: "2026-07-17", status: "in_progress", note: "The first Google Images viewport is captured and shows official LifeUSA imagery mixed with LifeUSA International, marketplace products, and other unrelated entities. The structured first-20 source inventory remains in progress." },
         { id: "LOGO-011", title: "Update Google Business Profile logo and photo inventory", phase: 3, owner: "Google property owner", dependency: "LOGO-003", evidence: "Profile screenshot and asset state", start: "2026-07-15", end: "2026-07-22", status: "not_started", note: "" },
         { id: "LOGO-012", title: "Claim or update the Knowledge Panel", phase: 3, owner: "Verified representative", dependency: "LOGO-004", evidence: "Claim state and feedback receipt", start: "2026-07-15", end: "2026-07-22", status: "not_started", note: "" },
         { id: "LOGO-013", title: "Submit valid indexing and image removal requests", phase: 3, owner: "Search Console owner", dependency: "Source changes live", evidence: "Request IDs and dated status", start: "2026-07-17", end: "2026-07-22", status: "not_started", note: "Submit only after each source change has been verified live." },
@@ -667,15 +758,15 @@
       ];
 
       const gates = [
-        { id: "GATE-A", title: "Confirm the exact Google surface", description: "Identify whether the CEO saw Google Images, Business Profile, Knowledge Panel, favicon, paid ad, or another result.", status: "in_progress", note: "Brief confirmed. Exact screenshot and reproducible result details remain open." },
-        { id: "GATE-B", title: "Approve the official logo files", description: "Approve square and horizontal masters, tagline punctuation, background rules, and the retired mark.", status: "not_started", note: "" },
+        { id: "GATE-A", title: "Confirm the Google surfaces to monitor", description: "Establish a reproducible Search and Images baseline, then check Business Profile, Knowledge Panel, favicon, and paid assets in their assigned actions.", status: "done", note: "Completed July 15. Personalization-disabled Google Search and Images baselines are attached. Property-specific checks remain assigned to LOGO-011, LOGO-012, and LOGO-016." },
+        { id: "GATE-B", title: "Approve the official logo files", description: "Approve the live website and social mark as the current identity, then normalize square and horizontal masters and usage rules.", status: "done", note: "Completed July 15. Client explicitly approved the mark used on the LifeUSA website and official social presence. Asset normalization continues under LOGO-003." },
         { id: "GATE-C", title: "Decide the old WordPress site disposition", description: "Modernize it, retire it, or preserve selected history while removing all retired-logo media.", status: "not_started", note: "" },
         { id: "GATE-D", title: "Authorize or defer the paid bridge", description: "Use paid branded visibility only as an optional bridge after owned-source repairs.", status: "waiting", note: "Requires a separate budget or Ad Grants decision." },
         { id: "GATE-E", title: "Authorize public brand guidance", description: "Approve an evergreen official brand-resources page without presenting the work as a false new rebrand.", status: "not_started", note: "" }
       ];
 
       const defaultState = () => ({
-        version: 1,
+        version: 2,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -688,16 +779,34 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 2;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
-        base.overviewText = cleanText(raw.overviewText || base.overviewText, 1600);
+        if (!(isPreviousVersion && raw.overviewText === PREVIOUS_OVERVIEW_TEXT)) {
+          base.overviewText = cleanText(raw.overviewText || base.overviewText, 1600);
+        }
+        const previousItems = {
+          "LOGO-001": { status: "in_progress", note: "Zoho brief confirmed. Exact screenshot, query, device, location, and result surface still need to be captured." },
+          "LOGO-002": { status: "not_started", note: "" },
+          "LOGO-003": { status: "not_started", note: "" },
+          "LOGO-010": { status: "in_progress", note: "Initial source review is complete. The full repeatable top-20 baseline follows once the exact CEO result is reproduced." }
+        };
+        const previousGates = {
+          "GATE-A": { status: "in_progress", note: "Brief confirmed. Exact screenshot and reproducible result details remain open." },
+          "GATE-B": { status: "not_started", note: "" }
+        };
+        const matchesPreviousPublished = (saved, previous) => previous && saved && saved.status === previous.status && cleanText(saved.note) === previous.note;
         for (const item of actions) {
           const saved = raw.items && raw.items[item.id];
-          if (saved) base.items[item.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          if (saved && !(isPreviousVersion && matchesPreviousPublished(saved, previousItems[item.id]))) {
+            base.items[item.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          }
         }
         for (const gate of gates) {
           const saved = raw.gates && raw.gates[gate.id];
-          if (saved) base.gates[gate.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          if (saved && !(isPreviousVersion && matchesPreviousPublished(saved, previousGates[gate.id]))) {
+            base.gates[gate.id] = { status: cleanStatus(saved.status), note: cleanText(saved.note) };
+          }
         }
         return base;
       };
@@ -923,7 +1032,7 @@
         save("Status prepared for export");
         const payload = {
           project: PROJECT_NAME,
-          version: 1,
+          version: 2,
           exportedAt: new Date().toISOString(),
           startDate: START_DATE,
           targetDate: TARGET_DATE,
