@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <style>
     :root {
+      color-scheme: light;
       --ink: #17231e;
       --muted: #617067;
       --paper: #f4f1e9;
@@ -466,25 +467,6 @@
       .progress-block { grid-template-columns: 1fr; }
       .progress-label { text-align: left; }
       .button { width: 100%; }
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --ink: #edf4ef;
-        --muted: #b4c2ba;
-        --paper: #101914;
-        --card: #18251f;
-        --line: #34463c;
-        --green-soft: #214638;
-        --gold-soft: #46371f;
-        --red-soft: #412824;
-        --blue-soft: #203847;
-      }
-      body::before { opacity: .08; }
-      .nav { background: rgba(24, 37, 31, .94); }
-      .metric, .detail, .action-card, .gate-card, .principle, .phase-card, .source-list a, input[type="search"], select, textarea { background: #1d2d25; color: var(--ink); }
-      .progress-block { background: #214638; }
-      .tag { background: #24342c; }
-      a { color: #8ecdb8; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
