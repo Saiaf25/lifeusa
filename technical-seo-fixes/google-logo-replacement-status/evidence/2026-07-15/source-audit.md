@@ -58,12 +58,13 @@ The live homepage was rechecked on July 15, 2026.
 | `NGO.logo` | Wix asset `6df904_2bb6857d9c8b49ae91789ad75efbc8b8` | Current white-on-transparent variant, 4250 x 2514; weak on white surfaces | Replace with a colored square logo that stays visible on white |
 | Favicon source | Wix asset `6df904_3ba0b63af7e945f0a92fbe9978934569` | Current blue square mark, 1800 x 1800 source | Used as the verified source for the dedicated official square upload |
 | Wix Business Profile logo | Wix asset `af2a6c_49a4190c354746b493c123d311222fb5` | Current square mark, 1800 x 1800; assigned July 15 | Complete; use this official asset for corrections and remaining owned signals |
+| Canonical horizontal Wix file | Wix asset `af2a6c_1bd1137d792b44c3855d26ee4cfcced0` | Current horizontal mark, 4101 x 1201; uploaded and checksum-verified July 15 | Complete; use this official asset for wide placements |
 | `NGO.@id` | Missing | Entity graph lacks a stable identifier | Add `https://www.lifeusa.org/#organization` |
 | `NGO.sameAs` | Missing | Official profiles are not connected from the entity node | Add only verified official LifeUSA profile URLs |
 | `WebSite` nodes | Two separate nodes | Duplicated website identity | Consolidate if Wix permits |
 | Open Graph image | Program photograph | Appropriate for sharing, but not a canonical logo | Keep separate from `NGO.logo` |
 
-The current square source was uploaded to the LifeUSA Wix Media Manager and assigned to the site's Business Profile logo field on July 15. The dedicated Wix URL is live. The custom homepage `NGO.logo` still points to the separate white asset and remains a distinct correction task.
+The current square source was uploaded to the LifeUSA Wix Media Manager and assigned to the site's Business Profile logo field on July 15. The current horizontal source was uploaded to the same owned Media Manager, and its remote checksum exactly matches the approved local source. Both dedicated Wix URLs are live. The custom homepage `NGO.logo` still points to the separate white asset and remains a distinct editor-only correction task.
 
 ## Confirmed live retired-logo sources
 

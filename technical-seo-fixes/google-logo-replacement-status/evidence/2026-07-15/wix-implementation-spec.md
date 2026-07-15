@@ -1,17 +1,17 @@
 # LifeUSA Wix logo implementation specification
 
-Prepared July 15, 2026. This is an implementation-ready specification, not a claim that the changes are already live.
+Prepared July 15, 2026. The two canonical Wix media assets are live. Editor-only website and structured-data changes remain an implementation specification and require human approval before publication.
 
 ## Production asset contract
 
-Publish these files on `lifeusa.org` under stable URLs that will not change when Wix media-library filenames change:
+Use these verified files as the canonical Wix-owned logo set:
 
 | Purpose | Proposed production URL | Source candidate | Requirement |
 |---|---|---|---|
 | Canonical square logo | `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png` | `current-square-favicon-source.png` | Live, Wix-owned, 1800 by 1800, colored mark visible on white |
-| Canonical horizontal logo | `https://www.lifeusa.org/brand/lifeusa-official-logo-horizontal.png` | `lifeusa-current-logo-source.png` | Current horizontal mark used in the live header |
+| Canonical horizontal logo | `https://static.wixstatic.com/media/af2a6c_1bd1137d792b44c3855d26ee4cfcced0~mv2.png` | `lifeusa-current-logo-source.png` | Live, Wix-owned, 4101 by 1201, byte-for-byte match to the approved website source |
 
-The square URL is live and assigned to the Wix Business Profile logo field. The proposed custom-domain horizontal URL is not live yet. Confirm the final horizontal path before replacing the live header source.
+Both Wix asset URLs return `200` and expose the approved source dimensions. The square URL is assigned to the Wix Business Profile logo field. A public `lifeusa.org` brand-resources page should link to these two files so humans and crawlers have one durable owned reference, but that page requires Wix editor publication.
 
 ## Consolidated NGO node
 
@@ -90,8 +90,8 @@ If Wix automatically generates a `WebSite` node that cannot be removed, do not a
 
 ## Wix publication checklist
 
-1. Keep the published square master at its verified Wix URL and publish the horizontal master at its final stable URL.
-2. Confirm both files return `200` without authentication or a redirect chain. The square check already passes.
+1. Keep the square and horizontal masters at their verified Wix Media Manager URLs.
+2. Confirm both files return `200` without authentication or a redirect chain. Both checks pass as of July 15.
 3. Use the square file for the favicon source, `NGO.logo`, Google Business Profile, and authority profiles.
 4. Use the horizontal file for the site header and other wide placements.
 5. Replace the current white-on-transparent `NGO.logo` source.
@@ -100,6 +100,8 @@ If Wix automatically generates a `WebSite` node that cannot be removed, do not a
 8. Validate the homepage with Google's Rich Results Test and Schema.org Validator.
 9. Inspect the rendered homepage source to confirm only the intended entity nodes are present.
 10. Request homepage recrawling in Google Search Console after the live verification passes.
+
+The Wix REST API was sufficient for the Media Manager uploads and Site Properties logo assignment. No supported REST endpoint was found for changing the existing homepage's arbitrary custom JSON-LD or creating the public static brand page on this site. Those items are correctly held for an approved Wix editor session rather than treated as API-complete.
 
 ## Acceptance evidence
 

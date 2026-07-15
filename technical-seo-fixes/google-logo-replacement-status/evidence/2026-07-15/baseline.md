@@ -28,12 +28,14 @@ Captured July 15, 2026 at 1280 px desktop width.
 - `wix-implementation-spec.md`: stable asset and structured-data publication specification.
 - `publisher-correction-pack.md`: correction drafts and acceptance checks for verified retired-logo sources.
 - `wix-owned-logo-change-log.md`: verified Wix Media Manager upload and Business Profile logo before-and-after record.
+- `outreach-approval-queue.md`: human-gated external-action register with two sent-message records and eight pending approval packages.
 
 ## Approved current logo evidence
 
 - Website: <https://www.lifeusa.org/>
 - Official social directory: <https://linktr.ee/LIFEUSA>
 - The current website header asset was recovered from its public Wix source at 4101 x 1201 px.
+- The approved horizontal source was uploaded to LifeUSA's Wix Media Manager at `https://static.wixstatic.com/media/af2a6c_1bd1137d792b44c3855d26ee4cfcced0~mv2.png`; its remote checksum exactly matches the local source.
 - The official social directory avatar was recovered from its public Linktree source at 1000 x 1000 px.
 - On July 15, 2026, the client confirmed that the website and social-media mark is the approved current logo.
 

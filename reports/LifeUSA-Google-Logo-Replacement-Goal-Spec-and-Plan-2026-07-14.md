@@ -597,11 +597,14 @@ Public evidence collection and the first owned-site change no longer depend on D
 - Admin access for official social and nonprofit profiles
 - A `lifeusa.org` mailbox authorized for correction outreach
 
+All external messages, access requests, form submissions, and changes to client-controlled accounts are human-gated. The live status page contains a decision-by-decision approval queue; marking an item approved records the decision but does not trigger an external action automatically.
+
 ## 17. July 15 execution update
 
 - Captured and published the repeatable Google Search and Google Images baseline.
 - Verified the first 20 broad Google Images results: 14 official, four unrelated same-name results, two current-branded marketplace results, and no retired crescent mark in that exact sample.
 - Uploaded the verified 1800 by 1800 current square asset to LifeUSA's Wix Media Manager and assigned it to the Wix Business Profile logo field.
+- Uploaded the approved 4101 by 1201 horizontal logo to the same LifeUSA Wix Media Manager. The public file returns `200`, and its remote SHA-256 exactly matches the approved local source. The canonical square and horizontal asset kit is now complete.
 - Confirmed that the homepage custom `NGO.logo` still points to a separate white file and that the entity graph still lacks `NGO.@id` and `sameAs`.
 - Reverified the retired crescent mark on the old WordPress archive, Kids That Do Good, and Arab Info Mall.
 - Verified the older blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree.
@@ -613,6 +616,11 @@ Public evidence collection and the first owned-site change no longer depend on D
 - Confirmed that a sponsored LifeUSA result visibly serves the older blue-globe logo.
 - Audited the available Google Ads CLI hierarchy read-only. It contains no LifeUSA Ads or Ad Grants customer, so the serving logo asset requires the LifeUSA ads administrator account.
 - Published the complete Google property audit and four dated evidence files on the live status page.
+- Sent the Kids That Do Good correction request to `info@kidsthatdogood.com` and recorded Zoho message ID `1784122643723013500`.
+- Sent the GreatNonprofits correction request to `support@greatnonprofits.org` and recorded Zoho message ID `1784122678410013500`.
+- Established a human-approval gate for all remaining communication and account-changing work. The approval queue contains the exact official route, prepared copy or action package, access dependency, and acceptance check for Arab Info Mall, Candid, ReliefWeb, Google Business Profile, social profiles, WordPress, Wix editor changes, and Google Ads.
+- Verified the official Arab Info Mall contact addresses and kiosk administrator workflow. No Arab Info Mall message was sent.
+- Confirmed that the Wix REST API can manage the uploaded media and Site Properties logo, but no supported route was found for editing arbitrary existing-page custom JSON-LD or creating the public static brand page; those changes remain queued for an approved Wix editor session.
 
 ## 18. Research confidence and limitations
 

@@ -1,12 +1,13 @@
 # LifeUSA retired-logo publisher correction pack
 
-Prepared July 15, 2026. The official square logo URL is now live, so these messages are ready for review and sending. No outreach has been sent from this document.
+Prepared July 15, 2026. The official square and horizontal logo files are live in LifeUSA's Wix Media Manager. The Kids That Do Good and GreatNonprofits correction emails have been sent. All remaining communication and account changes require human approval before execution; see the [human approval queue](outreach-approval-queue.md).
 
 ## Evidence bundle to attach
 
 - Official website: `https://www.lifeusa.org/`
 - Official social directory: `https://linktr.ee/LIFEUSA`
 - Official Wix square asset: `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
+- Official Wix horizontal asset: `https://static.wixstatic.com/media/af2a6c_1bd1137d792b44c3855d26ee4cfcced0~mv2.png`
 - Current square candidate: `current-square-favicon-source.png`
 - Source audit: `source-audit.md`
 - Authority and social profile audit: `authority-profile-audit.md`
@@ -14,6 +15,8 @@ Prepared July 15, 2026. The official square logo URL is now live, so these messa
 Do not attach the old logo unless the publisher asks for a visual comparison. Lead with the current official asset and the exact outdated page URL.
 
 ## 1. Kids That Do Good
+
+**Status:** Sent July 15, 2026, from `hello@saiaf.me` to `info@kidsthatdogood.com`. Zoho message ID: `1784122643723013500`. Awaiting reply and public correction.
 
 **Verified outdated page**
 
@@ -46,11 +49,16 @@ Life for Relief and Development
 
 ## 2. Arab Info Mall / Bibliotheca Alexandrina
 
+**Status:** Pending human approval as `APR-001`. Nothing has been sent.
+
 **Verified outdated page**
 
 - Organization profile: `https://arabinfomall.bibalex.org/En/Index.aspx?orgid=879&sectionid=1`
 - Retired image: `https://arabinfomall.bibalex.org/Attachments/Logos/10751.gif`
 - Publisher: Arab Info Mall, a Bibliotheca Alexandrina property
+- Official contact page: `https://arabinfomall.bibalex.org/En/ContactUs.aspx?OrgID=-1`
+- Official contact addresses: `arf@bibalex.org`, `info.mall@bibalex.org`
+- The official FAQ states that a kiosk administrator can log in and modify an organization kiosk.
 
 **Subject:** Correction request for Life for Relief and Development profile, organization 879
 
@@ -99,12 +107,14 @@ This is an owned-property recovery task, not third-party outreach.
 
 ## 4. Candid / GuideStar
 
+**Status:** Pending human approval as `APR-002`. Nothing has been changed.
+
 **Verified outdated profile**
 
 - Profile: `https://www.guidestar.org/profile/95-4402149`
 - Older blue-globe image: `https://docs.candid.org/edoc/11078205`
 - Local evidence: `legacy-blue-candid-guidestar-logo.png`
-- Profile route: use the Candid nonprofit profile associated with EIN 95-4402149 and its Update Nonprofit Profile control
+- Profile route: `https://www.guidestar.org/UpdateNonprofitProfile` for the Candid nonprofit profile associated with EIN 95-4402149
 
 **Profile correction text**
 
@@ -117,6 +127,8 @@ Please confirm that the public GuideStar profile and its image preview have refr
 **Acceptance check:** The logged-out GuideStar profile exposes the current yellow-ray square logo and no longer references document 11078205.
 
 ## 5. GreatNonprofits
+
+**Status:** Sent July 15, 2026, from `hello@saiaf.me` to `support@greatnonprofits.org`. Zoho message ID: `1784122678410013500`. Awaiting reply and public correction.
 
 **Verified outdated profile**
 
@@ -149,6 +161,8 @@ Life for Relief and Development
 
 ## 6. Controlled social profiles
 
+**Status:** Pending human approval as `APR-005`. No profile has been changed.
+
 This is an owned-profile implementation queue, not publisher outreach. The July 15 audit confirms the older blue-globe profile image on LinkedIn, the main English Facebook page, Instagram, YouTube, and X. The English Linktree avatar is current, but its Facebook button incorrectly points to the Somali-language Facebook page, which also uses the older blue-globe logo.
 
 **Administrator checklist**
@@ -164,12 +178,14 @@ This is an owned-profile implementation queue, not publisher outreach. The July 
 
 ## 7. ReliefWeb profile enhancement
 
+**Status:** Pending human approval as `APR-003`. Nothing has been sent.
+
 **Verified profile**
 
 - Organization: `https://reliefweb.int/organization/life`
 - Current state: active profile with 180 published reports, no LifeUSA logo exposed, and homepage set to `http://www.lifeusa.org`
 
-Ask ReliefWeb to change the homepage to `https://www.lifeusa.org/` and add the current square logo if its organization-source workflow supports one. This is an entity-quality enhancement, not an old-logo removal.
+Use ReliefWeb's official contact route at `https://reliefweb.int/contact` to ask for the homepage to change to `https://www.lifeusa.org/` and for the current square logo to be added if its organization-source workflow supports one. ReliefWeb's publishing guidance confirms that listed organizations contact ReliefWeb and use organization-controlled trusted URLs. This is an entity-quality enhancement, not an old-logo removal.
 
 **Acceptance check:** The profile links to HTTPS and, if supported, exposes the current yellow-ray logo.
 
