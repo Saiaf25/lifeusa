@@ -589,8 +589,8 @@ Public evidence collection and the first owned-site change no longer depend on D
 
 - Wix homepage custom structured-data editing access
 - Search Console access
-- Google Business Profile owner/manager access
-- Knowledge Panel claim state
+- Google Business Profile owner/manager access through the masked `li...@gmail.com` manager or an approved transfer
+- Separate Knowledge Panel claim access only if a distinct organization panel appears
 - YouTube channel owner/manager access
 - Google Ads or Ad Grants account state and approval decision
 - WordPress.com ownership or recovery route
@@ -607,6 +607,12 @@ Public evidence collection and the first owned-site change no longer depend on D
 - Verified the older blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree.
 - Verified that Charity Navigator and ReliefWeb expose no LifeUSA logo, so they are enhancement targets rather than stale-logo sources.
 - Published the authority-profile matrix, source evidence, correction drafts, owned-social checklist, and expanded `sameAs` specification on the live status page.
+- Captured the exact Southfield entity query and verified that the right-hand result is the established Google Business Profile, with 4.3 stars, 20 reviews, the correct address, and a stale HTTP website link.
+- Verified through Google's claim flow that the existing profile is managed by a masked `li...@gmail.com` account. The current Google session is not authorized, and no request was sent from the user's personal account.
+- Captured the public Google Maps media inventory and preserved an older blue Life avatar used by a contributor account associated with listing media.
+- Confirmed that a sponsored LifeUSA result visibly serves the older blue-globe logo.
+- Audited the available Google Ads CLI hierarchy read-only. It contains no LifeUSA Ads or Ad Grants customer, so the serving logo asset requires the LifeUSA ads administrator account.
+- Published the complete Google property audit and four dated evidence files on the live status page.
 
 ## 18. Research confidence and limitations
 
@@ -618,11 +624,15 @@ Public evidence collection and the first owned-site change no longer depend on D
 - The old WordPress, Kids That Do Good, and Arab Info Mall pages visibly publish the retired crescent logo.
 - Candid/GuideStar, GreatNonprofits, LinkedIn, Facebook, Instagram, YouTube, and X visibly publish the older blue-globe logo.
 - The English Linktree avatar is current, but its Facebook destination opens a Somali-language page that also uses the older logo.
+- Google already has an established LifeUSA Business Profile for the Southfield location; it should be updated, not recreated.
+- The current Business Profile manager is a different masked account, and the available Google account cannot edit the listing.
+- A sponsored LifeUSA result visibly uses the older blue-globe logo, while the available Google Ads credentials do not include a LifeUSA customer.
+- The exact Southfield query showed the local Business Profile rather than a separate nonprofit Knowledge Panel.
 - Google’s official documentation supports the distinct workflows described for Images, Organization markup, Business Profile, Knowledge Panel, favicon, Search Console, and Ads.
 
 ### Medium confidence
 
-- The exact result Dr. Hany saw may have been on Search, Images, or another Google surface, but independent baselines now cover Search and Images and no CEO screenshot is required to proceed.
+- The exact result Dr. Hany originally saw may differ from the sponsored result, local profile, or Maps media captured independently, but all of these verified older-logo surfaces can now be corrected without asking him for evidence.
 - Glassdoor and ShareDetroit require a final visual and account-access audit before their logo state is classified.
 
 ### Collection note
