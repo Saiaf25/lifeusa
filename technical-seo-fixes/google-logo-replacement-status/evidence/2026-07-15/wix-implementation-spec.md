@@ -49,13 +49,17 @@ Use one stable entity identifier and one canonical square logo URL. Add only pro
   "sameAs": [
     "https://www.facebook.com/Life4ReliefEN/",
     "https://www.instagram.com/life4relief/",
+    "https://www.tiktok.com/@life4relief.usa",
+    "https://www.youtube.com/channel/UCRTkW2TMw344eC562GSK1nA",
+    "https://x.com/LIFEforRELIEF",
+    "https://www.threads.com/@life4relief",
     "https://www.linkedin.com/company/life-for-relief-and-development",
     "https://linktr.ee/LIFEUSA"
   ]
 }
 ```
 
-The square logo URL and dimensions are verified live. The snippet is ready for the homepage custom structured-data control; validate the rendered source after publication.
+The square logo URL and dimensions are verified live. The social destinations are verified through LifeUSA's official English Linktree and direct profile checks. The English Linktree's Facebook button currently points to a Somali-language page, so the entity node intentionally uses the verified main English Facebook page while that Linktree error is corrected. The snippet is ready for the homepage custom structured-data control; validate the rendered source after publication.
 
 ## Website node cleanup
 

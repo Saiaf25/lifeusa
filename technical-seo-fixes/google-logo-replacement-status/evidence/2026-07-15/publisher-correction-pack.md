@@ -9,6 +9,7 @@ Prepared July 15, 2026. The official square logo URL is now live, so these messa
 - Official Wix square asset: `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
 - Current square candidate: `current-square-favicon-source.png`
 - Source audit: `source-audit.md`
+- Authority and social profile audit: `authority-profile-audit.md`
 
 Do not attach the old logo unless the publisher asks for a visual comparison. Lead with the current official asset and the exact outdated page URL.
 
@@ -96,9 +97,85 @@ This is an owned-property recovery task, not third-party outreach.
 
 **Acceptance check:** No public page on the archive renders the retired mark, and the direct retired image is removed, inaccessible, or no longer referenced; a dated verification is stored.
 
+## 4. Candid / GuideStar
+
+**Verified outdated profile**
+
+- Profile: `https://www.guidestar.org/profile/95-4402149`
+- Older blue-globe image: `https://docs.candid.org/edoc/11078205`
+- Local evidence: `legacy-blue-candid-guidestar-logo.png`
+- Profile route: use the Candid nonprofit profile associated with EIN 95-4402149 and its Update Nonprofit Profile control
+
+**Profile correction text**
+
+Life for Relief and Development, EIN 95-4402149, has adopted the current LifeUSA identity shown on `https://www.lifeusa.org/`. Please replace the older blue-globe profile image with the current official square logo:
+
+`https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
+
+Please confirm that the public GuideStar profile and its image preview have refreshed.
+
+**Acceptance check:** The logged-out GuideStar profile exposes the current yellow-ray square logo and no longer references document 11078205.
+
+## 5. GreatNonprofits
+
+**Verified outdated profile**
+
+- Profile: `https://greatnonprofits.org/org/life-for-relief-and-development`
+- Older blue-globe image: `https://cdn.greatnonprofits.org/images/logos/org_logo_513389_1711518504.png`
+- Local evidence: `legacy-blue-greatnonprofits-logo.png`
+- Public support address: `support@greatnonprofits.org`
+
+**Subject:** Please update the Life for Relief and Development profile logo
+
+Hello GreatNonprofits team,
+
+I am writing on behalf of Life for Relief and Development, also known as LifeUSA. Our organization profile currently displays an older blue-globe version of the Life logo.
+
+Please replace the profile image on:
+
+`https://greatnonprofits.org/org/life-for-relief-and-development`
+
+with our current official square logo:
+
+`https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
+
+The current identity can be verified on `https://www.lifeusa.org/` and `https://linktr.ee/LIFEUSA`. Please confirm when the public profile and cached thumbnail have been updated.
+
+Thank you,
+
+Life for Relief and Development
+
+**Acceptance check:** The logged-out profile displays the current yellow-ray square logo and the old CDN image is no longer referenced.
+
+## 6. Controlled social profiles
+
+This is an owned-profile implementation queue, not publisher outreach. The July 15 audit confirms the older blue-globe profile image on LinkedIn, the main English Facebook page, Instagram, YouTube, and X. The English Linktree avatar is current, but its Facebook button incorrectly points to the Somali-language Facebook page, which also uses the older blue-globe logo.
+
+**Administrator checklist**
+
+1. Upload `current-square-favicon-source.png` to LinkedIn, Facebook, Instagram, YouTube, and X.
+2. Keep the full square mark visible inside each platform's circular crop.
+3. Change the English Linktree Facebook destination to `https://www.facebook.com/Life4ReliefEN/`.
+4. Update the Somali Facebook page profile photo using the current square master.
+5. Check TikTok and Threads while signed in; normalize their profile photos if they are not current.
+6. Verify each public profile logged out and store the resulting public image or screenshot.
+
+**Acceptance check:** Each public profile and preview exposes the current yellow-ray square logo, and the English Linktree opens the intended English Facebook page.
+
+## 7. ReliefWeb profile enhancement
+
+**Verified profile**
+
+- Organization: `https://reliefweb.int/organization/life`
+- Current state: active profile with 180 published reports, no LifeUSA logo exposed, and homepage set to `http://www.lifeusa.org`
+
+Ask ReliefWeb to change the homepage to `https://www.lifeusa.org/` and add the current square logo if its organization-source workflow supports one. This is an entity-quality enhancement, not an old-logo removal.
+
+**Acceptance check:** The profile links to HTTPS and, if supported, exposes the current yellow-ray logo.
+
 ## Tracking fields
 
-For each publisher, record:
+For each publisher or platform, record:
 
 - Date sent
 - Sender and account used

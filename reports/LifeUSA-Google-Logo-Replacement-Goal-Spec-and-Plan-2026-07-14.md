@@ -583,13 +583,11 @@ After Gate A and Gate B are approved, execute this batch first:
 
 This batch addresses both the strongest root causes and the highest-authority reinforcing sources.
 
-## 16. Open inputs required before execution
+## 16. Remaining access inputs
 
-- Screenshot or exact reproduction of Dr. Hany’s Google result
-- Approved current square logo and horizontal logo
-- Explicit confirmation of the retired mark
-- Approved organization name, abbreviations, and tagline punctuation
-- Wix admin access
+Public evidence collection and the first owned-site change no longer depend on Dr. Hany. The Search and Images baseline, current website and Linktree references, and public authority-profile evidence were captured independently.
+
+- Wix homepage custom structured-data editing access
 - Search Console access
 - Google Business Profile owner/manager access
 - Knowledge Panel claim state
@@ -599,7 +597,18 @@ This batch addresses both the strongest root causes and the highest-authority re
 - Admin access for official social and nonprofit profiles
 - A `lifeusa.org` mailbox authorized for correction outreach
 
-## 17. Research confidence and limitations
+## 17. July 15 execution update
+
+- Captured and published the repeatable Google Search and Google Images baseline.
+- Verified the first 20 broad Google Images results: 14 official, four unrelated same-name results, two current-branded marketplace results, and no retired crescent mark in that exact sample.
+- Uploaded the verified 1800 by 1800 current square asset to LifeUSA's Wix Media Manager and assigned it to the Wix Business Profile logo field.
+- Confirmed that the homepage custom `NGO.logo` still points to a separate white file and that the entity graph still lacks `NGO.@id` and `sameAs`.
+- Reverified the retired crescent mark on the old WordPress archive, Kids That Do Good, and Arab Info Mall.
+- Verified the older blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree.
+- Verified that Charity Navigator and ReliefWeb expose no LifeUSA logo, so they are enhancement targets rather than stale-logo sources.
+- Published the authority-profile matrix, source evidence, correction drafts, owned-social checklist, and expanded `sameAs` specification on the live status page.
+
+## 18. Research confidence and limitations
 
 ### High confidence
 
@@ -607,18 +616,20 @@ This batch addresses both the strongest root causes and the highest-authority re
 - The homepage’s live structured data and logo URLs were inspected directly.
 - The structured-data logo is white-on-transparent and fails the white-background appearance test.
 - The old WordPress, Kids That Do Good, and Arab Info Mall pages visibly publish the retired crescent logo.
+- Candid/GuideStar, GreatNonprofits, LinkedIn, Facebook, Instagram, YouTube, and X visibly publish the older blue-globe logo.
+- The English Linktree avatar is current, but its Facebook destination opens a Somali-language page that also uses the older logo.
 - Google’s official documentation supports the distinct workflows described for Images, Organization markup, Business Profile, Knowledge Panel, favicon, Search Console, and Ads.
 
 ### Medium confidence
 
-- The CEO likely meant Google Images, based on his wording and the current image-result evidence, but the exact surface is not confirmed without his screenshot.
+- The exact result Dr. Hany saw may have been on Search, Images, or another Google surface, but independent baselines now cover Search and Images and no CEO screenshot is required to proceed.
 - Glassdoor and ShareDetroit require a final visual and account-access audit before their logo state is classified.
 
 ### Collection note
 
 The research began with Firecrawl search and eleven page-level extractions. The Firecrawl workspace then reached its credit limit. The remaining primary sources were reviewed directly from official Google, Schema.org, Candid, Charity Navigator, LinkedIn, Facebook, YouTube, and current LifeUSA profile pages. No recommendation depends on a community forum as its authority.
 
-## 18. Primary sources
+## 19. Primary sources
 
 ### Google Search and Images
 
@@ -666,9 +677,14 @@ The research began with Firecrawl search and eleven page-level extractions. The 
 - [Arab Info Mall profile](https://arabinfomall.bibalex.org/En/Index.aspx?orgid=879&sectionid=1)
 - [Charity Navigator profile](https://www.charitynavigator.org/ein/954402149)
 - [GreatNonprofits profile](https://greatnonprofits.org/org/life-for-relief-and-development)
+- [Candid / GuideStar profile](https://www.guidestar.org/profile/95-4402149)
 - [ReliefWeb profile](https://reliefweb.int/organization/life)
 - [LinkedIn page](https://www.linkedin.com/company/life-for-relief-and-development)
 - [Facebook page](https://www.facebook.com/Life4ReliefEN/)
+- [Instagram profile](https://www.instagram.com/life4relief/)
+- [YouTube channel](https://www.youtube.com/channel/UCRTkW2TMw344eC562GSK1nA)
+- [X profile](https://x.com/LIFEforRELIEF)
+- [Official English Linktree](https://linktr.ee/LIFEUSA)
 
 ## Rerun inputs
 
