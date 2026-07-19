@@ -61,6 +61,30 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-036 | A-Z Business Finder | Done | Find-Us-Here automatically created a distinct new profile at `https://www.a-zbusinessfinder.com/business-directory/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/`. Logged-out verification confirmed the canonical backlink and the 1800 by 1800 logo at `https://www.a-zbusinessfinder.com/images/business_images/main/Life-for-Relief-and-Development-Southfield-MI-USA-34560214.png`; decoded-pixel comparison against the canonical square returned AE `0` | **Yes** |
 | DIR-037 | Fyple | New candidate, CAPTCHA blocked | Google returned no exact indexed LifeUSA record. Fyple offers a free company listing, but the owner route redirects to authentication and displays reCAPTCHA. No CAPTCHA was handled and no account was created | No |
 
+## Important existing-profile access register
+
+These profiles are not neglected and must not be duplicated. They are valuable existing LifeUSA entity records where an authorized administrator may be able to add or standardize the approved logo, correct the website to `https://www.lifeusa.org/`, and repair other stale fields. They do **not** count toward the 20-new-profile goal. No access request has been sent.
+
+| Priority | Platform and public record | Verified public issue | Access or decision needed | Logo-edit confidence |
+|---:|---|---|---|---|
+| 1 | Every.org: `https://www.every.org/lifeusa` | Reverified July 19. The exact EIN profile is public, uses a generic “Humans” avatar, and links to `http://www.lifeusa.org` | Existing Every.org nonprofit administrator identified by the platform; Dr. Hani should identify or provide that administrator access | Owner dashboard required to verify the upload field |
+| 2 | Bonterra Deed: exact EIN `95-4402149` record in the nonprofit claim flow | The legal name and Southfield address match LifeUSA | Authorized organizational representative must claim or access the existing record | **Verified:** Deed says claimed profiles can add a mission, logo, and team members |
+| 3 | Benevity Causes: `https://causes.benevity.org/causes/840-954402149` | Existing profile has stale mission copy and an HTTP website link | Existing masked `lifeusa.org` owner account; identify the current internal administrator | Owner dashboard required to verify the logo field |
+| 4 | PayPal Giving Fund: `https://www.paypal.com/us/fundraiser/charity/2268883` | Exact EIN record has an HTTP website link and no approved visible logo | Authorized charity PayPal Business account plus acceptance of Giving Fund terms | Conditional; confirm branding controls after authorized enrollment |
+| 5 | Apple Maps / Apple Business Connect claim `6959862997556437473` | Exact Southfield record has the correct address and phone but an HTTP website link | Existing Apple Business Connect owner or authorized claim | Confirm logo and photo controls after owner access |
+| 6 | Bing Maps / Bing Places record `YN1AFB07F61C79BF68` | Exact verified business links to HTTP and exposes Facebook-sourced photos | Existing Bing Places owner access | Confirm logo control and source-photo management after access |
+| 7 | Foursquare: exact Southfield “Life For Relief & Development” record | Existing nonprofit record found in the owner search | Authorized access through `https://business.foursquare.com/` | Confirm logo field after owner access |
+| 8 | Yelp: `https://www.yelp.com/biz/life-for-relief-and-development-southfield` | Established LifeUSA record exists; device verification blocked the deeper field audit | Existing Yelp for Business owner or authorized claim | Confirm logo/photo controls after access |
+| 9 | Cybo: `https://www.cybo.com/US-biz/life-for-relief-development` | Exact record links to LifeUSA but has stale contact data and no approved logo | Existing owner access or claim | Logo state is visibly incomplete; edit capability requires owner verification |
+| 10 | CitySquares: `https://citysquares.com/b/life-for-relief-development-10255230` | Exact record has the correct address and phone, an HTTP website link, and no visible approved logo | Resolve the listing owner or claim route | Confirm logo field after access |
+| 11 | ChamberofCommerce.com: `https://chamberofcommerce.com/southfield-mi/4559853-life-for-relief-development` | Exact existing Southfield record is referenced by the verified Cybo profile | Resolve and claim the existing listing | Confirm logo field after access; do not duplicate |
+| 12 | Manta: existing “Life For Relief And Development Inc.” Southfield record | Indexed category evidence proves an existing record, but the direct owner route remains unresolved | Locate the exact public record and authorized owner route | Logo capability not yet verified |
+| 13 | Double the Donation: `https://doublethedonation.com/lifeusa` | Exact legal name, EIN, address, and website are public; no approved logo was visible | Identify the organization-maintenance route and authorized administrator | Logo capability not yet verified |
+
+### Message for Dr. Hani
+
+LifeUSA already has important third-party profiles that should be maintained rather than recreated. The immediate access priorities are Every.org, Bonterra Deed, Benevity Causes, PayPal Giving Fund, Apple Business Connect, Bing Places, Foursquare, Yelp, Cybo, and CitySquares. Please identify the current organizational administrator for each platform or provide an authorized owner-level route. After access is available, the acceptance check is: approved current logo or acceptable current blue-globe variant, canonical HTTPS website, correct legal identity and contact fields, and logged-out public verification.
+
 ## New-profile execution pool
 
 This is a quality-controlled research pool, not a claim that every route is already eligible or free. Each row must pass duplicate search, logo support, website-link support, and terms review before submission.
