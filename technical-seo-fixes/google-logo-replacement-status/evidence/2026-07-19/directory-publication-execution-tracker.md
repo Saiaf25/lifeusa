@@ -33,6 +33,14 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-009 | Hotfrog US | New candidate, access blocked | Google returned no exact record. The active U.S. owner route redirects to `https://admin.hotfrog.com/add/index-card`, requires an account, and explicitly says verified profiles can add images, a logo, and other details | No |
 | DIR-010 | Brownbook | Access blocked | Google returned no exact record, but the public site remained behind a Cloudflare security-verification screen, so owner registration and branding fields could not be verified | No |
 | DIR-011 | Cylex US | New candidate, CAPTCHA blocked | Google returned no exact record. Cylex confirms free business profiles and an active registration route; the authorized flow reached account creation but stopped at reCAPTCHA. No account was created | No |
+| DIR-012 | MerchantCircle | New candidate, access blocked | Google returned no exact record. MerchantCircle confirms a free basic listing with editable information and photos, but its observed `/signup` route returned 403 in the browser | No |
+| DIR-013 | Cybo | Existing | Cybo's add-business duplicate step found the exact Southfield record at `https://www.cybo.com/US-biz/life-for-relief-development`; the public page links to LifeUSA but exposes stale contact data and no approved logo | No |
+| DIR-014 | Nextdoor Business | New candidate, access blocked | Google returned no exact page. Nextdoor confirms a free Business Page with contact information and photos, but the claim CTA did not advance to a usable owner flow in the current browser session | No |
+| DIR-015 | Alignable | New candidate, CAPTCHA blocked | Google returned no exact profile. The authorized free-signup flow accepted the mailbox and terms selection, then required reCAPTCHA. No CAPTCHA was handled and no account was created | No |
+| DIR-016 | AARP Create the Good | New candidate, access blocked | Google returned no exact organization result. AARP explicitly offers nonprofits free volunteer-opportunity publication, but an AARP account is required and public logo/backlink fields remain unverified | No |
+| DIR-017 | Taproot Plus | New candidate, representative details needed | Google returned no exact organization result. Taproot confirms a free nonprofit profile, publicly displays organization logos with opportunities, and exposes a valid nonprofit signup form; it requires a real representative first and last name | No |
+| DIR-018 | ChamberofCommerce.com | Existing reference found | Cybo's exact Southfield record links to `chamberofcommerce.com/southfield-mi/4559853-life-for-relief-development`; resolve and claim that record instead of creating a duplicate | No |
+| DIR-019 | MapQuest | Existing reference found | Cybo's exact Southfield record links to `mapquest.com/us/michigan/life-for-relief-development-6299633`; resolve the current owner/data-provider route instead of creating a duplicate | No |
 
 ## New-profile execution pool
 
@@ -46,29 +54,29 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-004 | Yelp for Business | Local business profile | Existing | Established Southfield record found; resolve its owner route instead of creating a duplicate |
 | NEW-005 | Foursquare | Location and entity profile | Research | Duplicate venue search and authorized claim route |
 | NEW-006 | Manta | Business directory profile | Existing data record | Resolve the indexed Southfield record and owner route; do not create a duplicate |
-| NEW-007 | ChamberofCommerce.com | Local business directory profile | Research, unreliable search | Its direct search returned unrelated repeated results; verify data quality and free logo support before use |
+| NEW-007 | ChamberofCommerce.com | Local business directory profile | Existing reference found | Cybo exposes a Southfield ChamberofCommerce.com record; resolve that record instead of creating a duplicate |
 | NEW-008 | Hotfrog US | Business directory profile | New candidate, access blocked | Active U.S. registration and logo support verified; working account and email verification are required |
-| NEW-009 | MerchantCircle | Local business profile | Research | Duplicate search and active free account route |
+| NEW-009 | MerchantCircle | Local business profile | New candidate, access blocked | Free basic listing and photos verified; the signup endpoint returned 403 in the current browser session |
 | NEW-010 | Brownbook | Global business listing | Access blocked | Cloudflare verification prevented direct registration and branding-field inspection |
 | NEW-011 | Cylex US | Business directory profile | New candidate, CAPTCHA blocked | Free registration and no exact indexed record verified; account creation requires reCAPTCHA completion |
-| NEW-012 | Cybo | Global organization listing | Research | Duplicate search and public-logo capability |
-| NEW-013 | Nextdoor Business | Local organization profile | Research | Eligibility for nonprofit office and location verification |
-| NEW-014 | Alignable | Local business network profile | Research | Nonprofit fit, public profile, and no mandatory outreach behavior |
+| NEW-012 | Cybo | Global organization listing | Existing | Exact Southfield record found with stale contact data and no approved logo; claim/update rather than duplicate |
+| NEW-013 | Nextdoor Business | Local organization profile | New candidate, access blocked | Free page, photos, and contact details verified; owner claim route did not advance in the current session |
+| NEW-014 | Alignable | Local business network profile | New candidate, CAPTCHA blocked | Free signup reached reCAPTCHA; no account was created and no contacts were imported |
 | NEW-015 | Better Business Bureau | Charity or business profile | Conditional | BBB eligibility and any accreditation or review distinction; no paid accreditation without approval |
 | NEW-016 | Dun & Bradstreet | Business identity profile | Conditional | Existing D-U-N-S record search; logo is a paid-tier feature under current published terms |
 | NEW-017 | PayPal Giving Fund | Charity profile | Research | Enrollment state, charity-account owner, fundraising terms, and logo field |
 | NEW-018 | GlobalGiving | Humanitarian fundraising profile | Conditional | Program eligibility, application documents, and fundraising agreement |
 | NEW-019 | Pledge | Nonprofit giving profile | Research | Existing EIN record, claim route, and public branding capability |
 | NEW-020 | Double the Donation | Matching-gift nonprofit profile | Research | Existing record, nonprofit verification, and public organization page |
-| NEW-021 | AARP Create the Good | Volunteer organization profile | Research | Organization eligibility and live public profile capability |
-| NEW-022 | Taproot Plus | Skilled-volunteer nonprofit profile | Research | 501(c)(3) eligibility, organization review, and public profile |
+| NEW-021 | AARP Create the Good | Volunteer organization profile | New candidate, access blocked | Free nonprofit opportunity publishing is verified; AARP account and public branding fields remain gated |
+| NEW-022 | Taproot Plus | Skilled-volunteer nonprofit profile | New candidate, representative details needed | Free nonprofit profile and public organization-logo display verified; signup requires a real representative name |
 | NEW-023 | Catchafire | Skills-based volunteering profile | Conditional | Service agreement, eligibility, and any participation cost |
 | NEW-024 | Points of Light Engage | Volunteer organization profile | Research | Organization onboarding route and public branding fields |
 | NEW-025 | Deed | Workplace giving and volunteering profile | Research | Nonprofit enrollment and public profile capability |
 | NEW-026 | Michigan Nonprofit Association | State nonprofit directory | Conditional | Existing membership or separately approved membership value and cost |
 | NEW-027 | Southfield Area Chamber of Commerce | Local member directory | Conditional | Existing membership or separately approved membership value and cost |
 | NEW-028 | Great Lakes Business Network or verified local equivalent | Regional business profile | Research | Exact platform identity, authority, free profile, and genuine nonprofit fit |
-| NEW-029 | MapQuest business listing provider | Maps and local profile | Research | Current authorized data-provider route; do not create a duplicate via a reseller |
+| NEW-029 | MapQuest business listing provider | Maps and local profile | Existing reference found | Cybo exposes the existing Southfield MapQuest record; resolve the current data-provider route |
 | NEW-030 | Local.com or current successor | Local business directory profile | Research | Confirm platform is active, indexed, and permits authoritative owner updates |
 
 ## Standard public data
@@ -101,4 +109,4 @@ Life for Relief and Development is a Southfield, Michigan-based nonprofit humani
 
 ## Current blocker
 
-The supplied mailbox password was rejected by Google during authorized Idealist sign-in. It was tried once and was not retried. Cylex also reached an account-creation form but stopped at reCAPTCHA; no CAPTCHA interaction or account creation occurred. Until working mailbox access is available, email-verification profiles cannot reach **Done** status. Duplicate research and no-login public verification can continue.
+The supplied mailbox password was rejected by Google during authorized Idealist sign-in. It was tried once and was not retried. Cylex and Alignable reached account-creation forms but stopped at reCAPTCHA; no CAPTCHA interaction or account creation occurred. MerchantCircle's signup route returned 403. Taproot requires a real representative first and last name before account creation. Until working mailbox access is available, email-verification profiles cannot reach **Done** status. Duplicate research and no-login public verification can continue.
