@@ -660,7 +660,7 @@
         <h2>Current status</h2>
         <p>The first scheduled weekly check is complete. No reply, source correction, or Google refresh has been proved.</p>
       </div>
-      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">Directory publication execution has started. Browser checks found existing claimed LifeUSA records on Every.org and Benevity, so neither can count as a new profile; VolunteerMatch has merged into Idealist. Idealist is a legitimate new candidate, but account creation is blocked because the supplied mailbox password was rejected by Google. Zero new profiles are counted as done until a logged-out public page shows an approved logo and the canonical HTTPS LifeUSA link.</p>
+      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">Directory publication execution is active. Browser checks now identify existing LifeUSA records on Every.org, Benevity, Yelp, and Manta, so none can count as new. Idealist, Hotfrog US, and Cylex US are legitimate new candidates, but mailbox authentication blocks Idealist and Hotfrog, while Cylex stopped at reCAPTCHA. No CAPTCHA was handled and no new account was created. Zero new profiles are counted as done until a logged-out public page shows an approved logo and the canonical HTTPS LifeUSA link.</p>
       <div class="metrics" aria-label="Status summary">
         <div class="metric"><strong id="metricDone">4</strong><span>actions done</span></div>
         <div class="metric"><strong id="metricProgress">11</strong><span>actions in progress</span></div>
@@ -941,7 +941,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.11 · Page updated July 19, 2026</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.12 · Page updated July 19, 2026</footer>
   </main>
 
   <script>
@@ -1000,7 +1000,7 @@
         { id: "LOGO-016", title: "Audit Google Ads and Ad Grants business information assets", phase: 3, owner: "Ads administrator", dependency: "LifeUSA Ads or Ad Grants access", evidence: "Asset report and verification state", start: "2026-07-15", end: "2026-07-22", status: "in_progress", note: "Audited July 15 and reclassified July 19. The sponsored result serves the acceptable current blue-globe variant, so replacement is optional standardization rather than a correctness blocker. The available Google Ads hierarchy contains no LifeUSA customer." },
         { id: "LOGO-017", title: "Run an optional branded paid visibility test", phase: 5, owner: "Ads administrator", dependency: "Separate budget or Ad Grants approval", evidence: "30-day campaign report", start: "2026-07-20", end: "2026-08-18", status: "waiting", note: "Optional bridge only. It does not change organic Google Images or Knowledge Panel selection." },
         { id: "LOGO-018", title: "Monitor branded Google surfaces weekly for 12 weeks", phase: 6, owner: "SEO lead", dependency: "Major updates live", evidence: "Dated monitoring log and three stable checks", start: "2026-07-19", end: "2026-10-04", status: "in_progress", note: "July 19 scheduled check recorded. No replies or retired-source corrections were proved; canonical Wix assets remain healthy. Search and Images were blocked by an anti-automation challenge and recorded as inconclusive. Stable checks: 0 of 3. Next check: July 26." },
-        { id: "LOGO-019", title: "Publish approved new directory and business profiles", phase: 4, owner: "SEO lead and authorized profile administrators", dependency: "Canonical asset kit and working platform access", evidence: "Live profile, logo URL, canonical backlink, and logged-out screenshot", start: "2026-07-19", end: "2026-08-16", status: "in_progress", note: "Execution started July 19. Every.org and Benevity already have claimed LifeUSA profiles and cannot count as new; VolunteerMatch has merged into Idealist. Idealist has no exact Southfield record and is a valid new candidate, but Google rejected the supplied mailbox password. New profiles done: 0 of 20. Duplicate research and platform qualification continue in the attached execution tracker." }
+        { id: "LOGO-019", title: "Publish approved new directory and business profiles", phase: 4, owner: "SEO lead and authorized profile administrators", dependency: "Canonical asset kit and working platform access", evidence: "Live profile, logo URL, canonical backlink, and logged-out screenshot", start: "2026-07-19", end: "2026-08-16", status: "in_progress", note: "Browser qualification expanded July 19. Every.org, Benevity, Yelp, and Manta already expose LifeUSA records and cannot count as new; VolunteerMatch has merged into Idealist. Idealist, Hotfrog US, and Cylex US are valid new candidates. Mailbox authentication blocks Idealist and Hotfrog, while Cylex stopped at reCAPTCHA without creating an account. New profiles done: 0 of 20. Evidence and platform gates are in the attached execution tracker." }
       ];
 
       const gates = [
@@ -1090,13 +1090,13 @@
           "LOGO-012": [{ status: "not_started", note: "" }],
           "LOGO-014": [
             { status: "not_started", note: "Priority set: Candid, Charity Navigator, GreatNonprofits, ReliefWeb, LinkedIn, Facebook, Instagram, and YouTube." },
-            { status: "in_progress", note: "Direct audit completed July 15. Candid/GuideStar, GreatNonprofits, LinkedIn, the main English Facebook page, Instagram, YouTube, and X expose the older blue-globe logo. The English Linktree avatar is current, but its Facebook button points to a Somali page that also uses the older mark. Charity Navigator and ReliefWeb expose no LifeUSA logo; TikTok and Threads require signed-in verification. Evidence copies, exact URLs, and the correction order are attached." },
+            { status: "in_progress", note: "Direct audit completed July 15 and classification corrected July 19. Candid/GuideStar, GreatNonprofits, LinkedIn, the main English Facebook page, Instagram, YouTube, and X expose the acceptable current blue-globe variant. The English Linktree avatar is canonical, but its Facebook button points to a Somali page. Charity Navigator and ReliefWeb expose no LifeUSA logo; TikTok and Threads require signed-in verification. Evidence copies and exact URLs are attached." },
             { status: "in_progress", note: "GreatNonprofits outreach was sent and is awaiting correction. Candid/GuideStar, LinkedIn, Facebook, Instagram, YouTube, X, Linktree, and ReliefWeb actions are prepared as APR-002, APR-003, and APR-005. No remaining profile or account change will be made without human approval." }
           ],
           "LOGO-015": [
             { status: "not_started", note: "" },
             { status: "in_progress", note: "Source audit opened July 15. The broad first 20 contains no retired mark, but direct checks confirm the old WordPress site, Kids That Do Good, and Arab Info Mall still publish the retired crescent logo. Those three sources form the active correction queue." },
-            { status: "in_progress", note: "The direct-source queue now contains three retired-crescent sources plus Candid/GuideStar and GreatNonprofits using the older blue-globe mark. The publisher pack includes verified image URLs, local evidence, correction copy, and acceptance checks." }
+            { status: "in_progress", note: "The direct-source queue contains three retired-crescent sources. Candid/GuideStar and GreatNonprofits use the acceptable current blue-globe variant and are not logo-correction blockers. The publisher pack includes verified image URLs, local evidence, correction copy, and acceptance checks." }
           ],
           "LOGO-016": [{ status: "not_started", note: "" }],
           "LOGO-018": [{ status: "not_started", note: "Check US desktop and mobile results at weeks 1, 2, 4, 8, and 12, with weekly checks for priority surfaces." }]

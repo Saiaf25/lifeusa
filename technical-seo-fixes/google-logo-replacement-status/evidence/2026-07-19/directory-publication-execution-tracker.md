@@ -27,6 +27,12 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-003 | Benevity Causes | Existing | Public profile `https://causes.benevity.org/causes/840-954402149` is already registered to a masked `lifeusa.org` owner; it exposes stale mission copy and an HTTP website link | No |
 | DIR-004 | Idealist | Access blocked | Exact organization-plus-Southfield search returned zero results, so it is a legitimate new candidate. Account creation could not continue because Google rejected the supplied mailbox password | No |
 | DIR-005 | VolunteerMatch | Existing platform merged | VolunteerMatch now routes organization onboarding through Idealist and is not a second independent directory | No |
+| DIR-006 | Yelp for Business | Existing | Google returned the established public record at `https://www.yelp.com/biz/life-for-relief-and-development-southfield`; Yelp's device-verification screen prevented a deeper logged-out field audit | No |
+| DIR-007 | Manta | Existing data record | Manta-indexed category results already reference “Life For Relief And Development Inc.” in Southfield, so a new listing would risk duplication; the direct record still needs owner-route resolution | No |
+| DIR-008 | ChamberofCommerce.com | Research | Google returned no exact record, but the platform's own exact-name and city search produced repeated unrelated placeholder-like results. Do not submit until the duplicate-search defect and free logo capability are resolved | No |
+| DIR-009 | Hotfrog US | New candidate, access blocked | Google returned no exact record. The active U.S. owner route redirects to `https://admin.hotfrog.com/add/index-card`, requires an account, and explicitly says verified profiles can add images, a logo, and other details | No |
+| DIR-010 | Brownbook | Access blocked | Google returned no exact record, but the public site remained behind a Cloudflare security-verification screen, so owner registration and branding fields could not be verified | No |
+| DIR-011 | Cylex US | New candidate, CAPTCHA blocked | Google returned no exact record. Cylex confirms free business profiles and an active registration route; the authorized flow reached account creation but stopped at reCAPTCHA. No account was created | No |
 
 ## New-profile execution pool
 
@@ -37,14 +43,14 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-001 | Idealist | Nonprofit and volunteer organization | New candidate, access blocked | Working mailbox authentication and email verification |
 | NEW-002 | Apple Business Connect | Local business and brand profile | Research | Apple business account, company verification, and location ownership |
 | NEW-003 | Bing Places | Local business profile | Research | Duplicate search, Microsoft or approved Google sign-in, and business verification |
-| NEW-004 | Yelp for Business | Local business profile | Research | Claim existing record if present; free public logo and website capability must be confirmed |
+| NEW-004 | Yelp for Business | Local business profile | Existing | Established Southfield record found; resolve its owner route instead of creating a duplicate |
 | NEW-005 | Foursquare | Location and entity profile | Research | Duplicate venue search and authorized claim route |
-| NEW-006 | Manta | Business directory profile | Research | Duplicate search and current free-listing capability |
-| NEW-007 | ChamberofCommerce.com | Local business directory profile | Research | Duplicate search, free claim route, and logo field |
-| NEW-008 | Hotfrog US | Business directory profile | Research | Duplicate search and current US submission route |
+| NEW-006 | Manta | Business directory profile | Existing data record | Resolve the indexed Southfield record and owner route; do not create a duplicate |
+| NEW-007 | ChamberofCommerce.com | Local business directory profile | Research, unreliable search | Its direct search returned unrelated repeated results; verify data quality and free logo support before use |
+| NEW-008 | Hotfrog US | Business directory profile | New candidate, access blocked | Active U.S. registration and logo support verified; working account and email verification are required |
 | NEW-009 | MerchantCircle | Local business profile | Research | Duplicate search and active free account route |
-| NEW-010 | Brownbook | Global business listing | Research | Duplicate search, moderation terms, and public website field |
-| NEW-011 | Cylex US | Business directory profile | Research | Duplicate search and current US claim route |
+| NEW-010 | Brownbook | Global business listing | Access blocked | Cloudflare verification prevented direct registration and branding-field inspection |
+| NEW-011 | Cylex US | Business directory profile | New candidate, CAPTCHA blocked | Free registration and no exact indexed record verified; account creation requires reCAPTCHA completion |
 | NEW-012 | Cybo | Global organization listing | Research | Duplicate search and public-logo capability |
 | NEW-013 | Nextdoor Business | Local organization profile | Research | Eligibility for nonprofit office and location verification |
 | NEW-014 | Alignable | Local business network profile | Research | Nonprofit fit, public profile, and no mandatory outreach behavior |
@@ -95,4 +101,4 @@ Life for Relief and Development is a Southfield, Michigan-based nonprofit humani
 
 ## Current blocker
 
-The supplied mailbox password was rejected by Google during authorized Idealist sign-in. It was tried once and was not retried. Until working mailbox access is available, email-verification profiles cannot reach **Done** status. Duplicate research and no-login public verification can continue.
+The supplied mailbox password was rejected by Google during authorized Idealist sign-in. It was tried once and was not retried. Cylex also reached an account-creation form but stopped at reCAPTCHA; no CAPTCHA interaction or account creation occurred. Until working mailbox access is available, email-verification profiles cannot reach **Done** status. Duplicate research and no-login public verification can continue.
