@@ -1,5 +1,7 @@
 # LifeUSA Google property audit
 
+**Classification correction, July 19:** The client confirmed that the blue-globe logo is an acceptable current variant. The observations below remain valid, but matching blue-globe assets are no longer classified as outdated-logo defects. The stale HTTP Business Profile link and any confirmed retired crescent asset remain actionable.
+
 Audit date: July 15, 2026
 
 Locale: English, United States
@@ -10,7 +12,7 @@ Desktop viewport: 1280 by 720 pixels
 
 Google already has a local Business Profile for Life for Relief & Development at the correct Southfield address. The profile should not be recreated. It must be updated through the existing owner or manager account.
 
-The exact branded entity query also exposed an older blue-globe logo in a sponsored LifeUSA result. A separate nonprofit Knowledge Panel did not appear in this check.
+The exact branded entity query also exposed the acceptable current blue-globe variant in a sponsored LifeUSA result. A separate nonprofit Knowledge Panel did not appear in this check.
 
 ## Search surface
 
@@ -20,7 +22,7 @@ Repeatable query:
 
 Observed state:
 
-- A sponsored LifeUSA result used the older blue-globe logo.
+- A sponsored LifeUSA result used the acceptable current blue-globe variant.
 - The right-hand entity surface was the local Google Business Profile, not a separate organization Knowledge Panel.
 - The profile showed 4.3 stars and 20 Google reviews.
 - The category was Non-Profit organization.
@@ -55,7 +57,7 @@ The public Maps listing resolves to the established Southfield location:
 - Rating and review count: 4.3 from 20 reviews
 - Public website link: `http://www.lifeusa.org/`
 
-The photo gallery includes a contribution associated with a Google Maps contributor account using an older blue Life logo as its avatar. Contributor profile ID: `115898584427846492369`.
+The photo gallery includes a contribution associated with a Google Maps contributor account using the acceptable current blue-globe Life logo as its avatar. Contributor profile ID: `115898584427846492369`.
 
 This contributor avatar is a separate Google account identity signal. It should be replaced by that account owner if the account is controlled by LifeUSA; it cannot be changed from the Business Profile itself.
 
@@ -66,7 +68,7 @@ Evidence:
 
 ## Google Ads and Ad Grants
 
-The public sponsored result proves that a LifeUSA advertiser is currently serving the older blue-globe logo. The logo may come from account-level business information, a campaign-level brand asset, or a Google-generated dynamic asset.
+The public sponsored result proves that a LifeUSA advertiser is currently serving the acceptable current blue-globe variant. The logo may come from account-level business information, a campaign-level brand asset, or a Google-generated dynamic asset. Replacing it with the canonical square is optional standardization, not a correctness requirement.
 
 The local Google Ads CLI was checked read-only on July 15. Its accessible customer and manager hierarchy contains TTP/TMD advertising accounts and no LifeUSA customer. No LifeUSA Ads or Ad Grants asset could therefore be inspected or changed from the available credentials.
 

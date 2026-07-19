@@ -11,6 +11,8 @@ These two source-correction emails were sent before the human-approval gate was 
 | SENT-001 | `info@kidsthatdogood.com` | Please update the Life for Relief and Development logo | `1784122643723013500` | Wait for a reply, then verify the public profile and direct image URL |
 | SENT-002 | `support@greatnonprofits.org` | Please update the Life for Relief and Development profile logo | `1784122678410013500` | Wait for a reply, then verify the logged-out profile and CDN image |
 
+**July 19 classification correction:** The client confirmed that the blue-globe logo is an acceptable current variant. SENT-002 remains an immutable historical fact, but a GreatNonprofits logo replacement is no longer required for correctness and a non-response is not a campaign blocker.
+
 ## Approval instructions
 
 Approve items by their exact IDs, for example: `Approve APR-001 and APR-007.` Approval authorizes only the action described in that item. Credentials, passwords, and private access details must not be added to the public status-page notes.
@@ -54,11 +56,9 @@ Approve items by their exact IDs, for example: `Approve APR-001 and APR-007.` Ap
 **Route:** [Candid's Update Nonprofit Profile tool](https://www.guidestar.org/UpdateNonprofitProfile) for EIN `95-4402149`
 **Access needed:** Authorized Candid/GuideStar organization administrator
 
-**Prepared profile note**
+**Revised action scope:** The existing blue-globe image is an acceptable current variant and does not require replacement. Use the authorized profile only to verify the website, legal identity, mission, and contact fields. A switch to the canonical yellow-ray square is optional consistency work.
 
-> Life for Relief and Development, EIN 95-4402149, uses the current LifeUSA identity shown on `https://www.lifeusa.org/`. Replace the older blue-globe profile image with the current official square logo: `https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`.
-
-**Acceptance check:** The logged-out GuideStar profile displays the current yellow-ray square logo and no longer references the previous image document.
+**Acceptance check:** The logged-out GuideStar profile displays either approved current logo variant, links to the canonical HTTPS website, and contains accurate organization details.
 
 ## APR-003: ReliefWeb organization profile enhancement
 
@@ -103,20 +103,20 @@ Approve items by their exact IDs, for example: `Approve APR-001 and APR-007.` Ap
 
 **Acceptance check:** The approved account is a manager or owner, the profile links to HTTPS, the current logo is published, and dated public screenshots are stored.
 
-## APR-005: Official social profile alignment
+## APR-005: Official social profile and Linktree integrity
 
 **Default status:** Pending approval
-**External effect:** Changes public profile images and one Linktree destination across organization-controlled accounts
+**External effect:** Corrects one Linktree destination and verifies organization-controlled profile identity; logo changes are optional unless a genuinely retired crescent mark is found
 **Accounts:** LinkedIn, English Facebook, Somali Facebook, Instagram, YouTube, X, Linktree; inspect TikTok and Threads while signed in
 
 **Prepared action package**
 
-1. Upload the canonical square logo to each account that still uses the older blue-globe image.
-2. Preserve enough internal padding for circular crops.
-3. Change the English Linktree Facebook destination to `https://www.facebook.com/Life4ReliefEN/`.
+1. Treat the blue-globe profile image as an acceptable current variant on Facebook and matching official profiles.
+2. Change the English Linktree Facebook destination to `https://www.facebook.com/Life4ReliefEN/`.
+3. Replace a profile image only if it is the retired crescent mark or if the client separately chooses canonical-logo standardization.
 4. Verify every public profile logged out and capture its public image URL or screenshot.
 
-**Acceptance check:** Every controlled profile and preview displays the current logo, and the English Linktree opens the English Facebook page.
+**Acceptance check:** Every controlled profile and preview displays either approved current variant, and the English Linktree opens the English Facebook page.
 
 ## APR-006: Old WordPress archive disposition
 
@@ -151,20 +151,24 @@ Approve items by their exact IDs, for example: `Approve APR-001 and APR-007.` Ap
 
 **Acceptance check:** The live page, rendered JSON-LD, header, favicon, and public asset page pass the attached Wix checklist.
 
-## APR-008: Google Ads / Ad Grants account access and logo replacement
+## APR-008: Optional Google Ads / Ad Grants logo standardization
 
 **Default status:** Pending approval
-**External effect:** Accesses and changes paid-search business information or campaign assets
+**External effect:** Accesses paid-search business information or campaign assets and optionally standardizes an already acceptable current logo
 **Access needed:** LifeUSA Google Ads or Ad Grants administrator account
 
 **Prepared action package**
 
 1. Identify the customer that served the captured sponsored LifeUSA result.
 2. Inspect account-level business information and campaign-level image/logo assets.
-3. Replace the older blue-globe logo with the canonical square asset.
+3. Confirm whether the serving blue-globe asset matches the acceptable current variant. Replace it with the canonical square only if the Ads administrator chooses standardization.
 4. Preview eligible placements and publish only after the Ads administrator confirms the account and campaign scope.
 
-**Acceptance check:** The serving asset record uses the current square logo and a dated Google Search check no longer shows the old paid-result logo.
+**Acceptance check:** The serving asset is documented as either the acceptable current blue-globe variant or the canonical square. This item is not a correctness blocker unless a retired crescent asset is found.
+
+## New directory and backlink expansion
+
+The researched shortlist and quality gates are documented in [the July 19 logo directory and backlink expansion plan](../2026-07-19/logo-directory-and-backlink-expansion-plan.md). No directory claim, account creation, application, membership, submission, or paid upgrade is authorized by this document. Before execution, create a scoped approval item naming the exact `DIR` ID, account, fields, cost, and external effect.
 
 ## Execution record fields
 

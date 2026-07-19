@@ -21,12 +21,13 @@ The broad top 20 is healthier than the older targeted-query sample, but the camp
 
 ## Executive decision
 
-The proposed directory and third-party profile campaign is valid, but it should not run alone. The fastest credible approach is a coordinated four-track program:
+The directory and third-party profile campaign is an active solution track, but it should not run alone. The fastest credible approach is a coordinated five-track program:
 
 1. Fix the canonical logo signals on `lifeusa.org`.
 2. Remove or replace the retired logo at the specific pages and image URLs that still publish it.
 3. Update Google-owned surfaces separately: Business Profile, Knowledge Panel if present, favicon/Search, Search Console, and Google Ads if used.
 4. Align high-trust, already-indexed nonprofit and social profiles with one approved logo package.
+5. Create a controlled set of new, genuine-fit nonprofit, giving, humanitarian, volunteer, and local-business profiles that publish the canonical logo and link to `https://www.lifeusa.org/`.
 
 Google does not provide a single switch that forces one logo everywhere. Its systems select images from the owned website, public web sources, verified Google properties, and direct feedback. The campaign can make the new logo overwhelmingly clearer and more consistent, but it cannot promise a particular image position or a fixed completion date.
 
@@ -67,7 +68,7 @@ Within a 90-day monitoring window after implementation:
 
 - The retired crescent logo is absent from the top 20 Google Images results for the approved branded query set in three consecutive weekly US checks.
 - No retired logo is used as the featured image, logo, or favicon in LifeUSA’s branded Google Search, Maps, Business Profile, Knowledge Panel, or eligible paid-search presentation.
-- Every LifeUSA-controlled website and Tier 1 profile uses the approved current logo package.
+- Every LifeUSA-controlled website and Tier 1 profile uses either the canonical current logo or an approved current variant.
 - Every confirmed retired-logo source is either corrected, removed, blocked from Google Images, or recorded as an unresolved third-party dependency with proof of outreach.
 
 These are campaign targets, not guarantees about Google’s algorithm.
@@ -75,7 +76,7 @@ These are campaign targets, not guarantees about Google’s algorithm.
 ### Non-goals
 
 - Do not claim that directory submissions directly force Google to select a logo. Google does not document such a guarantee.
-- Do not create dozens of low-quality directory listings.
+- Do not create dozens of low-quality directory listings. New placements must pass the relevance, logo, website-link, public-verification, and human-approval checks in the directory expansion plan.
 - Do not submit removal requests before the source image has actually been removed, replaced, or made unavailable.
 - Do not report an accurate but old third-party photo as a policy violation unless it genuinely violates that platform’s policy.
 - Do not launch paid ads as if they can repair organic Google Images or Knowledge Panel results. Paid assets affect ads only.
@@ -95,7 +96,7 @@ These are campaign targets, not guarantees about Google’s algorithm.
 
 ### Leading indicators
 
-- One approved square logo and one approved horizontal logo, with no competing “official” variants.
+- One preferred canonical square logo and one preferred canonical horizontal logo for new placements, with documented acceptable current variants.
 - Canonical square logo URL returns `200`, is crawlable, indexable, and visible on white.
 - Homepage Organization/NGO markup passes validation and points to that canonical image.
 - `sameAs` contains only verified official LifeUSA profiles.
@@ -155,7 +156,13 @@ Homepage checked: [lifeusa.org](https://www.lifeusa.org/)
 | [Facebook](https://www.facebook.com/Life4ReliefEN/) | Existing official page indexed for the organization | Verify profile image and About links |
 | [ReliefWeb](https://reliefweb.int/organization/life) | Existing authoritative humanitarian organization page | Verify logo and canonical site link; request correction if needed |
 
-### 4.4 Important interpretation
+### 4.4 Current logo classification decision, July 19
+
+The blue-globe logo used on the English Facebook page is an **acceptable current variant**, not an outdated or retired logo. Matching blue-globe files on Candid/GuideStar, GreatNonprofits, LinkedIn, Instagram, YouTube, X, Somali Facebook, Google Ads, or Maps are likewise acceptable when visual comparison confirms that they are the same approved variant. They may be changed to the canonical yellow-ray square for consistency, but their presence is not a source defect and does not block campaign completion.
+
+The retired crescent mark remains the only confirmed obsolete logo family in this program. New directory placements should use the canonical yellow-ray square to strengthen a consistent forward-looking signal.
+
+### 4.5 Important interpretation
 
 The retired logo is not merely “cached by Google.” Multiple live webpages still publish it. Google is correctly discovering those source files. Search cleanup will be durable only after those sources are changed or the current logo becomes a stronger and more consistent result.
 
@@ -292,7 +299,9 @@ Actions:
 
 ### Operating principle
 
-Prioritize existing, authoritative, relevant profiles that already rank for LifeUSA. Do not optimize for the number of submissions. Optimize for entity consistency, control, and actual branded visibility.
+Prioritize existing, authoritative, relevant profiles that already rank for LifeUSA, then add a deliberate set of new genuine-fit profiles. Do not optimize for the number of submissions. Optimize for entity consistency, control, actual branded visibility, and a public canonical website link.
+
+The researched platform list, qualification rules, official capability sources, costs, execution order, and per-placement acceptance fields are documented in [the logo directory and backlink expansion plan](../technical-seo-fixes/google-logo-replacement-status/evidence/2026-07-19/logo-directory-and-backlink-expansion-plan.md).
 
 ### Tier 0: Google-controlled surfaces
 
@@ -308,7 +317,7 @@ Prioritize existing, authoritative, relevant profiles that already rank for Life
 |---|---|---|
 | Candid/GuideStar | Nonprofit identity profile syndicated to many charitable sites | Claim or verify profile; update official logo, website, name, mission, contact, and social links |
 | Charity Navigator | Highly visible donor-trust profile and currently managed by LifeUSA | Audit through Nonprofit Portal; align logo and general information |
-| GreatNonprofits | Already indexed and currently uses a modern logo variant | Align with approved master and verify website/social links |
+| GreatNonprofits | Already indexed and uses an acceptable current blue-globe variant | Keep the acceptable variant; verify website and social links |
 | ReliefWeb | Mission-relevant humanitarian authority | Verify logo, website, and organization description |
 | LinkedIn | Official organization identity and a Knowledge Panel verification route | Update through super-admin access; align logo and website |
 | Facebook | Existing official page and a Knowledge Panel verification route | Align profile image, About link, and naming |
@@ -332,7 +341,7 @@ For each source, record:
 
 - Profile or landing page URL
 - Direct image URL
-- Current visual classification: approved, retired, uncertain
+- Current visual classification: canonical current, acceptable current variant, retired, uncertain
 - Organization control level
 - Login or contact route
 - Update request date
@@ -353,6 +362,8 @@ Create a new profile only if it is:
 - Free from spammy link-selling or mass-directory behavior
 
 New low-value directory volume is explicitly out of scope.
+
+Initial new-placement priorities are Every.org, PayPal Giving Fund, Benevity Causes, Idealist, VolunteerMatch, Apple Business Connect, and Bing Places. Google Business Profile, Candid/GuideStar, GreatNonprofits, Charity Navigator, ReliefWeb, Yelp, GlobalGiving, and Dun & Bradstreet are existing, conditional, or cost-sensitive routes that must be handled according to the detailed expansion plan. No listing, claim, application, membership, or paid upgrade may be executed without an exact human approval item.
 
 ## 8. Phased execution plan
 
@@ -476,6 +487,7 @@ New low-value directory volume is explicitly out of scope.
 | LOGO-016 | Audit Ads/Ad Grants assets | Ads admin | LOGO-003 | Asset report and verification state |
 | LOGO-017 | Optional branded paid test | Ads admin | Separate approval | Campaign report |
 | LOGO-018 | Weekly 12-week monitoring | SEO lead | Major updates live | Dated monitoring log |
+| LOGO-019 | Publish approved new directory and business profiles | SEO lead + authorized profile administrators | Canonical asset kit and exact per-platform approval | Live profile, logo URL, canonical backlink, and logged-out screenshot |
 
 ## 10. Roles and approvals
 
@@ -523,14 +535,14 @@ Recommended: publish an evergreen official brand-resources page. Do not publish 
 |---|---|---|
 | Google keeps an old image after source replacement | Delayed result | Verify old URL state, request refresh, monitor weekly |
 | White logo is invisible on white | Google rejects or avoids it | Use approved colored square asset on a safe background |
-| Multiple current variants compete | Ambiguous entity signal | Approve one canonical square and one canonical horizontal version |
+| Undocumented variants are misclassified | Unnecessary profile changes and false blockers | Maintain a three-state register: canonical current, acceptable current variant, retired |
 | Third party does not respond | Old result remains | Follow-up schedule, escalation contact, document exception, strengthen higher-authority sources |
 | Business Profile user photo is old but not policy-violating | Removal request rejected | Add strong current owner media and report only genuine policy violations |
 | Removal request submitted too early | Request rejected or image returns | Change source first, verify response, then submit |
 | Ads show a dynamic old logo | Paid inconsistency | Audit, pause/remove dynamic assets, upload manual approved logo |
 | Team mistakes ads for an organic fix | Wrong expectations | Separate paid and organic KPIs in reporting |
 | Search results vary by location or personalization | Misleading progress | Use repeatable US signed-out desktop/mobile protocol |
-| Mass directory submissions create spam | Brand and SEO risk | Use the tiered authority/relevance filter |
+| Mass directory submissions create spam | Brand and SEO risk | Use the expansion-plan qualification filter and exact per-platform approval |
 | Access is split across former staff | Delays | Build access matrix before execution and assign named owners |
 
 ## 13. Timing expectations
@@ -607,13 +619,13 @@ All external messages, access requests, form submissions, and changes to client-
 - Uploaded the approved 4101 by 1201 horizontal logo to the same LifeUSA Wix Media Manager. The public file returns `200`, and its remote SHA-256 exactly matches the approved local source. The canonical square and horizontal asset kit is now complete.
 - Confirmed that the homepage custom `NGO.logo` still points to a separate white file and that the entity graph still lacks `NGO.@id` and `sameAs`.
 - Reverified the retired crescent mark on the old WordPress archive, Kids That Do Good, and Arab Info Mall.
-- Verified the older blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree.
+- Verified the blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree. On July 19, the client confirmed this is an acceptable current variant, not an outdated mark.
 - Verified that Charity Navigator and ReliefWeb expose no LifeUSA logo, so they are enhancement targets rather than stale-logo sources.
 - Published the authority-profile matrix, source evidence, correction drafts, owned-social checklist, and expanded `sameAs` specification on the live status page.
 - Captured the exact Southfield entity query and verified that the right-hand result is the established Google Business Profile, with 4.3 stars, 20 reviews, the correct address, and a stale HTTP website link.
 - Verified through Google's claim flow that the existing profile is managed by a masked `li...@gmail.com` account. The current Google session is not authorized, and no request was sent from the user's personal account.
-- Captured the public Google Maps media inventory and preserved an older blue Life avatar used by a contributor account associated with listing media.
-- Confirmed that a sponsored LifeUSA result visibly serves the older blue-globe logo.
+- Captured the public Google Maps media inventory and preserved a blue-globe Life avatar used by a contributor account associated with listing media. This is acceptable when it matches the approved current variant.
+- Confirmed that a sponsored LifeUSA result visibly serves the acceptable current blue-globe variant; this is no longer classified as a logo defect.
 - Audited the available Google Ads CLI hierarchy read-only. It contains no LifeUSA Ads or Ad Grants customer, so the serving logo asset requires the LifeUSA ads administrator account.
 - Published the complete Google property audit and four dated evidence files on the live status page.
 - Sent the Kids That Do Good correction request to `info@kidsthatdogood.com` and recorded Zoho message ID `1784122643723013500`.
@@ -635,17 +647,17 @@ All external messages, access requests, form submissions, and changes to client-
 - The homepage’s live structured data and logo URLs were inspected directly.
 - The structured-data logo is white-on-transparent and fails the white-background appearance test.
 - The old WordPress, Kids That Do Good, and Arab Info Mall pages visibly publish the retired crescent logo.
-- Candid/GuideStar, GreatNonprofits, LinkedIn, Facebook, Instagram, YouTube, and X visibly publish the older blue-globe logo.
-- The English Linktree avatar is current, but its Facebook destination opens a Somali-language page that also uses the older logo.
+- Candid/GuideStar, GreatNonprofits, LinkedIn, Facebook, Instagram, YouTube, and X visibly publish the blue-globe logo, which the client confirmed is an acceptable current variant.
+- The English Linktree avatar is current, and its Facebook destination opens a Somali-language page. The destination mismatch remains a profile-integrity issue; the Somali page's blue-globe logo is acceptable.
 - Google already has an established LifeUSA Business Profile for the Southfield location; it should be updated, not recreated.
 - The current Business Profile manager is a different masked account, and the available Google account cannot edit the listing.
-- A sponsored LifeUSA result visibly uses the older blue-globe logo, while the available Google Ads credentials do not include a LifeUSA customer.
+- A sponsored LifeUSA result visibly uses the acceptable current blue-globe variant. The available Google Ads credentials do not include a LifeUSA customer, but replacement is optional consistency work rather than a correctness blocker.
 - The exact Southfield query showed the local Business Profile rather than a separate nonprofit Knowledge Panel.
 - Google’s official documentation supports the distinct workflows described for Images, Organization markup, Business Profile, Knowledge Panel, favicon, Search Console, and Ads.
 
 ### Medium confidence
 
-- The exact result Dr. Hany originally saw may differ from the sponsored result, local profile, or Maps media captured independently, but all of these verified older-logo surfaces can now be corrected without asking him for evidence.
+- The exact result Dr. Hany originally saw may differ from the sponsored result, local profile, or Maps media captured independently. Only confirmed retired-crescent surfaces require logo correction; acceptable current variants do not.
 - Glassdoor and ShareDetroit require a final visual and account-access audit before their logo state is classified.
 
 ### Collection note

@@ -1,5 +1,7 @@
 # LifeUSA retired-logo publisher correction pack
 
+**Classification correction, July 19:** The client confirmed that the blue-globe logo used on Facebook and matching official profiles is an acceptable current variant. Historical messages and evidence filenames below are preserved, but blue-globe placements are no longer treated as outdated-logo defects. The retired crescent mark remains the correction target.
+
 Prepared July 15, 2026. The official square and horizontal logo files are live in LifeUSA's Wix Media Manager. The Kids That Do Good and GreatNonprofits correction emails have been sent. All remaining communication and account changes require human approval before execution; see the [human approval queue](outreach-approval-queue.md).
 
 ## Evidence bundle to attach
@@ -109,31 +111,25 @@ This is an owned-property recovery task, not third-party outreach.
 
 **Status:** Pending human approval as `APR-002`. Nothing has been changed.
 
-**Verified outdated profile**
+**Verified current-variant profile**
 
 - Profile: `https://www.guidestar.org/profile/95-4402149`
-- Older blue-globe image: `https://docs.candid.org/edoc/11078205`
+- Acceptable current blue-globe image: `https://docs.candid.org/edoc/11078205`
 - Local evidence: `legacy-blue-candid-guidestar-logo.png`
 - Profile route: `https://www.guidestar.org/UpdateNonprofitProfile` for the Candid nonprofit profile associated with EIN 95-4402149
 
-**Profile correction text**
+No logo correction is required. Through the authorized profile, verify the canonical HTTPS website and current organization details. Replacing the image with the canonical yellow-ray square is optional standardization only.
 
-Life for Relief and Development, EIN 95-4402149, has adopted the current LifeUSA identity shown on `https://www.lifeusa.org/`. Please replace the older blue-globe profile image with the current official square logo:
-
-`https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png`
-
-Please confirm that the public GuideStar profile and its image preview have refreshed.
-
-**Acceptance check:** The logged-out GuideStar profile exposes the current yellow-ray square logo and no longer references document 11078205.
+**Acceptance check:** The logged-out GuideStar profile exposes either approved current variant and accurate organization information.
 
 ## 5. GreatNonprofits
 
 **Status:** Delivered July 15, 2026, from `hello@saiaf.me` to `support@greatnonprofits.org`. Zoho message ID: `1784122678410013500`. The July 15 read-only check found no reply, and the public page and CDN image remain unchanged.
 
-**Verified outdated profile**
+**Verified current-variant profile**
 
 - Profile: `https://greatnonprofits.org/org/life-for-relief-and-development`
-- Older blue-globe image: `https://cdn.greatnonprofits.org/images/logos/org_logo_513389_1711518504.png`
+- Acceptable current blue-globe image: `https://cdn.greatnonprofits.org/images/logos/org_logo_513389_1711518504.png`
 - Local evidence: `legacy-blue-greatnonprofits-logo.png`
 - Public support address: `support@greatnonprofits.org`
 
@@ -157,24 +153,25 @@ Thank you,
 
 Life for Relief and Development
 
-**Acceptance check:** The logged-out profile displays the current yellow-ray square logo and the old CDN image is no longer referenced.
+**Historical note:** This message was sent before the blue-globe variant was confirmed acceptable. Do not infer that a correction is still required, and do not send a follow-up solely about this logo.
+
+**Acceptance check:** The logged-out profile displays either approved current variant and links to accurate LifeUSA details.
 
 ## 6. Controlled social profiles
 
 **Status:** Pending human approval as `APR-005`. No profile has been changed.
 
-This is an owned-profile implementation queue, not publisher outreach. The July 15 audit confirms the older blue-globe profile image on LinkedIn, the main English Facebook page, Instagram, YouTube, and X. The English Linktree avatar is current, but its Facebook button incorrectly points to the Somali-language Facebook page, which also uses the older blue-globe logo.
+This is an owned-profile integrity queue, not publisher outreach. The July 15 audit captured the blue-globe profile image on LinkedIn, the main English Facebook page, Instagram, YouTube, and X. That logo is an acceptable current variant. The English Linktree avatar is canonical, but its Facebook button incorrectly points to the Somali-language Facebook page.
 
 **Administrator checklist**
 
-1. Upload `current-square-favicon-source.png` to LinkedIn, Facebook, Instagram, YouTube, and X.
-2. Keep the full square mark visible inside each platform's circular crop.
-3. Change the English Linktree Facebook destination to `https://www.facebook.com/Life4ReliefEN/`.
-4. Update the Somali Facebook page profile photo using the current square master.
-5. Check TikTok and Threads while signed in; normalize their profile photos if they are not current.
-6. Verify each public profile logged out and store the resulting public image or screenshot.
+1. Keep the acceptable blue-globe profile images unless the client separately approves canonical-logo standardization.
+2. Change the English Linktree Facebook destination to `https://www.facebook.com/Life4ReliefEN/`.
+3. Check TikTok and Threads while signed in and classify them as canonical current, acceptable current variant, retired, or uncertain.
+4. Change a logo only if it is the retired crescent mark or optional standardization is separately approved.
+5. Verify each public profile logged out and store the resulting public image or screenshot.
 
-**Acceptance check:** Each public profile and preview exposes the current yellow-ray square logo, and the English Linktree opens the intended English Facebook page.
+**Acceptance check:** Each public profile and preview exposes either approved current variant, and the English Linktree opens the intended English Facebook page.
 
 ## 7. ReliefWeb profile enhancement
 

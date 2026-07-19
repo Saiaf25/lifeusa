@@ -2,6 +2,10 @@
 
 Checked July 19, 2026 at 10:17 Europe/Istanbul. This run was read-only outside the repository. No message, form, access request, approval, or account change was made.
 
+## Classification correction recorded later July 19
+
+The client confirmed that the blue-globe logo used on Facebook is an acceptable current variant, not an outdated mark. The measurements below remain valid observations, but every matching blue-globe file is now classified as an acceptable current variant rather than a correction blocker. Historical evidence filenames containing `legacy-blue` are retained only to preserve evidence paths. The retired crescent mark remains the obsolete logo family.
+
 ## Result
 
 The campaign is not complete. No source correction or Google refresh was proved in this run, and the stable-check count remains **0 of 3**.
@@ -24,19 +28,19 @@ All pages and direct images below returned HTTP `200`.
 | Surface | Public evidence on July 19 | Classification |
 |---|---|---|
 | Kids That Do Good | Page still references `life-for-relief-and-development-logo.png` in the visible image, Open Graph, and X/Twitter metadata. Direct file is 200 by 200 PNG, 12,519 bytes, SHA-256 `007d9b603111684bd0142feb1dae5e41ce144e500d68bbc1ea6af14051f4e26f`, and decoded-pixel AE is `0` against the July 15 retired-logo evidence | Source unchanged; no correction proved |
-| GreatNonprofits | JSON-LD, Open Graph, and X/Twitter metadata still reference `org_logo_513389_1711518504.png`. Direct file is 266 by 266 PNG, 283,806 bytes, SHA-256 `2d1de086aa753d889f32d05b3fabc232e76f1fe16f4c9a4ad0f64f6d67108117`, and decoded-pixel AE is `0` | Source unchanged; no correction proved |
+| GreatNonprofits | JSON-LD, Open Graph, and X/Twitter metadata still reference `org_logo_513389_1711518504.png`. Direct file is 266 by 266 PNG, 283,806 bytes, SHA-256 `2d1de086aa753d889f32d05b3fabc232e76f1fe16f4c9a4ad0f64f6d67108117`, and decoded-pixel AE is `0` | Acceptable current variant unchanged; no correction required |
 | Old WordPress archive | Page still embeds `life-logo-hd_white.png`. Direct file is 1500 by 1500 PNG, 514,944 bytes, SHA-256 `281840637b1241b09371d2c0adf19d4a7b683fbc8683d0af39e4ad42afc66850`, and decoded-pixel AE is `0` | Retired source unchanged |
 | Arab Info Mall | Profile still embeds `/Attachments/Logos/10751.gif` and still links to the HTTP LifeUSA website. Direct file is 200 by 200 GIF, 12,092 bytes, SHA-256 `9296fe04f8808f906310433494959417a290d2933d5603362e40e25fce3bcb88`, and decoded-pixel AE is `0` | Retired source and stale details unchanged |
-| Candid / GuideStar | Profile still embeds `https://docs.candid.org/edoc/11078205`. Direct file is 1500 by 1500 PNG, SHA-256 `f440247655ec4a13196be3ee40b291c361de42e596a05941395fc22dd42b6328`, and decoded-pixel AE is `0` | Older blue-globe source unchanged |
+| Candid / GuideStar | Profile still embeds `https://docs.candid.org/edoc/11078205`. Direct file is 1500 by 1500 PNG, SHA-256 `f440247655ec4a13196be3ee40b291c361de42e596a05941395fc22dd42b6328`, and decoded-pixel AE is `0` | Acceptable current variant unchanged; no correction required |
 
 AE is ImageMagick absolute pixel error against the preserved July 15 evidence image. A value of `0` proves identical decoded pixels even when container encoding or metadata differs.
 
 ## Authority profiles
 
-- LinkedIn still exposes the preserved older blue-globe image at 200 by 200; decoded-pixel AE is `0`.
-- YouTube still exposes the preserved older blue-globe image at 900 by 900; decoded-pixel AE is `0`.
-- X still exposes the preserved older blue-globe image at 400 by 400; decoded-pixel AE is `0`.
-- The English Facebook page and Somali Facebook page both visibly showed the older blue-globe profile image in a logged-out browser.
+- LinkedIn still exposes the preserved acceptable current blue-globe variant at 200 by 200; decoded-pixel AE is `0`.
+- YouTube still exposes the preserved acceptable current blue-globe variant at 900 by 900; decoded-pixel AE is `0`.
+- X still exposes the preserved acceptable current blue-globe variant at 400 by 400; decoded-pixel AE is `0`.
+- The English Facebook page and Somali Facebook page both visibly showed the acceptable current blue-globe variant in a logged-out browser.
 - The English Linktree still uses the current avatar family, but its Facebook destination remains the Somali profile ID `61563961181765`.
 - ReliefWeb still links to `http://www.lifeusa.org` and exposes no LifeUSA profile logo.
 - Charity Navigator still exposes the correct organization record and no LifeUSA profile logo.
@@ -58,7 +62,7 @@ Both canonical assets remain byte-for-byte identical to the documented masters. 
 ## Google surfaces
 
 - The signed-out Google Search and Images queries were requested with `hl=en`, `gl=us`, and `pws=0`, but Google returned an anti-automation challenge. The paid-result logo, organic favicon, Knowledge Panel state, and ranked Images set are therefore **inconclusive for July 19**. The July 15 verified state remains the last proved state and was not rewritten as current.
-- The logged-out public Maps listing remained observable at CID `0xd5173b8aa5409446`: 4.3 stars, 20 reviews, correct Southfield address, stale `http://www.lifeusa.org/` website link, and older-logo imagery. No source correction or Google refresh was proved.
+- The logged-out public Maps listing remained observable at CID `0xd5173b8aa5409446`: 4.3 stars, 20 reviews, correct Southfield address, stale `http://www.lifeusa.org/` website link, and blue-globe imagery. The website link remains actionable; matching blue-globe imagery is acceptable.
 
 ## Approval and next check
 

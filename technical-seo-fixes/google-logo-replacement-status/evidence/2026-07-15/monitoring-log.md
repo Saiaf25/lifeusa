@@ -8,6 +8,10 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## July 19 logo classification decision
+
+The client confirmed that the blue-globe logo used on Facebook and matching official profiles is an acceptable current variant. It is not an outdated-logo blocker. The canonical yellow-ray square remains preferred for new placements. The retired crescent mark remains the source-removal target. SENT-002 is preserved as a historical sent-message record, but GreatNonprofits no longer requires a logo correction.
+
 ## July 19 scheduled check
 
 The first scheduled weekly check is complete. No publisher reply, source correction, account change, or Google refresh was proved.
@@ -16,10 +20,10 @@ The first scheduled weekly check is complete. No publisher reply, source correct
 
 - Zoho Mail: exact and broad read-only searches, including spam and trash, found no reply to SENT-001 or SENT-002. The original message IDs and successful delivery records remain unchanged.
 - Retired-crescent sources: Kids That Do Good, the old WordPress archive, and Arab Info Mall still reference their documented legacy images. Each direct image returned `200` and matched the preserved July 15 evidence with decoded-pixel absolute error `0`.
-- Older blue-globe sources: GreatNonprofits and Candid/GuideStar remain pixel-identical to the preserved evidence. LinkedIn, YouTube, and X direct profile images also remain pixel-identical. Both public Facebook profiles visibly retain the older blue-globe image.
+- Acceptable blue-globe variants: GreatNonprofits and Candid/GuideStar remain pixel-identical to the preserved evidence. LinkedIn, YouTube, and X direct profile images also remain pixel-identical. Both public Facebook profiles visibly retain the acceptable current variant. These are observations, not correction blockers.
 - Other authority signals: the English Linktree still points its Facebook destination to the Somali profile, and ReliefWeb still links to `http://www.lifeusa.org`. Charity Navigator still exposes no LifeUSA profile logo.
 - Owned signals: both canonical Wix assets returned `200` with unchanged dimensions and SHA-256 checksums. The homepage still uses the separate white `NGO.logo` and separate favicon source.
-- Google Maps: the logged-out Southfield listing still shows 4.3 stars, 20 reviews, the correct address, a stale HTTP website link, and older-logo imagery.
+- Google Maps: the logged-out Southfield listing still shows 4.3 stars, 20 reviews, the correct address, a stale HTTP website link, and blue-globe imagery. The HTTP link remains actionable; matching blue-globe imagery is acceptable.
 
 ### Inconclusive surfaces
 
