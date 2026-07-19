@@ -8,6 +8,35 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## July 19 scheduled check
+
+The first scheduled weekly check is complete. No publisher reply, source correction, account change, or Google refresh was proved.
+
+### Verified unchanged
+
+- Zoho Mail: exact and broad read-only searches, including spam and trash, found no reply to SENT-001 or SENT-002. The original message IDs and successful delivery records remain unchanged.
+- Retired-crescent sources: Kids That Do Good, the old WordPress archive, and Arab Info Mall still reference their documented legacy images. Each direct image returned `200` and matched the preserved July 15 evidence with decoded-pixel absolute error `0`.
+- Older blue-globe sources: GreatNonprofits and Candid/GuideStar remain pixel-identical to the preserved evidence. LinkedIn, YouTube, and X direct profile images also remain pixel-identical. Both public Facebook profiles visibly retain the older blue-globe image.
+- Other authority signals: the English Linktree still points its Facebook destination to the Somali profile, and ReliefWeb still links to `http://www.lifeusa.org`. Charity Navigator still exposes no LifeUSA profile logo.
+- Owned signals: both canonical Wix assets returned `200` with unchanged dimensions and SHA-256 checksums. The homepage still uses the separate white `NGO.logo` and separate favicon source.
+- Google Maps: the logged-out Southfield listing still shows 4.3 stars, 20 reviews, the correct address, a stale HTTP website link, and older-logo imagery.
+
+### Inconclusive surfaces
+
+The signed-out Google Search and Images queries were requested with `hl=en`, `gl=us`, and `pws=0`, but Google returned an anti-automation challenge. The paid-result logo, organic favicon, Knowledge Panel state, and ranked Images set were not directly observable. Their July 15 verified state remains the last proved state; no current claim was inferred.
+
+Instagram returned a logged-out public-page load error. TikTok and Threads remain unavailable for reliable logged-out image verification. Their statuses were not changed.
+
+Full dated measurements, checksums, and evidence interpretation: [July 19 monitoring check](../2026-07-19/monitoring-check.md).
+
+### Decision
+
+- SENT-001 and SENT-002 remain **Already sent**, with no verified reply.
+- LOGO-008 and LOGO-011 remain **Waiting**.
+- LOGO-004 through LOGO-007, LOGO-009, LOGO-012, LOGO-014 through LOGO-016, and LOGO-018 remain **In progress**.
+- APR-001 through APR-008 remain pending approval; no item was executed.
+- Stable-check count remains **0 of 3** because source corrections are incomplete.
+
 ## July 15 control check
 
 ### Zoho delivery and reply state
@@ -56,4 +85,4 @@ The first loaded Google Images result set still includes Kids That Do Good and t
 
 ## Next scheduled check
 
-Sunday, July 19, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
+Sunday, July 26, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
