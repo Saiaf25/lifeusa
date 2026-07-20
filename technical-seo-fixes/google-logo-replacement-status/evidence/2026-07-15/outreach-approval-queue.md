@@ -135,10 +135,12 @@ Approve items by their exact IDs, for example: `Approve APR-001 and APR-007.` Ap
 
 ## APR-007: Wix editor identity-signal changes
 
-**Default status:** Pending approval
+**Current status:** Approved July 20, 2026; partially executed
 **External effect:** Publishes changes to the live LifeUSA website
 **Access needed:** Wix editor access for the existing Life USA site
 **Implementation specification:** [Wix logo implementation specification](wix-implementation-spec.md)
+
+The user explicitly approved `APR-007` in the current thread. The homepage NGO structured-data portion was manually published and verified live on July 20, completing `LOGO-005`. The public brand-resources page now displays both canonical logo files, and the project owner explicitly accepted it without direct download links, completing `LOGO-004`. Two `WebSite` nodes and other unverified canonical visual placements remain open, so APR-007 is not marked completed.
 
 **Prepared action package**
 

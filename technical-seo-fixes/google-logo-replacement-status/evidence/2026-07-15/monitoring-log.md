@@ -8,6 +8,33 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## July 20 owned brand-resources publication
+
+The user confirmed publication of `https://www.lifeusa.org/brand-resources`. A logged-out public check returned `200` and verified native Wix heading, introductory copy, and a two-item Wix Pro Gallery.
+
+- The live 1800 by 1800 square PNG is byte-for-byte identical to the approved square master.
+- The initial check found a derived 3000 by 879 horizontal JPG; a second cache-busted check proved it was replaced by the approved 4101 by 1201 canonical PNG.
+- The square has descriptive alt text. The horizontal image alt field remains empty, but its official title is visible.
+- The project owner explicitly confirmed that direct download links are not required and accepted the current page as complete for this action.
+
+`LOGO-004` is **Done**. The owned page and both canonical assets are verified live under the project owner's acceptance criteria. Full evidence: [July 20 LOGO-004 brand-page verification](../2026-07-20/logo-004-brand-page-live-verification.md).
+
+This ad hoc owned-site change does not increment the scheduled stable-check count, which remains **0 of 3**.
+
+## July 20 owned structured-data correction
+
+The user explicitly approved `APR-007`, manually published the prepared homepage NGO markup, and reported completion. A cache-busted public-source verification proved the following:
+
+- one parseable `NGO` node now uses `https://www.lifeusa.org/#organization`;
+- `alternateName`, the verified official `sameAs` list, address, and contact point are present;
+- the NGO logo is the canonical colored 1800 by 1800 Wix square;
+- the former white-logo URL is absent from the fetched homepage HTML; and
+- the canonical square still returns HTTP `200` with the documented dimensions and checksum.
+
+`LOGO-005` is now **Done**. `APR-007` remains approved and partially executed because two `WebSite` nodes and remaining visual placements are still open; the brand-resources portion is complete under `LOGO-004`. Full evidence: [July 20 LOGO-005 verification](../2026-07-20/logo-005-live-verification.md).
+
+This ad hoc correction does not increment the scheduled stable-check count, which remains **0 of 3**.
+
 ## July 19 logo classification decision
 
 The client confirmed that the blue-globe logo used on Facebook and matching official profiles is an acceptable current variant. It is not an outdated-logo blocker. The canonical yellow-ray square remains preferred for new placements. The retired crescent mark remains the source-removal target. SENT-002 is preserved as a historical sent-message record, but GreatNonprofits no longer requires a logo correction.

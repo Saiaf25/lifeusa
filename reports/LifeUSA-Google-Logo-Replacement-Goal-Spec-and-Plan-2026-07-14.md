@@ -617,7 +617,7 @@ All external messages, access requests, form submissions, and changes to client-
 - Verified the first 20 broad Google Images results: 14 official, four unrelated same-name results, two current-branded marketplace results, and no retired crescent mark in that exact sample.
 - Uploaded the verified 1800 by 1800 current square asset to LifeUSA's Wix Media Manager and assigned it to the Wix Business Profile logo field.
 - Uploaded the approved 4101 by 1201 horizontal logo to the same LifeUSA Wix Media Manager. The public file returns `200`, and its remote SHA-256 exactly matches the approved local source. The canonical square and horizontal asset kit is now complete.
-- Confirmed that the homepage custom `NGO.logo` still points to a separate white file and that the entity graph still lacks `NGO.@id` and `sameAs`.
+- Confirmed July 20 that the manually published homepage `NGO` node now uses the canonical colored square, stable `@id`, `alternateName`, verified `sameAs`, address, and contact point. The former white-logo URL is absent from the fetched homepage HTML. Two `WebSite` nodes remain for later consolidation.
 - Reverified the retired crescent mark on the old WordPress archive, Kids That Do Good, and Arab Info Mall.
 - Verified the blue-globe mark on Candid/GuideStar, GreatNonprofits, LinkedIn, the English Facebook page, Instagram, YouTube, X, and the Somali Facebook page linked from the English Linktree. On July 19, the client confirmed this is an acceptable current variant, not an outdated mark.
 - Verified that Charity Navigator and ReliefWeb expose no LifeUSA logo, so they are enhancement targets rather than stale-logo sources.

@@ -46,3 +46,17 @@ The live homepage was reloaded after the Business Profile update. Its existing c
 This confirms the custom homepage structured data is managed separately from the Wix Business Profile logo. The business-profile correction is complete, while replacement of `NGO.logo`, addition of `@id` and `sameAs`, and duplicate `WebSite` cleanup remain active under LOGO-005.
 
 The remaining homepage JSON-LD, visible header, favicon, and public brand-page changes require an approved Wix editor session. No supported Wix REST route was found for those specific existing-page edits.
+
+## July 20 homepage NGO repair
+
+The user explicitly approved `APR-007` and manually published the prepared homepage NGO markup. Public rendered-source verification confirmed that the live NGO node now uses the canonical colored 1800 by 1800 square, stable `@id`, `alternateName`, verified `sameAs`, address, and contact point. The former white-logo URL is absent from the fetched homepage HTML.
+
+`LOGO-005` is complete. Two `WebSite` nodes remain, so duplicate-node cleanup and the other unverified APR-007 placements remain open. See [LOGO-005 live verification](../2026-07-20/logo-005-live-verification.md).
+
+## July 20 brand-resources page publication
+
+The user published `https://www.lifeusa.org/brand-resources`. Logged-out verification returned `200` and confirmed that the heading, introductory copy, and two-logo gallery are native Wix content.
+
+The first check found an exact approved 1800 by 1800 square and a derived 3000 by 879 horizontal JPG. A second cache-busted check proved that the horizontal placement was replaced with the approved 4101 by 1201 canonical PNG. The square has descriptive alt text; the horizontal title is visible, although its image alt field remains empty.
+
+The project owner explicitly confirmed that direct download links are not required and accepted the current page as complete. `LOGO-004` is done. See [LOGO-004 brand-page live verification](../2026-07-20/logo-004-brand-page-live-verification.md).
