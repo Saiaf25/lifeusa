@@ -1179,7 +1179,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.27</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.28</footer>
   </main>
 
   <script>
@@ -1412,7 +1412,7 @@
       ];
 
       const defaultState = () => ({
-        version: 21,
+        version: 22,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1428,7 +1428,7 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 21;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 22;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -1525,9 +1525,9 @@
             const previous = previousItems[item.id] || [];
             const savedNote = cleanText(saved.note);
             const legacyFingerprints = LEGACY_DEFAULT_NOTE_FINGERPRINTS[item.id] || [];
-            const isLegacyDefaultNote = Number.isFinite(raw.version) && raw.version >= 16 && raw.version <= 20 && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const isLegacyDefaultNote = legacyFingerprints.includes(textFingerprint(savedNote.trim()));
             const upgradeStatus = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => saved.status === value.status));
-            const upgradeNote = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
+            const upgradeNote = isLegacyDefaultNote || (isPreviousVersion && previous.some(value => savedNote.trim() === value.note.trim()));
             base.items[item.id] = {
               status: upgradeStatus ? item.status : cleanStatus(saved.status),
               note: upgradeNote ? item.note : savedNote
