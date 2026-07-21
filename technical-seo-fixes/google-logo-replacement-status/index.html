@@ -638,9 +638,7 @@
       <h1>Google logo replacement program</h1>
       <p id="heroSummary" class="hero-summary" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable project summary">Replace the retired LifeUSA logo wherever it still appears, strengthen the approved logo across the website and trusted profiles, then check Google until the results stay consistent.</p>
       <div class="meta">
-        <span>Started: Sunday, July 12, 2026</span>
-        <span>Target monitoring end: October 4, 2026</span>
-        <span id="projectClock">Week 1 of 12</span>
+        <span>Started: Sunday, July 5, 2026</span>
         <span>Owner: Saiaf Gamal</span>
       </div>
     </header>
@@ -943,7 +941,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.22 · Page updated July 21, 2026</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.23</footer>
   </main>
 
   <script>
@@ -952,8 +950,7 @@
 
       const STORAGE_KEY = "lifeusa-google-logo-status-v1";
       const PROJECT_NAME = "LifeUSA Google Logo Replacement Program";
-      const START_DATE = "2026-07-12";
-      const TARGET_DATE = "2026-10-04";
+      const START_DATE = "2026-07-05";
       const DEFAULT_HERO_SUMMARY = document.getElementById("heroSummary").textContent.trim();
       const PREVIOUS_HERO_SUMMARIES = [
         "Replace retired LifeUSA logo signals across owned pages, Google properties, and authoritative third-party sources, then monitor until the current logo is consistently shown."
@@ -996,78 +993,97 @@
       };
 
       const actions = [
-        { id: "LOGO-001", title: "Save the starting Google results", phase: 1, owner: "SEO lead", dependency: "None", evidence: "Saved Google Search and Images screenshots", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Done July 15. Saved the starting Google Search and Images results with personalization turned off." },
-        { id: "LOGO-002", title: "Agree which logos are current and retired", phase: 1, owner: "SEO lead and client", dependency: "Public website and official profiles", evidence: "Approved logo list", start: "2026-07-12", end: "2026-07-19", status: "done", note: "Done July 19. The yellow-ray logo is preferred, the blue-globe logo is also approved, and the crescent logo is retired." },
-        { id: "LOGO-010", title: "Review the first 20 Google Images sources", phase: 1, owner: "SEO lead", dependency: "Starting Google results", evidence: "List of the first 20 image sources", start: "2026-07-12", end: "2026-07-15", status: "done", note: "Done July 15. The first 20 results contained 14 official sources, four unrelated businesses, two current marketplace results, and no retired crescent logo." },
+        { id: "LOGO-001", title: "Save the starting Google results", phase: 1, owner: "SEO lead", dependency: "None", evidence: "Saved Google Search and Images screenshots", status: "done", note: "Done in July. Saved the starting Google Search and Images results with personalization turned off." },
+        { id: "LOGO-002", title: "Agree which logos are current and retired", phase: 1, owner: "SEO lead and client", dependency: "Public website and official profiles", evidence: "Approved logo list", status: "done", note: "Done in July. The yellow-ray logo is preferred, the blue-globe logo is also approved, and the crescent logo is retired." },
+        { id: "LOGO-010", title: "Review the first 20 Google Images sources", phase: 1, owner: "SEO lead", dependency: "Starting Google results", evidence: "List of the first 20 image sources", status: "done", note: "Done in July. The first 20 results contained 14 official sources, four unrelated businesses, two current marketplace results, and no retired crescent logo." },
 
-        { id: "LOGO-003", title: "Create the official square and horizontal logo files", phase: 2, owner: "Brand owner", dependency: "Approved logo decision", evidence: "Live square and horizontal files", start: "2026-07-13", end: "2026-07-17", status: "done", note: "Done July 15. The approved square and horizontal logo files are live and match the original files exactly." },
-        { id: "LOGO-004", title: "Publish the LifeUSA Brand Resources page", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live Brand Resources page", start: "2026-07-14", end: "2026-07-20", status: "done", note: "Done July 20. The Brand Resources page is live and shows both approved logo files." },
-        { id: "LOGO-005", title: "Fix the logo information Google reads from the homepage", phase: 2, owner: "Wix administrator and SEO lead", dependency: "Official square logo", evidence: "Public homepage organization information", start: "2026-07-14", end: "2026-07-20", status: "done", note: "Done July 20. The homepage now gives Google the approved colored logo and correct organization details. One separate cleanup remains: the hidden Google information lists the website twice." },
-        { id: "LOGO-006", title: "Use approved logos in the header, footer, and browser icon", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live header, footer, and browser icon", start: "2026-07-14", end: "2026-07-21", status: "done", note: "Done July 21. The header and footer use the approved horizontal logo, and the browser icon uses the approved square logo." },
+        { id: "LOGO-003", title: "Create the official square and horizontal logo files", phase: 2, owner: "Brand owner", dependency: "Approved logo decision", evidence: "Live square and horizontal files", status: "done", note: "Done in July. The approved square and horizontal logo files are live and match the original files exactly." },
+        { id: "LOGO-004", title: "Publish the LifeUSA Brand Resources page", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live Brand Resources page", status: "done", note: "Done in July. The Brand Resources page is live and shows both approved logo files." },
+        { id: "LOGO-005", title: "Fix the logo information Google reads from the homepage", phase: 2, owner: "Wix administrator and SEO lead", dependency: "Official square logo", evidence: "Public homepage organization information", status: "done", note: "Done in July. The homepage now gives Google the approved colored logo and correct organization details. One separate cleanup remains: the hidden Google information lists the website twice." },
+        { id: "LOGO-006", title: "Use approved logos in the header, footer, and browser icon", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live header, footer, and browser icon", status: "done", note: "Done in July. The header and footer use the approved horizontal logo, and the browser icon uses the approved square logo." },
 
-        { id: "LOGO-007", title: "Remove the retired logo from the old WordPress site", phase: 3, owner: "WordPress owner", dependency: "Decision on the old WordPress site", evidence: "Public check showing the old logo is gone", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Still open. The old WordPress site continues to show the retired crescent logo. A decision is needed before changing the site." },
-        { id: "LOGO-008", title: "Replace the retired logo on Kids That Do Good", phase: 3, owner: "Client communications", dependency: "Publisher reply", evidence: "Updated public profile and image", start: "2026-07-15", end: "2026-07-26", status: "waiting", note: "Waiting for a reply. The request was sent July 15, but the public page still shows the retired logo." },
-        { id: "LOGO-009", title: "Replace the retired logo on Arab Info Mall", phase: 3, owner: "Client communications", dependency: "Client approval to contact the publisher", evidence: "Updated public profile and image", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "Needs approval. The profile still shows the retired logo and an old website address. No message has been sent." },
-        { id: "LOGO-015", title: "Review other websites that rank for LifeUSA", phase: 3, owner: "SEO lead and client communications", dependency: "List of outside sources", evidence: "Updated source list and public checks", start: "2026-07-15", end: "2026-07-26", status: "in_progress", note: "In progress. Known retired-logo sources are listed, and any remaining contact or account work is waiting in the approval queue." },
+        { id: "LOGO-007", title: "Remove the retired logo from the old WordPress site", phase: 3, owner: "WordPress owner", dependency: "Decision on the old WordPress site", evidence: "Public check showing the old logo is gone", status: "in_progress", note: "Still open. The old WordPress site continues to show the retired crescent logo. A decision is needed before changing the site." },
+        { id: "LOGO-008", title: "Replace the retired logo on Kids That Do Good", phase: 3, owner: "Client communications", dependency: "Publisher reply", evidence: "Updated public profile and image", status: "waiting", note: "Waiting for a reply. The request was sent in July, but the public page still shows the retired logo." },
+        { id: "LOGO-009", title: "Replace the retired logo on Arab Info Mall", phase: 3, owner: "Client communications", dependency: "Client approval to contact the publisher", evidence: "Updated public profile and image", status: "in_progress", note: "Needs approval. The profile still shows the retired logo and an old website address. No message has been sent." },
+        { id: "LOGO-015", title: "Review other websites that rank for LifeUSA", phase: 3, owner: "SEO lead and client communications", dependency: "List of outside sources", evidence: "Updated source list and public checks", status: "in_progress", note: "In progress. Known retired-logo sources are listed, and any remaining contact or account work is waiting in the approval queue." },
 
-        { id: "LOGO-014", title: "Update important nonprofit and social profiles", phase: 4, owner: "LifeUSA profile owners", dependency: "Access to each profile", evidence: "Public profile checks", start: "2026-07-15", end: "2026-08-02", status: "in_progress", note: "In progress. The blue-globe logos are approved. Remaining fixes include the wrong Facebook link in Linktree, the old ReliefWeb website link, and a fresh Instagram check." },
-        { id: "LOGO-019", title: "Publish 20 new directory profiles with the approved logo", phase: 4, owner: "SEO lead and LifeUSA profile owners", dependency: "Official square logo and working account access", evidence: "20 public profiles with the logo and LifeUSA website link", start: "2026-07-19", end: "2026-08-16", status: "in_progress", note: "2 of 20 are done: Find-Us-Here and A-Z Business Finder. Existing profiles need owner access and do not count as new profiles. No access request has been sent." },
+        { id: "LOGO-014", title: "Update important nonprofit and social profiles", phase: 4, owner: "LifeUSA profile owners", dependency: "Access to each profile", evidence: "Public profile checks", status: "in_progress", note: "In progress. The blue-globe logos are approved. Remaining fixes include the wrong Facebook link in Linktree, the old ReliefWeb website link, and a fresh Instagram check." },
+        { id: "LOGO-019", title: "Publish 20 new directory profiles with the approved logo", phase: 4, owner: "SEO lead and LifeUSA profile owners", dependency: "Official square logo and working account access", evidence: "20 public profiles with the logo and LifeUSA website link", status: "in_progress", note: "2 of 20 are done: Find-Us-Here and A-Z Business Finder. Existing profiles need owner access and do not count as new profiles. No access request has been sent." },
 
-        { id: "LOGO-011", title: "Update the Southfield Google Business Profile", phase: 5, owner: "LifeUSA Google account owner", dependency: "Access from the current profile manager", evidence: "Public Google Business Profile check", start: "2026-07-22", end: "2026-08-02", status: "waiting", note: "Waiting for approved account access. The profile exists and its blue-globe logo is approved, but its website link still uses HTTP. No access request has been sent." },
-        { id: "LOGO-012", title: "Watch for a separate LifeUSA Knowledge Panel", phase: 5, owner: "Approved LifeUSA representative", dependency: "A separate organization panel must appear", evidence: "Public Google result and claim state", start: "2026-07-22", end: "2026-08-02", status: "in_progress", note: "No separate LifeUSA organization panel was found. Keep checking and use the claim process only if one appears." },
-        { id: "LOGO-013", title: "Ask Google to recrawl corrected pages and remove old images when valid", phase: 5, owner: "Search Console owner", dependency: "Each corrected source must be live", evidence: "Google request reference and follow-up check", start: "2026-07-22", end: "2026-08-23", status: "not_started", note: "Not started. Submit requests only after each website has removed or replaced the retired logo." },
-        { id: "LOGO-016", title: "Check the LifeUSA Google Ads logo settings", phase: 5, owner: "LifeUSA Ads administrator", dependency: "LifeUSA Google Ads account access", evidence: "Google Ads logo settings check", start: "2026-07-22", end: "2026-08-02", status: "in_progress", note: "The visible ad uses the approved blue-globe logo, so changing it is optional. The available Google Ads access does not include the LifeUSA account." },
+        { id: "LOGO-011", title: "Update the Southfield Google Business Profile", phase: 5, owner: "LifeUSA Google account owner", dependency: "Access from the current profile manager", evidence: "Public Google Business Profile check", status: "waiting", note: "Waiting for approved account access. The profile exists and its blue-globe logo is approved, but its website link still uses HTTP. No access request has been sent." },
+        { id: "LOGO-012", title: "Watch for a separate LifeUSA Knowledge Panel", phase: 5, owner: "Approved LifeUSA representative", dependency: "A separate organization panel must appear", evidence: "Public Google result and claim state", status: "in_progress", note: "No separate LifeUSA organization panel was found. Keep checking and use the claim process only if one appears." },
+        { id: "LOGO-013", title: "Ask Google to recrawl corrected pages and remove old images when valid", phase: 5, owner: "Search Console owner", dependency: "Each corrected source must be live", evidence: "Google request reference and follow-up check", status: "not_started", note: "Not started. Submit requests only after each website has removed or replaced the retired logo." },
+        { id: "LOGO-016", title: "Check the LifeUSA Google Ads logo settings", phase: 5, owner: "LifeUSA Ads administrator", dependency: "LifeUSA Google Ads account access", evidence: "Google Ads logo settings check", status: "in_progress", note: "The visible ad uses the approved blue-globe logo, so changing it is optional. The available Google Ads access does not include the LifeUSA account." },
 
-        { id: "LOGO-017", title: "Optional: run a short branded Google Ads test", phase: 6, owner: "LifeUSA Ads administrator", dependency: "Separate approval and budget", evidence: "Short campaign report", start: "2026-07-20", end: "2026-08-18", status: "waiting", note: "Waiting for separate approval and budget. This may increase visibility, but it will not change normal Google Search or Images results." },
+        { id: "LOGO-017", title: "Optional: run a short branded Google Ads test", phase: 6, owner: "LifeUSA Ads administrator", dependency: "Separate approval and budget", evidence: "Short campaign report", status: "waiting", note: "Waiting for separate approval and budget. This may increase visibility, but it will not change normal Google Search or Images results." },
 
-        { id: "LOGO-018", title: "Check Google and key sources weekly until results stay stable", phase: 7, owner: "SEO lead", dependency: "Major source fixes are live", evidence: "Weekly log and three stable checks", start: "2026-07-19", end: "2026-10-04", status: "in_progress", note: "The first weekly check was recorded July 19. No publisher fixes or replies were confirmed, and Google blocked the automated Search and Images check. Stable checks: 0 of 3. Next check: July 26." }
+        { id: "LOGO-018", title: "Check Google and key sources weekly until results stay stable", phase: 7, owner: "SEO lead", dependency: "Major source fixes are live", evidence: "Weekly log and three stable checks", status: "in_progress", note: "The first weekly check was recorded in July. No publisher fixes or replies were confirmed, and Google blocked the automated Search and Images check. Stable checks: 0 of 3. The next weekly check is scheduled." }
       ];
 
-      const VERSION_16_ACTION_NOTES = {
-        "LOGO-001": "Completed July 15. Captured Google Search and Google Images for LifeUSA at 1280 px, hl=en, gl=us, pws=0. Google reported that results were not personalized. See the Captured evidence section.",
-        "LOGO-002": "Updated July 19. The yellow-ray assets are canonical, the blue-globe logo used on Facebook and matching official profiles is an acceptable current variant, and the crescent mark is retired.",
-        "LOGO-003": "Completed July 15. The canonical Wix-owned set now contains the approved 1800 x 1800 square and 4101 x 1201 horizontal files. Both are live; the horizontal remote checksum exactly matches the approved website source, and the square is assigned to the Wix Business Profile logo field.",
-        "LOGO-004": "Completed and verified July 20. The public brand-resources page returns 200 and now displays the approved canonical 1800 x 1800 square and 4101 x 1201 horizontal PNG. The project owner explicitly accepted the current page and confirmed that direct download links are not required.",
-        "LOGO-005": "Completed and verified July 20 after explicit APR-007 approval and manual Wix publication. The public homepage exposes one parseable NGO node with the canonical colored 1800 x 1800 square, stable @id, alternateName, verified sameAs, address, and contact point. The former white-logo URL is absent. Two WebSite nodes remain under the still-open APR-007 cleanup scope.",
-        "LOGO-006": "Completed and verified July 21. The live header and footer use the approved 4101 x 1201 horizontal master, the favicon source is byte-identical to the approved 1800 x 1800 square, all direct files return 200, and both visible logo placements expose descriptive alt text.",
-        "LOGO-007": "Reverified July 19. The archive page still embeds the 1500 x 1500 retired crescent file, and the direct image is pixel-identical to the July 15 evidence. APR-006 remains pending.",
-        "LOGO-008": "Reverified July 19. No reply was found to SENT-001. The page still references the retired image in visible, Open Graph, and X/Twitter fields, and the 200 x 200 direct image remains pixel-identical to the July 15 evidence.",
-        "LOGO-009": "Reverified July 19. The profile still serves the pixel-identical retired crescent GIF and stale HTTP website details. APR-001 remains pending approval; nothing has been sent.",
-        "LOGO-010": "Completed July 15. The broad LifeUSA query produced 14 official results, four unrelated same-name business results, two current-branded marketplace results, and zero retired crescent marks in the first 20. The full Markdown and CSV inventories are attached.",
-        "LOGO-011": "Reverified logged out July 19. The established Southfield Maps listing still has 4.3 stars, 20 reviews, the correct address, and an HTTP website link. Matching blue-globe imagery is acceptable. APR-004 remains pending; no access request was sent.",
-        "LOGO-012": "Audited July 15. The exact Southfield entity query shows the local Business Profile, not a separate nonprofit Knowledge Panel. Continue monitoring branded entity queries and use the representative claim route only if a distinct organization panel appears.",
-        "LOGO-013": "Submit only after each source change has been verified live.",
-        "LOGO-014": "Classification corrected July 19. Blue-globe images on GreatNonprofits, Candid/GuideStar, LinkedIn, Facebook, YouTube, and X are acceptable current variants. Remaining defects are profile details such as the Linktree Facebook mismatch and ReliefWeb HTTP link. Instagram was inconclusive.",
-        "LOGO-015": "Kids That Do Good and GreatNonprofits correction emails were sent July 15 and their Zoho message IDs are recorded. Arab Info Mall and all other remaining outreach are human-gated in the approval queue with exact routes, prepared copy, and acceptance checks.",
-        "LOGO-016": "Audited July 15 and reclassified July 19. The sponsored result serves the acceptable current blue-globe variant, so replacement is optional standardization rather than a correctness blocker. The available Google Ads hierarchy contains no LifeUSA customer.",
-        "LOGO-017": "Optional bridge only. It does not change organic Google Images or Knowledge Panel selection.",
-        "LOGO-018": "July 19 scheduled check recorded. No replies or retired-source corrections were proved; canonical Wix assets remain healthy. Search and Images were blocked by an anti-automation challenge and recorded as inconclusive. Stable checks: 0 of 3. Next check: July 26.",
-        "LOGO-019": "Updated July 19. Find-Us-Here and A-Z Business Finder remain the first two qualifying new public profiles. A dedicated access register now preserves 13 important existing LifeUSA records for owner correction rather than duplicate creation. Every.org is the top access priority because its exact EIN profile uses a generic avatar and HTTP link; Deed explicitly supports a logo after claim. Benevity, PayPal Giving Fund, Apple, Bing, Foursquare, Yelp, Cybo, CitySquares, ChamberofCommerce.com, Manta, and Double the Donation are also registered with precise access or verification needs. Existing records do not count toward the new-profile goal. New profiles done: 2 of 20. No access request was sent."
+      const LEGACY_DEFAULT_NOTE_FINGERPRINTS = {
+        "LOGO-001": [2468275072, 1188887501],
+        "LOGO-002": [2655374619, 1537012613],
+        "LOGO-003": [3546647972, 696936659],
+        "LOGO-004": [4126769937, 3390436989],
+        "LOGO-005": [3711447607, 2342541568],
+        "LOGO-006": [1089305338, 3435994832],
+        "LOGO-007": [2947637579, 4034130646],
+        "LOGO-008": [1454634842, 2221767985],
+        "LOGO-009": [2811563139, 1386573203],
+        "LOGO-010": [1180601467, 1638702859],
+        "LOGO-011": [1216590408, 1577497245],
+        "LOGO-012": [3826085019, 1956328277],
+        "LOGO-013": [233667454, 736287614],
+        "LOGO-014": [695747222, 2535362166],
+        "LOGO-015": [1918008430, 3230383188],
+        "LOGO-016": [863102646, 520464009],
+        "LOGO-017": [4268070283, 2210954547],
+        "LOGO-018": [4034705494, 2870245241],
+        "LOGO-019": [1958985006, 3326427807]
+      };
+      const VERSION_17_GATE_NOTE_FINGERPRINTS = {
+        "GATE-A": 1846156181,
+        "GATE-B": 2770102524,
+        "GATE-C": 1065718236,
+        "GATE-D": 2929358204,
+        "GATE-E": 3754322438
+      };
+      const VERSION_17_APPROVAL_NOTE_FINGERPRINTS = {
+        "SENT-001": 1853048249,
+        "SENT-002": 1822988967,
+        "APR-001": 2141943918,
+        "APR-002": 854980241,
+        "APR-003": 2294239386,
+        "APR-004": 986141171,
+        "APR-005": 1662200533,
+        "APR-006": 156236842,
+        "APR-007": 3076120800,
+        "APR-008": 1402853815
       };
 
       const gates = [
-        { id: "GATE-A", title: "Confirm the Google surfaces to monitor", description: "Establish a reproducible Search and Images baseline, then check Business Profile, Knowledge Panel, favicon, and paid assets in their assigned actions.", status: "done", note: "Completed July 15. Personalization-disabled Google Search and Images baselines are attached. Property-specific checks remain assigned to LOGO-011, LOGO-012, and LOGO-016." },
-        { id: "GATE-B", title: "Approve the official logo files", description: "Approve the live website and social mark as the current identity, then normalize square and horizontal masters and usage rules.", status: "done", note: "Completed July 15. The approved square and horizontal masters are live in LifeUSA's Wix Media Manager and verified as the canonical two-file set." },
+        { id: "GATE-A", title: "Confirm the Google surfaces to monitor", description: "Establish a reproducible Search and Images baseline, then check Business Profile, Knowledge Panel, favicon, and paid assets in their assigned actions.", status: "done", note: "Completed in July. Personalization-disabled Google Search and Images baselines are attached. Property-specific checks remain assigned to LOGO-011, LOGO-012, and LOGO-016." },
+        { id: "GATE-B", title: "Approve the official logo files", description: "Approve the live website and social mark as the current identity, then normalize square and horizontal masters and usage rules.", status: "done", note: "Completed in July. The approved square and horizontal masters are live in LifeUSA's Wix Media Manager and verified as the canonical two-file set." },
         { id: "GATE-C", title: "Decide the old WordPress site disposition", description: "Modernize it, retire it, or preserve selected history while removing all retired-logo media.", status: "waiting", note: "Prepared as APR-006 for a human disposition decision before account recovery or archive changes." },
         { id: "GATE-D", title: "Authorize or defer the paid bridge", description: "Use paid branded visibility only as an optional bridge after owned-source repairs.", status: "waiting", note: "Requires a separate budget or Ad Grants decision. Ads account access and logo replacement are separately queued as APR-008." },
-        { id: "GATE-E", title: "Authorize public brand guidance", description: "Approve an evergreen official brand-resources page without presenting the work as a false new rebrand.", status: "done", note: "Completed July 20. The user explicitly approved APR-007, published the public brand-resources page, and accepted it without direct download links. LOGO-004 is complete." }
+        { id: "GATE-E", title: "Authorize public brand guidance", description: "Approve an evergreen official brand-resources page without presenting the work as a false new rebrand.", status: "done", note: "Completed in July. The public brand-resources page is live and accepted without direct download links. LOGO-004 is complete." }
       ];
 
       const approvals = [
-        { id: "SENT-001", title: "Kids That Do Good correction", description: "The source-correction email was sent before the approval gate and is now awaiting a publisher reply.", effect: "External email already sent", route: "info@kidsthatdogood.com", routeUrl: "mailto:info@kidsthatdogood.com", copy: "Subject: Please update the Life for Relief and Development logo\nZoho message ID: 1784122643723013500\nNext step: wait for a reply, then verify the public profile and direct image URL.", status: "sent", note: "Delivered July 15, 2026, from hello@saiaf.me. July 19 read-only check: no reply; public page and retired image remain unchanged." },
-        { id: "SENT-002", title: "GreatNonprofits correction", description: "The source-correction email was sent before the approval gate and is now awaiting a publisher reply.", effect: "External email already sent", route: "support@greatnonprofits.org", routeUrl: "mailto:support@greatnonprofits.org", copy: "Subject: Please update the Life for Relief and Development profile logo\nZoho message ID: 1784122678410013500\nNext step: wait for a reply, then verify the logged-out profile and old CDN image.", status: "sent", note: "Delivered July 15, 2026, from hello@saiaf.me. July 19 read-only check: no reply; public profile and CDN image remain unchanged." },
+        { id: "SENT-001", title: "Kids That Do Good correction", description: "The source-correction email was sent before the approval gate and is now awaiting a publisher reply.", effect: "External email already sent", route: "info@kidsthatdogood.com", routeUrl: "mailto:info@kidsthatdogood.com", copy: "Subject: Please update the Life for Relief and Development logo\nZoho message ID: 1784122643723013500\nNext step: wait for a reply, then verify the public profile and direct image URL.", status: "sent", note: "Sent in July from hello@saiaf.me. No reply has been found; the public page and retired image remain unchanged." },
+        { id: "SENT-002", title: "GreatNonprofits correction", description: "The source-correction email was sent before the approval gate and is now awaiting a publisher reply.", effect: "External email already sent", route: "support@greatnonprofits.org", routeUrl: "mailto:support@greatnonprofits.org", copy: "Subject: Please update the Life for Relief and Development profile logo\nZoho message ID: 1784122678410013500\nNext step: wait for a reply, then verify the logged-out profile and old CDN image.", status: "sent", note: "Sent in July from hello@saiaf.me. No reply has been found; the public profile image remains unchanged." },
         { id: "APR-001", title: "Arab Info Mall profile correction", description: "Send the prepared full-profile correction to both official Arab Info Mall addresses.", effect: "Sends one external correction email", route: "arf@bibalex.org and info.mall@bibalex.org", routeUrl: "https://arabinfomall.bibalex.org/En/ContactUs.aspx?OrgID=-1", copy: "Subject: Correction request for Life for Relief and Development profile, organization 879\n\nRequest replacement of the retired logo on organization profile 879 with the official square Wix asset, correction of legacy organization details, access to the kiosk-editing route, or removal if the profile cannot be maintained. Full exact copy is linked below.", status: "pending_approval", note: "Official contact addresses and kiosk administrator workflow verified. Nothing sent." },
         { id: "APR-002", title: "Candid / GuideStar profile verification", description: "Use the authorized nonprofit administrator account for EIN 95-4402149 to verify website and identity fields. The blue-globe logo is an acceptable current variant.", effect: "Reviews or changes a public nonprofit profile", route: "Candid Update Nonprofit Profile", routeUrl: "https://www.guidestar.org/UpdateNonprofitProfile", copy: "Verify the canonical HTTPS website, legal identity, mission, and contact fields. Keep the acceptable blue-globe variant or optionally standardize to the canonical square only if separately chosen.", status: "pending_approval", note: "Authorized Candid organization access is required; logo replacement is not a correctness blocker." },
         { id: "APR-003", title: "ReliefWeb profile enhancement", description: "Ask ReliefWeb to change the organization homepage to HTTPS and add the current logo if supported.", effect: "Submits an external profile request", route: "ReliefWeb contact route", routeUrl: "https://reliefweb.int/contact", copy: "Subject: Update request for Life for Relief and Development organization profile\n\nRequest that https://reliefweb.int/organization/life link to https://www.lifeusa.org/ and add the official square Wix logo if the source-profile workflow supports it. Full exact copy is linked below.", status: "pending_approval", note: "Official ReliefWeb contact workflow verified. Nothing sent." },
         { id: "APR-004", title: "Google Business Profile access and correction", description: "Request access from an approved LifeUSA Google account or have the existing manager make the prepared corrections.", effect: "Requests account access and changes a live Google property", route: "Existing Southfield profile manager", routeUrl: "https://www.google.com/search?q=Life+for+Relief+and+Development+Southfield+MI", copy: "Use an approved organizational Google account. Change the website link to HTTPS, upload the canonical square logo, review business-supplied older photos, and verify the public profile. Do not use Saiaf's personal Google account unless separately approved.", status: "pending_approval", note: "The current session is not an authorized manager; no access request has been sent." },
         { id: "APR-005", title: "Official social profile and Linktree integrity", description: "Correct the English Linktree Facebook destination and verify controlled profiles. Blue-globe profile images are acceptable current variants.", effect: "Changes one public organization-controlled link and may verify profiles", route: "LinkedIn, Facebook, Instagram, YouTube, X, Linktree", routeUrl: "https://linktr.ee/LIFEUSA", copy: "Change the English Linktree Facebook destination to https://www.facebook.com/Life4ReliefEN/. Keep acceptable blue-globe profile images unless a retired crescent mark is found or canonical standardization is separately approved. Verify every profile logged out.", status: "pending_approval", note: "No controlled social account has been changed." },
         { id: "APR-006", title: "Old WordPress archive disposition", description: "Choose whether to modernize, preserve selected history without retired branding, or make the archive private.", effect: "Recovers and changes an organization-controlled archive", route: "WordPress.com account recovery and site settings", routeUrl: "https://lifeusaorg.wordpress.com/where-we-are/", copy: "Recover the owner account, apply the approved disposition, remove every public retired-logo reference, and verify the direct legacy media URL. Preserve useful history only when it does not compete with the current website.", status: "pending_approval", note: "A disposition decision is required before account recovery or changes." },
-        { id: "APR-007", title: "Wix editor identity-signal changes", description: "Publish the prepared homepage JSON-LD, canonical asset placements, and public brand-resources page.", effect: "Publishes changes to the live LifeUSA website", route: "Existing Life USA Wix editor", routeUrl: "./evidence/2026-07-15/wix-implementation-spec.md", copy: "Replace the white NGO.logo with the colored square, add NGO @id and verified sameAs, avoid a competing WebSite node, publish the brand-resources page, align header and favicon, then validate rendered source before requesting recrawl.", status: "approved", note: "Explicitly approved July 20. The homepage NGO repair, accepted brand-resources page, navigation link, and approved favicon, header, and footer placements are now verified. APR-007 remains partially executed only because two homepage WebSite nodes still require consolidation." },
+        { id: "APR-007", title: "Wix editor identity-signal changes", description: "Publish the prepared homepage JSON-LD, canonical asset placements, and public brand-resources page.", effect: "Publishes changes to the live LifeUSA website", route: "Existing Life USA Wix editor", routeUrl: "./evidence/2026-07-15/wix-implementation-spec.md", copy: "Replace the white NGO.logo with the colored square, add NGO @id and verified sameAs, avoid a competing WebSite node, publish the brand-resources page, align header and favicon, then validate rendered source before requesting recrawl.", status: "approved", note: "Approved in July. The homepage NGO repair, accepted brand-resources page, navigation link, and approved favicon, header, and footer placements are now verified. Two homepage WebSite nodes still require consolidation." },
         { id: "APR-008", title: "Optional Google Ads logo standardization", description: "Use the correct LifeUSA Ads administrator account to identify the serving asset and optionally standardize an already acceptable current variant.", effect: "Accesses and may change paid-search assets", route: "LifeUSA Google Ads or Ad Grants administrator", routeUrl: "./evidence/2026-07-15/google-property-audit.md", copy: "Identify the customer serving the captured sponsored result and confirm whether the asset matches the acceptable blue-globe variant. Replace it with the canonical square only if the Ads administrator chooses standardization. A matching blue-globe asset is not a correctness blocker.", status: "pending_approval", note: "The currently available Google Ads hierarchy contains no LifeUSA customer." }
       ];
 
       const defaultState = () => ({
-        version: 17,
+        version: 18,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1079,10 +1095,11 @@
       const cleanText = (value, limit = 5000) => typeof value === "string" ? value.slice(0, limit) : "";
       const cleanStatus = value => VALID_STATUSES.includes(value) ? value : "not_started";
       const cleanApprovalStatus = value => APPROVAL_STATUSES.includes(value) ? value : "pending_approval";
+      const textFingerprint = value => [...value].reduce((hash, character) => (Math.imul(hash, 31) + character.charCodeAt(0)) >>> 0, 0);
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 17;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 18;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -1179,8 +1196,9 @@
             const previous = previousItems[item.id] || [];
             const savedNote = cleanText(saved.note);
             const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
-            const isVersion16DefaultNote = raw.version === 16 && savedNote.trim() === (VERSION_16_ACTION_NOTES[item.id] || "").trim();
-            const upgradeNote = isPreviousVersion && (isVersion16DefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
+            const legacyFingerprints = LEGACY_DEFAULT_NOTE_FINGERPRINTS[item.id] || [];
+            const isLegacyDefaultNote = (raw.version === 16 || raw.version === 17) && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const upgradeNote = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.items[item.id] = {
               status: upgradeStatus ? item.status : cleanStatus(saved.status),
               note: upgradeNote ? item.note : savedNote
@@ -1193,7 +1211,8 @@
             const previous = previousGates[gate.id] || [];
             const savedNote = cleanText(saved.note);
             const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
-            const upgradeNote = isPreviousVersion && previous.some(value => savedNote.trim() === value.note.trim());
+            const isVersion17DefaultNote = raw.version === 17 && textFingerprint(savedNote.trim()) === VERSION_17_GATE_NOTE_FINGERPRINTS[gate.id];
+            const upgradeNote = isPreviousVersion && (isVersion17DefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.gates[gate.id] = {
               status: upgradeStatus ? gate.status : cleanStatus(saved.status),
               note: upgradeNote ? gate.note : savedNote
@@ -1206,7 +1225,8 @@
             const previous = previousApprovals[approval.id] || [];
             const savedNote = cleanText(saved.note);
             const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
-            const upgradeNote = isPreviousVersion && previous.some(value => savedNote.trim() === value.note.trim());
+            const isVersion17DefaultNote = raw.version === 17 && textFingerprint(savedNote.trim()) === VERSION_17_APPROVAL_NOTE_FINGERPRINTS[approval.id];
+            const upgradeNote = isPreviousVersion && (isVersion17DefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.approvals[approval.id] = {
               status: upgradeStatus ? approval.status : cleanApprovalStatus(saved.status),
               note: upgradeNote ? approval.note : savedNote
@@ -1234,7 +1254,6 @@
       const phaseFilter = document.getElementById("phaseFilter");
       const saveStateLabel = document.getElementById("saveState");
 
-      const formatDate = iso => new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(new Date(`${iso}T00:00:00Z`));
       const todayIso = () => new Date().toISOString().slice(0, 10);
       const makeElement = (tag, className, text) => {
         const element = document.createElement(tag);
@@ -1285,13 +1304,6 @@
         return select;
       };
 
-      const dueState = item => {
-        if (state.items[item.id].status === "done") return { label: "Completed", className: "on-track" };
-        if (todayIso() > item.end) return { label: "Past target", className: "overdue" };
-        if (todayIso() < item.start) return { label: "Scheduled", className: "" };
-        return { label: "Active", className: "on-track" };
-      };
-
       const renderActions = () => {
         const query = searchActions.value.trim().toLowerCase();
         const status = statusFilter.value;
@@ -1316,8 +1328,6 @@
           kicker.append(makeElement("span", "tag", `Step ${actions.indexOf(item) + 1}`));
           kicker.append(makeElement("span", "tag", item.id));
           kicker.append(makeElement("span", "tag", `Phase ${item.phase}`));
-          const due = dueState(item);
-          kicker.append(makeElement("span", `tag ${due.className}`.trim(), due.label));
           const title = makeElement("h3", "action-title", item.title);
           title.id = `title-${item.id}`;
           headingBlock.append(kicker, title);
@@ -1338,7 +1348,6 @@
           const detailValues = [
             ["Owner", item.owner],
             ["Needed first", item.dependency],
-            ["Target dates", `${formatDate(item.start)} to ${formatDate(item.end)}`],
             ["How we verify", item.evidence]
           ];
           for (const [label, value] of detailValues) {
@@ -1525,19 +1534,6 @@
         updateApprovalSummary();
       };
 
-      const updateClock = () => {
-        const start = Date.parse(`${START_DATE}T00:00:00Z`);
-        const end = Date.parse(`${TARGET_DATE}T00:00:00Z`);
-        const today = Date.parse(`${todayIso()}T00:00:00Z`);
-        const day = Math.floor((today - start) / 86400000) + 1;
-        const totalDays = Math.round((end - start) / 86400000) + 1;
-        let label;
-        if (day < 1) label = "Scheduled to start July 12, 2026";
-        else if (today > end) label = "12-week monitoring window ended";
-        else label = `Day ${day} of ${totalDays} · Week ${Math.min(12, Math.ceil(day / 7))} of 12`;
-        document.getElementById("projectClock").textContent = label;
-      };
-
       const exportStatus = () => {
         save("Status prepared for export");
         const payload = {
@@ -1545,7 +1541,6 @@
           version: 14,
           exportedAt: new Date().toISOString(),
           startDate: START_DATE,
-          targetDate: TARGET_DATE,
           data: state
         };
         const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
@@ -1616,7 +1611,6 @@
       renderApprovals();
       renderGates();
       updateSummary();
-      updateClock();
     })();
   </script>
 
