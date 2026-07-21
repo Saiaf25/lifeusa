@@ -473,6 +473,109 @@
       color: var(--muted);
       font-size: 1.02rem;
     }
+    .proof-intro {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 0 0 18px;
+      padding: 16px 18px;
+      color: #203b31;
+      background: var(--green-soft);
+      border: 1px solid #bdd8cd;
+      border-radius: var(--radius-md);
+    }
+    .proof-intro p { max-width: 760px; margin: 0; }
+    .proof-legend { display: flex; flex-wrap: wrap; gap: 7px; }
+    .proof-status {
+      display: inline-flex;
+      align-items: center;
+      width: max-content;
+      padding: 5px 9px;
+      border-radius: 999px;
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+    }
+    .proof-status.fixed { color: #0f5b3c; background: #d9f4e7; }
+    .proof-status.open { color: #8a321e; background: #ffe1d8; }
+    .proof-status.pending { color: #76520b; background: #fff0bd; }
+    .proof-stack { display: grid; gap: 16px; margin-bottom: 24px; }
+    .proof-case {
+      padding: 20px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: 0 12px 28px rgba(18, 48, 38, .05);
+    }
+    .proof-case-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .proof-case h3 { margin: 0 0 5px; color: var(--green-dark); font-size: 1.25rem; }
+    .proof-case-head p, .proof-result { margin: 0; color: var(--muted); }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .proof-frame {
+      overflow: hidden;
+      margin: 0;
+      background: #f5f2eb;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+    .proof-frame > a { display: block; background: #142b42; }
+    .proof-frame img {
+      display: block;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: top;
+    }
+    .proof-frame.asset img { object-fit: contain; padding: 20px; }
+    .proof-frame figcaption { padding: 12px 13px 14px; color: var(--muted); font-size: .88rem; }
+    .proof-frame figcaption strong { display: block; margin-bottom: 3px; color: var(--green-dark); }
+    .proof-placeholder {
+      display: grid;
+      min-height: 250px;
+      place-content: center;
+      padding: 26px;
+      color: #6c520e;
+      background: #fff8dc;
+      text-align: center;
+    }
+    .proof-placeholder strong { display: block; margin-bottom: 5px; color: #634708; font-size: 1.05rem; }
+    .proof-result { margin-top: 13px; }
+    .proof-links, .action-proof-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .proof-links a, .action-proof-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 10px;
+      color: var(--green-dark);
+      background: #f7f4ed;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: .84rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .proof-links a:hover, .action-proof-links a:hover { background: var(--green-soft); }
+    .action-proof {
+      margin-top: 12px;
+      padding: 13px 14px;
+      background: #f7f4ed;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+    .action-proof > strong { display: block; color: var(--green-dark); font-size: .86rem; }
+    .action-proof-links { margin-top: 8px; }
+    .action-proof-links a { background: white; }
     .evidence-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -600,6 +703,8 @@
       .gate-controls { grid-template-columns: 1fr; }
       .approval-meta { grid-template-columns: 1fr; }
       .evidence-grid { grid-template-columns: 1fr; }
+      .proof-intro, .proof-case-head { display: block; }
+      .proof-legend, .proof-case-head .proof-status { margin-top: 10px; }
       .audit-totals { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .source-list { grid-template-columns: 1fr; }
       .save-state { width: 100%; margin-left: 0; }
@@ -613,6 +718,8 @@
       .progress-label { text-align: left; }
       .button { width: 100%; }
       .evidence-card img { height: 240px; }
+      .proof-case { padding: 14px; }
+      .proof-frame img, .proof-placeholder { min-height: 0; height: 220px; }
       .audit-totals { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -733,7 +840,7 @@
       <div class="toolbar" aria-label="Status data tools">
         <button id="exportButton" class="button" type="button">Export status</button>
         <button id="importButton" class="button secondary" type="button">Import status</button>
-        <input id="importFile" class="visually-hidden" type="file" accept="application/json,.json">
+        <input id="importFile" class="visually-hidden" type="file" accept="application/json,.json" aria-label="Import a saved logo-status JSON file">
         <button id="resetButton" class="button danger" type="button">Reset local updates</button>
         <span id="saveState" class="save-state">Default status loaded</span>
       </div>
@@ -765,10 +872,141 @@
 
     <section id="evidence" class="section">
       <div class="section-heading">
-        <h2>Captured evidence</h2>
-        <p>Public evidence collected independently from July 15 through July 21, 2026.</p>
+        <h2>Proof of progress and remaining issues</h2>
+        <p>Click any image to open the full capture. Each result also links to the public source or its detailed verification record.</p>
       </div>
-      <p class="evidence-summary">The broad branded query currently favors official LifeUSA sources. Direct checks found three retired-crescent sources that remain actionable and eight blue-globe profile signals that are now classified as acceptable current variants. The program separates canonical current, acceptable current variant, retired, uncertain, and unrelated results.</p>
+      <p class="evidence-summary">This evidence separates work that is visibly fixed from work that is still open. The LifeUSA website now publishes stronger approved-logo signals and two new directory profiles are live. Three outside sources still publish the retired crescent logo, and Google has not yet been proved refreshed.</p>
+      <div class="proof-intro" role="note">
+        <p><strong>How to read this section:</strong> “Verified fixed” means the public source changed and was checked logged out. “Still open” means the retired source remains visible. “Awaiting Google” means the source work and Google’s later refresh are being tracked as separate events.</p>
+        <div class="proof-legend" aria-label="Evidence status legend">
+          <span class="proof-status fixed">Verified fixed</span>
+          <span class="proof-status open">Still open</span>
+          <span class="proof-status pending">Awaiting Google</span>
+        </div>
+      </div>
+
+      <div class="proof-stack">
+        <article class="proof-case">
+          <div class="proof-case-head">
+            <div><h3>1. Homepage organization logo: before and after</h3><p>The white logo remains acceptable on a dark header, but it was a weak machine-readable choice because it can disappear on white. The homepage organization data now uses the approved colored square.</p></div>
+            <span class="proof-status fixed">Verified fixed</span>
+          </div>
+          <div class="comparison-grid">
+            <figure class="proof-frame asset">
+              <a href="./evidence/2026-07-15/current-schema-logo-white-transparent.png"><img src="./evidence/2026-07-15/current-schema-logo-white-transparent.png" alt="Before asset: white transparent LifeUSA logo previously used in homepage organization data" loading="eager"></a>
+              <figcaption><strong>Before: weak schema placement, not a retired logo</strong>Homepage organization data used this white transparent file, which could disappear on a white surface.</figcaption>
+            </figure>
+            <figure class="proof-frame asset">
+              <a href="./evidence/2026-07-15/current-square-favicon-source.png"><img src="./evidence/2026-07-15/current-square-favicon-source.png" alt="After asset: approved colored square LifeUSA logo now used in homepage organization data" loading="eager"></a>
+              <figcaption><strong>After</strong>The public organization data now points to the approved colored 1800 by 1800 square.</figcaption>
+            </figure>
+          </div>
+          <p class="proof-result"><strong>Why this matters:</strong> Google now receives a visible, stable organization logo plus the correct LifeUSA identity and official profile links. This proves the source correction; it does not yet prove a Google refresh.</p>
+          <div class="proof-links">
+            <a href="https://www.lifeusa.org/">Open the live homepage</a>
+            <a href="./evidence/2026-07-20/logo-005-live-verification.md">Read the before/after verification</a>
+            <a href="./evidence/2026-07-15/wix-owned-logo-change-log.md">Open the Wix change log</a>
+          </div>
+        </article>
+
+        <article class="proof-case">
+          <div class="proof-case-head">
+            <div><h3>2. Visible owned-brand sources now live</h3><p>The approved logo is visible on the main site, and the new Brand Resources page gives publishers and directories an official source.</p></div>
+            <span class="proof-status fixed">Verified fixed</span>
+          </div>
+          <div class="comparison-grid">
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png"><img src="./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png" alt="After screenshot of the live LifeUSA homepage showing the approved horizontal logo in the header" loading="lazy"></a>
+              <figcaption><strong>After: live homepage</strong>The header and footer use the approved horizontal source; the browser icon uses the approved square source.</figcaption>
+            </figure>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/after-lifeusa-brand-resources-page.png"><img src="./evidence/2026-07-21/after-lifeusa-brand-resources-page.png" alt="After screenshot of the published Official LifeUSA Brand Resources page" loading="lazy"></a>
+              <figcaption><strong>After: new public brand source</strong>The Brand Resources page is public and presents both approved logo files for partner and directory use.</figcaption>
+            </figure>
+          </div>
+          <div class="proof-links">
+            <a href="https://www.lifeusa.org/brand-resources">Open Brand Resources</a>
+            <a href="./evidence/2026-07-20/logo-004-brand-page-live-verification.md">Read the brand-page verification</a>
+            <a href="./evidence/2026-07-21/logo-006-and-navigation-verification.md">Read the header, footer, and icon verification</a>
+          </div>
+        </article>
+
+        <article class="proof-case">
+          <div class="proof-case-head">
+            <div><h3>3. New directory profiles carrying the approved logo</h3><p>These are new, logged-out public profiles—not submissions, drafts, or duplicates of existing LifeUSA records.</p></div>
+            <span class="proof-status fixed">2 verified live</span>
+          </div>
+          <div class="comparison-grid">
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/after-find-us-here-directory-profile.png"><img src="./evidence/2026-07-21/after-find-us-here-directory-profile.png" alt="After screenshot of the new Find-Us-Here LifeUSA profile with approved logo" loading="lazy"></a>
+              <figcaption><strong>After: Find-Us-Here</strong>New public profile with the approved square logo, correct organization details, and canonical website link.</figcaption>
+            </figure>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/after-a-z-business-finder-profile.png"><img src="./evidence/2026-07-21/after-a-z-business-finder-profile.png" alt="After screenshot of the new A-Z Business Finder LifeUSA profile with approved logo and website link" loading="lazy"></a>
+              <figcaption><strong>After: A-Z Business Finder</strong>New public profile with the canonical website link and a logo whose decoded pixels match the approved square.</figcaption>
+            </figure>
+          </div>
+          <p class="proof-result"><strong>Progress:</strong> 2 of 20 qualifying new profiles are complete. Existing profiles that need owner access are tracked separately so they are repaired instead of duplicated.</p>
+          <div class="proof-links">
+            <a href="https://www.find-us-here.com/businesses/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">Open Find-Us-Here</a>
+            <a href="https://www.a-zbusinessfinder.com/business-directory/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">Open A-Z Business Finder</a>
+            <a href="./evidence/2026-07-19/directory-publication-execution-tracker.md">Open the full directory tracker</a>
+          </div>
+        </article>
+
+        <article class="proof-case">
+          <div class="proof-case-head">
+            <div><h3>4. Retired-logo sources that still need correction</h3><p>These screenshots show why the campaign remains open. The old logo is still visible on public third-party or archived pages.</p></div>
+            <span class="proof-status open">3 sources still open</span>
+          </div>
+          <div class="comparison-grid">
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/current-wordpress-retired-logo-page.png"><img src="./evidence/2026-07-21/current-wordpress-retired-logo-page.png" alt="Current screenshot of the old LifeUSA WordPress archive still showing the retired crescent logo" loading="lazy"></a>
+              <figcaption><strong>Current: old WordPress archive</strong>The retired crescent logo remains in the site header. Account recovery and a decision on the archive are required.</figcaption>
+            </figure>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png"><img src="./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png" alt="Current screenshot of Kids That Do Good still showing the retired LifeUSA crescent logo" loading="lazy"></a>
+              <figcaption><strong>Current: Kids That Do Good</strong>The publisher page still displays the retired logo. A correction request was sent, but no public change is verified.</figcaption>
+            </figure>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-21/current-arab-info-mall-retired-logo-page.png"><img src="./evidence/2026-07-21/current-arab-info-mall-retired-logo-page.png" alt="Current screenshot of Arab Info Mall still showing the retired LifeUSA crescent logo" loading="lazy"></a>
+              <figcaption><strong>Current: Arab Info Mall</strong>The retired logo and outdated organization details remain public. Publisher contact requires approval.</figcaption>
+            </figure>
+          </div>
+          <p class="proof-result"><strong>Required after state:</strong> each source must publicly show an approved current logo or be removed. A sent message alone does not count as fixed.</p>
+          <div class="proof-links">
+            <a href="https://lifeusaorg.wordpress.com/where-we-are/">Open WordPress source</a>
+            <a href="https://kidsthatdogood.com/causes/life-relief-development/">Open Kids That Do Good</a>
+            <a href="https://arabinfomall.bibalex.org/En/Index.aspx?orgid=879&amp;sectionid=1">Open Arab Info Mall</a>
+            <a href="./evidence/2026-07-15/publisher-correction-pack.md">Open the correction evidence</a>
+          </div>
+        </article>
+
+        <article class="proof-case">
+          <div class="proof-case-head">
+            <div><h3>5. Google: baseline captured, after result not yet proved</h3><p>Google can update only after it recrawls corrected sources. The tracker keeps that algorithmic refresh separate from the work already completed.</p></div>
+            <span class="proof-status pending">Awaiting Google</span>
+          </div>
+          <div class="comparison-grid">
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Before baseline screenshot of Google Images results for LifeUSA with personalization disabled" loading="lazy"></a>
+              <figcaption><strong>Before: saved Google Images baseline</strong>The repeatable starting view was captured in English, in the United States, with personalization disabled.</figcaption>
+            </figure>
+            <div class="proof-frame">
+              <div class="proof-placeholder"><div><strong>After screenshot pending</strong>No Google refresh is claimed yet. A new screenshot belongs here only after a clean public check proves the change.</div></div>
+              <div class="proof-placeholder-caption"></div>
+            </div>
+          </div>
+          <p class="proof-result"><strong>Completion rule:</strong> the program remains open until approved logos are consistent across owned, Google, and authoritative outside sources, followed by three stable checks.</p>
+          <div class="proof-links">
+            <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the Google Images query</a>
+            <a href="./evidence/2026-07-15/baseline.md">Read the baseline protocol</a>
+            <a href="./evidence/2026-07-19/monitoring-check.md">Read the latest scheduled check</a>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="retired-heading">Detailed evidence library</h3>
       <div class="evidence-grid">
         <article class="evidence-card">
           <a href="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg" alt="Google Search baseline for LifeUSA showing the official Life for Relief and Development website and other similarly named results" loading="lazy"></a>
@@ -834,6 +1072,7 @@
           <a href="./evidence/2026-07-19/directory-publication-execution-tracker.md">Open the directory publication tracker</a>
           <a href="./evidence/2026-07-20/logo-005-live-verification.md">Open the July 20 LOGO-005 verification</a>
           <a href="./evidence/2026-07-20/logo-004-brand-page-live-verification.md">Open the July 20 LOGO-004 brand-page verification</a>
+          <a href="./evidence/2026-07-21/client-proof-screenshot-register.md">Open the client screenshot register</a>
           <a href="./evidence/2026-07-15/authority-profile-audit.md">Open the authority profile audit</a>
           <a href="./evidence/2026-07-15/google-property-audit.md">Open the Google property audit</a>
         </div>
@@ -941,7 +1180,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.23</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.24</footer>
   </main>
 
   <script>
@@ -1019,6 +1258,97 @@
 
         { id: "LOGO-018", title: "Check Google and key sources weekly until results stay stable", phase: 7, owner: "SEO lead", dependency: "Major source fixes are live", evidence: "Weekly log and three stable checks", status: "in_progress", note: "The first weekly check was recorded in July. No publisher fixes or replies were confirmed, and Google blocked the automated Search and Images check. Stable checks: 0 of 3. The next weekly check is scheduled." }
       ];
+
+      const ACTION_PROOF_LINKS = {
+        "LOGO-001": [
+          ["Search screenshot", "./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"],
+          ["Images screenshot", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"],
+          ["Capture protocol", "./evidence/2026-07-15/baseline.md"]
+        ],
+        "LOGO-002": [
+          ["Approved logo evidence", "#evidence"],
+          ["Full source audit", "./evidence/2026-07-15/source-audit.md"]
+        ],
+        "LOGO-010": [
+          ["First-20 CSV", "./evidence/2026-07-15/first-20-source-inventory.csv"],
+          ["Images screenshot", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"]
+        ],
+        "LOGO-003": [
+          ["Wix change log", "./evidence/2026-07-15/wix-owned-logo-change-log.md"],
+          ["Square file", "https://static.wixstatic.com/media/af2a6c_49a4190c354746b493c123d311222fb5~mv2.png"],
+          ["Horizontal file", "https://static.wixstatic.com/media/af2a6c_1bd1137d792b44c3855d26ee4cfcced0~mv2.png"]
+        ],
+        "LOGO-004": [
+          ["Live Brand Resources page", "https://www.lifeusa.org/brand-resources"],
+          ["After screenshot", "./evidence/2026-07-21/after-lifeusa-brand-resources-page.png"],
+          ["Verification record", "./evidence/2026-07-20/logo-004-brand-page-live-verification.md"]
+        ],
+        "LOGO-005": [
+          ["Before schema asset", "./evidence/2026-07-15/current-schema-logo-white-transparent.png"],
+          ["After logo", "./evidence/2026-07-15/current-square-favicon-source.png"],
+          ["Live verification", "./evidence/2026-07-20/logo-005-live-verification.md"]
+        ],
+        "LOGO-006": [
+          ["After screenshot", "./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png"],
+          ["Placement verification", "./evidence/2026-07-21/logo-006-and-navigation-verification.md"],
+          ["Live homepage", "https://www.lifeusa.org/"]
+        ],
+        "LOGO-007": [
+          ["Current screenshot", "./evidence/2026-07-21/current-wordpress-retired-logo-page.png"],
+          ["Live source", "https://lifeusaorg.wordpress.com/where-we-are/"],
+          ["Correction evidence", "./evidence/2026-07-15/publisher-correction-pack.md"]
+        ],
+        "LOGO-008": [
+          ["Current screenshot", "./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png"],
+          ["Live source", "https://kidsthatdogood.com/causes/life-relief-development/"],
+          ["Approval record", "./evidence/2026-07-15/outreach-approval-queue.md"]
+        ],
+        "LOGO-009": [
+          ["Current screenshot", "./evidence/2026-07-21/current-arab-info-mall-retired-logo-page.png"],
+          ["Live source", "https://arabinfomall.bibalex.org/En/Index.aspx?orgid=879&sectionid=1"],
+          ["Approval record", "./evidence/2026-07-15/outreach-approval-queue.md"]
+        ],
+        "LOGO-015": [
+          ["Source audit", "./evidence/2026-07-15/source-audit.md"],
+          ["Publisher correction pack", "./evidence/2026-07-15/publisher-correction-pack.md"],
+          ["Monitoring record", "./evidence/2026-07-19/monitoring-check.md"]
+        ],
+        "LOGO-014": [
+          ["Authority profile audit", "./evidence/2026-07-15/authority-profile-audit.md"],
+          ["Official Linktree", "https://linktr.ee/LIFEUSA"],
+          ["Profile evidence gallery", "#evidence"]
+        ],
+        "LOGO-019": [
+          ["Directory tracker", "./evidence/2026-07-19/directory-publication-execution-tracker.md"],
+          ["Find-Us-Here profile", "https://www.find-us-here.com/businesses/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/"],
+          ["A-Z Business Finder profile", "https://www.a-zbusinessfinder.com/business-directory/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/"]
+        ],
+        "LOGO-011": [
+          ["Claim-state screenshot", "./evidence/2026-07-15/google-business-profile-claim-state-2026-07-15.jpg"],
+          ["Maps listing", "https://www.google.com/maps/place/Life+For+Relief+%26+Development/"],
+          ["Google property audit", "./evidence/2026-07-15/google-property-audit.md"]
+        ],
+        "LOGO-012": [
+          ["Entity-result screenshot", "./evidence/2026-07-15/google-search-lifeusa-entity-surface-2026-07-15.jpg"],
+          ["Google property audit", "./evidence/2026-07-15/google-property-audit.md"]
+        ],
+        "LOGO-013": [
+          ["Latest monitoring check", "./evidence/2026-07-19/monitoring-check.md"],
+          ["Google recrawl guidance", "https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl"]
+        ],
+        "LOGO-016": [
+          ["Visible-result screenshot", "./evidence/2026-07-15/google-search-lifeusa-entity-surface-2026-07-15.jpg"],
+          ["Ads finding", "./evidence/2026-07-15/google-property-audit.md"]
+        ],
+        "LOGO-017": [
+          ["Why paid support is optional", "./evidence/2026-07-15/google-property-audit.md"]
+        ],
+        "LOGO-018": [
+          ["Starting baseline", "./evidence/2026-07-15/baseline.md"],
+          ["First weekly check", "./evidence/2026-07-19/monitoring-check.md"],
+          ["Monitoring log", "./evidence/2026-07-15/monitoring-log.md"]
+        ]
+      };
 
       const LEGACY_DEFAULT_NOTE_FINGERPRINTS = {
         "LOGO-001": [2468275072, 1188887501],
@@ -1356,6 +1686,21 @@
             details.append(detail);
           }
 
+          const proofLinks = ACTION_PROOF_LINKS[item.id] || [];
+          const proof = makeElement("div", "action-proof");
+          proof.append(makeElement("strong", "", "Evidence and public links"));
+          const proofLinkList = makeElement("div", "action-proof-links");
+          for (const [label, href] of proofLinks) {
+            const link = makeElement("a", "", label);
+            link.href = href;
+            if (/^https?:\/\//.test(href)) {
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+            }
+            proofLinkList.append(link);
+          }
+          proof.append(proofLinkList);
+
           const noteField = makeElement("div", "note-field");
           const noteLabel = makeElement("label", "", "Current update");
           noteLabel.htmlFor = `note-${item.id}`;
@@ -1370,7 +1715,7 @@
             noteTimers.set(item.id, setTimeout(() => save(`${item.id} note saved`), 300));
           });
           noteField.append(noteLabel, note);
-          card.append(top, details, noteField);
+          card.append(top, details, proof, noteField);
           actionList.append(card);
         }
 
