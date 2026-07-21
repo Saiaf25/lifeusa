@@ -1,4 +1,4 @@
-# LOGO-006 and homepage live verification
+# LOGO-006 and Brand Resources navigation verification
 
 Verified July 21, 2026 against cache-busted, logged-out public pages and the direct Wix media URLs.
 
@@ -12,14 +12,6 @@ Verified July 21, 2026 against cache-busted, logged-out public pages and the dir
 
 All four direct files used for comparison returned HTTP `200`. The rendered header and footer images both expose the descriptive alternative text `Life for Relief and Development logo`.
 
-## Homepage H1 correction
-
-The cache-busted public homepage exposed exactly one `h1` element:
-
-`Life for Relief and Development`
-
-The heading was visible in the rendered accessibility tree. This verifies the duplicate-homepage-H1 correction as a technical and on-page SEO fix; it is not classified as a logo correction.
-
 ## Brand Resources navigation
 
 The public homepage navigation contains `Brand Resources` in the expanded `About` submenu and resolves it to:
@@ -31,7 +23,6 @@ The destination returned HTTP `200` and loaded with the public title `Brand Reso
 ## Decision
 
 - `LOGO-006`: **Done**. The favicon, header, and footer placements use approved current assets and the visible logo images have descriptive alternative text.
-- Homepage duplicate H1: **Done**, logged under technical/on-page SEO rather than the logo program.
 - Brand Resources navigation link: **Done** and publicly reachable.
 - `APR-007`: remains approved and partially executed only because the two homepage `WebSite` nodes still require consolidation.
 - Stable monitoring count remains **0 of 3**. This ad hoc owned-site verification is not a scheduled regression check and does not prove a Google refresh.

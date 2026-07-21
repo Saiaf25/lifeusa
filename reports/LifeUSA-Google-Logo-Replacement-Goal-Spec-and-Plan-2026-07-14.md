@@ -640,7 +640,6 @@ All external messages, access requests, form submissions, and changes to client-
 - Ran the exact Google Images query for `Life for Relief and Development logo` with English, United States, and personalization disabled. The initial result set still includes Kids That Do Good and the old WordPress archive, confirming that live retired-logo sources remain discoverable by Google.
 - Verified July 21 that the live header and footer use a byte-identical copy of the approved 4101 by 1201 horizontal master, the favicon source is byte-identical to the approved 1800 by 1800 square, and both visible logo placements expose descriptive alt text. `LOGO-006` is complete.
 - Verified July 21 that `Brand Resources` is present in the public About submenu and its destination returns `200`.
-- Verified July 21 that the public homepage now exposes exactly one visible H1, `Life for Relief and Development`. This is a completed technical/on-page SEO correction and is not counted as logo work.
 
 ## 18. Research confidence and limitations
 

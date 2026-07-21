@@ -61,12 +61,12 @@ The first check found an exact approved 1800 by 1800 square and a derived 3000 b
 
 The project owner explicitly confirmed that direct download links are not required and accepted the current page as complete. `LOGO-004` is done. See [LOGO-004 brand-page live verification](../2026-07-20/logo-004-brand-page-live-verification.md).
 
-## July 21 header, footer, favicon, navigation, and H1 verification
+## July 21 header, footer, favicon, and navigation verification
 
 The user reported completing the remaining visible owned-site work. Logged-out verification of the cache-busted public homepage confirmed that the header and footer both use the approved current horizontal source and expose the descriptive alt text `Life for Relief and Development logo`. Direct-file comparison proved that their 4101 by 1201 source is byte-for-byte identical to the canonical horizontal master.
 
 The live favicon points to a 1800 by 1800 Wix source that is byte-for-byte identical to the canonical square master. All compared direct files returned HTTP `200`.
 
-The homepage now exposes exactly one visible H1, `Life for Relief and Development`. This is logged as a technical/on-page SEO correction rather than a logo action. The live About submenu also contains `Brand Resources`, linked to the public page, which returned `200`.
+The live About submenu contains `Brand Resources`, linked to the public page, which returned `200`.
 
-`LOGO-006` is done. `APR-007` remains partially executed only because two homepage `WebSite` nodes still require consolidation. See [July 21 live verification](../2026-07-21/logo-006-and-homepage-verification.md).
+`LOGO-006` is done. `APR-007` remains partially executed only because two homepage `WebSite` nodes still require consolidation. See [July 21 live verification](../2026-07-21/logo-006-and-navigation-verification.md).

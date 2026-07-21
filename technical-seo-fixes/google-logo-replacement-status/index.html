@@ -660,7 +660,7 @@
         <h2>Current status</h2>
         <p>The owned homepage NGO, brand page, header, footer, and favicon work is verified live. Third-party source corrections and Google refresh monitoring remain active.</p>
       </div>
-      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">LOGO-004, LOGO-005, and LOGO-006 are complete. The official brand-resources page and its navigation link are live, the homepage NGO node uses the canonical colored square, and the header, footer, and favicon resolve to approved current assets. The homepage duplicate-H1 correction is verified separately as a technical and on-page fix. Two WebSite nodes keep APR-007 partially executed. Directory publication remains at 2 of 20 qualifying new profiles, and scheduled monitoring remains at 0 of 3 stable checks.</p>
+      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">LOGO-004, LOGO-005, and LOGO-006 are complete. The official brand-resources page and its navigation link are live, the homepage NGO node uses the canonical colored square, and the header, footer, and favicon resolve to approved current assets. Two WebSite nodes keep APR-007 partially executed. Directory publication remains at 2 of 20 qualifying new profiles, and scheduled monitoring remains at 0 of 3 stable checks.</p>
       <div class="metrics" aria-label="Status summary">
         <div class="metric"><strong id="metricDone">7</strong><span>actions done</span></div>
         <div class="metric"><strong id="metricProgress">8</strong><span>actions in progress</span></div>
@@ -943,7 +943,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.20 · Page updated July 21, 2026</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.21 · Page updated July 21, 2026</footer>
   </main>
 
   <script>
@@ -1036,7 +1036,7 @@
       ];
 
       const defaultState = () => ({
-        version: 15,
+        version: 16,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1051,10 +1051,14 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 15;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 16;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
-        if (!(isPreviousVersion && PREVIOUS_OVERVIEW_TEXTS.includes(raw.overviewText))) {
+        const isSupersededVersion15Overview = isPreviousVersion
+          && typeof raw.overviewText === "string"
+          && raw.overviewText.startsWith("LOGO-004, LOGO-005, and LOGO-006 are complete.")
+          && raw.overviewText.includes("Directory publication remains at 2 of 20 qualifying new profiles");
+        if (!(isPreviousVersion && (PREVIOUS_OVERVIEW_TEXTS.includes(raw.overviewText) || isSupersededVersion15Overview))) {
           base.overviewText = cleanText(raw.overviewText || base.overviewText, 1600);
         }
         const previousItems = {

@@ -10,15 +10,14 @@ Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
 ## July 21 owned-placement and homepage verification
 
-The user reported completing the favicon, header, footer, homepage H1, and Brand Resources navigation work. Cache-busted, logged-out public verification proved:
+The user reported completing the favicon, header, footer, and Brand Resources navigation work. Cache-busted, logged-out public verification proved:
 
 - the header and footer use the same approved 4101 by 1201 horizontal master, with byte-identical SHA-256 `14819312d534ee94bcb625a87a15ab76cd05ad77ec9d09a2b514bf8c308cd867`;
 - the favicon source is byte-identical to the approved 1800 by 1800 square, with SHA-256 `d3d830b08effb1202b1ded8bc26bec91f78dfb8b89c97ef59f892b2ea88a77cb`;
-- the visible header and footer logos use the descriptive alt text `Life for Relief and Development logo`;
-- the homepage exposes exactly one visible H1, `Life for Relief and Development`; and
+- the visible header and footer logos use the descriptive alt text `Life for Relief and Development logo`; and
 - `Brand Resources` is present in the expanded About submenu and its `https://www.lifeusa.org/brand-resources` destination returns HTTP `200`.
 
-`LOGO-006` is **Done**. The duplicate-H1 correction is recorded separately as a technical/on-page SEO fix, not as logo work. `APR-007` remains approved and partially executed only because the two homepage `WebSite` nodes still require consolidation. Full evidence: [July 21 LOGO-006 and homepage verification](../2026-07-21/logo-006-and-homepage-verification.md).
+`LOGO-006` is **Done**. `APR-007` remains approved and partially executed only because the two homepage `WebSite` nodes still require consolidation. Full evidence: [July 21 LOGO-006 and navigation verification](../2026-07-21/logo-006-and-navigation-verification.md).
 
 This ad hoc owned-site verification does not prove a Google refresh and does not increment the scheduled stable-check count, which remains **0 of 3**.
 
