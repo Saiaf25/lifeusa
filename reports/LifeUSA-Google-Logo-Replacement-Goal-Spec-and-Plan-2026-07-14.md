@@ -632,12 +632,15 @@ All external messages, access requests, form submissions, and changes to client-
 - Sent the GreatNonprofits correction request to `support@greatnonprofits.org` and recorded Zoho message ID `1784122678410013500`.
 - Established a human-approval gate for all remaining communication and account-changing work. The approval queue contains the exact official route, prepared copy or action package, access dependency, and acceptance check for Arab Info Mall, Candid, ReliefWeb, Google Business Profile, social profiles, WordPress, Wix editor changes, and Google Ads.
 - Verified the official Arab Info Mall contact addresses and kiosk administrator workflow. No Arab Info Mall message was sent.
-- Confirmed that the Wix REST API can manage the uploaded media and Site Properties logo, but no supported route was found for editing arbitrary existing-page custom JSON-LD or creating the public static brand page; those changes remain queued for an approved Wix editor session.
+- Confirmed that the Wix REST API can manage uploaded media and the Site Properties logo but not these existing-page editor changes. The user subsequently completed the NGO markup, public brand-resources page, navigation link, and visible logo placements manually in Wix. Only the duplicate `WebSite` node cleanup remains open within APR-007.
 - Activated the recurring `lifeusa-logo-signal-monitor` for Sundays at 10:00 Europe/Istanbul. It is read-only for Zoho and public platforms, preserves APR-001 through APR-008 as human-gated, and updates only evidence-backed status artifacts.
 - Completed the July 15 monitoring control check. Zoho confirms both sent messages were delivered successfully, with no publisher reply found. Kids That Do Good and GreatNonprofits still reference their old public image files.
 - Verified that the GreatNonprofits CDN image is byte-for-byte unchanged and that the Kids That Do Good image is pixel-identical to the captured retired logo despite harmless PNG encoding differences.
 - Reverified both canonical Wix files: each returns `200`, retains the approved dimensions, and exactly matches the local master SHA-256.
 - Ran the exact Google Images query for `Life for Relief and Development logo` with English, United States, and personalization disabled. The initial result set still includes Kids That Do Good and the old WordPress archive, confirming that live retired-logo sources remain discoverable by Google.
+- Verified July 21 that the live header and footer use a byte-identical copy of the approved 4101 by 1201 horizontal master, the favicon source is byte-identical to the approved 1800 by 1800 square, and both visible logo placements expose descriptive alt text. `LOGO-006` is complete.
+- Verified July 21 that `Brand Resources` is present in the public About submenu and its destination returns `200`.
+- Verified July 21 that the public homepage now exposes exactly one visible H1, `Life for Relief and Development`. This is a completed technical/on-page SEO correction and is not counted as logo work.
 
 ## 18. Research confidence and limitations
 
@@ -645,7 +648,7 @@ All external messages, access requests, form submissions, and changes to client-
 
 - Dr. Hany’s request and Saiaf’s response were verified directly in Zoho Mail.
 - The homepage’s live structured data and logo URLs were inspected directly.
-- The structured-data logo is white-on-transparent and fails the white-background appearance test.
+- The repaired NGO node uses the approved colored square, while the visible header, footer, and favicon sources are byte-identical to their approved canonical masters. Two `WebSite` nodes remain for consolidation.
 - The old WordPress, Kids That Do Good, and Arab Info Mall pages visibly publish the retired crescent logo.
 - Candid/GuideStar, GreatNonprofits, LinkedIn, Facebook, Instagram, YouTube, and X visibly publish the blue-globe logo, which the client confirmed is an acceptable current variant.
 - The English Linktree avatar is current, and its Facebook destination opens a Somali-language page. The destination mismatch remains a profile-integrity issue; the Somali page's blue-globe logo is acceptable.
