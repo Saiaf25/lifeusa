@@ -367,103 +367,33 @@ Initial new-placement priorities are Every.org, PayPal Giving Fund, Benevity Cau
 
 ## 8. Phased execution plan
 
-### Phase 0: Confirm the exact problem and approve assets
+### Phase 1: Understand the problem
 
-**Target:** Day 0 to Day 2
-**Gate:** No production changes until completed
+Save the starting Google results, agree which logo versions are approved, and review the first 20 Google Images sources. This creates a clear before record.
 
-- Obtain Dr. Hany’s screenshot or reproduce the exact result with him.
-- Record query, Google tab/surface, device, location, signed-in state, image URL, and landing page.
-- Obtain the authoritative current logo in vector and high-resolution PNG formats.
-- Obtain written confirmation of which logo is retired.
-- Decide whether the approved current mark includes the tagline and which tagline punctuation is correct.
-- Name the LifeUSA brand approver, Wix administrator, Business Profile owner, Search Console owner, social admin, and Ads admin.
-- Approve the canonical asset matrix and public brand-page wording.
+### Phase 2: Fix the LifeUSA website
 
-**Deliverables:** Baseline evidence pack, approved brand kit, access matrix, signed decision record.
+Create the official square and horizontal files, publish the Brand Resources page, fix the logo information on the homepage, and use approved logos in the header, footer, and browser icon.
 
-### Phase 1: Repair owned canonical signals
+### Phase 3: Remove retired logo sources
 
-**Target:** Day 2 to Day 5
-**Dependency:** Approved brand kit and Wix access
+Correct the old WordPress site, Kids That Do Good, Arab Info Mall, and any other website that still publishes the retired crescent logo. Google refresh requests wait until these public sources change.
 
-- Publish the brand page and canonical square logo URL.
-- Replace the homepage `NGO.logo` value.
-- Add stable `@id`, approved `alternateName`, and verified `sameAs` links.
-- Consolidate duplicate `WebSite` graph nodes if Wix permits.
-- Align favicon, header, and footer variants.
-- Confirm no retired logo is referenced by owned pages, schema, CSS, media galleries, PDFs, or hidden components.
-- Add the logo to an image sitemap or confirm Wix’s sitemap discovery path.
-- Validate HTML, structured data, dimensions, content type, crawlability, and white-background appearance.
-- Request indexing for homepage and brand page.
+### Phase 4: Strengthen profiles and directories
 
-**Acceptance criteria:** Live source contains one approved entity graph; canonical logo is `200`, visible on white, and crawlable; validation screenshots saved.
+Review nonprofit and social profiles, correct wrong links or missing details, and publish approved new directory profiles. Existing profiles must be updated through their owners rather than duplicated.
 
-### Phase 2: Remove the strongest retired-logo sources
+### Phase 5: Update Google after source fixes
 
-**Target:** Day 3 to Day 14
-**Can run in parallel with Phase 1 after asset approval**
+Update the Southfield Business Profile when approved access is available, watch for a separate Knowledge Panel, check the LifeUSA Ads logo settings, and ask Google to recrawl only after source corrections are live.
 
-- Recover or confirm ownership of `lifeusaorg.wordpress.com`.
-- Decide whether to modernize it, make it private, or retire it.
-- Delete or replace the old WordPress media file and confirm its final HTTP state.
-- Contact Kids That Do Good with the canonical square logo and correction evidence.
-- Contact Arab Info Mall for a full profile correction, not logo-only, because contact data is stale.
-- Verify and correct Glassdoor and ShareDetroit.
-- Submit Google refresh/removal requests only after source changes are live.
+### Phase 6: Optional paid support
 
-**Acceptance criteria:** Each P0 old image is changed at source or has a documented owner/contact blocker and dated outreach evidence.
+Run a short branded Google Ads test only if LifeUSA separately approves the account, budget, and purpose. Paid visibility does not change normal Google Search or Images results.
 
-### Phase 3: Align Google properties
+### Phase 7: Monitor and close
 
-**Target:** Day 3 to Day 10
-**Dependencies:** Approved square asset and access
-
-- Verify and update Google Business Profile logo and photo inventory.
-- Distinguish Business Profile from Knowledge Panel.
-- Claim the Knowledge Panel if available and submit a supported featured-image correction.
-- Update YouTube channel branding and official site links.
-- Review Search Console ownership and removal/indexing tools.
-- Audit Google Ads business-information assets and advertiser verification.
-
-**Acceptance criteria:** Each accessible Google property uses the approved asset; inaccessible properties have a named access owner and request date.
-
-### Phase 4: Align authoritative profiles
-
-**Target:** Day 5 to Day 21
-
-- Update Candid/GuideStar.
-- Update Charity Navigator.
-- Verify GreatNonprofits.
-- Update ReliefWeb.
-- Update LinkedIn, Facebook, Instagram, and YouTube.
-- Update relevant employment and humanitarian directories already ranking for LifeUSA.
-- Use identical canonical website, organization name, current logo family, address, phone, and short description.
-
-**Acceptance criteria:** All Tier 1 profiles are verified and consistent; Tier 2 work is at least 80% resolved or documented.
-
-### Phase 5: Optional paid visibility bridge
-
-**Target:** After Phase 1; 30-day controlled test
-**Approval gate:** Separate budget or Ad Grants approval
-
-- Launch only if the team wants immediate paid brand consistency while organic sources recrawl.
-- Use Search business-information assets with the approved logo.
-- Target organization-name queries in the US.
-- Keep landing pages and message factual and donor-focused.
-- Do not represent the campaign as a method for changing organic images.
-- Stop or revise if asset serving is inconsistent or the campaign adds no measurable value.
-
-### Phase 6: Monitor and close
-
-**Target:** Weekly for 12 weeks
-
-- Repeat the branded query set on US desktop and mobile.
-- Record image position, landing page, direct image URL, and visual classification.
-- Check Search Console indexing and removal status.
-- Check Business Profile, Knowledge Panel, favicon, and ad assets.
-- Follow up with unresolved publishers at 7, 14, and 30 days.
-- Close only after the primary targets are satisfied for three consecutive weekly checks or the sponsor accepts documented third-party exceptions.
+Check Google and the priority sources every week. Close the program only after retired sources are corrected or accepted as documented exceptions and three consecutive scheduled checks show no regression.
 
 ## 9. Work breakdown structure
 
