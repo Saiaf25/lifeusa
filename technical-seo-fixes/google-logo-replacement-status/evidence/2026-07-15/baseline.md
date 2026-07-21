@@ -11,6 +11,11 @@ Captured July 15, 2026 at 1280 px desktop width.
 - Google reported that the Search results were not personalized.
 - Account identity and personal controls were excluded from the published screenshots.
 
+## How the two queries are used
+
+- **Logo benchmark:** `Life for Relief and Development logo`. This is the pass-or-fail query because it reproduces the retired crescent result. Future before-and-after checks must repeat this exact query with the same locale and personalization parameters.
+- **General brand context:** `LifeUSA`. This broad query records overall brand visibility, unrelated same-name results, and the first-20 source mix. It does not determine whether the retired-logo problem is fixed and must not be compared directly with the logo benchmark.
+
 ## Evidence files
 
 - `google-search-lifeusa-desktop.jpg`: Google Search baseline, 1280 x 1900 px.

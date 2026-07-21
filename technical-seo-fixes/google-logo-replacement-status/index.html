@@ -992,17 +992,13 @@
               <a href="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"><img src="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png" alt="Google Images benchmark reproduction showing retired yellow crescent LifeUSA logos in the results" loading="lazy"></a>
               <figcaption><strong>Faulty result reproduced July 21</strong>The exact query <code>Life for Relief and Development logo</code>, with English, United States, and personalization disabled in the URL, visibly returns multiple retired yellow-crescent LifeUSA logos.</figcaption>
             </figure>
-            <figure class="proof-frame">
-              <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Control screenshot of broad Google Images results for LifeUSA with no crescent logo visible" loading="lazy"></a>
-              <figcaption><strong>Control capture: not the faulty result</strong>This later broad <code>LifeUSA</code> query contains no retired crescent mark in its first 20 results. It is useful control evidence, but it is not the missing before screenshot.</figcaption>
-            </figure>
             <div class="proof-frame">
               <div class="proof-placeholder"><div><strong>After screenshot pending</strong>No Google refresh is claimed yet. A new screenshot belongs here only after a clean public check proves the change.</div></div>
             </div>
           </div>
           <p class="proof-result"><strong>What is proved now:</strong> Google Images still surfaces the retired crescent, and the same mark remains live on discoverable source pages. <strong>What is not proved:</strong> a clean Google refresh. The program remains open until the sources are corrected and three stable Google checks show no regression.</p>
           <div class="proof-links">
-            <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the Google Images query</a>
+            <a href="https://www.google.com/search?q=Life+for+Relief+and+Development+logo&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the exact faulty-logo query</a>
             <a href="./evidence/2026-07-15/baseline.md">Read the baseline protocol</a>
             <a href="./evidence/2026-07-19/monitoring-check.md">Read the latest scheduled check</a>
           </div>
@@ -1014,16 +1010,16 @@
         <article class="evidence-card">
           <a href="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg" alt="Google Search baseline for LifeUSA showing the official Life for Relief and Development website and other similarly named results" loading="lazy"></a>
           <div class="evidence-copy">
-            <h3>Google Search baseline</h3>
-            <p>Query: LifeUSA. English, US locale, personalization disabled. Official paid and organic LifeUSA results appear, alongside a similarly named language-learning company.</p>
+            <h3>General Google Search context</h3>
+            <p>Query: <code>LifeUSA</code>. This broad name search records general brand visibility and same-name results. It is context only, not the test used to decide whether the retired logo is fixed.</p>
             <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0">Open the repeatable query</a>
           </div>
         </article>
         <article class="evidence-card">
           <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Google Images baseline for LifeUSA showing a mixture of official LifeUSA imagery and unrelated similarly named sources" loading="lazy"></a>
           <div class="evidence-copy">
-            <h3>Google Images baseline</h3>
-            <p>The first 20 contain 14 official results, four unrelated same-name business results, and two current-branded marketplace results. No retired crescent mark appears in this exact broad-query sample.</p>
+            <h3>General Google Images context</h3>
+            <p>Query: <code>LifeUSA</code>. The first 20 contain 14 official results, four unrelated same-name businesses, and two current-branded marketplace results. This broad sample is kept for entity context only; it is not compared with the faulty-logo query.</p>
             <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Open the repeatable image query</a>
           </div>
         </article>
@@ -1183,7 +1179,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.26</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.27</footer>
   </main>
 
   <script>
@@ -1235,9 +1231,9 @@
       };
 
       const actions = [
-        { id: "LOGO-001", title: "Save the starting Google results and the reported crescent result", phase: 1, owner: "SEO lead", dependency: "Original screenshot or a faithful public reproduction", evidence: "Google screenshots showing both the control query and the reported faulty result", status: "done", note: "Done in July. The original July 14 screenshot was not saved, so the exact documented query was repeated on July 21. It visibly returned multiple retired crescent logos and is labeled as a reproduction, not the missing original." },
+        { id: "LOGO-001", title: "Save the exact faulty Google Images query and result", phase: 1, owner: "SEO lead", dependency: "Original screenshot or a faithful public reproduction", evidence: "The same exact query captured before and after the Google refresh", status: "done", note: "Done in July. The logo benchmark query is “Life for Relief and Development logo.” It visibly returns the retired crescent. Future checks must repeat this exact query; the separate “LifeUSA” searches are general context only." },
         { id: "LOGO-002", title: "Agree which logos are current and retired", phase: 1, owner: "SEO lead and client", dependency: "Public website and official profiles", evidence: "Approved logo list", status: "done", note: "Done in July. The yellow-ray logo is preferred, the blue-globe logo is also approved, and the crescent logo is retired." },
-        { id: "LOGO-010", title: "Review the first 20 Google Images sources", phase: 1, owner: "SEO lead", dependency: "Starting Google results", evidence: "List of the first 20 image sources", status: "done", note: "Done in July. The first 20 results contained 14 official sources, four unrelated businesses, two current marketplace results, and no retired crescent logo." },
+        { id: "LOGO-010", title: "Review the first 20 results for the broad “LifeUSA” query", phase: 1, owner: "SEO lead", dependency: "General Google Images context capture", evidence: "List of the first 20 image sources for the query “LifeUSA”", status: "done", note: "Done in July. This broad “LifeUSA” check is for general brand visibility, not the logo pass-or-fail test. Its first 20 results contained 14 official sources, four unrelated businesses, and two current marketplace results." },
 
         { id: "LOGO-003", title: "Create the official square and horizontal logo files", phase: 2, owner: "Brand owner", dependency: "Approved logo decision", evidence: "Live square and horizontal files", status: "done", note: "Done in July. The approved square and horizontal logo files are live and match the original files exactly." },
         { id: "LOGO-004", title: "Publish the LifeUSA Brand Resources page", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live Brand Resources page", status: "done", note: "Done in July. The Brand Resources page is live and shows both approved logo files." },
@@ -1264,10 +1260,9 @@
 
       const ACTION_PROOF_LINKS = {
         "LOGO-001": [
-          ["Faulty crescent benchmark reproduction", "./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"],
-          ["Search control screenshot", "./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"],
-          ["Broad Images control (no crescent)", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"],
-          ["Capture protocol", "./evidence/2026-07-15/baseline.md"]
+          ["Faulty result — query: “Life for Relief and Development logo”", "./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"],
+          ["Repeat that exact Google Images query", "https://www.google.com/search?q=Life+for+Relief+and+Development+logo&hl=en&gl=us&pws=0&udm=2"],
+          ["Query and capture rules", "./evidence/2026-07-15/baseline.md"]
         ],
         "LOGO-002": [
           ["Approved logo evidence", "#evidence"],
@@ -1275,7 +1270,7 @@
         ],
         "LOGO-010": [
           ["First-20 CSV", "./evidence/2026-07-15/first-20-source-inventory.csv"],
-          ["Images screenshot", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"]
+          ["General Images context — query: “LifeUSA”", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"]
         ],
         "LOGO-003": [
           ["Wix change log", "./evidence/2026-07-15/wix-owned-logo-change-log.md"],
@@ -1355,7 +1350,7 @@
       };
 
       const LEGACY_DEFAULT_NOTE_FINGERPRINTS = {
-        "LOGO-001": [2468275072, 1188887501, 1764340692],
+        "LOGO-001": [2468275072, 1188887501, 1764340692, 883890004],
         "LOGO-002": [2655374619, 1537012613],
         "LOGO-003": [3546647972, 696936659],
         "LOGO-004": [4126769937, 3390436989],
@@ -1364,7 +1359,7 @@
         "LOGO-007": [2947637579, 4034130646],
         "LOGO-008": [1454634842, 2221767985],
         "LOGO-009": [2811563139, 1386573203],
-        "LOGO-010": [1180601467, 1638702859],
+        "LOGO-010": [1180601467, 1638702859, 2683996388],
         "LOGO-011": [1216590408, 1577497245],
         "LOGO-012": [3826085019, 1956328277],
         "LOGO-013": [233667454, 736287614],
@@ -1417,7 +1412,7 @@
       ];
 
       const defaultState = () => ({
-        version: 20,
+        version: 21,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1433,7 +1428,7 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 20;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 21;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -1530,7 +1525,7 @@
             const previous = previousItems[item.id] || [];
             const savedNote = cleanText(saved.note);
             const legacyFingerprints = LEGACY_DEFAULT_NOTE_FINGERPRINTS[item.id] || [];
-            const isLegacyDefaultNote = Number.isFinite(raw.version) && raw.version >= 16 && raw.version <= 19 && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const isLegacyDefaultNote = Number.isFinite(raw.version) && raw.version >= 16 && raw.version <= 20 && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
             const upgradeStatus = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => saved.status === value.status));
             const upgradeNote = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.items[item.id] = {
