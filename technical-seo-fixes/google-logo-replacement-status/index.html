@@ -984,20 +984,23 @@
 
         <article class="proof-case">
           <div class="proof-case-head">
-            <div><h3>5. Google: baseline captured, after result not yet proved</h3><p>Google can update only after it recrawls corrected sources. The tracker keeps that algorithmic refresh separate from the work already completed.</p></div>
-            <span class="proof-status pending">Awaiting Google</span>
+            <div><h3>5. Google benchmark: faulty crescent result reproduced</h3><p>The original July 14 screenshot was not saved, but the same documented Google Images query was repeated on July 21 and still showed the retired crescent logo. The capture below records that faulty result without pretending it is the missing original.</p></div>
+            <span class="proof-status pending">Benchmark reproduced</span>
           </div>
           <div class="comparison-grid">
             <figure class="proof-frame">
-              <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Before baseline screenshot of Google Images results for LifeUSA with personalization disabled" loading="lazy"></a>
-              <figcaption><strong>Before: saved Google Images baseline</strong>The repeatable starting view was captured in English, in the United States, with personalization disabled.</figcaption>
+              <a href="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"><img src="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png" alt="Google Images benchmark reproduction showing retired yellow crescent LifeUSA logos in the results" loading="lazy"></a>
+              <figcaption><strong>Faulty result reproduced July 21</strong>The exact query <code>Life for Relief and Development logo</code>, with English, United States, and personalization disabled in the URL, visibly returns multiple retired yellow-crescent LifeUSA logos.</figcaption>
+            </figure>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="Control screenshot of broad Google Images results for LifeUSA with no crescent logo visible" loading="lazy"></a>
+              <figcaption><strong>Control capture: not the faulty result</strong>This later broad <code>LifeUSA</code> query contains no retired crescent mark in its first 20 results. It is useful control evidence, but it is not the missing before screenshot.</figcaption>
             </figure>
             <div class="proof-frame">
               <div class="proof-placeholder"><div><strong>After screenshot pending</strong>No Google refresh is claimed yet. A new screenshot belongs here only after a clean public check proves the change.</div></div>
-              <div class="proof-placeholder-caption"></div>
             </div>
           </div>
-          <p class="proof-result"><strong>Completion rule:</strong> the program remains open until approved logos are consistent across owned, Google, and authoritative outside sources, followed by three stable checks.</p>
+          <p class="proof-result"><strong>What is proved now:</strong> Google Images still surfaces the retired crescent, and the same mark remains live on discoverable source pages. <strong>What is not proved:</strong> a clean Google refresh. The program remains open until the sources are corrected and three stable Google checks show no regression.</p>
           <div class="proof-links">
             <a href="https://www.google.com/search?q=LifeUSA&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the Google Images query</a>
             <a href="./evidence/2026-07-15/baseline.md">Read the baseline protocol</a>
@@ -1180,7 +1183,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.25</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.26</footer>
   </main>
 
   <script>
@@ -1232,7 +1235,7 @@
       };
 
       const actions = [
-        { id: "LOGO-001", title: "Save the starting Google results", phase: 1, owner: "SEO lead", dependency: "None", evidence: "Saved Google Search and Images screenshots", status: "done", note: "Done in July. Saved the starting Google Search and Images results with personalization turned off." },
+        { id: "LOGO-001", title: "Save the starting Google results and the reported crescent result", phase: 1, owner: "SEO lead", dependency: "Original screenshot or a faithful public reproduction", evidence: "Google screenshots showing both the control query and the reported faulty result", status: "done", note: "Done in July. The original July 14 screenshot was not saved, so the exact documented query was repeated on July 21. It visibly returned multiple retired crescent logos and is labeled as a reproduction, not the missing original." },
         { id: "LOGO-002", title: "Agree which logos are current and retired", phase: 1, owner: "SEO lead and client", dependency: "Public website and official profiles", evidence: "Approved logo list", status: "done", note: "Done in July. The yellow-ray logo is preferred, the blue-globe logo is also approved, and the crescent logo is retired." },
         { id: "LOGO-010", title: "Review the first 20 Google Images sources", phase: 1, owner: "SEO lead", dependency: "Starting Google results", evidence: "List of the first 20 image sources", status: "done", note: "Done in July. The first 20 results contained 14 official sources, four unrelated businesses, two current marketplace results, and no retired crescent logo." },
 
@@ -1261,8 +1264,9 @@
 
       const ACTION_PROOF_LINKS = {
         "LOGO-001": [
-          ["Search screenshot", "./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"],
-          ["Images screenshot", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"],
+          ["Faulty crescent benchmark reproduction", "./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"],
+          ["Search control screenshot", "./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"],
+          ["Broad Images control (no crescent)", "./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"],
           ["Capture protocol", "./evidence/2026-07-15/baseline.md"]
         ],
         "LOGO-002": [
@@ -1351,7 +1355,7 @@
       };
 
       const LEGACY_DEFAULT_NOTE_FINGERPRINTS = {
-        "LOGO-001": [2468275072, 1188887501],
+        "LOGO-001": [2468275072, 1188887501, 1764340692],
         "LOGO-002": [2655374619, 1537012613],
         "LOGO-003": [3546647972, 696936659],
         "LOGO-004": [4126769937, 3390436989],
@@ -1413,7 +1417,7 @@
       ];
 
       const defaultState = () => ({
-        version: 19,
+        version: 20,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1429,7 +1433,7 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 19;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 20;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -1525,9 +1529,9 @@
           if (saved) {
             const previous = previousItems[item.id] || [];
             const savedNote = cleanText(saved.note);
-            const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
             const legacyFingerprints = LEGACY_DEFAULT_NOTE_FINGERPRINTS[item.id] || [];
-            const isLegacyDefaultNote = (raw.version === 16 || raw.version === 17 || raw.version === 18) && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const isLegacyDefaultNote = Number.isFinite(raw.version) && raw.version >= 16 && raw.version <= 19 && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const upgradeStatus = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => saved.status === value.status));
             const upgradeNote = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.items[item.id] = {
               status: upgradeStatus ? item.status : cleanStatus(saved.status),
