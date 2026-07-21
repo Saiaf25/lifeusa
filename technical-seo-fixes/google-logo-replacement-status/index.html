@@ -911,13 +911,13 @@
 
         <article class="proof-case">
           <div class="proof-case-head">
-            <div><h3>2. Visible owned-brand sources now live</h3><p>The approved logo is visible on the main site, and the new Brand Resources page gives publishers and directories an official source.</p></div>
+            <div><h3>2. Visible owned-brand sources now live</h3><p>The approved logo is visible on the main site, the header and footer now use descriptive alt text, and the new Brand Resources page gives publishers and directories an official source.</p></div>
             <span class="proof-status fixed">Verified fixed</span>
           </div>
           <div class="comparison-grid">
             <figure class="proof-frame">
               <a href="./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png"><img src="./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png" alt="After screenshot of the live LifeUSA homepage showing the approved horizontal logo in the header" loading="lazy"></a>
-              <figcaption><strong>After: live homepage</strong>The header and footer use the approved horizontal source; the browser icon uses the approved square source.</figcaption>
+              <figcaption><strong>After: live homepage</strong>The header and footer use the approved horizontal source and both identify the image as “Life for Relief and Development logo.” The browser icon uses the approved square source.</figcaption>
             </figure>
             <figure class="proof-frame">
               <a href="./evidence/2026-07-21/after-lifeusa-brand-resources-page.png"><img src="./evidence/2026-07-21/after-lifeusa-brand-resources-page.png" alt="After screenshot of the published Official LifeUSA Brand Resources page" loading="lazy"></a>
@@ -1180,7 +1180,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.24</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.25</footer>
   </main>
 
   <script>
@@ -1239,7 +1239,7 @@
         { id: "LOGO-003", title: "Create the official square and horizontal logo files", phase: 2, owner: "Brand owner", dependency: "Approved logo decision", evidence: "Live square and horizontal files", status: "done", note: "Done in July. The approved square and horizontal logo files are live and match the original files exactly." },
         { id: "LOGO-004", title: "Publish the LifeUSA Brand Resources page", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live Brand Resources page", status: "done", note: "Done in July. The Brand Resources page is live and shows both approved logo files." },
         { id: "LOGO-005", title: "Fix the logo information Google reads from the homepage", phase: 2, owner: "Wix administrator and SEO lead", dependency: "Official square logo", evidence: "Public homepage organization information", status: "done", note: "Done in July. The homepage now gives Google the approved colored logo and correct organization details. One separate cleanup remains: the hidden Google information lists the website twice." },
-        { id: "LOGO-006", title: "Use approved logos in the header, footer, and browser icon", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live header, footer, and browser icon", status: "done", note: "Done in July. The header and footer use the approved horizontal logo, and the browser icon uses the approved square logo." },
+        { id: "LOGO-006", title: "Use approved logos and descriptive alt text in the header, footer, and browser icon", phase: 2, owner: "Wix administrator", dependency: "Official logo files", evidence: "Live header, footer, browser icon, and logo alt text", status: "done", note: "Done in July. The Wix administrator aligned the header and footer with the approved horizontal logo, changed both logo alt texts to “Life for Relief and Development logo,” and aligned the browser icon with the approved square logo." },
 
         { id: "LOGO-007", title: "Remove the retired logo from the old WordPress site", phase: 3, owner: "WordPress owner", dependency: "Decision on the old WordPress site", evidence: "Public check showing the old logo is gone", status: "in_progress", note: "Still open. The old WordPress site continues to show the retired crescent logo. A decision is needed before changing the site." },
         { id: "LOGO-008", title: "Replace the retired logo on Kids That Do Good", phase: 3, owner: "Client communications", dependency: "Publisher reply", evidence: "Updated public profile and image", status: "waiting", note: "Waiting for a reply. The request was sent in July, but the public page still shows the retired logo." },
@@ -1290,7 +1290,7 @@
         ],
         "LOGO-006": [
           ["After screenshot", "./evidence/2026-07-21/after-lifeusa-homepage-approved-header.png"],
-          ["Placement verification", "./evidence/2026-07-21/logo-006-and-navigation-verification.md"],
+          ["Placement and alt-text verification", "./evidence/2026-07-21/logo-006-and-navigation-verification.md"],
           ["Live homepage", "https://www.lifeusa.org/"]
         ],
         "LOGO-007": [
@@ -1356,7 +1356,7 @@
         "LOGO-003": [3546647972, 696936659],
         "LOGO-004": [4126769937, 3390436989],
         "LOGO-005": [3711447607, 2342541568],
-        "LOGO-006": [1089305338, 3435994832],
+        "LOGO-006": [1089305338, 3435994832, 180422436],
         "LOGO-007": [2947637579, 4034130646],
         "LOGO-008": [1454634842, 2221767985],
         "LOGO-009": [2811563139, 1386573203],
@@ -1413,7 +1413,7 @@
       ];
 
       const defaultState = () => ({
-        version: 18,
+        version: 19,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -1429,7 +1429,7 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 18;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 19;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -1527,7 +1527,7 @@
             const savedNote = cleanText(saved.note);
             const upgradeStatus = isPreviousVersion && previous.some(value => saved.status === value.status);
             const legacyFingerprints = LEGACY_DEFAULT_NOTE_FINGERPRINTS[item.id] || [];
-            const isLegacyDefaultNote = (raw.version === 16 || raw.version === 17) && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
+            const isLegacyDefaultNote = (raw.version === 16 || raw.version === 17 || raw.version === 18) && legacyFingerprints.includes(textFingerprint(savedNote.trim()));
             const upgradeNote = isPreviousVersion && (isLegacyDefaultNote || previous.some(value => savedNote.trim() === value.note.trim()));
             base.items[item.id] = {
               status: upgradeStatus ? item.status : cleanStatus(saved.status),
