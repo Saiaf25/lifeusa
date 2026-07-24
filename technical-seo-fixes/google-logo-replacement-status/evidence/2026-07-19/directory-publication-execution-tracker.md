@@ -36,7 +36,7 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-011 | Cylex US | Human verification required | Google returned no exact record. On July 24, the public site stopped at a Cloudflare “Verify you are human” screen before the registration route could be reached | No |
 | DIR-012 | MerchantCircle | New candidate, signup blocked | Google returned no exact record. MerchantCircle confirms a free basic listing with editable business information and photos. On July 24, the official `/signup` route again returned 403 | No |
 | DIR-013 | Cybo | Existing | Cybo's add-business duplicate step found the exact Southfield record at `https://www.cybo.com/US-biz/life-for-relief-development`; the public page links to LifeUSA but exposes stale contact data and no approved logo | No |
-| DIR-014 | Nextdoor Business | Approved logo saved, public recheck pending | On July 24, the account email was verified and authenticated dashboard access was confirmed. The page at `https://nextdoor.com/pages/life-for-relief-and-development-southfield-mi/` shows the correct legal name, address, phone, public email, description, and canonical HTTPS backlink. The approved square LifeUSA logo was uploaded, cropped, saved, and verified visually in the authenticated page. A separate logged-out browser request returned an HTTP response failure, so the new public logo state could not be reverified and the profile does not count yet | No |
+| DIR-014 | Nextdoor Business | Done | On July 24, the account email was verified and authenticated dashboard access was confirmed. The page at `https://nextdoor.com/pages/life-for-relief-and-development-southfield-mi/` shows the correct legal name, address, phone, public email, description, canonical HTTPS backlink, and approved square LifeUSA logo. The logo was uploaded, cropped, saved, and verified visually. The user then explicitly confirmed that the same logo appears without signing in. Evidence screenshot: `../2026-07-24/nextdoor-approved-logo-and-backlink.jpg` | **Yes** |
 | DIR-015 | Alignable | CAPTCHA blocked | Google returned no exact profile. On July 24, the free signup accepted the approved mailbox and terms selection, then required reCAPTCHA. The CAPTCHA has not been completed | No |
 | DIR-016 | AARP Create the Good | Personal details and CAPTCHA required | Google returned no exact organization result. AARP offers free nonprofit opportunity publication, but its account form requires a real first name, last name, birthday, postal code, and moving-character security challenge. No personal data was invented or submitted | No |
 | DIR-017 | Taproot Plus | Organization approved, logo saved | Google returned no exact organization result. On July 24, the authorized account email was verified, nonprofit onboarding was completed with the legal name, EIN `95-4402149`, canonical website, mission, location, and issue areas, and Taproot displayed “Congratulations! You're officially a Taproot nonprofit!” The dashboard marks Life for Relief and Development as `Approved`. The approved square logo was uploaded, cropped, saved, and visually verified beside the canonical website in the organization profile. A logged-out public organization URL has not been exposed, so the profile does not count yet | No |
@@ -107,7 +107,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-010 | Brownbook | Global business listing | Access blocked | Cloudflare verification prevented direct registration and branding-field inspection |
 | NEW-011 | Cylex US | Business directory profile | New candidate, CAPTCHA blocked | Free registration and no exact indexed record verified; account creation requires reCAPTCHA completion |
 | NEW-012 | Cybo | Global organization listing | Existing | Exact Southfield record found with stale contact data and no approved logo; claim/update rather than duplicate |
-| NEW-013 | Nextdoor Business | Local organization profile | Approved logo saved, public recheck pending | The approved square logo is saved with the correct details and canonical HTTPS backlink. A separate logged-out browser request returned an HTTP response failure, so public logo verification remains |
+| NEW-013 | Nextdoor Business | Local organization profile | Done | Public page, approved square logo, canonical HTTPS backlink, and logged-out visibility are verified |
 | NEW-014 | Alignable | Local business network profile | New candidate, CAPTCHA blocked | Free signup reached reCAPTCHA; no account was created and no contacts were imported |
 | NEW-015 | Better Business Bureau | Charity or business profile | Conditional | BBB eligibility and any accreditation or review distinction; no paid accreditation without approval |
 | NEW-016 | Dun & Bradstreet | Business identity profile | Conditional | Existing D-U-N-S record search; logo is a paid-tier feature under current published terms |
@@ -169,7 +169,7 @@ Life for Relief and Development is a Southfield, Michigan-based nonprofit humani
 
 ## Current blocker
 
-Qualified progress is **2 of 20**. Find-Us-Here and A-Z Business Finder meet every Done criterion.
+Qualified progress is **3 of 20**. Find-Us-Here, A-Z Business Finder, and Nextdoor meet every Done criterion.
 
 The July 24 approved batch reached these human gates:
 
@@ -184,7 +184,6 @@ The July 24 approved batch reached these human gates:
 These platform conditions also prevent completion:
 
 - Callupcontact returned Cloudflare Tunnel Error 1033, so its missing logo could not be added.
-- Nextdoor is published with the correct public details and HTTPS backlink, and the approved logo is saved. A separate logged-out browser request returned an HTTP response failure, so the new public logo state still needs rechecking.
 - Opendi verification was reported as completed, but a fresh exact-name and Southfield search still returns no public result.
 - Hotfrog's advertised registration link returned Page Not Found.
 - MerchantCircle's official free-signup route returned 403.
