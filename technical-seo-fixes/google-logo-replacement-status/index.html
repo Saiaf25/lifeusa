@@ -339,6 +339,27 @@
     .phase-card b { display: block; color: var(--green); }
     .phase-card small { display: block; margin: 4px 0 8px; color: var(--muted); }
     .phase-card span { font-size: .86rem; font-weight: 700; }
+    .phase-profile-count {
+      display: block;
+      margin-top: 8px;
+      color: var(--green);
+    }
+    .phase-profile-count strong { font-size: 1.05rem; }
+    .phase-profile-progress {
+      display: block;
+      height: 6px;
+      margin-top: 6px;
+      overflow: hidden;
+      background: var(--line);
+      border-radius: 999px;
+    }
+    .phase-profile-progress i {
+      display: block;
+      width: 10%;
+      height: 100%;
+      background: var(--green);
+      border-radius: inherit;
+    }
     .control-bar {
       display: grid;
       grid-template-columns: minmax(180px, 1.4fr) minmax(150px, .7fr) minmax(150px, .7fr);
@@ -882,7 +903,13 @@
         <li class="phase-card" data-phase="1"><b>Phase 1</b><small>Understand the problem<br>Starting point</small><span data-phase-count>0 of 3 done</span></li>
         <li class="phase-card" data-phase="2"><b>Phase 2</b><small>Fix the LifeUSA website<br>LifeUSA-controlled work</small><span data-phase-count>0 of 4 done</span></li>
         <li class="phase-card" data-phase="3"><b>Phase 3</b><small>Remove retired logo sources<br>Outside websites</small><span data-phase-count>0 of 4 done</span></li>
-        <li class="phase-card" data-phase="4"><b>Phase 4</b><small>Strengthen profiles and directories<br>Requires profile access</small><span data-phase-count>0 of 2 done</span></li>
+        <li class="phase-card" data-phase="4">
+          <b>Phase 4</b>
+          <small>Profiles and directory expansion<br>Requires profile access</small>
+          <span data-phase-count>0 of 2 work items done</span>
+          <span class="phase-profile-count"><strong>2 of 20</strong> new profiles live</span>
+          <span class="phase-profile-progress" role="progressbar" aria-label="New directory profiles published" aria-valuemin="0" aria-valuemax="20" aria-valuenow="2"><i></i></span>
+        </li>
         <li class="phase-card" data-phase="5"><b>Phase 5</b><small>Update Google after source fixes<br>Runs after public corrections</small><span data-phase-count>0 of 4 done</span></li>
         <li class="phase-card" data-phase="6"><b>Phase 6</b><small>Optional paid support<br>Only if approved</small><span data-phase-count>0 of 1 done</span></li>
         <li class="phase-card" data-phase="7"><b>Phase 7</b><small>Monitor and close<br>Weekly until stable</small><span data-phase-count>0 of 1 done</span></li>
@@ -1960,7 +1987,7 @@
           else if (phaseStates.includes("blocked")) phaseState = "blocked";
           else if (phaseStates.some(value => value !== "not_started")) phaseState = "active";
           card.dataset.state = phaseState;
-          card.querySelector("[data-phase-count]").textContent = `${phaseDone} of ${phaseItems.length} done`;
+          card.querySelector("[data-phase-count]").textContent = `${phaseDone} of ${phaseItems.length} work items done`;
         });
         updateApprovalSummary();
       };
