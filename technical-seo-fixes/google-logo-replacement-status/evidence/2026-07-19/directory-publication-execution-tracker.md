@@ -36,10 +36,10 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-011 | Cylex US | Human verification required | Google returned no exact record. On July 24, the public site stopped at a Cloudflare “Verify you are human” screen before the registration route could be reached | No |
 | DIR-012 | MerchantCircle | New candidate, signup blocked | Google returned no exact record. MerchantCircle confirms a free basic listing with editable business information and photos. On July 24, the official `/signup` route again returned 403 | No |
 | DIR-013 | Cybo | Existing | Cybo's add-business duplicate step found the exact Southfield record at `https://www.cybo.com/US-biz/life-for-relief-development`; the public page links to LifeUSA but exposes stale contact data and no approved logo | No |
-| DIR-014 | Nextdoor Business | Account owner name required | Google returned no exact page. Nextdoor confirms a free Business Page with contact information and photos. On July 24, the approved email and password advanced to the account-owner screen, which requires a real first and last name | No |
+| DIR-014 | Nextdoor Business | Published, logo pending | On July 24, an authorized account was created under Saif Gamal and the public page was published at `https://nextdoor.com/page/life-for-relief-and-development-southfield-mi/`. The page shows the correct legal name, charity category, address, phone, public email, description, and canonical HTTPS backlink. The browser upload control rejected the approved logo file, so the page does not count until that logo is added and verified logged out | No |
 | DIR-015 | Alignable | CAPTCHA blocked | Google returned no exact profile. On July 24, the free signup accepted the approved mailbox and terms selection, then required reCAPTCHA. The CAPTCHA has not been completed | No |
 | DIR-016 | AARP Create the Good | Personal details and CAPTCHA required | Google returned no exact organization result. AARP offers free nonprofit opportunity publication, but its account form requires a real first name, last name, birthday, postal code, and moving-character security challenge. No personal data was invented or submitted | No |
-| DIR-017 | Taproot Plus | Account owner name required | Google returned no exact organization result. Taproot confirms a free nonprofit profile and publicly displays organization logos. On July 24, its nonprofit account form required a real representative first and last name before account creation | No |
+| DIR-017 | Taproot Plus | Account created, email verification pending | Google returned no exact organization result. Taproot confirms a free nonprofit profile and publicly displays organization logos. On July 24, an authorized nonprofit account was created under Saif Gamal. Taproot confirmed that the account exists and sent a verification email to the approved LifeUSA Gmail account. The verification link must be opened before the organization profile, logo, and backlink can be completed | No |
 | DIR-018 | ChamberofCommerce.com | Existing reference found | Cybo's exact Southfield record links to `chamberofcommerce.com/southfield-mi/4559853-life-for-relief-development`; resolve and claim that record instead of creating a duplicate | No |
 | DIR-019 | MapQuest | Existing reference found | Cybo's exact Southfield record links to `mapquest.com/us/michigan/life-for-relief-development-6299633`; resolve the current owner/data-provider route instead of creating a duplicate | No |
 | DIR-020 | Points of Light Engage | Magic link sent | Google returned no exact indexed organization result. Points of Light offers nonprofit registration and volunteer-opportunity management. On July 24, its automated sign-in link was requested for the approved LifeUSA Gmail account. The link must be opened before registration can continue | No |
@@ -53,7 +53,7 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-028 | EZlocal | Human verification required | Google returned no exact indexed record. On July 24, the public site again stopped at Cloudflare security verification. Duplicate status, free owner route, and logo support remain unverified | No |
 | DIR-029 | CitySquares | Existing | CitySquares' own exact search returned `https://citysquares.com/b/life-for-relief-development-10255230` with the correct address, phone, and an HTTP LifeUSA link but no visible approved logo | No |
 | DIR-030 | ShowMeLocal | Site unavailable in browser | Google returned no exact indexed record. On July 24, the public site still rendered a blank page in the browser. Duplicate status, owner route, and logo support remain unverified | No |
-| DIR-031 | Opendi | Submitted, not published | The authorized free submission flow accepted the organization information but issued no confirmation ID. On July 24, Opendi’s own exact name search returned “No results,” so no public profile exists to verify or count | No |
+| DIR-031 | Opendi | Submitted, email verification pending | On July 24, the authorized free listing flow accepted the legal name, description, Saif Gamal as contact, address, phone, public email, website, no published hours, and Social Services category. Opendi then displayed “Thanks for your free listing” and confirmed that a verification link was sent by email. The platform rewrote the website field to an HTTP link, and no logo field or public page is available until email verification is completed | No |
 | DIR-032 | My Local Services | Conditional paid listing | The platform advertises a full-page listing for `$2` and says listings are manually approved. Any payment or paid listing remains separately gated | No |
 | DIR-033 | Local.com | Ineligible current platform | The current site is an expert-review and top-ten content publisher, not an active owner-managed local business directory submission route | No |
 | DIR-034 | Callupcontact | Published, logo incomplete; site temporarily unavailable | A new public profile was previously verified at `https://www.callupcontact.com/b/businessprofile/Life_for_Relief_and_Development/10168407` with the correct organization data and canonical backlink but no approved logo. On July 24, the page returned Cloudflare Tunnel Error 1033, so the logo could not be added or reverified | No |
@@ -107,7 +107,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-010 | Brownbook | Global business listing | Access blocked | Cloudflare verification prevented direct registration and branding-field inspection |
 | NEW-011 | Cylex US | Business directory profile | New candidate, CAPTCHA blocked | Free registration and no exact indexed record verified; account creation requires reCAPTCHA completion |
 | NEW-012 | Cybo | Global organization listing | Existing | Exact Southfield record found with stale contact data and no approved logo; claim/update rather than duplicate |
-| NEW-013 | Nextdoor Business | Local organization profile | New candidate, access blocked | Free page, photos, and contact details verified; owner claim route did not advance in the current session |
+| NEW-013 | Nextdoor Business | Local organization profile | Published, logo pending | Public page `https://nextdoor.com/page/life-for-relief-and-development-southfield-mi/` now has the correct organization details and canonical HTTPS backlink; the approved logo still needs a successful upload and logged-out verification |
 | NEW-014 | Alignable | Local business network profile | New candidate, CAPTCHA blocked | Free signup reached reCAPTCHA; no account was created and no contacts were imported |
 | NEW-015 | Better Business Bureau | Charity or business profile | Conditional | BBB eligibility and any accreditation or review distinction; no paid accreditation without approval |
 | NEW-016 | Dun & Bradstreet | Business identity profile | Conditional | Existing D-U-N-S record search; logo is a paid-tier feature under current published terms |
@@ -116,7 +116,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-019 | Pledge | Nonprofit giving profile | Conditional fundraising platform | No exact indexed LifeUSA page found, but the available route creates fundraising products rather than a routine directory profile; service enrollment remains separately gated |
 | NEW-020 | Double the Donation | Matching-gift nonprofit profile | Existing | Exact public `/lifeusa` record found with the legal name, EIN, address, and LifeUSA website link; maintain rather than duplicate |
 | NEW-021 | AARP Create the Good | Volunteer organization profile | New candidate, access blocked | Free nonprofit opportunity publishing is verified; AARP account and public branding fields remain gated |
-| NEW-022 | Taproot Plus | Skilled-volunteer nonprofit profile | New candidate, representative details needed | Free nonprofit profile and public organization-logo display verified; signup requires a real representative name |
+| NEW-022 | Taproot Plus | Skilled-volunteer nonprofit profile | Account created, email verification pending | Authorized account created under Saif Gamal; Taproot sent the required verification email before organization-profile editing can continue |
 | NEW-023 | Catchafire | Skills-based volunteering profile | Conditional | Service agreement, eligibility, and any participation cost |
 | NEW-024 | Points of Light Engage | Volunteer organization profile | New candidate, access blocked | No exact indexed record found and nonprofit registration is active; email magic-link access and public logo/backlink-field verification remain required |
 | NEW-025 | Deed | Workplace giving and volunteering profile | Existing data record | Exact legal name, EIN, and Southfield record found in the free claim search; claim and enhance the existing record rather than count it as new |
@@ -128,7 +128,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-031 | EZlocal | Local business directory profile | Access blocked | Cloudflare verification prevented duplicate and owner-field inspection |
 | NEW-032 | CitySquares | Local business directory profile | Existing | Exact Southfield record found with a stale HTTP link and no visible approved logo |
 | NEW-033 | ShowMeLocal | Local business directory profile | Access blocked | Public site rendered an empty document; owner and logo capabilities remain unverified |
-| NEW-034 | Opendi | Local business directory profile | Submitted, public receipt unverified | Free submission flow completed, but no confirmation ID or public result was observable |
+| NEW-034 | Opendi | Local business directory profile | Submitted, email verification pending | Opendi displayed a successful submission receipt and sent a verification email; publication, logo support, and the final public link remain unverified |
 | NEW-035 | My Local Services | Local business directory profile | Conditional paid listing | Platform requires a `$2` listing payment and manual approval |
 | NEW-036 | Callupcontact | Local business directory profile | Published, logo incomplete | New public profile and canonical backlink verified; approved logo still absent |
 | NEW-037 | Find-Us-Here | Local business and community directory profile | Done | New logged-out public profile, approved logo, and canonical backlink verified |
@@ -171,14 +171,13 @@ The July 24 approved batch reached these human gates:
 
 - Idealist and Alignable require reCAPTCHA completion.
 - Cylex, Brownbook, and EZlocal require Cloudflare human verification.
-- Nextdoor and Taproot require the real first and last name of the account owner.
 - AARP Create the Good requires an account owner's name, birthday, postal code, and security challenge.
-- Points of Light sent an automated magic sign-in link to the approved LifeUSA Gmail account. The link must be opened before registration can continue.
+- Taproot, Opendi, and Points of Light sent verification or sign-in links to the approved LifeUSA Gmail account. Each link must be opened before its profile can continue.
 
 These platform conditions also prevent completion:
 
 - Callupcontact returned Cloudflare Tunnel Error 1033, so its missing logo could not be added.
-- Opendi's own exact search returned no published result after the prior submission.
+- Nextdoor is published with the correct public details and HTTPS backlink, but its approved logo upload is still pending.
 - Hotfrog's advertised registration link returned Page Not Found.
 - MerchantCircle's official free-signup route returned 403.
 - Fyple's registration page is under maintenance.
