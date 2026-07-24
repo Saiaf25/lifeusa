@@ -63,7 +63,7 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 | DIR-038 | LaCartes | Account form staged, CAPTCHA and Terms pending | No indexed exact LifeUSA result was found. The official free registration form is active and the approved account details were entered on July 24. The platform requires an image CAPTCHA and acceptance of its Terms before account creation. Business-profile logo and backlink fields remain unverified | No |
 | DIR-039 | 2FindLocal | Account form staged, image verification pending | The official phone lookup returned “Sorry, we could not find any information” for `800-827-3543`, confirming the new-listing route rather than a duplicate. The authorized account form was filled on July 24 and is waiting at the platform's image-verification field. Logo upload support and the final public profile remain unverified | No |
 | DIR-040 | iBegin | Cloudflare verification blocked | No indexed exact LifeUSA result was found. The official submission route `https://www.ibegin.com/business-center/submit/` was opened on July 24 but remained on Cloudflare's “Performing security verification” screen, so the form and logo field could not be reached | No |
-| DIR-041 | BizHwy | Activated, logo unsupported in free editor | On July 24, the free listing was submitted with the legal name, Southfield address, phone, canonical website, and approved mailbox. Both preselected paid upgrades, totaling `$25`, were removed. The exact activation email from `info@bizhwy.com` was opened and the platform confirmed “Business Listing Activated.” Authenticated profile review found editable contact data but no logo or image control, so the activated listing cannot count toward the 20-logo goal | No |
+| DIR-041 | BizHwy | Activated, Brand Resources backlink saved | On July 24, the free listing was submitted with the legal name, Southfield address, phone, and approved mailbox. Both preselected paid upgrades, totaling `$25`, were removed. The exact activation email from `info@bizhwy.com` was opened and the platform confirmed “Business Listing Activated.” Authenticated profile review found no logo or image control. The listing's only website field was therefore updated and verified as `https://www.lifeusa.org/brand-resources`, giving the directory a direct backlink to the approved-logo page. The listing still cannot count toward the 20-logo goal because BizHwy does not display the logo | No |
 
 ## Important existing-profile access register
 
@@ -137,7 +137,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 | NEW-040 | LaCartes | Business and organization profile | Account form staged | Approved account details are entered; image CAPTCHA and Terms acceptance are required before submission |
 | NEW-041 | 2FindLocal | Local business directory profile | Account form staged | Phone lookup confirmed no existing record; image verification is required before registration |
 | NEW-042 | iBegin | Local business directory profile | Access blocked | Cloudflare security verification prevents access to the submission form |
-| NEW-043 | BizHwy | Local business directory profile | Activated, not logo-capable | Free listing activated and canonical website saved, but the authenticated free editor has no logo or image field |
+| NEW-043 | BizHwy | Local business directory profile | Activated, Brand Resources backlink saved | Free listing activated. The authenticated editor has no logo or image field, so its single website field now links directly to `https://www.lifeusa.org/brand-resources` |
 
 ## Standard public data
 
@@ -191,4 +191,4 @@ These platform conditions also prevent completion:
 - Fyple's registration page is under maintenance.
 - ShowMeLocal rendered a blank page.
 
-BizHwy was activated and verified as not logo-capable in its free editor, so it does not count toward the 20-logo goal. LaCartes and 2FindLocal are staged at human-verification steps. iBegin remains blocked by Cloudflare.
+BizHwy was activated and verified as not logo-capable in its free editor. Its website field now links directly to the LifeUSA Brand Resources page, but it does not count toward the 20-logo goal because the logo is not displayed. LaCartes and 2FindLocal are staged at human-verification steps. iBegin remains blocked by Cloudflare.
