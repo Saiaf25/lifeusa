@@ -360,6 +360,52 @@
       background: var(--green);
       border-radius: inherit;
     }
+    .directory-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .directory-column {
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+    .directory-column h3 {
+      margin: 0 0 5px;
+      color: var(--green-dark);
+      font-size: var(--text-body-lg);
+    }
+    .directory-column > p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: var(--text-ui);
+    }
+    .directory-list {
+      display: grid;
+      gap: 9px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .directory-list li {
+      padding: 11px 12px;
+      background: var(--surface-muted);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+    }
+    .directory-list strong { display: block; color: var(--ink); }
+    .directory-list small { display: block; margin-top: 3px; color: var(--muted); }
+    .directory-list a { font-weight: 700; }
+    .directory-ref {
+      color: var(--muted);
+      font: .75rem/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .directory-next {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: var(--text-ui);
+    }
     .control-bar {
       display: grid;
       grid-template-columns: minmax(180px, 1.4fr) minmax(150px, .7fr) minmax(150px, .7fr);
@@ -787,6 +833,7 @@
     @media (max-width: 1024px) {
       .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .principles { grid-template-columns: 1fr; }
+      .directory-summary { grid-template-columns: 1fr; }
       .action-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .gate-grid { grid-template-columns: 1fr; }
       .approval-top, .approval-controls { grid-template-columns: 1fr; }
@@ -861,6 +908,7 @@
     <nav class="nav" aria-label="Page sections">
       <a href="#overview">Overview</a>
       <a href="#timeline">Timeline</a>
+      <a href="#directories">Directories</a>
       <a href="#actions">Work plan</a>
       <a href="#approvals">Approval queue</a>
       <a href="#gates">Decision gates</a>
@@ -914,6 +962,54 @@
         <li class="phase-card" data-phase="6"><b>Phase 6</b><small>Optional paid support<br>Only if approved</small><span data-phase-count>0 of 1 done</span></li>
         <li class="phase-card" data-phase="7"><b>Phase 7</b><small>Monitor and close<br>Weekly until stable</small><span data-phase-count>0 of 1 done</span></li>
       </ol>
+    </section>
+
+    <section id="directories" class="section">
+      <div class="section-heading">
+        <h2>Directory profile progress</h2>
+        <p>Two new profiles currently meet the full requirement: a public page, the approved LifeUSA logo, and a working LifeUSA website link.</p>
+      </div>
+      <div class="directory-summary">
+        <article class="directory-column">
+          <h3>Live and counted: 2 of 20</h3>
+          <p>These profiles are public and complete.</p>
+          <ul class="directory-list">
+            <li>
+              <strong><a href="https://www.find-us-here.com/businesses/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">Find-Us-Here</a></strong>
+              <small>Approved logo and LifeUSA website link verified. <span class="directory-ref">DIR-035</span></small>
+            </li>
+            <li>
+              <strong><a href="https://www.a-zbusinessfinder.com/business-directory/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">A-Z Business Finder</a></strong>
+              <small>Approved logo and LifeUSA website link verified. <span class="directory-ref">DIR-036</span></small>
+            </li>
+          </ul>
+        </article>
+        <article class="directory-column">
+          <h3>Started but not counted</h3>
+          <p>These need one more verified result before they count.</p>
+          <ul class="directory-list">
+            <li>
+              <strong><a href="https://www.callupcontact.com/b/businessprofile/Life_for_Relief_and_Development/10168407">Callupcontact</a></strong>
+              <small>The public profile is live, but the approved logo is missing. <span class="directory-ref">DIR-034</span></small>
+            </li>
+            <li>
+              <strong>Opendi</strong>
+              <small>The listing was submitted, but no public profile or confirmation receipt has been found. <span class="directory-ref">DIR-031</span></small>
+            </li>
+          </ul>
+        </article>
+        <article class="directory-column">
+          <h3>Next profile candidates</h3>
+          <p>These require access, verification, or a human signup step.</p>
+          <ul class="directory-list">
+            <li><strong>Idealist, Hotfrog, Cylex</strong><small>Account access or CAPTCHA is required.</small></li>
+            <li><strong>MerchantCircle, Nextdoor, Alignable</strong><small>Account access or CAPTCHA is required.</small></li>
+            <li><strong>AARP Create the Good, Taproot Plus, Points of Light</strong><small>Representative or email verification is required.</small></li>
+            <li><strong>Brownbook, EZlocal, ShowMeLocal, Fyple</strong><small>Access or public-route verification is required.</small></li>
+          </ul>
+        </article>
+      </div>
+      <p class="directory-next">Existing LifeUSA profiles on websites such as Every.org, Benevity, Yelp, Candid, PayPal Giving Fund, Apple Maps, Bing Maps, and Foursquare belong to the separate logo-update task. They are important, but they do not count as new profiles. <a href="./evidence/2026-07-19/directory-publication-execution-tracker.md">Open the full directory evidence register</a>.</p>
     </section>
 
     <section id="actions" class="section">
