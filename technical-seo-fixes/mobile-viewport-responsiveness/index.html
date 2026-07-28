@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>LifeUSA Wix Mobile Viewport Development Ticket</title>
+  <style>
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("./fonts/thmanyahseriftext-Regular.woff2") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("./fonts/thmanyahseriftext-Bold.woff2") format("woff2");
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: "Thmanyah Serif Text";
+      src: url("./fonts/thmanyahseriftext-Black.woff2") format("woff2");
+      font-weight: 900;
+    }
+    :root {
+      --ink: #17231e;
+      --muted: #617067;
+      --paper: #f4f1e9;
+      --card: #fffdf7;
+      --green: #116149;
+      --green2: #dbece5;
+      --gold: #c79236;
+      --red: #a63b32;
+      --line: #d9ddd6;
+      --shadow: 0 18px 55px rgba(31,48,40,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Thmanyah Serif Text", Georgia, serif;
+      line-height: 1.65;
+    }
+    body:before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .35;
+      background-image: radial-gradient(#b7b0a1 .6px, transparent .6px);
+      background-size: 10px 10px;
+    }
+    a {
+      color: var(--green);
+      font-weight: 700;
+    }
+    a:focus-visible {
+      outline: 3px solid rgba(199,146,54,.55);
+      outline-offset: 3px;
+    }
+    .wrap {
+      position: relative;
+      max-width: 1180px;
+      margin: auto;
+      padding: 32px 22px 80px;
+    }
+    header {
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      color: white;
+      background: linear-gradient(135deg, #0b4b39, #153126);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+    header:after {
+      content: "980";
+      position: absolute;
+      right: -18px;
+      bottom: -54px;
+      color: rgba(255,255,255,.045);
+      font: 900 160px/1 Arial, sans-serif;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: #d9ebe4;
+      text-decoration: none;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 13px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 99px;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 900px;
+      margin: 18px 0 10px;
+      font-size: clamp(2.15rem, 5vw, 4.45rem);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+    header p {
+      max-width: 790px;
+      margin: 0;
+      color: #d9ebe4;
+      font-size: 1.12rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .meta span {
+      padding: 7px 12px;
+      background: rgba(255,255,255,.1);
+      border-radius: 8px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      display: flex;
+      gap: 3px;
+      justify-content: space-between;
+      overflow: auto;
+      margin: 0 0 28px;
+      padding: 6px;
+      background: rgba(255,253,247,.92);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      backdrop-filter: blur(12px);
+    }
+    nav a {
+      flex: 0 0 auto;
+      padding: 6px 8px;
+      color: var(--green);
+      border-radius: 7px;
+      font-size: clamp(.78rem, 1.45vw, .96rem);
+      line-height: 1.2;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    nav a:hover { background: var(--green2); }
+    section {
+      scroll-margin-top: 90px;
+      margin: 20px 0;
+      padding: 32px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 7px 25px rgba(31,48,40,.045);
+    }
+    h2 {
+      margin: 0 0 18px;
+      color: var(--green);
+      font-size: 1.8rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 6px;
+      color: var(--green);
+      font-size: 1.13rem;
+      letter-spacing: 0;
+    }
+    p { margin: 7px 0 14px; }
+    .lede { max-width: 880px; font-size: 1.13rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+    }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card {
+      min-width: 0;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .metric {
+      display: block;
+      margin: 6px 0;
+      color: var(--ink);
+      font-size: clamp(1.65rem, 3.25vw, 2.65rem);
+      font-weight: 900;
+      line-height: 1.05;
+      overflow-wrap: anywhere;
+    }
+    .label { color: var(--muted); font-size: .96rem; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-width: max-content;
+      padding: 5px 12px;
+      color: var(--green);
+      background: var(--green2);
+      border-radius: 99px;
+      font-size: .9rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .status.warn { color: #7a4b06; background: #fff7e7; }
+    .status.danger { color: var(--red); background: #fff0ed; }
+    .callout {
+      margin: 16px 0;
+      padding: 15px 18px;
+      background: #fff7e7;
+      border-left: 5px solid var(--gold);
+      border-radius: 12px;
+    }
+    .callout.danger { background: #fff0ed; border-color: var(--red); }
+    .callout.ok { background: #edf7f2; border-color: var(--green); }
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .94rem;
+      text-align: left;
+    }
+    th, td {
+      padding: 11px 9px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      color: var(--green);
+      background: #edf4f0;
+      font-weight: 900;
+    }
+    code {
+      padding: 1px 5px;
+      background: #edf4f0;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: .88em;
+      overflow-wrap: anywhere;
+    }
+    pre {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 14px 0;
+      padding: 16px;
+      color: #daf1e6;
+      background: #14261f;
+      border-radius: 12px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: .88rem;
+      line-height: 1.55;
+    }
+    ul, ol { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .timeline { display: grid; gap: 12px; }
+    .step {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--line);
+    }
+    .date { color: var(--green); font-weight: 900; }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .checklist li {
+      position: relative;
+      margin: 0;
+      padding: 13px 15px 13px 42px;
+      background: #edf7f2;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .checklist li:before {
+      content: "□";
+      position: absolute;
+      left: 15px;
+      top: 11px;
+      color: var(--green);
+      font-weight: 900;
+    }
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .resource-list a {
+      min-width: 0;
+      padding: 15px;
+      background: #edf4f0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      padding: 22px;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 820px) {
+      header, section { padding: 24px; }
+      .grid, .grid.three, .checklist, .resource-list { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 1fr; gap: 4px; }
+      h1 { font-size: 2.35rem; }
+    }
+    @media print {
+      nav { display: none; }
+      body { background: white; }
+      body:before { display: none; }
+      .wrap { max-width: none; padding: 0; }
+      header, section { box-shadow: none; break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <a class="back-link" href="../">← LifeUSA Technical SEO Fixes</a><br>
+    <span class="eyebrow">Development Ticket · LIFE-WIX-MOBILE-001</span>
+    <h1>Restore the Wix Mobile Viewport</h1>
+    <p>LifeUSA currently serves its 980 px desktop canvas to phones. This ticket defines the Wix setting change, mobile-editor repair, and release tests required to restore a responsive mobile layout.</p>
+    <div class="meta">
+      <span>Critical</span>
+      <span>Sitewide</span>
+      <span>Remediation pending</span>
+      <span>Confirmed July 28, 2026</span>
+    </div>
+  </header>
+
+  <nav aria-label="Ticket sections">
+    <a href="#summary">Summary</a>
+    <a href="#scope">Scope</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#cause">Cause</a>
+    <a href="#implementation">Implementation</a>
+    <a href="#acceptance">Acceptance</a>
+    <a href="#rollback">Rollback</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Bottom Line</h2>
+    <p class="lede">The live site fits on a phone by shrinking the desktop page, not by responding to the device. A 390 px iPhone receives a 980 px layout viewport and displays the page at approximately 39.8% scale.</p>
+    <div class="grid three">
+      <div class="card">
+        <h3>Ticket Status</h3>
+        <span class="metric">Pending</span>
+        <span class="label">Diagnosis confirmed. Wix Editor change and mobile-layout QA remain.</span>
+      </div>
+      <div class="card">
+        <h3>Mobile Canvas</h3>
+        <span class="metric">980 px</span>
+        <span class="label">Forced desktop layout width returned to iPhone and Android.</span>
+      </div>
+      <div class="card">
+        <h3>Measured Scale</h3>
+        <span class="metric">39.8%</span>
+        <span class="label">Desktop page size on the tested 390 px iPhone viewport.</span>
+      </div>
+    </div>
+    <div class="callout danger"><strong>Severity: Critical.</strong> The issue affects the shared Wix shell, header, page container, standard pages, and Wix Blog posts.</div>
+  </section>
+
+  <section id="scope">
+    <h2>Confirmed Scope</h2>
+    <p class="lede">Three representative page types return the same fixed mobile viewport.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Page Type</th><th>Live URL</th><th>Mobile Response</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>Homepage</td><td><a href="https://www.lifeusa.org/">lifeusa.org/</a></td><td><code>width=980</code></td><td><span class="status danger">Failed</span></td></tr>
+          <tr><td>Standard page</td><td><a href="https://www.lifeusa.org/about">lifeusa.org/about</a></td><td><code>width=980</code></td><td><span class="status danger">Failed</span></td></tr>
+          <tr><td>Wix Blog post</td><td><a href="https://www.lifeusa.org/post/orphan-education-after-loss-why-school-stability-matters">Orphan education post</a></td><td><code>width=980</code></td><td><span class="status danger">Failed</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><strong>User-agent comparison:</strong> iPhone and Android receive <code>width=980, user-scalable=yes</code>. Desktop Chrome correctly receives <code>width=device-width, initial-scale=1</code>.</div>
+  </section>
+
+  <section id="evidence">
+    <h2>Runtime Evidence</h2>
+    <div class="grid">
+      <div class="card"><h3>Mobile device</h3><p><code>390 × 844 CSS px, DPR 3</code></p></div>
+      <div class="card"><h3>Layout viewport</h3><p><code>980 CSS px</code></p></div>
+      <div class="card"><h3>Visual scale</h3><p><code>0.3979591727</code></p></div>
+      <div class="card"><h3>Desktop baseline</h3><p><code>1484 px viewport / 1484 px document</code></p></div>
+      <div class="card"><h3>Shared site root</h3><p><code>#site-root { width: 980px; min-width: 980px; }</code></p></div>
+      <div class="card"><h3>Shared page shell</h3><p><code>#SITE_HEADER</code> and <code>#PAGES_CONTAINER</code> both measure 980 px.</p></div>
+    </div>
+    <pre>&lt;meta name="viewport" content="width=980, user-scalable=yes" id="wixMobileViewport"&gt;</pre>
+    <div class="resource-list">
+      <a href="./evidence/2026-07-28/home-mobile-iphone-final-390x844.png">Mobile iPhone screenshot</a>
+      <a href="./evidence/2026-07-28/runtime-measurements.json">Runtime measurements JSON</a>
+      <a href="./evidence/2026-07-28/user-agent-viewport-check.txt">User-agent viewport check</a>
+    </div>
+  </section>
+
+  <section id="cause">
+    <h2>Root-Cause Assessment</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>High-Confidence Diagnosis</h3>
+        <p>Wix Editor's <strong>Mobile Friendly</strong> view is disabled. Wix documents that this state displays the desktop version on mobile devices, which matches the live behavior.</p>
+      </div>
+      <div class="card">
+        <h3>Authenticated Confirmation</h3>
+        <p>Open the production site in Wix Editor, inspect <strong>Settings → Mobile Friendly</strong>, and capture the current toggle state before changing it.</p>
+      </div>
+    </div>
+    <div class="callout danger"><strong>Rejected shortcut:</strong> <code>overflow-x: hidden</code> can conceal clipping, but it cannot create a mobile menu, restore readable sizing, or reflow the 980 px desktop canvas.</div>
+  </section>
+
+  <section id="implementation">
+    <h2>Implementation Plan</h2>
+    <div class="timeline">
+      <div class="step">
+        <div class="date">Phase 1</div>
+        <div>
+          <h3>Enable Wix mobile rendering</h3>
+          <ol>
+            <li>Open the production site in Wix Editor.</li>
+            <li>Open <strong>Settings → Mobile Friendly</strong>.</li>
+            <li>Record the current disabled state, then enable Mobile Friendly.</li>
+            <li>Switch to the mobile editor. Do not publish yet.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="step">
+        <div class="date">Phase 2</div>
+        <div>
+          <h3>Repair the generated mobile layout</h3>
+          <ul>
+            <li>Replace the desktop navigation bar with the Wix mobile menu.</li>
+            <li>Resize and position the logo, language selector, account, donate, search, and social controls.</li>
+            <li>Reflow hero copy, counters, cards, galleries, forms, image/text sections, and footer columns.</li>
+            <li>Review Hidden on Mobile, spacing, overlaps, gridlines, clipped text, and touch targets.</li>
+            <li>Test Arabic separately for RTL order, alignment, menu behavior, and clipping.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step">
+        <div class="date">Phase 3</div>
+        <div>
+          <h3>Release after mobile QA</h3>
+          <p>Test the unpublished mobile view at the target widths, publish only when it passes, then repeat the same checks on the public cache-bypassed site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="acceptance">
+    <h2>Definition of Done</h2>
+    <ul class="checklist">
+      <li>Mobile HTML uses a device-width viewport, not <code>width=980</code>.</li>
+      <li>320, 360, 375, 390, 412, and 430 px widths render as mobile layouts.</li>
+      <li>Shared Wix root, header, and page containers are no longer fixed at 980 px.</li>
+      <li>No unintended horizontal scrolling exists.</li>
+      <li>Body text is readable without zooming.</li>
+      <li>The mobile menu opens, closes, scrolls, and reaches every primary destination.</li>
+      <li>Language, account, donate, search, social, and form controls remain tappable.</li>
+      <li>Homepage, About, Programs, Ways to Give, Blog, Donate entry, Privacy, and Arabic pass.</li>
+      <li>Portrait and landscape pass on iOS Safari and Android Chrome.</li>
+      <li>Desktop at 1440 px remains visually unchanged.</li>
+    </ul>
+  </section>
+
+  <section id="rollback">
+    <h2>Rollback and References</h2>
+    <p>If the generated mobile layout contains a release-blocking defect, do not publish it. If a published change must be reversed, restore the previous Wix site version. Turning Mobile Friendly off again is an emergency rollback only because it restores the confirmed defect.</p>
+    <div class="resource-list">
+      <a href="https://support.wix.com/en/article/wix-editor-about-the-mobile-version-of-your-site">Wix: About the mobile version</a>
+      <a href="https://support.wix.com/en/article/wix-editor-troubleshooting-layout-issues-on-your-mobile-site">Wix: Troubleshoot mobile layouts</a>
+      <a href="./README.md">Markdown technical specification</a>
+    </div>
+  </section>
+
+  <footer>LifeUSA Technical SEO · Development Ticket LIFE-WIX-MOBILE-001</footer>
+</main>
+</body>
+</html>

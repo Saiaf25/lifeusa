@@ -1,0 +1,17 @@
+LifeUSA live viewport response check
+Captured: 2026-07-28
+URL: https://www.lifeusa.org/
+
+iPhone Safari user agent:
+width=980, user-scalable=yes
+
+Android Chrome user agent:
+width=980, user-scalable=yes
+
+Desktop Chrome user agent:
+width=device-width, initial-scale=1
+
+Conclusion:
+The live server intentionally returns a fixed 980 px desktop viewport to mobile
+user agents. This is a site-level mobile configuration failure, not a single
+component overflow.

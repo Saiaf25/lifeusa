@@ -1,0 +1,71 @@
+{
+  "capturedAt": "2026-07-28T13:02:46.061Z",
+  "status": "confirmed",
+  "severity": "critical",
+  "scope": "sitewide",
+  "desktop": {
+    "url": "https://www.lifeusa.org/",
+    "viewportCssPx": {
+      "width": 1484,
+      "height": 727
+    },
+    "viewportMeta": "width=device-width, initial-scale=1",
+    "documentClientWidth": 1484,
+    "documentScrollWidth": 1484,
+    "horizontalOverflowPx": 0
+  },
+  "mobile": {
+    "deviceProfile": "iPhone, 390x844 CSS px, DPR 3",
+    "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/15E148 Safari/604.1",
+    "viewportMeta": "width=980, user-scalable=yes",
+    "screenWidthCssPx": 390,
+    "layoutViewportWidthCssPx": 980,
+    "visualViewportScale": 0.3979591727256775,
+    "forcedCanvas": [
+      {
+        "id": "pageBackground_e6zct",
+        "widthCssPx": 980,
+        "minWidth": "980px"
+      },
+      {
+        "id": "site-root",
+        "widthCssPx": 980,
+        "minWidth": "980px"
+      },
+      {
+        "id": "SITE_HEADER",
+        "widthCssPx": 980
+      },
+      {
+        "id": "PAGES_CONTAINER",
+        "widthCssPx": 980
+      }
+    ]
+  },
+  "representativePages": [
+    {
+      "url": "https://www.lifeusa.org/",
+      "type": "homepage",
+      "mobileViewportMeta": "width=980, user-scalable=yes",
+      "result": "fail"
+    },
+    {
+      "url": "https://www.lifeusa.org/about",
+      "type": "standard page",
+      "mobileViewportMeta": "width=980, user-scalable=yes",
+      "result": "fail"
+    },
+    {
+      "url": "https://www.lifeusa.org/post/orphan-education-after-loss-why-school-stability-matters",
+      "type": "Wix Blog post",
+      "mobileViewportMeta": "width=980, user-scalable=yes",
+      "result": "fail"
+    }
+  ],
+  "diagnosis": {
+    "finding": "Wix serves the desktop canvas to mobile devices instead of its mobile-friendly layout.",
+    "likelyEditorState": "Mobile Friendly is disabled.",
+    "confidence": "high",
+    "authenticatedEditorConfirmationRequired": true
+  }
+}

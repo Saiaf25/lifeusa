@@ -200,12 +200,40 @@
   <div class="container">
     <div class="summary">
       <div class="metric"><strong>5</strong><span>verified fixes</span></div>
-      <div class="metric"><strong>1</strong><span>confirmed style system fix</span></div>
+      <div class="metric"><strong>1</strong><span>critical mobile issue</span></div>
       <div class="metric"><strong>1</strong><span>client-review blocker</span></div>
-      <div class="metric"><strong>2026-07-21</strong><span>last updated</span></div>
+      <div class="metric"><strong>2026-07-28</strong><span>last updated</span></div>
     </div>
 
     <div class="fix-list">
+      <section class="fix-card pending">
+        <div class="fix-meta">
+          <span class="pill pending">Confirmed critical</span>
+          <span class="pill">Mobile viewport</span>
+          <span class="pill">2026-07-28</span>
+        </div>
+        <h2 class="fix-title">Wix serves the 980 px desktop canvas to mobile devices</h2>
+        <p class="fix-note">iPhone and Android requests receive a fixed 980 px viewport, forcing the desktop site to shrink to roughly 39.8% on a 390 px phone. The issue is sitewide and requires enabling Wix Mobile Friendly, repairing the generated mobile layout, and passing cross-device QA before publication.</p>
+        <div class="fix-details">
+          <div class="detail">
+            <b>Open development ticket</b>
+            <a href="./mobile-viewport-responsiveness/">LIFE-WIX-MOBILE-001</a>
+          </div>
+          <div class="detail">
+            <b>Live evidence</b>
+            <span>Homepage, standard page, and Wix Blog post all return width=980 to mobile user agents.</span>
+          </div>
+          <div class="detail">
+            <b>Primary action</b>
+            <span>Enable Mobile Friendly in Wix Editor, then repair and test the mobile view before publishing.</span>
+          </div>
+          <div class="detail">
+            <b>Status</b>
+            <span>Diagnosis confirmed; authenticated Wix Editor change and mobile-layout QA are pending.</span>
+          </div>
+        </div>
+      </section>
+
       <section class="fix-card watch">
         <div class="fix-meta">
           <span class="pill watch">Live status</span>
