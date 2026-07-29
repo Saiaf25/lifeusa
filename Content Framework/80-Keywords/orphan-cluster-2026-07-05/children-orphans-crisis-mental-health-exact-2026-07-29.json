@@ -1,0 +1,273 @@
+{
+  "action": "post",
+  "data": {
+    "results": [
+      {
+        "keywordMetrics": {
+          "avgMonthlySearches": "6600",
+          "competition": "LOW",
+          "competitionIndex": "9",
+          "highTopOfPageBidMicros": "19359857",
+          "lowTopOfPageBidMicros": "1614241",
+          "monthlySearchVolumes": [
+            {
+              "month": "JULY",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "AUGUST",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "SEPTEMBER",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "OCTOBER",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "NOVEMBER",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "DECEMBER",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "JANUARY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "FEBRUARY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "MARCH",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "APRIL",
+              "monthlySearches": "8100",
+              "year": "2026"
+            },
+            {
+              "month": "MAY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "JUNE",
+              "monthlySearches": "6600",
+              "year": "2026"
+            }
+          ]
+        },
+        "text": "childhood trauma"
+      },
+      {
+        "keywordMetrics": {
+          "avgMonthlySearches": "390",
+          "competition": "MEDIUM",
+          "competitionIndex": "36",
+          "highTopOfPageBidMicros": "4499675",
+          "lowTopOfPageBidMicros": "788384",
+          "monthlySearchVolumes": [
+            {
+              "month": "JULY",
+              "monthlySearches": "480",
+              "year": "2025"
+            },
+            {
+              "month": "AUGUST",
+              "monthlySearches": "480",
+              "year": "2025"
+            },
+            {
+              "month": "SEPTEMBER",
+              "monthlySearches": "390",
+              "year": "2025"
+            },
+            {
+              "month": "OCTOBER",
+              "monthlySearches": "480",
+              "year": "2025"
+            },
+            {
+              "month": "NOVEMBER",
+              "monthlySearches": "320",
+              "year": "2025"
+            },
+            {
+              "month": "DECEMBER",
+              "monthlySearches": "390",
+              "year": "2025"
+            },
+            {
+              "month": "JANUARY",
+              "monthlySearches": "590",
+              "year": "2026"
+            },
+            {
+              "month": "FEBRUARY",
+              "monthlySearches": "390",
+              "year": "2026"
+            },
+            {
+              "month": "MARCH",
+              "monthlySearches": "320",
+              "year": "2026"
+            },
+            {
+              "month": "APRIL",
+              "monthlySearches": "260",
+              "year": "2026"
+            },
+            {
+              "month": "MAY",
+              "monthlySearches": "320",
+              "year": "2026"
+            },
+            {
+              "month": "JUNE",
+              "monthlySearches": "210",
+              "year": "2026"
+            }
+          ]
+        },
+        "text": "war orphans"
+      },
+      {
+        "keywordMetrics": {
+          "avgMonthlySearches": "10",
+          "competition": "LOW",
+          "competitionIndex": "0",
+          "monthlySearchVolumes": [
+            {
+              "month": "JULY",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "AUGUST",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "SEPTEMBER",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "OCTOBER",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "NOVEMBER",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "DECEMBER",
+              "monthlySearches": "10",
+              "year": "2025"
+            },
+            {
+              "month": "JANUARY",
+              "monthlySearches": "10",
+              "year": "2026"
+            },
+            {
+              "month": "FEBRUARY",
+              "monthlySearches": "10",
+              "year": "2026"
+            },
+            {
+              "month": "MARCH",
+              "monthlySearches": "10",
+              "year": "2026"
+            },
+            {
+              "month": "APRIL",
+              "monthlySearches": "10",
+              "year": "2026"
+            },
+            {
+              "month": "MAY",
+              "monthlySearches": "10",
+              "year": "2026"
+            },
+            {
+              "month": "JUNE",
+              "monthlySearches": "10",
+              "year": "2026"
+            }
+          ]
+        },
+        "text": "orphan mental health"
+      },
+      {
+        "text": "psychological effects of violence on children"
+      },
+      {
+        "text": "effects of war on children"
+      },
+      {
+        "text": "effects of violence on children"
+      },
+      {
+        "text": "children in crisis"
+      },
+      {
+        "text": "children affected by war"
+      },
+      {
+        "closeVariants": [
+          "trauma in children"
+        ],
+        "text": "child trauma"
+      },
+      {
+        "text": "child ptsd"
+      },
+      {
+        "text": "trauma in children"
+      },
+      {
+        "text": "mental health of children in conflict"
+      },
+      {
+        "text": "children and war"
+      },
+      {
+        "text": "war children"
+      },
+      {
+        "text": "orphaned children mental health"
+      },
+      {
+        "text": "mental health of orphaned children"
+      },
+      {
+        "text": "psychological effects of war on children"
+      },
+      {
+        "text": "trauma in orphaned children"
+      }
+    ]
+  },
+  "path": "/v22/customers/7391807452:generateKeywordHistoricalMetrics",
+  "resource": "customers",
+  "status": 200,
+  "success": true
+}

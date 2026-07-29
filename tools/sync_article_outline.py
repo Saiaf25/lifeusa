@@ -60,7 +60,7 @@ PAGES = (
             "Gaza Orphans: How War Leaves Children Without Care, Safety, and Support",
             "Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood",
             "Orphan Education After Loss: Why School Stability Matters",
-            "Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
+            "Children and Orphans in Crisis: The Psychological Toll of Violence",
         ),
     ),
     OutlinePage(
@@ -104,10 +104,12 @@ PAGES = (
         source=Path("Content Framework/70-outputs/handoff/orphans/mental-health-support-for-orphaned-children.html"),
         live=Path("article-plans-and-outlines/mental-health-support-for-orphaned-children/index.html"),
         required_text=(
-            "Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
+            "Children and Orphans in Crisis: The Psychological Toll of Violence",
+            "childhood trauma",
+            "war orphans",
             "orphan mental health",
             "non-clinical",
-            "Owner: Saiaf",
+            "Writer: Angela",
             "children-in-crisis-the-psychological-toll-of-violence",
             *TEMPLATE_REQUIRED_TEXT,
         ),

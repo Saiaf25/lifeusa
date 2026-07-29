@@ -1,0 +1,132 @@
+{
+  "action": "post",
+  "data": {
+    "results": [
+      {
+        "keywordMetrics": {
+          "avgMonthlySearches": "6600",
+          "competition": "LOW",
+          "competitionIndex": "9",
+          "highTopOfPageBidMicros": "19359857",
+          "lowTopOfPageBidMicros": "1614241",
+          "monthlySearchVolumes": [
+            {
+              "month": "JULY",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "AUGUST",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "SEPTEMBER",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "OCTOBER",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "NOVEMBER",
+              "monthlySearches": "8100",
+              "year": "2025"
+            },
+            {
+              "month": "DECEMBER",
+              "monthlySearches": "6600",
+              "year": "2025"
+            },
+            {
+              "month": "JANUARY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "FEBRUARY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "MARCH",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "APRIL",
+              "monthlySearches": "8100",
+              "year": "2026"
+            },
+            {
+              "month": "MAY",
+              "monthlySearches": "6600",
+              "year": "2026"
+            },
+            {
+              "month": "JUNE",
+              "monthlySearches": "6600",
+              "year": "2026"
+            }
+          ]
+        },
+        "text": "trauma in childhood"
+      },
+      {
+        "text": "childhood trauma symptoms"
+      },
+      {
+        "text": "signs of trauma in children"
+      },
+      {
+        "text": "child traumatic stress"
+      },
+      {
+        "text": "childhood ptsd"
+      },
+      {
+        "text": "childhood emotional trauma"
+      },
+      {
+        "text": "children and trauma"
+      },
+      {
+        "text": "effects of violence on children"
+      },
+      {
+        "text": "impact of war on children"
+      },
+      {
+        "text": "war trauma in children"
+      },
+      {
+        "closeVariants": [
+          "children mental health",
+          "child mental health"
+        ],
+        "text": "mental health in children"
+      },
+      {
+        "text": "children mental health"
+      },
+      {
+        "text": "child mental health"
+      },
+      {
+        "text": "psychological trauma in children"
+      },
+      {
+        "text": "trauma symptoms in children"
+      },
+      {
+        "text": "helping children cope with trauma"
+      }
+    ]
+  },
+  "path": "/v22/customers/7391807452:generateKeywordHistoricalMetrics",
+  "resource": "customers",
+  "status": 200,
+  "success": true
+}

@@ -17,6 +17,8 @@ DATE = "July 5, 2026"
 KW_EXACT = "Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json"
 KW_REWRITE = "Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json"
 KW_EXPANDED = "Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-conflict-geography-expanded.json"
+MENTAL_KW_EXACT = "Content Framework/80-Keywords/orphan-cluster-2026-07-05/children-orphans-crisis-mental-health-exact-2026-07-29.json"
+MENTAL_KW_SUPPORTING = "Content Framework/80-Keywords/orphan-cluster-2026-07-05/children-trauma-supporting-exact-2026-07-29.json"
 
 
 @dataclass(frozen=True)
@@ -65,36 +67,54 @@ def is_new_guide(topic: Topic) -> bool:
     return topic.content_type.startswith("New informational guide")
 
 
+def is_angela_owned(topic: Topic) -> bool:
+    return is_new_guide(topic) or topic.slug == "mental-health-support-for-orphaned-children"
+
+
 def owner_meta(topic: Topic) -> str:
-    return "Writer: Angela" if is_new_guide(topic) else "Owner: Saiaf"
+    return "Writer: Angela" if is_angela_owned(topic) else "Owner: Saiaf"
 
 
 def owner_card(topic: Topic) -> str:
-    if is_new_guide(topic):
+    if is_angela_owned(topic):
         return "Angela draft. Saiaf SEO planning/review."
     return "Saiaf rewrite/enrichment. Not Angela."
 
 
 def owner_risk_note(topic: Topic) -> str:
-    if is_new_guide(topic):
+    if is_angela_owned(topic):
         return "this is an Angela draft assignment; Saiaf owns SEO planning and review."
     return "this is Saiaf rewrite/enrichment work, not an Angela draft assignment."
 
 
 def brief_owner(topic: Topic) -> str:
-    if is_new_guide(topic):
+    if is_angela_owned(topic):
         return "Angela draft; Saiaf SEO planning/review"
     return "Saiaf rewrite/enrichment"
 
 
 def outline_heading(topic: Topic) -> str:
-    if is_new_guide(topic):
+    if is_angela_owned(topic):
+        if not is_new_guide(topic):
+            return "Full Rewrite Outline For Angela"
         return "Writer Outline For Angela"
     return "Rewrite Outline For Saiaf"
 
 
 def section_write_label(topic: Topic) -> str:
-    return "What Angela should write" if is_new_guide(topic) else "What Saiaf should write"
+    return "What Angela should write" if is_angela_owned(topic) else "What Saiaf should write"
+
+
+def keyword_source_note(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return f"`{MENTAL_KW_EXACT}` and `{MENTAL_KW_SUPPORTING}`. Google Ads CLI is the U.S. English demand source; zero-volume long-tail phrases are semantic coverage terms, not traffic claims."
+    return f"`{KW_EXACT}` and `{KW_REWRITE}`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape."
+
+
+def demand_source_path(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return MENTAL_KW_EXACT
+    return KW_EXACT
 
 
 def package_date(topic: Topic) -> str:
@@ -105,7 +125,7 @@ def package_date(topic: Topic) -> str:
 
 def package_version(topic: Topic) -> str:
     if topic.slug == "mental-health-support-for-orphaned-children":
-        return "1.1"
+        return "1.2"
     return "1.0"
 
 
@@ -239,17 +259,17 @@ TOPICS: tuple[Topic, ...] = (
     ),
     Topic(
         slug="mental-health-support-for-orphaned-children",
-        title="Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
-        subtitle="Rewrite and expand the existing April 2026 article in place. Preserve its Wix URL and useful conflict, play, education, stability, and recovery material while integrating the orphan mental-health angle.",
-        content_type="Existing article enrichment; Saiaf-owned rewrite",
+        title="Children and Orphans in Crisis: The Psychological Toll of Violence",
+        subtitle="Full combined-intent rewrite of the April 2026 article. Preserve the original focus on children affected by violence while adding dedicated orphan mental-health, caregiver-loss, safety, routine, play, education, and support coverage.",
+        content_type="Existing article enrichment; Angela-owned rewrite",
         live_url="https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence",
-        status_note="Rewrite the existing `Children in Crisis: The Psychological Toll of Violence` article in place. Do not publish a second mental-health article or redirect the current URL. The working title is an SEO/editorial recommendation, not a required URL change.",
-        primary_keywords=(("orphan mental health", "10", "Low", "Use in title, intro, one H2, metadata, and FAQ."),),
-        secondary_keywords=(("war orphans", "390", "Low", "Use carefully in trauma/conflict section, not as the main topic."), ("orphan crisis", "10", "Low", "Use only if natural in crisis context.")),
-        reader_problem="The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.",
-        cluster_boundary="This page owns psychosocial support, routine, safety, trusted adults, school connection, play, and dignity. It must not become a clinical mental-health article, a general orphan needs guide, or a sponsorship coverage article.",
-        format_decision="Substantial in-place rewrite of the existing crisis article with strong medical-claim guardrails, preserved useful sections, clearer orphan relevance, and improved internal linking.",
-        intro_guidance="Retain the existing crisis-zone framing, then bring orphaned children into the first paragraph by connecting caregiver loss, displacement, and disrupted routines to emotional safety. State that the article is educational, not medical advice, and focuses on supportive conditions rather than diagnosis or treatment.",
+        status_note="Angela should rewrite the complete existing `Children in Crisis: The Psychological Toll of Violence` article in place. The revision must serve both the original children-and-violence intent and the added orphan mental-health intent. Do not publish a second article, neglect the original topic, or redirect the current URL.",
+        primary_keywords=(("childhood trauma", "6,600", "Low", "Primary broad-intent term. Use in the introduction, psychological-toll section, metadata, and one FAQ without turning the article into clinical advice."), ("war orphans", "390", "Medium", "Primary bridge between violence, caregiver loss, and orphanhood. Use in one dedicated H2 and the conflict context."), ("orphan mental health", "10", "Low", "Primary orphan-specific term. Use naturally in one H2, body copy, and FAQ; do not force it into every section.")),
+        secondary_keywords=(("trauma in childhood", "6,600", "Low", "Close broad variant of `childhood trauma`; use sparingly rather than repeating both phrases."), ("children in crisis", "0 reported", "Not reported", "Preserve the original editorial framing and title language; treat as a semantic phrase, not a traffic claim."), ("psychological effects of violence on children", "0 reported", "Not reported", "Use as a descriptive phrase in the broad violence section."), ("effects of war on children", "0 reported", "Not reported", "Use in conflict coverage where natural."), ("mental health of orphaned children", "0 reported", "Not reported", "Natural-language orphan mental-health variant for body copy."), ("trauma in orphaned children", "0 reported", "Not reported", "Use cautiously in the caregiver-loss section without diagnosing children."), ("children affected by war", "0 reported", "Not reported", "Semantic conflict phrase for the original article intent.")),
+        reader_problem="The reader wants to understand how violence, war, displacement, and prolonged instability affect children generally, how caregiver loss creates additional risks for orphans, and what safe, consistent support can help both groups.",
+        cluster_boundary="This page jointly owns the psychological toll of violence on children and the mental-health needs of war orphans and orphaned children. It must preserve both intents while avoiding clinical diagnosis, a general orphan-needs list, or a full sponsorship-mechanics explanation.",
+        format_decision="Comprehensive in-place rewrite that combines the original children-in-crisis article with a dedicated orphan mental-health lane, using strong source and medical-claim guardrails.",
+        intro_guidance="Begin with all children living through violence, war, displacement, and prolonged instability so the original article intent remains intact. Then explain that children who lose a parent or caregiver can face an additional layer of grief, disrupted attachment, responsibility, and uncertainty. Introduce `childhood trauma`, `war orphans`, and `orphan mental health` naturally without diagnosing individual children.",
         links=(
             Link("Existing rewrite target", "https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence", "psychological toll of violence on children", "Canonical article to update in place; preserve this URL."),
             Link("Somaliland mental health", "https://www.lifeusa.org/post/life-for-relief-and-development-life-cares-for-the-mental-health-of-orphaned-children-in-somalilan", "mental health support for orphaned children", "Primary proof point."),
@@ -263,17 +283,21 @@ TOPICS: tuple[Topic, ...] = (
             COMMON_LINKS[3],
         ),
         sections=(
-            Section("Why Mental Health Support Matters After Loss", "Define the page's unique informational role.", "I understand material needs, but what about emotional needs?", "`orphan mental health` 10/mo.", "Explain grief, fear, disrupted routine, isolation, and the need for safe relationships. Keep this non-clinical.", "Do not diagnose children or describe treatment protocols."),
-            Section("How War And Crisis Can Affect Children", "Use high-demand conflict keyword without hijacking the page.", "How is this different for war orphans?", "`war orphans` 390/mo as support.", "Discuss exposure to violence, displacement, caregiver loss, school interruption, and uncertainty.", "Do not make unsourced current-conflict claims."),
-            Section("Supportive Conditions That Help Children Feel Safer", "Give practical, non-medical substance.", "What kind of support helps?", "`orphan mental health` 10/mo.", "Cover routine, school attendance, trusted caregivers, safe spaces, play, peer connection, food security, and dignity.", "Do not promise healing, recovery, or therapy outcomes."),
-            Section("Where Sponsorship And Program Support Fit", "Connect to LifeUSA without duplicating sponsorship mechanics.", "Can donor support help emotional stability?", "`orphan crisis` 10/mo if natural.", "Explain that material stability can support emotional stability when programs provide consistent care, school support, and safe routines.", "Do not repeat every sponsorship coverage category."),
-            Section("LifeUSA Examples To Use Carefully", "Ground the guide in proof while avoiding clinical overclaiming.", "I want real examples.", "`orphan mental health` 10/mo.", "Use the Somaliland mental-health post, stability/sponsorship post, and joy/play examples.", "Do not imply all programs include counseling unless confirmed."),
+            Section("Childhood Under Constant Instability", "Preserve and strengthen the original article's broad crisis intent.", "What happens to children who grow up around violence and instability?", "`children in crisis`, `children affected by war`, `childhood trauma` 6,600/mo.", "Rewrite the existing opening around violence, displacement, interrupted school, unsafe shelter, family separation, and loss of ordinary routines. Make clear that not every affected child is an orphan.", "Do not narrow the opening to orphans or use current conflict statistics without dated primary sources."),
+            Section("The Psychological Toll of Violence on Children", "Fully answer the original article's core question before adding the orphan layer.", "How can repeated violence affect a child's emotional and social well-being?", "`childhood trauma` 6,600/mo; `psychological effects of violence on children` as a semantic phrase.", "Explain fear, uncertainty, concentration and sleep disruption, withdrawal, heightened alertness, grief, and interrupted development in careful educational language. Cite primary or authoritative health sources for every clinical statement.", "Do not diagnose PTSD, claim neurological changes without strong sourcing, or imply all children respond in the same way."),
+            Section("When Crisis Leaves Children Without Parents or Caregivers", "Create the explicit bridge from the original broad topic to orphanhood.", "What changes when violence also causes caregiver loss?", "`war orphans` 390/mo; `effects of war on children` and `trauma in orphaned children` as semantic phrases.", "Explain bereavement, family separation, disrupted attachment and protection, possible new responsibilities, unstable caregiving, and compounded uncertainty. Define war orphans briefly and link to the fuller orphan-definition and Gaza pages.", "Do not treat orphanhood as a diagnosis or imply that every war-affected child has lost both parents."),
+            Section("Orphan Mental Health After Loss and Displacement", "Give the orphan-specific intent its own substantial section rather than sprinkling it through the article.", "What emotional support may orphaned children need after loss?", "`orphan mental health` 10/mo; `mental health of orphaned children` as a natural variant.", "Cover grief, belonging, trusted relationships, predictable care, dignity, peer connection, and the need for age-appropriate support. Separate general supportive conditions from professional mental-health treatment.", "Do not promise healing, label behavior as a disorder, or claim LIFE provides therapy unless the exact program is confirmed."),
+            Section("What Children's Play Can Reveal", "Retain one of the original article's most distinctive ideas while making it source-safe.", "Why does play matter during crisis?", "`childhood trauma` as context; no forced keyword repetition.", "Preserve the discussion of play as expression, connection, routine, creativity, and ordinary childhood experience. If the Gaza funeral-play example remains, verify the original source and frame it carefully without sensationalism.", "Do not interpret one video as a diagnosis or universal evidence of how all children process trauma."),
+            Section("What Helps Children Feel Safer and More Stable", "Combine the strongest practical material for both children in crisis and orphaned children.", "What supportive conditions can make a difference?", "`children in crisis`, `orphan mental health`, and `childhood trauma` used naturally.", "Cover physical safety, food and shelter security, trusted adults, consistent caregiving, routine, peer connection, safe play, dignity, and referral to qualified support where available.", "Do not describe these conditions as substitutes for professional care or guaranteed recovery."),
+            Section("Why Consistency, Caregiving, and Education Matter", "Retain the existing consistency and tent-school material while strengthening the orphan connection.", "Why are long-term support and school continuity important?", "`war orphans` and `mental health of orphaned children` as supporting language.", "Explain how predictable material support, caregiver stability, school routine, adult contact, learning, and peer interaction can support well-being. Link to the education and sponsorship guides for details.", "Do not claim sponsorship or education automatically provides mental-health treatment."),
+            Section("How LIFE Supports Children and Orphans in Crisis", "Ground both intent lanes in verified LifeUSA work.", "What relevant support has LIFE actually provided?", "Use keywords only where they accurately describe the linked programs.", "Use a small set of verified examples: Somaliland mental-health support, orphan stability/sponsorship, education, Global Orphan Party play and social connection, and relevant crisis support. State precisely what each source proves.", "Do not generalize one country program to all LIFE programs or imply counseling is universally included."),
+            Section("How Readers Can Help Responsibly", "Replace the old conclusion with one careful combined next step.", "What can I do after understanding the problem?", "`war orphans` and `orphan mental health` only if natural; prioritize clarity over repetition.", "Summarize that children affected by violence need safety and stability, while orphaned children may also need consistent caregiving and support after loss. Link to verified help, sponsorship, and donation paths with one primary CTA.", "Do not promise that a donation will heal trauma or use fear-based claims about children."),
         ),
-        faq=("Why do orphaned children need mental health support?", "How can war affect orphaned children emotionally?", "What helps orphaned children feel safe after trauma?", "Can school and routine support mental health?", "Is this the same as therapy?"),
-        meta_title="Mental Health Support for Orphaned Children After Loss",
-        meta_description="Learn why orphaned children may need emotional support after loss or crisis, and how routine, safety, school, play, and trusted care can help.",
-        review_note="Saiaf should rewrite the existing Wix article in place, preserve its URL, and compare the revision against the current copy so useful material is retained. Review all clinical, neurological, PTSD, recovery, and program-outcome claims against primary sources before updating Wix.",
-        source_note="Existing rewrite target: Children in Crisis: The Psychological Toll of Violence, published April 5, 2026 and modified April 6, 2026. Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.",
+        faq=("How does violence affect children's mental health?", "What is childhood trauma?", "How can war affect children emotionally?", "What additional challenges can war orphans face?", "Why do orphaned children need mental-health support?", "What helps children feel safer after violence or loss?", "Can school, play, and routine support children's well-being?", "Is supportive care the same as therapy?"),
+        meta_title="Children and Orphans in Crisis: Psychological Toll",
+        meta_description="Learn how violence and war affect children's mental health, why caregiver loss adds risks for orphans, and how safety, routine, play, school, and trusted care can help.",
+        review_note="Angela should rewrite the complete existing Wix article in place and preserve both intent lanes: children affected by violence and orphan mental health after caregiver loss. Saiaf should review the draft for keyword balance, structure, internal links, and every clinical, neurological, PTSD, recovery, and program-outcome claim before Wix publication.",
+        source_note="Existing rewrite target: Children in Crisis: The Psychological Toll of Violence, published April 5, 2026 and modified April 6, 2026. Live U.S. English Google Ads data pulled 2026-07-29: childhood trauma 6,600/mo, war orphans 390/mo, orphan mental health 10/mo; listed zero-volume long tails are semantic coverage terms.",
     ),
 )
 
@@ -340,23 +364,27 @@ DEEPENING = {
         ),
     },
     "mental-health-support-for-orphaned-children": {
-        "thesis": "Mental health support for orphaned children should be framed as safety, routine, trusted care, school connection, play, and dignity after loss or trauma, while avoiding medical advice or unsupported therapy claims.",
+        "thesis": "Violence and prolonged crisis can affect any child's emotional development and sense of safety; when crisis also causes parent or caregiver loss, orphaned children may face additional grief, protection, belonging, and stability challenges that require dedicated coverage.",
         "promise": (
-            "Explain emotional needs after orphanhood without diagnosing children.",
-            "Connect conflict and war-orphan contexts to trauma carefully and non-politically.",
-            "Define supportive conditions donors can understand: stable adults, routine, school, safe spaces, play, and basic-needs security.",
-            "Use Somaliland and joy/play examples as proof while staying inside claim-safe language.",
+            "Preserve the original article's explanation of how violence, war, displacement, and prolonged instability affect children generally.",
+            "Add a substantial caregiver-loss and orphan mental-health lane instead of reducing the page to only one audience.",
+            "Explain supportive conditions such as safety, trusted adults, consistent caregiving, routine, school, play, peer connection, and basic-needs security without diagnosing children.",
+            "Give Angela a complete section-by-section rewrite plan with verified LifeUSA links and medical-claim guardrails.",
         ),
         "intro": (
-            "When a child loses a parent or caregiver, the need for help is not only material. Food, clothing, shelter, and school matter deeply, but children also need safety, routine, trusted adults, and moments where they can feel like children again.\n\n"
-            "This guide should explain mental health support for orphaned children in non-clinical language. It should not diagnose children or promise healing. Instead, it should show how stable care, school connection, play, dignity, and consistent support can help create the conditions children need after loss, displacement, or trauma."
+            "Children growing up amid violence, war, displacement, and prolonged instability can lose the ordinary foundations of childhood: physical safety, predictable routines, uninterrupted education, play, and confidence that trusted adults will be there tomorrow. These conditions can contribute to childhood trauma and emotional distress, but children do not all respond in the same way.\n\n"
+            "For war orphans and other children who lose a parent or caregiver, crisis can add another layer of grief, separation, disrupted protection, and uncertainty. This article should examine both experiences together: the psychological toll of violence on children generally and the mental-health needs of orphaned children after loss, while distinguishing supportive care from clinical diagnosis or treatment."
         ),
         "depth": (
-            ("Frame emotional support as part of care after loss, not as a clinical treatment article.", "Mention grief, fear, disrupted routine, isolation, and the need for trusted adults.", "Use `orphan mental health` once in a natural sentence."),
-            ("Use `war orphans` carefully to explain why conflict can intensify fear, instability, displacement, and school disruption.", "Avoid current casualty claims unless Saiaf adds verified sources.", "Link to the Gaza article for the conflict-specific angle instead of repeating it."),
-            ("Define supportive conditions: routine, safe shelter, school attendance, trusted caregivers, peer connection, play, food security, and dignity.", "Make this the most substantial section; it is the article's practical heart.", "Avoid therapy language unless LifeUSA confirms professional services."),
-            ("Explain how sponsorship or program support can create consistency around material needs, school, and caregiver support.", "Link to the sponsorship coverage article for details.", "Avoid saying sponsorship provides mental-health treatment."),
-            ("Use Somaliland mental-health and stability posts, plus Ghana/play/Eid examples.", "State what each example can support as evidence: care, stability, joy, routine, or social connection.", "Add a final claim-safety reminder before publication."),
+            ("Retain the original crisis-zone scope and distinguish violence exposure, displacement, family separation, school interruption, and loss of routine.", "Use `childhood trauma` as the broad measurable term and `children in crisis` as editorial framing.", "State explicitly that many crisis-affected children are not orphans."),
+            ("Explain possible emotional, behavioral, sleep, concentration, social, and developmental effects using authoritative sources.", "Keep variation and resilience visible: possible effects are not universal outcomes.", "Source-check or remove the current article's PTSD prevalence, neurological-pathway, and long-term-outcome claims."),
+            ("Define the additional consequences of parent or caregiver loss: bereavement, interrupted attachment and protection, unstable caregiving, and new responsibilities.", "Use `war orphans` naturally and link to the definition and Gaza articles.", "Avoid implying that an orphan has necessarily lost both parents."),
+            ("Give `orphan mental health` its own substantial section covering grief, belonging, trusted relationships, dignity, peer connection, and predictable care.", "Separate community and caregiver support from licensed treatment.", "Do not describe ordinary grief responses as disorders."),
+            ("Retain the original play section because it provides distinctive information gain.", "Explain play as expression, connection, learning, routine, and ordinary childhood experience.", "Verify or remove the social-media funeral-play example if its original source and context cannot be established."),
+            ("Organize supportive conditions into safety/basic needs, stable adults, predictable routines, school, play, peers, and qualified referrals where available.", "Explain that these conditions can support well-being without guaranteeing recovery.", "Make this practical section useful for both children in crisis and orphaned children."),
+            ("Preserve the consistency and education sections, but connect them explicitly to caregiving and orphan stability.", "Link to the live sponsorship-coverage and orphan-education resources instead of repeating their mechanics.", "Avoid saying sponsorship or school is mental-health treatment."),
+            ("Choose a small set of LifeUSA examples and state exactly what each linked source demonstrates.", "Use Somaliland, education, stability/sponsorship, and Global Orphan Party examples across both intent lanes.", "Do not generalize one country's services to every LIFE program."),
+            ("Close by summarizing the shared needs of children affected by violence and the additional needs created by caregiver loss.", "Use one primary verified CTA with contextual links to help and sponsorship content.", "Replace the old guaranteed-healing language with careful, non-clinical wording."),
         ),
     },
 }
@@ -457,39 +485,41 @@ TEMPLATE_DATA = {
         ),
     },
     "mental-health-support-for-orphaned-children": {
-        "audience": "Donors and supporters who understand material orphan support but want to understand emotional safety, trauma, routine, and psychosocial support after loss.",
-        "reader_stage": "Learning and verifying trust: the reader needs a careful, non-clinical explanation before supporting or sharing.",
-        "trust_blockers": "Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.",
-        "journey": "I am reading about children affected by violence -> how does caregiver loss intensify the impact for orphaned children? -> what do routine, play, school, and trusted adults contribute? -> what support is safe to discuss? -> how can I help responsibly?",
+        "audience": "Readers, donors, and supporters seeking to understand the psychological toll of violence on children generally and the additional mental-health and stability challenges faced by war orphans and other orphaned children.",
+        "reader_stage": "Learning, comparing, and deciding: the reader first needs a careful explanation of both groups, then a responsible support path.",
+        "trust_blockers": "Narrowing the article to orphans and neglecting the original children-in-crisis intent; diagnosing children; unsupported PTSD, neurological, recovery, or program claims; or turning mental health into a donation slogan.",
+        "journey": "How does violence affect children? -> what is childhood trauma? -> what changes when a parent or caregiver is lost? -> what does orphan mental health support mean? -> how can play, routine, school, and trusted care help? -> what can I do responsibly?",
         "serp_competitors": (
+            Link("NCTSN - About Child Trauma", "https://www.nctsn.org/what-is-child-trauma/about-child-trauma", "childhood trauma and traumatic stress", "Authoritative broad-intent source covering violence, war, sudden loss, separation, varied child responses, and protective factors."),
+            Link("UNICEF - Child Protection", "https://www.unicef.org/protection", "children in crisis and family separation", "Authoritative crisis source covering violence, displacement, family separation, protection, mental health, and psychosocial support."),
             Link("Duke Global Health - Mental Health Services Critical for Orphans", "https://globalhealth.duke.edu/news/protective-and-mental-health-services-critical-orphans-worldwide", "mental health services for orphans", "Research/news result emphasizing protection and mental health services."),
             Link("PMC - Childhood trauma and depressive symptoms", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12642290/", "childhood trauma among orphaned children", "Research result linking trauma exposure and depressive symptoms."),
             Link("BMJ Global Health - Care environment and mental health", "https://gh.bmj.com/content/6/3/e003644", "care environment and mental health of orphaned children", "Research result on care environment and mental health risk."),
-            Link("A Child's Hope Foundation - Mental Health Needs", "https://achildshopefoundation.org/2021/05/20/addressing-mental-health-needs-of-orphaned-children/", "mental health needs of orphaned children", "Nonprofit page that leans toward counseling/healing language."),
-            Link("Embrace Relief - Emotional Well-Being", "https://www.embracerelief.org/mental-health-matters-addressing-emotional-well-being-in-orphaned-children/", "emotional well-being in orphaned children", "Nonprofit article discussing therapeutic support, belonging, and nurturing environments."),
         ),
         "serp_features": "SERP snapshot mixes academic/research pages and nonprofit articles. Some competing pages use clinical or therapy language.",
         "paid_ads": "Paid ads were not verified in this browser snapshot.",
-        "content_pattern": "Ranking/visible content often discusses trauma, counseling, protective services, and care environments. The risk is overclaiming beyond LifeUSA's confirmed program details.",
-        "serp_notes": "LifeUSA's page should be explicitly non-clinical: safety, routine, trusted adults, school connection, play, dignity, and stable support. That is the safer information gain.",
-        "current_rank": "The existing LifeUSA article is the rewrite target and is live at its canonical Wix URL. Current ranking and GSC performance for `orphan mental health` were not verified in this pass, so preserve the URL and benchmark GSC before changing the title or metadata.",
+        "content_pattern": "Visible content spans broad childhood trauma and conflict effects as well as orphan-specific counseling, protection, and care environments. The combined page must cover both instead of replacing one with the other.",
+        "serp_notes": "LifeUSA's information gain is the bridge from violence affecting children generally to the additional consequences of caregiver loss, followed by practical non-clinical supports and verified program examples.",
+        "current_rank": "The existing LifeUSA article is the rewrite target and is live at its canonical Wix URL. Current GSC performance for the old page and the three measurable targets (`childhood trauma`, `war orphans`, and `orphan mental health`) was not verified in this pass, so preserve the URL and benchmark GSC before changing the live title or metadata.",
         "image_notes": "Use non-clinical, dignity-first imagery: safe group activities, school, play, or caregiver-supported environments. Avoid sad-child closeups and therapy-implying photos unless program details support them.",
         "schema_notes": "Use Article schema and optional FAQ schema. Do not use MedicalWebPage or medical schema unless LifeUSA publishes clinically reviewed medical content.",
         "info_gain": (
-            "Turn the existing broad crisis article into the orphan-cluster mental-health owner without discarding its useful conflict, play, consistency, education, and recovery material.",
-            "Translate mental-health need into donor-safe support conditions rather than medical treatment claims.",
-            "Use LifeUSA Somaliland mental-health/stability examples while clearly separating confirmed program details from general psychosocial principles.",
-            "Connect war orphans to trauma carefully, then link out to the Gaza-specific page instead of repeating it.",
-            "Give the rewriter explicit claim guardrails so the article stays useful and safe.",
+            "Preserve the original broad explanation of how violence affects children while adding a distinct caregiver-loss and orphan mental-health layer.",
+            "Use the measurable keyword bridge from `childhood trauma` (6,600/mo) to `war orphans` (390/mo) and `orphan mental health` (10/mo) without keyword stuffing.",
+            "Retain the existing play, consistency, education, and support material while correcting unsupported clinical or guaranteed-outcome language.",
+            "Use LifeUSA Somaliland mental-health/stability, education, and joy/play examples while clearly separating confirmed program details from general psychosocial principles.",
+            "Give Angela a full rewrite sequence rather than asking her to append an orphan section to the old article.",
         ),
         "appendix_sources": (
             "Existing article to rewrite in place: `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence` (published 2026-04-05; modified 2026-04-06; self-canonical; HTTP 200 when checked 2026-07-29).",
             "Preservation rule: keep the existing Wix slug and useful sections; do not publish the planning slug as a second article or add a redirect unless a separately approved migration decision is made.",
-            "Existing-content map: retain and consolidate `Childhood Under Constant Instability`, `When Survival Replaces Development`, and `The Psychological Toll of Prolonged Trauma` into the loss-and-crisis sections; source-check every clinical or neurological statement.",
-            "Existing-content map: retain the play, consistency, and education material under supportive conditions and program support; keep the LIFE examples only where the linked program evidence supports the wording.",
-            "Existing-content map: rewrite `The Path to Healing` as a careful conclusion that avoids guaranteed recovery or resilience outcomes and leads to one verified orphan-support action.",
-            "Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.",
-            "SERP snapshot sources: Duke Global Health, PMC, BMJ Global Health, A Child's Hope Foundation, Embrace Relief.",
+            "Existing-content map: keep `Childhood Under Constant Instability` and `The Psychological Toll of Prolonged Trauma` as the broad original intent; rebuild `When Survival Replaces Development` with source-safe childhood-trauma language.",
+            "Existing-content map: insert dedicated caregiver-loss and `Orphan Mental Health After Loss and Displacement` sections before moving into support.",
+            "Existing-content map: retain and strengthen the play, consistency, and education material; keep LIFE examples only where the linked program evidence supports the wording.",
+            "Existing-content map: rewrite `The Path to Healing` as a combined conclusion for children and orphans that avoids guaranteed recovery or resilience outcomes and leads to one verified support action.",
+            "Google Ads CLI U.S. English exact pull (2026-07-29): `childhood trauma` 6,600/mo, `war orphans` 390/mo, `orphan mental health` 10/mo. Zero-volume long tails remain semantic coverage terms, not traffic claims.",
+            f"Keyword evidence files: `{MENTAL_KW_EXACT}` and `{MENTAL_KW_SUPPORTING}`.",
+            "Research and guidance sources: NCTSN child-trauma guidance, UNICEF child protection, Duke Global Health, PMC childhood-trauma research, and BMJ Global Health care-environment research.",
             "LifeUSA proof pages: Somaliland mental-health post, Somaliland stability/sponsorship post, Gaza orphan article, Ghana/global play examples.",
             "Open question: confirm whether LifeUSA provides counseling, psychosocial support, referrals, or only broader stability/mental-health programming before final wording.",
         ),
@@ -573,7 +603,7 @@ def build_brief(topic: Topic) -> str:
     - **Proposed/live URL:** `{topic.live_url}`
     - **Current rank:** {tdata(topic, "current_rank")}
     - **Status note:** {topic.status_note}
-    - **Keyword source:** `{KW_EXACT}` and `{KW_REWRITE}`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
+    - **Keyword source:** {keyword_source_note(topic)}
 
     ## 2. Audience And Reader Need
 
@@ -689,7 +719,7 @@ def build_outline(topic: Topic) -> str:
     - **Proposed/live URL:** `{topic.live_url}`
     - **Article type:** {topic.content_type}
     - **Current rank:** {tdata(topic, "current_rank")}
-    - **Writer:** {"Angela" if is_new_guide(topic) else "Saiaf"}
+    - **Writer:** {"Angela" if is_angela_owned(topic) else "Saiaf"}
     - **Review owner:** Saiaf for SEO, links, sensitive claims, and final LifeUSA fit.
 
     ## 2. Audience And Reader Need
@@ -959,7 +989,7 @@ def build_html(topic: Topic) -> str:
           <div class="card"><h3>Content type</h3><p>{html_escape(topic.content_type)}</p></div>
           <div class="card"><h3>URL</h3><p><code>{html_escape(topic.live_url)}</code></p></div>
           <div class="card"><h3>Current rank</h3><p>{html_escape(tdata(topic, "current_rank"))}</p></div>
-          <div class="card"><h3>Demand source</h3><p><code>{html_escape(KW_EXACT)}</code></p></div>
+          <div class="card"><h3>Demand source</h3><p><code>{html_escape(demand_source_path(topic))}</code></p></div>
           <div class="card"><h3>Owner</h3><p>{html_escape(owner_card(topic))}</p></div>
         </div>
         <div class="callout ok"><strong>Status:</strong> {html_escape(topic.status_note)}</div>
@@ -1103,15 +1133,17 @@ def build_source_notes() -> str:
     Saiaf approved four directions with clarifications, with the mental-health package amended on 2026-07-29 after the existing live article was identified:
 
     - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article or forcing a new title. Saiaf owns these rewrites.
-    - `Mental Health Support for Orphaned Children` is now a Saiaf-owned rewrite of the live `Children in Crisis: The Psychological Toll of Violence` article. Preserve `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence`; do not create the previously proposed Wix URL.
+    - `Children and Orphans in Crisis: The Psychological Toll of Violence` is an Angela-owned full rewrite of the live `Children in Crisis: The Psychological Toll of Violence` article. It must preserve both the original children-and-violence intent and the added orphan mental-health intent. Preserve `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence`; do not create the previously proposed Wix URL.
     - `Orphan Education After Loss` remains a new informational guide for Angela to draft.
-    - Ownership split: rewrites are done by Saiaf; the remaining new guide draft is done by Angela, with Saiaf handling SEO planning and review.
+    - Ownership split: Saiaf owns the Gaza and gifts rewrites; Angela owns the combined children-and-orphans crisis rewrite and the education draft; Saiaf handles SEO planning and review.
 
     ## Keyword Sources
 
     - `{KW_EXACT}`
     - `{KW_REWRITE}`
     - `{KW_EXPANDED}`
+    - `{MENTAL_KW_EXACT}`
+    - `{MENTAL_KW_SUPPORTING}`
     - `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-basic-needs-gifts-expanded.json`
 
     Google Ads CLI is the demand source. Ahrefs is helper-only for SERP shape if needed later.
