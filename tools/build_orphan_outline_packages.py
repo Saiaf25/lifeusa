@@ -97,6 +97,36 @@ def section_write_label(topic: Topic) -> str:
     return "What Angela should write" if is_new_guide(topic) else "What Saiaf should write"
 
 
+def package_date(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return "July 29, 2026"
+    return DATE
+
+
+def package_version(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return "1.1"
+    return "1.0"
+
+
+def publication_slug(topic: Topic) -> str:
+    if topic.slug != "mental-health-support-for-orphaned-children":
+        return topic.slug
+    return topic.live_url.rstrip("/").rsplit("/", 1)[-1]
+
+
+def publication_slug_label(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return "Existing Wix slug to preserve"
+    return "Suggested slug"
+
+
+def link_risk_note(topic: Topic) -> str:
+    if topic.slug == "mental-health-support-for-orphaned-children":
+        return "verify every LifeUSA and donation URL immediately before the Wix update; do not substitute a planning-preview URL for an available live article."
+    return "use the planned `How To Help Orphans` GitHub outline until the Wix URL is live; do not link to the 404 Wix URL yet."
+
+
 COMMON_LINKS = (
     Link("What Is an Orphan?", "https://www.lifeusa.org/post/what-is-an-orphan", "what an orphan is", "Definition and context article."),
     Link("How To Help Orphans", "https://saiaf25.github.io/lifeusa/article-plans-and-outlines/how-to-help-orphans/", "how to help orphans", "Planned pillar outline until the Wix URL is live."),
@@ -210,23 +240,27 @@ TOPICS: tuple[Topic, ...] = (
     Topic(
         slug="mental-health-support-for-orphaned-children",
         title="Mental Health Support for Orphaned Children: Routine, Safety, and Care After Trauma",
-        subtitle="New informational guide. It can use Somaliland and conflict examples as proof, but it does not have to replace the existing Somaliland post.",
-        content_type="New informational guide; Angela-owned draft",
-        live_url="https://www.lifeusa.org/post/mental-health-support-for-orphaned-children",
-        status_note="This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.",
+        subtitle="Rewrite and expand the existing April 2026 article in place. Preserve its Wix URL and useful conflict, play, education, stability, and recovery material while integrating the orphan mental-health angle.",
+        content_type="Existing article enrichment; Saiaf-owned rewrite",
+        live_url="https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence",
+        status_note="Rewrite the existing `Children in Crisis: The Psychological Toll of Violence` article in place. Do not publish a second mental-health article or redirect the current URL. The working title is an SEO/editorial recommendation, not a required URL change.",
         primary_keywords=(("orphan mental health", "10", "Low", "Use in title, intro, one H2, metadata, and FAQ."),),
         secondary_keywords=(("war orphans", "390", "Low", "Use carefully in trauma/conflict section, not as the main topic."), ("orphan crisis", "10", "Low", "Use only if natural in crisis context.")),
         reader_problem="The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.",
         cluster_boundary="This page owns psychosocial support, routine, safety, trusted adults, school connection, play, and dignity. It must not become a clinical mental-health article, a general orphan needs guide, or a sponsorship coverage article.",
-        format_decision="New informational guide with strong medical-claim guardrails.",
-        intro_guidance="Open by saying orphaned children may need more than material support, especially after loss or crisis. Then set the boundary: this article is not medical advice, but explains supportive conditions that can help children feel safer and more stable.",
+        format_decision="Substantial in-place rewrite of the existing crisis article with strong medical-claim guardrails, preserved useful sections, clearer orphan relevance, and improved internal linking.",
+        intro_guidance="Retain the existing crisis-zone framing, then bring orphaned children into the first paragraph by connecting caregiver loss, displacement, and disrupted routines to emotional safety. State that the article is educational, not medical advice, and focuses on supportive conditions rather than diagnosis or treatment.",
         links=(
+            Link("Existing rewrite target", "https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence", "psychological toll of violence on children", "Canonical article to update in place; preserve this URL."),
             Link("Somaliland mental health", "https://www.lifeusa.org/post/life-for-relief-and-development-life-cares-for-the-mental-health-of-orphaned-children-in-somalilan", "mental health support for orphaned children", "Primary proof point."),
             Link("Somaliland stability", "https://www.lifeusa.org/post/life-for-relief-and-development-life-sponsorship-program-restored-hope-and-stability-for-134-orpha", "hope and stability for orphaned children", "Stability proof point."),
             Link("Gaza war orphans context", "https://www.lifeusa.org/post/who-will-watch-over-the-orphans-of-gaza", "war orphans and caregiver loss", "Conflict context link."),
             Link("Ghana orphan party", "https://www.lifeusa.org/post/a-day-of-laughter-and-hope-for-ghana-s-orphaned-children-at-the-life-global-orphan-party-2026", "laughter and hope for orphaned children", "Joy/social support proof point."),
             Link("Let them play", "https://www.lifeusa.org/post/let-them-play-life-gives-every-child-a-chance-to-be-a-child-at-the-global-orphan-eid-parties", "a chance to be a child", "Play/dignity support."),
-            *COMMON_LINKS,
+            COMMON_LINKS[0],
+            Link("How To Help Orphans", "https://www.lifeusa.org/post/10-ways-to-help-orphans-through-sponsorship-and-charity", "how to help orphans", "Live orphan-help pillar."),
+            Link("Sponsorship coverage guide", "https://www.lifeusa.org/post/what-does-orphan-sponsorship-cover-a-guide-for-donors", "what orphan sponsorship can cover", "Live supporting sponsorship guide."),
+            COMMON_LINKS[3],
         ),
         sections=(
             Section("Why Mental Health Support Matters After Loss", "Define the page's unique informational role.", "I understand material needs, but what about emotional needs?", "`orphan mental health` 10/mo.", "Explain grief, fear, disrupted routine, isolation, and the need for safe relationships. Keep this non-clinical.", "Do not diagnose children or describe treatment protocols."),
@@ -238,8 +272,8 @@ TOPICS: tuple[Topic, ...] = (
         faq=("Why do orphaned children need mental health support?", "How can war affect orphaned children emotionally?", "What helps orphaned children feel safe after trauma?", "Can school and routine support mental health?", "Is this the same as therapy?"),
         meta_title="Mental Health Support for Orphaned Children After Loss",
         meta_description="Learn why orphaned children may need emotional support after loss or crisis, and how routine, safety, school, play, and trusted care can help.",
-        review_note="Angela should draft this as a new informational guide. Saiaf should review it for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.",
-        source_note="Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.",
+        review_note="Saiaf should rewrite the existing Wix article in place, preserve its URL, and compare the revision against the current copy so useful material is retained. Review all clinical, neurological, PTSD, recovery, and program-outcome claims against primary sources before updating Wix.",
+        source_note="Existing rewrite target: Children in Crisis: The Psychological Toll of Violence, published April 5, 2026 and modified April 6, 2026. Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.",
     ),
 )
 
@@ -426,7 +460,7 @@ TEMPLATE_DATA = {
         "audience": "Donors and supporters who understand material orphan support but want to understand emotional safety, trauma, routine, and psychosocial support after loss.",
         "reader_stage": "Learning and verifying trust: the reader needs a careful, non-clinical explanation before supporting or sharing.",
         "trust_blockers": "Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.",
-        "journey": "I know orphaned children need material support -> what about emotional needs? -> how do loss and war affect stability? -> what support is safe to discuss? -> what LifeUSA examples exist? -> what should be reviewed before publishing?",
+        "journey": "I am reading about children affected by violence -> how does caregiver loss intensify the impact for orphaned children? -> what do routine, play, school, and trusted adults contribute? -> what support is safe to discuss? -> how can I help responsibly?",
         "serp_competitors": (
             Link("Duke Global Health - Mental Health Services Critical for Orphans", "https://globalhealth.duke.edu/news/protective-and-mental-health-services-critical-orphans-worldwide", "mental health services for orphans", "Research/news result emphasizing protection and mental health services."),
             Link("PMC - Childhood trauma and depressive symptoms", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12642290/", "childhood trauma among orphaned children", "Research result linking trauma exposure and depressive symptoms."),
@@ -438,16 +472,22 @@ TEMPLATE_DATA = {
         "paid_ads": "Paid ads were not verified in this browser snapshot.",
         "content_pattern": "Ranking/visible content often discusses trauma, counseling, protective services, and care environments. The risk is overclaiming beyond LifeUSA's confirmed program details.",
         "serp_notes": "LifeUSA's page should be explicitly non-clinical: safety, routine, trusted adults, school connection, play, dignity, and stable support. That is the safer information gain.",
-        "current_rank": "This is a proposed new guide. Current LifeUSA ranking for `orphan mental health` was not verified in GSC in this pass.",
+        "current_rank": "The existing LifeUSA article is the rewrite target and is live at its canonical Wix URL. Current ranking and GSC performance for `orphan mental health` were not verified in this pass, so preserve the URL and benchmark GSC before changing the title or metadata.",
         "image_notes": "Use non-clinical, dignity-first imagery: safe group activities, school, play, or caregiver-supported environments. Avoid sad-child closeups and therapy-implying photos unless program details support them.",
         "schema_notes": "Use Article schema and optional FAQ schema. Do not use MedicalWebPage or medical schema unless LifeUSA publishes clinically reviewed medical content.",
         "info_gain": (
+            "Turn the existing broad crisis article into the orphan-cluster mental-health owner without discarding its useful conflict, play, consistency, education, and recovery material.",
             "Translate mental-health need into donor-safe support conditions rather than medical treatment claims.",
             "Use LifeUSA Somaliland mental-health/stability examples while clearly separating confirmed program details from general psychosocial principles.",
             "Connect war orphans to trauma carefully, then link out to the Gaza-specific page instead of repeating it.",
-            "Give Angela explicit claim guardrails so the article stays useful and safe.",
+            "Give the rewriter explicit claim guardrails so the article stays useful and safe.",
         ),
         "appendix_sources": (
+            "Existing article to rewrite in place: `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence` (published 2026-04-05; modified 2026-04-06; self-canonical; HTTP 200 when checked 2026-07-29).",
+            "Preservation rule: keep the existing Wix slug and useful sections; do not publish the planning slug as a second article or add a redirect unless a separately approved migration decision is made.",
+            "Existing-content map: retain and consolidate `Childhood Under Constant Instability`, `When Survival Replaces Development`, and `The Psychological Toll of Prolonged Trauma` into the loss-and-crisis sections; source-check every clinical or neurological statement.",
+            "Existing-content map: retain the play, consistency, and education material under supportive conditions and program support; keep the LIFE examples only where the linked program evidence supports the wording.",
+            "Existing-content map: rewrite `The Path to Healing` as a careful conclusion that avoids guaranteed recovery or resilience outcomes and leads to one verified orphan-support action.",
             "Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.",
             "SERP snapshot sources: Duke Global Health, PMC, BMJ Global Health, A Child's Hope Foundation, Embrace Relief.",
             "LifeUSA proof pages: Somaliland mental-health post, Somaliland stability/sponsorship post, Gaza orphan article, Ghana/global play examples.",
@@ -742,7 +782,7 @@ def build_outline(topic: Topic) -> str:
     - **Repetition risk:** compare against `What Is an Orphan?`, `How To Help Orphans`, and `What Does Orphan Sponsorship Cover?` before drafting.
     - **Claim risk:** avoid medical, legal, adoption, custody, direct-child-contact, or guaranteed-outcome claims unless LifeUSA confirms them.
     - **Keyword risk:** do not force low-volume phrases repeatedly. Use them once where natural and let the article's distinct angle carry the page.
-    - **Link risk:** use the planned `How To Help Orphans` GitHub outline until the Wix URL is live; do not link to the 404 Wix URL yet.
+    - **Link risk:** {link_risk_note(topic)}
     - **Owner risk:** {owner_risk_note(topic)}
     """)
 
@@ -889,8 +929,8 @@ def build_html(topic: Topic) -> str:
         <h1>{html_escape(topic.title)}</h1>
         <p>{html_escape(topic.subtitle)}</p>
         <div class="meta">
-          <span>Version 1.0</span>
-          <span>{DATE}</span>
+          <span>Version {package_version(topic)}</span>
+          <span>{package_date(topic)}</span>
           <span>Prepared by Saiaf Gamal</span>
           <span>{html_escape(owner_meta(topic))}</span>
         </div>
@@ -1030,12 +1070,12 @@ def build_html(topic: Topic) -> str:
           <li>Are child, medical, crisis, sponsorship, zakat, or sadaqah claims safe to publish?</li>
           <li>Are internal links live and relevant?</li>
         </ul>
-        <p><strong>Suggested slug:</strong> <code>{html_escape(topic.slug)}</code></p>
+        <p><strong>{publication_slug_label(topic)}:</strong> <code>{html_escape(publication_slug(topic))}</code></p>
         <p><strong>Review note:</strong> {html_escape(topic.review_note)}</p>
         <div class="callout"><strong>Source note:</strong> {html_escape(topic.source_note)}</div>
       </section>
     </main>
-    <footer>LifeUSA · {html_escape(topic.title)} · Content Brief and Outline · Version 1.0</footer>
+    <footer>LifeUSA · {html_escape(topic.title)} · Content Brief and Outline · Version {package_version(topic)}</footer>
     </body>
     </html>
     """)
@@ -1060,11 +1100,12 @@ def build_source_notes() -> str:
 
     ## User Decision
 
-    Saiaf approved four directions with clarifications:
+    Saiaf approved four directions with clarifications, with the mental-health package amended on 2026-07-29 after the existing live article was identified:
 
     - `Gaza Orphans` and `Why Gifts for Orphans Matter` are existing article enrichment/rewrite plans. Rewrite means add depth, keyword targeting, structure, and links. It does not mean deleting the old article or forcing a new title. Saiaf owns these rewrites.
-    - `Orphan Education After Loss` and `Mental Health Support for Orphaned Children` are new informational guides for Angela to draft. They do not have to replace existing recap posts.
-    - Ownership split: rewrites are done by Saiaf; new guide drafts are done by Angela, with Saiaf handling SEO planning and review.
+    - `Mental Health Support for Orphaned Children` is now a Saiaf-owned rewrite of the live `Children in Crisis: The Psychological Toll of Violence` article. Preserve `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence`; do not create the previously proposed Wix URL.
+    - `Orphan Education After Loss` remains a new informational guide for Angela to draft.
+    - Ownership split: rewrites are done by Saiaf; the remaining new guide draft is done by Angela, with Saiaf handling SEO planning and review.
 
     ## Keyword Sources
 

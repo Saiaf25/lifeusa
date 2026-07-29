@@ -2,11 +2,11 @@
 
     ## 1. Article Setup
 
-    - **Content type:** New informational guide; Angela-owned draft
-    - **Owner:** Angela draft; Saiaf SEO planning/review
-    - **Proposed/live URL:** `https://www.lifeusa.org/post/mental-health-support-for-orphaned-children`
-    - **Current rank:** This is a proposed new guide. Current LifeUSA ranking for `orphan mental health` was not verified in GSC in this pass.
-    - **Status note:** This should be a new informational guide focused on psychosocial support. Angela drafts it; Saiaf reviews medical-claim safety, SEO structure, links, and keyword use.
+    - **Content type:** Existing article enrichment; Saiaf-owned rewrite
+    - **Owner:** Saiaf rewrite/enrichment
+    - **Proposed/live URL:** `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence`
+    - **Current rank:** The existing LifeUSA article is the rewrite target and is live at its canonical Wix URL. Current ranking and GSC performance for `orphan mental health` were not verified in this pass, so preserve the URL and benchmark GSC before changing the title or metadata.
+    - **Status note:** Rewrite the existing `Children in Crisis: The Psychological Toll of Violence` article in place. Do not publish a second mental-health article or redirect the current URL. The working title is an SEO/editorial recommendation, not a required URL change.
     - **Keyword source:** `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-nonrepetitive-guides-exact.json` and `Content Framework/80-Keywords/orphan-cluster-2026-07-05/orphan-old-rewrite-candidates-exact.json`. Google Ads CLI is the demand source; Ahrefs is helper-only if used later for SERP shape.
 
     ## 2. Audience And Reader Need
@@ -50,7 +50,7 @@
 
     ## 5. Format Decision
 
-    New informational guide with strong medical-claim guardrails.
+    Substantial in-place rewrite of the existing crisis article with strong medical-claim guardrails, preserved useful sections, clearer orphan relevance, and improved internal linking.
 
     ## Article Thesis
 
@@ -70,7 +70,7 @@
     - **What they need next:** The reader wants to understand how loss, war, displacement, and instability affect orphaned children emotionally, and what responsible support can look like.
     - **What could block trust:** Medical overclaims, therapy promises, diagnosing children, unsupported trauma claims, or turning mental health into a donation slogan.
 
-    `I know orphaned children need material support -> what about emotional needs? -> how do loss and war affect stability? -> what support is safe to discuss? -> what LifeUSA examples exist? -> what should be reviewed before publishing?`
+    `I am reading about children affected by violence -> how does caregiver loss intensify the impact for orphaned children? -> what do routine, play, school, and trusted adults contribute? -> what support is safe to discuss? -> how can I help responsibly?`
 
     ## Non-Cannibalization Rule
 
@@ -78,7 +78,7 @@
 
     ## 7. Intro Guidance
 
-    Open by saying orphaned children may need more than material support, especially after loss or crisis. Then set the boundary: this article is not medical advice, but explains supportive conditions that can help children feel safer and more stable.
+    Retain the existing crisis-zone framing, then bring orphaned children into the first paragraph by connecting caregiver loss, displacement, and disrupted routines to emotional safety. State that the article is educational, not medical advice, and focuses on supportive conditions rather than diagnosis or treatment.
 
     ## Working Intro Draft
 
@@ -117,14 +117,15 @@ This guide should explain mental health support for orphaned children in non-cli
 
     | Page | URL | Suggested anchor | Note |
 |---|---|---|---|
+| Existing rewrite target | `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence` | psychological toll of violence on children | Canonical article to update in place; preserve this URL. |
 | Somaliland mental health | `https://www.lifeusa.org/post/life-for-relief-and-development-life-cares-for-the-mental-health-of-orphaned-children-in-somalilan` | mental health support for orphaned children | Primary proof point. |
 | Somaliland stability | `https://www.lifeusa.org/post/life-for-relief-and-development-life-sponsorship-program-restored-hope-and-stability-for-134-orpha` | hope and stability for orphaned children | Stability proof point. |
 | Gaza war orphans context | `https://www.lifeusa.org/post/who-will-watch-over-the-orphans-of-gaza` | war orphans and caregiver loss | Conflict context link. |
 | Ghana orphan party | `https://www.lifeusa.org/post/a-day-of-laughter-and-hope-for-ghana-s-orphaned-children-at-the-life-global-orphan-party-2026` | laughter and hope for orphaned children | Joy/social support proof point. |
 | Let them play | `https://www.lifeusa.org/post/let-them-play-life-gives-every-child-a-chance-to-be-a-child-at-the-global-orphan-eid-parties` | a chance to be a child | Play/dignity support. |
 | What Is an Orphan? | `https://www.lifeusa.org/post/what-is-an-orphan` | what an orphan is | Definition and context article. |
-| How To Help Orphans | `https://saiaf25.github.io/lifeusa/article-plans-and-outlines/how-to-help-orphans/` | how to help orphans | Planned pillar outline until the Wix URL is live. |
-| Sponsorship coverage guide | `https://saiaf25.github.io/lifeusa/article-plans-and-outlines/what-does-orphan-sponsorship-cover/` | what orphan sponsorship can cover | Supporting sponsorship guide. |
+| How To Help Orphans | `https://www.lifeusa.org/post/10-ways-to-help-orphans-through-sponsorship-and-charity` | how to help orphans | Live orphan-help pillar. |
+| Sponsorship coverage guide | `https://www.lifeusa.org/post/what-does-orphan-sponsorship-cover-a-guide-for-donors` | what orphan sponsorship can cover | Live supporting sponsorship guide. |
 | Orphan donation CTA | `https://donate.lifeusa.org/donorportal/project-designations?Program=11WVy000001QlE5MAK` | support orphaned children through LifeUSA | Established orphan sponsorship/donation CTA. |
 
     ## 10. Metadata, FAQ, Images, And Schema
@@ -137,25 +138,31 @@ This guide should explain mental health support for orphaned children in non-cli
 
     ## 11. Information Gain
 
-    - Translate mental-health need into donor-safe support conditions rather than medical treatment claims.
+    - Turn the existing broad crisis article into the orphan-cluster mental-health owner without discarding its useful conflict, play, consistency, education, and recovery material.
+- Translate mental-health need into donor-safe support conditions rather than medical treatment claims.
 - Use LifeUSA Somaliland mental-health/stability examples while clearly separating confirmed program details from general psychosocial principles.
 - Connect war orphans to trauma carefully, then link out to the Gaza-specific page instead of repeating it.
-- Give Angela explicit claim guardrails so the article stays useful and safe.
+- Give the rewriter explicit claim guardrails so the article stays useful and safe.
 
     ## 12. Internal Appendix
 
-    - Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.
+    - Existing article to rewrite in place: `https://www.lifeusa.org/post/children-in-crisis-the-psychological-toll-of-violence` (published 2026-04-05; modified 2026-04-06; self-canonical; HTTP 200 when checked 2026-07-29).
+- Preservation rule: keep the existing Wix slug and useful sections; do not publish the planning slug as a second article or add a redirect unless a separately approved migration decision is made.
+- Existing-content map: retain and consolidate `Childhood Under Constant Instability`, `When Survival Replaces Development`, and `The Psychological Toll of Prolonged Trauma` into the loss-and-crisis sections; source-check every clinical or neurological statement.
+- Existing-content map: retain the play, consistency, and education material under supportive conditions and program support; keep the LIFE examples only where the linked program evidence supports the wording.
+- Existing-content map: rewrite `The Path to Healing` as a careful conclusion that avoids guaranteed recovery or resilience outcomes and leads to one verified orphan-support action.
+- Google Ads CLI: `orphan mental health` 10/mo; `war orphans` 390/mo as supporting conflict context.
 - SERP snapshot sources: Duke Global Health, PMC, BMJ Global Health, A Child's Hope Foundation, Embrace Relief.
 - LifeUSA proof pages: Somaliland mental-health post, Somaliland stability/sponsorship post, Gaza orphan article, Ghana/global play examples.
 - Open question: confirm whether LifeUSA provides counseling, psychosocial support, referrals, or only broader stability/mental-health programming before final wording.
 
     ## Review Note
 
-    Angela should draft this as a new informational guide. Saiaf should review it for medical-claim safety before publication. Use non-clinical language unless LifeUSA provides program details.
+    Saiaf should rewrite the existing Wix article in place, preserve its URL, and compare the revision against the current copy so useful material is retained. Review all clinical, neurological, PTSD, recovery, and program-outcome claims against primary sources before updating Wix.
 
     ## Source Note
 
-    Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.
+    Existing rewrite target: Children in Crisis: The Psychological Toll of Violence, published April 5, 2026 and modified April 6, 2026. Google Ads CLI source: orphan mental health 10/mo; supported by war orphans 390/mo for conflict-trauma context.
 
     ## Anti-Cannibalization Checklist
 
