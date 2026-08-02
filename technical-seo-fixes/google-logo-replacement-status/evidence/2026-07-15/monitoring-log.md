@@ -8,6 +8,33 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## August 2 scheduled check
+
+The third scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or complete Google refresh was proved.
+
+### Verified unchanged
+
+- Zoho Mail: exact sender and exact subject searches, including spam and trash, found no publisher reply to SENT-001 or SENT-002. The historical sent records and message IDs remain intact.
+- Retired-crescent sources: the old WordPress archive, Kids That Do Good, and Arab Info Mall still reference their documented legacy files. Each direct file returned `200` and had decoded-pixel absolute error `0` against the July 15 evidence.
+- Acceptable current variants: GreatNonprofits and Candid/GuideStar remain pixel-identical to the preserved evidence. Logged-out LinkedIn, both Facebook pages, Instagram, YouTube, and X expose approved current blue-globe variants. Linktree exposes the preferred yellow-ray avatar.
+- Other authority signals: the English Linktree Facebook destination still resolves to the Somali profile, while Candid/GuideStar, LinkedIn, Google Maps, and ReliefWeb still expose HTTP LifeUSA website links. ReliefWeb still exposes no logo.
+- Owned signals: both canonical Wix assets returned `200` with unchanged dimensions and SHA-256 checksums. The homepage NGO node still uses the canonical square, the visible logo alt text remains present, the approved favicon source remains linked, and the Brand Resources page still references both canonical files. Two `WebSite` nodes remain.
+- Google Maps: the logged-out Southfield listing still shows 4.3 stars, 20 reviews, the correct address, the stale HTTP website link, and current LifeUSA-branded media.
+- Directory profiles: Find-Us-Here, A-Z Business Finder, and Nextdoor remain public under the authoritative tracker URLs. Find-Us-Here and A-Z retain canonical HTTPS backlinks; the A-Z image remains pixel-identical to the canonical square. Progress remains 3 of 20.
+
+### Inconclusive surfaces
+
+The required signed-out Google Search and Images queries used `hl=en`, `gl=us`, and `pws=0`, but both redirected to Google's anti-automation page. The paid-result logo, organic favicon, separate Knowledge Panel state, and ranked Images set were not directly observable. No August 2 result state was inferred from older evidence.
+
+Full dated measurements, checksums, page references, and interpretation: [August 2 monitoring check](../2026-08-02/monitoring-check.md).
+
+### Decision
+
+- SENT-001 and SENT-002 remain **Already sent**, with no verified publisher reply.
+- No source correction or Google refresh was recorded.
+- APR-001 through APR-006 and APR-008 remain pending; APR-007 remains approved and partially executed only for the duplicate `WebSite` cleanup. No approval item was executed.
+- Stable-check count remains **0 of 3** because the retired source references remain live and the required Google result surfaces were not fully observable.
+
 ## July 26 scheduled check
 
 The second scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or complete Google refresh was proved.
@@ -156,4 +183,4 @@ The first loaded Google Images result set still includes Kids That Do Good and t
 
 ## Next scheduled check
 
-Sunday, August 2, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
+Sunday, August 9, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
