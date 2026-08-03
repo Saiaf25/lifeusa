@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LifeUSA Homepage Structured Data Verification</title>
+  <style>
+    :root { color-scheme: light; --navy:#082b49; --blue:#2f6f9f; --green:#198754; --green-bg:#eaf7f0; --gold:#9a6700; --gold-bg:#fff4d6; --line:#d6e0e8; --ink:#17324a; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#eef3f7; color:var(--ink); font:17px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { width:1180px; margin:34px auto; background:#fff; border:1px solid var(--line); box-shadow:0 12px 35px rgba(8,43,73,.12); }
+    header { background:var(--navy); color:#fff; padding:28px 34px; }
+    header p { margin:7px 0 0; color:#cfe2f1; }
+    .source { padding:18px 34px; border-bottom:1px solid var(--line); background:#f8fafc; }
+    .grid { display:grid; grid-template-columns:1.35fr .65fr; gap:22px; padding:26px 34px 34px; }
+    .card { border:2px solid var(--line); border-radius:12px; overflow:hidden; }
+    .card h2 { margin:0; padding:16px 20px; font-size:22px; }
+    .fixed { border-color:#7ac79d; }
+    .fixed h2 { color:var(--green); background:var(--green-bg); }
+    .open { border-color:#e7c45d; }
+    .open h2 { color:var(--gold); background:var(--gold-bg); }
+    dl { display:grid; grid-template-columns:190px 1fr; margin:0; padding:18px 20px; gap:10px 16px; }
+    dt { font-weight:700; color:#496579; }
+    dd { margin:0; overflow-wrap:anywhere; }
+    code { font:15px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace; color:#0e446d; }
+    .count { font-size:72px; line-height:1; font-weight:800; color:var(--gold); margin:24px 20px 8px; }
+    .open p { margin:0 20px 24px; }
+    .note { margin:0 34px 32px; padding:15px 18px; border-left:4px solid var(--blue); background:#edf6fb; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Homepage structured data: live rendered-source check</h1>
+      <p>Captured from https://www.lifeusa.org/ on 2 August 2026</p>
+    </header>
+    <div class="source"><strong>Method:</strong> parsed every live <code>script[type="application/ld+json"]</code> block in the rendered homepage DOM.</div>
+    <div class="grid">
+      <section class="card fixed">
+        <h2>VERIFIED FIX - Organization / NGO identity</h2>
+        <dl>
+          <dt>@type</dt><dd><code>NGO</code></dd>
+          <dt>@id</dt><dd><code>https://www.lifeusa.org/#organization</code></dd>
+          <dt>Name</dt><dd>Life for Relief and Development</dd>
+          <dt>alternateName</dt><dd><code>LifeUSA</code></dd>
+          <dt>Logo</dt><dd>Canonical colored square, 1800 × 1800</dd>
+          <dt>sameAs</dt><dd>8 official profiles</dd>
+          <dt>Contact data</dt><dd>Postal address and customer-support telephone present</dd>
+          <dt>Old white logo</dt><dd>Not present in the rendered source</dd>
+        </dl>
+      </section>
+      <section class="card open">
+        <h2>ONGOING - WebSite consolidation</h2>
+        <div class="count">2</div>
+        <p><strong>WebSite nodes remain.</strong> Consolidating them into one canonical node is still an open technical task.</p>
+      </section>
+    </div>
+    <p class="note">This panel reports the live state without treating the completed NGO repair as proof that every homepage schema issue is resolved.</p>
+  </main>
+</body>
+</html>
