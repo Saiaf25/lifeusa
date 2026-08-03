@@ -4,9 +4,9 @@ const THUMBNAIL = "./video-thumbnail.jpg";
 const LOGO = "./lifeusa-logo-horizontal.png";
 
 const variants = [
-  { key: "A", name: "Documentary title card" },
-  { key: "B", name: "Split-screen film poster" },
-  { key: "C", name: "Theatre premiere" },
+  { key: "A", name: "Cinematic song portrait" },
+  { key: "B", name: "Split-screen song poster" },
+  { key: "C", name: "Theatre listening room" },
 ];
 
 const icons = {
@@ -25,7 +25,8 @@ function Header({ transparent = false } = {}) {
       </a>
       <nav aria-label="Campaign navigation">
         <a href="#story">Why it matters</a>
-        <a href="#song">Watch the film</a>
+        <a href="#song">Hear the song</a>
+        <a href="#lyrics">Read the lyrics</a>
         <a class="nav-cta" href="#take-action">Stand with Gaza's children</a>
       </nav>
     </header>`;
@@ -45,12 +46,30 @@ function ActionPair({ dark = false } = {}) {
   return `
     <div class="action-pair ${dark ? "on-dark" : ""}">
       <a class="button button-primary" href="#take-action">Stand with Gaza's children ${icons.arrow}</a>
-      <a class="button button-ghost" href="${VIDEO_URL}" target="_blank" rel="noreferrer">Watch on YouTube</a>
+      <a class="button button-ghost" href="${VIDEO_URL}" target="_blank" rel="noreferrer">Listen on YouTube</a>
     </div>`;
 }
 
 function EvidenceNote() {
   return `<p class="evidence-note"><strong>240,000+ views and counting.</strong> The song is reaching people around the world. Help it reach one more.</p>`;
+}
+
+function LyricsSection() {
+  return `
+    <section class="lyrics-section" id="lyrics" aria-labelledby="lyrics-title">
+      <div class="lyrics-heading">
+        <p class="section-kicker">Lyrics</p>
+        <h2 id="lyrics-title">Words at the heart of the song.</h2>
+        <p>Read the refrain, then listen again.</p>
+      </div>
+      <div class="lyrics-reading">
+        <blockquote class="lyrics-refrain">
+          <span>“60,000 orphans in Gaza.</span>
+          <span>Don't look away.”</span>
+        </blockquote>
+        <button class="lyrics-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
+      </div>
+    </section>`;
 }
 
 function Footer() {
@@ -73,7 +92,7 @@ function VariantA() {
           <h1><span>60,000</span> Orphans in Gaza</h1>
           <p class="hero-deck">A child should be known by their dreams and the future still ahead of them, not by the loss they have endured. This song asks the world to listen and stand beside Gaza's orphaned children.</p>
           <div class="a-actions">
-            <button class="round-play" data-jump-video type="button">${icons.play}<span>Watch the film</span></button>
+            <button class="round-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
             ${ActionPair({ dark: true })}
           </div>
           <div class="view-proof" aria-label="More than 240,000 views and counting"><strong>240K+</strong><span>views and counting</span></div>
@@ -91,17 +110,19 @@ function VariantA() {
         </section>
 
         <section class="a-film" id="song">
-          <div class="film-heading"><span>01</span><div><p>Watch the official film</p><h2>Hear the song the world is carrying.</h2></div></div>
+          <div class="film-heading"><span>01</span><div><p>Listen to the official song</p><h2>Hear the song the world is carrying.</h2></div></div>
           ${VideoPoster({ label: "Play 60,000+ Orphans in Gaza", mode: "cinematic" })}
           ${EvidenceNote()}
         </section>
+
+        ${LyricsSection()}
 
         <section class="a-action" id="take-action">
           <p class="section-kicker">Do not let the final note be the end</p>
           <h2>When the song ends, let compassion keep moving.</h2>
           <div class="action-steps">
-            <article><span>01</span><h3>Watch</h3><p>Stay with the story from the first note to the last.</p></article>
-            <article><span>02</span><h3>Share</h3><p>Send the film to someone who needs to see it.</p></article>
+            <article><span>01</span><h3>Listen</h3><p>Stay with the song from the first note to the last.</p></article>
+            <article><span>02</span><h3>Share</h3><p>Send the song to someone who needs to hear it.</p></article>
             <article><span>03</span><h3>Stand with them</h3><p>Help LIFE keep Gaza's children seen, remembered, and supported.</p></article>
           </div>
           ${ActionPair()}
@@ -118,7 +139,7 @@ function VariantB() {
       <main id="main">
         <section class="b-poster">
           <div class="b-poster-copy">
-            <p class="eyebrow">A LIFE film for Gaza's children</p>
+            <p class="eyebrow">A LIFE song for Gaza's children</p>
             <h1 aria-label="60,000 Orphans in Gaza"><span>60,000</span><br>Orphans<br>in Gaza</h1>
             <p class="b-poster-deck">One song. Thousands of childhoods changed by loss. A call to see every child beyond the number.</p>
             ${ActionPair()}
@@ -126,22 +147,24 @@ function VariantB() {
           </div>
           <div class="b-poster-visual">
             <img src="${THUMBNAIL}" alt="A child featured in LIFE's song for Gaza campaign">
-            <button class="b-poster-play" data-jump-video type="button">${icons.play}<span>Watch the film</span></button>
+            <button class="b-poster-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
             <p>A child is more than what war has taken.</p>
           </div>
         </section>
 
         <section class="b-reel" id="song">
           <div class="b-reel-index" aria-hidden="true">
-            <span>Press play</span><span>The official LIFE film</span><span>Share the story</span>
+            <span>Press play</span><span>The official LIFE song</span><span>Share the song</span>
           </div>
           ${VideoPoster({ label: "Play 60,000+ Orphans in Gaza", mode: "poster" })}
           <div class="b-reel-caption">
             <strong>60,000+ Orphans in Gaza</strong>
             <p><strong>240,000+ views and counting.</strong> Every view is a chance for one more person to see the child behind the number.</p>
-            <p class="evidence-note">Watch it fully. Share it thoughtfully. Keep the story moving.</p>
+            <p class="evidence-note">Listen fully. Share it thoughtfully. Keep the story moving.</p>
           </div>
         </section>
+
+        ${LyricsSection()}
 
         <section class="b-frames" id="story">
           <div class="b-frame-lead">
@@ -150,7 +173,7 @@ function VariantB() {
           </div>
           <article><span>01</span><h3>Hear the song</h3><p>Give these children more than a passing moment.</p></article>
           <article><span>02</span><h3>See the child</h3><p>Every number holds a life, a memory, and a future.</p></article>
-          <article><span>03</span><h3>Keep hope moving</h3><p>Share the film, then stand with Gaza's children through LIFE.</p></article>
+          <article><span>03</span><h3>Keep hope moving</h3><p>Share the song, then stand with Gaza's children through LIFE.</p></article>
         </section>
 
         <section class="b-endcard" id="take-action">
@@ -168,7 +191,7 @@ function VariantC() {
       ${Header()}
       <main id="main">
         <section class="c-marquee">
-          <p class="eyebrow">Now showing · A song the world is carrying</p>
+          <p class="eyebrow">Now playing · A song the world is carrying</p>
           <h1>60,000 Orphans in Gaza</h1>
           <div class="c-marquee-line">
             <span>A song for Gaza's children</span><span>240,000+ views</span><span>Presented by LIFE</span>
@@ -177,10 +200,12 @@ function VariantC() {
 
         <section class="c-screen" id="song">
           <div class="c-screen-frame">
-            ${VideoPoster({ label: "Watch 60,000+ Orphans in Gaza", mode: "theatre" })}
+            ${VideoPoster({ label: "Play 60,000+ Orphans in Gaza", mode: "theatre" })}
           </div>
-          <p class="c-screen-caption">Watch with sound. Stay with the story.</p>
+          <p class="c-screen-caption">Listen with sound. Stay with the song.</p>
         </section>
+
+        ${LyricsSection()}
 
         <section class="c-credits" id="story">
           <p class="c-credit-label">When the song ends</p>
@@ -231,7 +256,7 @@ function mountVideo(target) {
   const frame = document.createElement("iframe");
   frame.className = target.className;
   frame.src = `https://www.youtube.com/embed/${VIDEO_ID}?autoplay=1&rel=0`;
-  frame.title = "60,000+ Orphans in Gaza — LIFE campaign video";
+  frame.title = "60,000+ Orphans in Gaza | LIFE campaign song";
   frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
   frame.referrerPolicy = "strict-origin-when-cross-origin";
   frame.allowFullscreen = true;
@@ -239,7 +264,7 @@ function mountVideo(target) {
   return frame;
 }
 
-function playCampaignFilm() {
+function playCampaignSong() {
   const target = document.querySelector("#song [data-play-video]");
   const player = target ? mountVideo(target) : document.querySelector("#song iframe");
   player?.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -268,7 +293,7 @@ async function shareCampaign() {
 function bindInteractions() {
   document.querySelectorAll("[data-cycle]").forEach((button) => button.addEventListener("click", () => cycleVariant(Number(button.dataset.cycle))));
   document.querySelectorAll("[data-play-video]").forEach((button) => button.addEventListener("click", () => mountVideo(button)));
-  document.querySelectorAll("[data-jump-video]").forEach((button) => button.addEventListener("click", playCampaignFilm));
+  document.querySelectorAll("[data-jump-video]").forEach((button) => button.addEventListener("click", playCampaignSong));
   document.querySelectorAll("[data-share]").forEach((button) => button.addEventListener("click", shareCampaign));
 }
 
