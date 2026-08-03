@@ -16,6 +16,7 @@ const icons = {
 };
 
 let activeTransition;
+let activeLyricsObserver;
 
 function Header({ transparent = false } = {}) {
   return `
@@ -60,14 +61,69 @@ function LyricsSection() {
       <div class="lyrics-heading">
         <p class="section-kicker">Lyrics</p>
         <h2 id="lyrics-title">Words at the heart of the song.</h2>
-        <p>Read the refrain, then listen again.</p>
+        <p>Follow every word, then listen again.</p>
+        <button class="lyrics-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
       </div>
       <div class="lyrics-reading">
         <blockquote class="lyrics-refrain">
           <span>“60,000 orphans in Gaza.</span>
           <span>Don't look away.”</span>
         </blockquote>
-        <button class="lyrics-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
+        <div class="lyrics-transcript" aria-label="Complete lyrics">
+          <div class="lyrics-column">
+            <p class="lyrics-stanza">There’s a child dreaming tonight,<br>
+              Holding on to a little light.<br>
+              Waiting for someone to care,<br>
+              Waiting to know someone’s there.<br>
+              One small gift, one open heart,<br>
+              Can help a brand-new future start.</p>
+
+            <p class="lyrics-stanza lyrics-chorus">60,000 orphans in Gaza,<br>
+              60,000 dreams to save.<br>
+              60,000 orphans in Gaza,<br>
+              Don’t look away,<br>
+              don’t look away.<br>
+              60,000 orphans in Gaza,<br>
+              Waiting for hope today.<br>
+              60,000 orphans in Gaza,<br>
+              Be the change, be the change.<br>
+              Ahhhhhhh. Ahhhhhhh.<br>
+              Be the change</p>
+
+            <p class="lyrics-stanza">A little love can go so far,<br>
+              A little hope can heal the scars.<br>
+              What you give today can shine,<br>
+              In a child’s life for all time.</p>
+          </div>
+
+          <div class="lyrics-column">
+            <p class="lyrics-stanza lyrics-chorus">60,000 orphans in Gaza,<br>
+              60,000 dreams to save.<br>
+              60,000 orphans in Gaza,<br>
+              Don’t look away,<br>
+              don’t look away.<br>
+              60,000 orphans in Gaza,<br>
+              60,000 dreams to save.<br>
+              60,000 orphans in Gaza,<br>
+              Don’t look away, ………..</p>
+
+            <p class="lyrics-stanza lyrics-bridge">Sponsor an orphan today<br>
+              through Life for Relief and Development.<br>
+              Where there is life,<br>
+              There is hope.<br>
+              Sponsor an orphan today. …</p>
+
+            <p class="lyrics-stanza lyrics-outro">60,000 orphans in Gaza<br>
+              ooooooooh………<br>
+              60,000 orphans in Gaza<br>
+              Don’t look away,<br>
+              don’t look away<br>
+              60,000 orphans in Gaza,<br>
+              Awaaaaaaaaaaaaaaay-<br>
+              60,000 orphans in Gaza.<br>
+              60,000 orphans in Gaza</p>
+          </div>
+        </div>
       </div>
     </section>`;
 }
@@ -297,6 +353,18 @@ function bindInteractions() {
   document.querySelectorAll("[data-share]").forEach((button) => button.addEventListener("click", shareCampaign));
 }
 
+function watchLyricsVisibility() {
+  activeLyricsObserver?.disconnect();
+  document.documentElement.classList.remove("lyrics-in-view");
+  const lyrics = document.querySelector("#lyrics");
+  if (!lyrics || !("IntersectionObserver" in window)) return;
+
+  activeLyricsObserver = new IntersectionObserver(([entry]) => {
+    document.documentElement.classList.toggle("lyrics-in-view", entry.isIntersecting);
+  }, { rootMargin: "-12% 0px -12%", threshold: 0 });
+  activeLyricsObserver.observe(lyrics);
+}
+
 function render({ animate = false } = {}) {
   const key = getVariant();
   const view = key === "B" ? VariantB() : key === "C" ? VariantC() : VariantA();
@@ -305,6 +373,7 @@ function render({ animate = false } = {}) {
   if (animate) document.querySelector(".variant")?.classList.add("is-entering");
   document.documentElement.dataset.variant = key;
   bindInteractions();
+  watchLyricsVisibility();
 }
 
 function renderWithTransition() {
