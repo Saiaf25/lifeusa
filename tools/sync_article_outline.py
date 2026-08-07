@@ -61,6 +61,7 @@ PAGES = (
             "Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood",
             "Orphan Education After Loss: Why School Stability Matters",
             "Children and Orphans in Crisis: The Psychological Toll of Violence",
+            "Why Donate to Charity? Benefits of Giving and Generosity",
         ),
     ),
     OutlinePage(
@@ -158,6 +159,20 @@ PAGES = (
             "Policy caution",
             "Do not publish this as a new standalone article",
             "LIFE positioned as a relief organization",
+        ),
+    ),
+    OutlinePage(
+        name="why-donate-to-charity-benefits-of-giving",
+        source=Path("Content Framework/70-outputs/handoff/giving/why-donate-to-charity-benefits-of-giving.html"),
+        live=Path("article-plans-and-outlines/why-donate-to-charity-benefits-of-giving/index.html"),
+        required_text=(
+            "Why Donate to Charity? Benefits of Giving and Generosity",
+            "why-giving-makes-you-wealthier",
+            "benefits of donating to charity",
+            "Claim Kill List",
+            "IRS Topic 506",
+            "Keywords This Page Must Not Target",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(

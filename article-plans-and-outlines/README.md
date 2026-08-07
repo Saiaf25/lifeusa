@@ -114,6 +114,26 @@ The live preview is:
 article-plans-and-outlines/can-zakat-be-used-to-sponsor-an-orphan/index.html
 ```
 
+For the charitable-giving cluster hub outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/giving/why-donate-to-charity-benefits-of-giving.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/why-donate-to-charity-benefits-of-giving/index.html
+```
+
+This is the hub of the U.S. charitable giving cluster and the first outline outside the orphan cluster. Its keyword source is the `LifeUSA USA Charitable Giving Keyword Cluster - 2026-07-28` sheet, whose local build lives at:
+
+```text
+outputs/019fa866-9acf-74f0-8379-305525f38efa/LifeUSA-USA-Charitable-Giving-Keyword-Cluster-2026-07-28.xlsx
+```
+
+The `Topic Gaps` tab in that workbook was added 2026-08-07 and records the cluster expansion from 5 owned pages to 10, grounded in the Google Ads pull stored at `Content Framework/80-Keywords/giving-cluster-gaps-2026-08-07/`. The Google Drive copy of that sheet is a separate file and does not update automatically; re-upload the local workbook when the tab needs to reach the client.
+
 The educational outline-template source is:
 
 ```text
@@ -125,6 +145,28 @@ The live template preview is:
 ```text
 article-plans-and-outlines/article-outline-template/index.html
 ```
+
+## Songs for Gaza UI review page
+
+The client-facing comparison page is:
+
+```text
+article-plans-and-outlines/songs-for-gaza-ui-approaches/index.html
+```
+
+Its design-record source is:
+
+```text
+prototypes/songs-for-gaza-landing-page/
+```
+
+The public noindex review URL is:
+
+```text
+https://saiaf25.github.io/lifeusa/article-plans-and-outlines/songs-for-gaza-ui-approaches/?variant=A
+```
+
+The A/B/C query state switches among the documentary title card, split-screen film poster, and theatre premiere directions while keeping all three approaches under one client-review slug. This page is a design-review artifact, not the production LifeUSA landing page. The user confirmed the page and worldwide English keyword sheet were emailed to Dr. Hany Saqr and Angela Joyce on 2026-08-04; client selection is pending.
 
 After editing the source file, run:
 
