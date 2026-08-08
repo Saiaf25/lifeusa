@@ -298,6 +298,10 @@ function getVariant() {
   return variants.some((item) => item.key === key) ? key : "A";
 }
 
+function getEmbedMode() {
+  return new URLSearchParams(window.location.search).get("embed") === "wix";
+}
+
 function cycleVariant(direction) {
   const current = getVariant();
   const index = variants.findIndex((item) => item.key === current);
@@ -367,11 +371,13 @@ function watchLyricsVisibility() {
 
 function render({ animate = false } = {}) {
   const key = getVariant();
+  const embedMode = getEmbedMode();
   const view = key === "B" ? VariantB() : key === "C" ? VariantC() : VariantA();
-  const comparisonEnabled = window.location.pathname.includes("/prototypes/") || window.location.pathname.includes("/songs-for-gaza-ui-approaches/") || ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  const comparisonEnabled = !embedMode && (window.location.pathname.includes("/prototypes/") || window.location.pathname.includes("/songs-for-gaza-ui-approaches/") || ["localhost", "127.0.0.1"].includes(window.location.hostname));
   document.getElementById("app").innerHTML = view + (comparisonEnabled ? ApproachSwitcher(key) : "");
   if (animate) document.querySelector(".variant")?.classList.add("is-entering");
   document.documentElement.dataset.variant = key;
+  document.documentElement.dataset.embed = embedMode ? "wix" : "standalone";
   bindInteractions();
   watchLyricsVisibility();
 }
