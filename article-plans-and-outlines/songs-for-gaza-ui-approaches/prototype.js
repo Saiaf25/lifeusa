@@ -1,5 +1,7 @@
 const VIDEO_ID = "eCHh-iVZW2Q";
 const VIDEO_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
+const CTA_URL = "https://donate.lifeusa.org/donorportal/project-designations?Program=11WVy000001QlE5MAK";
+const CTA_LABEL = "Sponsor An Orphan";
 const THUMBNAIL = "./video-thumbnail.jpg";
 const LOGO = "./lifeusa-logo-horizontal.png";
 
@@ -28,7 +30,7 @@ function Header({ transparent = false } = {}) {
         <a href="#story">Why it matters</a>
         <a href="#song">Hear the song</a>
         <a href="#lyrics">Read the lyrics</a>
-        <a class="nav-cta" href="#take-action">Stand with Gaza's children</a>
+        <a class="nav-cta" href="${CTA_URL}">${CTA_LABEL}</a>
       </nav>
     </header>`;
 }
@@ -46,13 +48,13 @@ function VideoPoster({ label = "Play the song for Gaza", mode = "wide" } = {}) {
 function ActionPair({ dark = false } = {}) {
   return `
     <div class="action-pair ${dark ? "on-dark" : ""}">
-      <a class="button button-primary" href="#take-action">Stand with Gaza's children ${icons.arrow}</a>
+      <a class="button button-primary" href="${CTA_URL}">${CTA_LABEL} ${icons.arrow}</a>
       <a class="button button-ghost" href="${VIDEO_URL}" target="_blank" rel="noreferrer">Listen on YouTube</a>
     </div>`;
 }
 
 function EvidenceNote() {
-  return `<p class="evidence-note"><strong>240,000+ views and counting.</strong> The song is reaching people around the world. Help it reach one more.</p>`;
+  return `<p class="evidence-note"><strong>500K+ views and counting.</strong> The song is reaching people around the world. Help it reach one more.</p>`;
 }
 
 function LyricsSection() {
@@ -131,7 +133,7 @@ function LyricsSection() {
 function Footer() {
   return `
     <footer class="site-footer">
-      <div><strong>LIFE</strong><span>Life for Relief and Development</span></div>
+      <div><img src="${LOGO}" alt="LIFE for Relief and Development"></div>
       <p>Where there is life, there is hope.</p>
     </footer>`;
 }
@@ -151,7 +153,7 @@ function VariantA() {
             <button class="round-play" data-jump-video type="button">${icons.play}<span>Play the song</span></button>
             ${ActionPair({ dark: true })}
           </div>
-          <div class="view-proof" aria-label="More than 240,000 views and counting"><strong>240K+</strong><span>views and counting</span></div>
+          <div class="view-proof" aria-label="More than 500,000 views and counting"><strong>500K+</strong><span>views and counting</span></div>
         </div>
       </section>
 
@@ -215,7 +217,7 @@ function VariantB() {
           ${VideoPoster({ label: "Play 60,000+ Orphans in Gaza", mode: "poster" })}
           <div class="b-reel-caption">
             <strong>60,000+ Orphans in Gaza</strong>
-            <p><strong>240,000+ views and counting.</strong> Every view is a chance for one more person to see the child behind the number.</p>
+            <p><strong>500K+ views and counting.</strong> Every view is a chance for one more person to see the child behind the number.</p>
             <p class="evidence-note">Listen fully. Share it thoughtfully. Keep the story moving.</p>
           </div>
         </section>
@@ -250,7 +252,7 @@ function VariantC() {
           <p class="eyebrow">Now playing · A song the world is carrying</p>
           <h1>60,000 Orphans in Gaza</h1>
           <div class="c-marquee-line">
-            <span>A song for Gaza's children</span><span>240,000+ views</span><span>Presented by LIFE</span>
+            <span>A song for Gaza's children</span><span>500K+ views</span><span>Presented by LIFE</span>
           </div>
         </section>
 
@@ -269,7 +271,7 @@ function VariantC() {
           <div>
             <p>For Gaza's orphaned children, grief does not end when the music stops. But neither do courage, possibility, or the right to a future. Carry their story from attention to compassion, and from compassion to action.</p>
             <blockquote>“A child who has lost so much should never lose the world's attention.”</blockquote>
-            <p class="evidence-note">More than 240,000 views have carried the song this far. Help carry it farther.</p>
+            <p class="evidence-note">500K+ views have carried the song this far. Help carry it farther.</p>
           </div>
         </section>
 
@@ -331,7 +333,7 @@ function playCampaignSong() {
 }
 
 async function shareCampaign() {
-  const shareData = { title: "60,000 Orphans in Gaza", text: "LIFE's song for Gaza's orphaned children has been watched more than 240,000 times. Watch it and help carry their story forward.", url: VIDEO_URL };
+  const shareData = { title: "60,000 Orphans in Gaza", text: "LIFE's song for Gaza's orphaned children has been watched more than 500,000 times. Watch it and help carry their story forward.", url: VIDEO_URL };
   if (navigator.share) {
     try {
       await navigator.share(shareData);
