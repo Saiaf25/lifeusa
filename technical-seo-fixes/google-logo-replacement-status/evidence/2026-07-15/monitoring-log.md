@@ -8,6 +8,40 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## August 9 scheduled check
+
+The fourth scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or complete Google refresh was proved.
+
+### Verified state
+
+- Zoho Mail: exact sender and exact subject searches, including spam and trash, found no publisher reply to SENT-001 or SENT-002. The historical sent records and message IDs remain intact.
+- Retired-crescent sources: the old WordPress archive, Kids That Do Good, and Arab Info Mall still reference their documented legacy files. Each direct file returned `200` and was byte-for-byte identical to the July 15 evidence.
+- Acceptable current variants: GreatNonprofits and Candid/GuideStar remain byte-for-byte identical to the preserved evidence. Logged-out LinkedIn, both Facebook pages, Instagram, YouTube, and X expose approved current variants. Linktree exposes the preferred yellow-ray identity.
+- Other authority signals: the English Linktree Facebook destination still resolves to the Somali profile, while Candid/GuideStar, LinkedIn, Google Maps, and ReliefWeb still expose HTTP LifeUSA website links. ReliefWeb still exposes no logo.
+- Owned signals: both canonical Wix assets returned `200` with unchanged dimensions and SHA-256 checksums. The homepage NGO node still uses the canonical square, the visible logo alt text remains present, the approved favicon source remains linked, and the Brand Resources page still references both canonical files. Two `WebSite` nodes remain.
+- Directory profiles: Find-Us-Here, A-Z Business Finder, and Nextdoor remain public. Find-Us-Here and A-Z retain canonical HTTPS backlinks; the A-Z image remains pixel-identical to the canonical square. Progress remains 3 of 20.
+
+### Google Search, Images, entity, paid, favicon, and Maps
+
+The required signed-out queries used `hl=en`, `gl=us`, and `pws=0`. After an initial anti-automation response, repeating the exact URLs in the isolated context made both Search and Images observable.
+
+- Organic Search displayed the approved current blue `Life` favicon.
+- The serving LIFE USA sponsored result displayed an approved blue-globe logo.
+- The Southfield entity panel showed 4.3 stars, 20 reviews, the correct address and phone, no retired-logo identity image, and the stale HTTP website link.
+- The public Maps photo gallery continued to show current LifeUSA-branded media.
+- Google Images still visibly ranked the retired Kids That Do Good crescent result in the first loaded result set and exposed the old WordPress archive as a result source.
+
+This proves healthy current Google signals and an incomplete Images refresh at the same time. It does not prove stability.
+
+Full dated measurements, checksums, page references, and interpretation: [August 9 monitoring check](../2026-08-09/monitoring-check.md).
+
+### Decision
+
+- SENT-001 and SENT-002 remain **Already sent**, with no verified publisher reply.
+- No source correction was recorded. Google Search and the paid result expose approved current signals, but Google Images still exposes a retired source.
+- APR-001 through APR-006 and APR-008 remain pending; APR-007 remains approved and partially executed only for the duplicate `WebSite` cleanup. No approval item was executed.
+- Stable-check count remains **0 of 3** because the retired source references remain live and a retired result remains visible in Google Images.
+
 ## August 2 scheduled check
 
 The third scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or complete Google refresh was proved.
@@ -183,4 +217,4 @@ The first loaded Google Images result set still includes Kids That Do Good and t
 
 ## Next scheduled check
 
-Sunday, August 9, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
+Sunday, August 16, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
