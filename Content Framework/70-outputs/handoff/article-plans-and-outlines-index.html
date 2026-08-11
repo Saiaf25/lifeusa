@@ -71,6 +71,43 @@
       display: grid;
       gap: 18px;
     }
+    .cluster-group + .cluster-group {
+      margin-top: 50px;
+    }
+    .cluster-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .cluster-kicker {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .cluster-title {
+      margin: 0;
+      color: #214336;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .cluster-count {
+      flex: 0 0 auto;
+      padding: 5px 10px;
+      border: 1px solid #c7ded4;
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--green2);
+      font-size: 13px;
+      font-weight: 700;
+    }
     .page-card {
       display: block;
       padding: 24px 28px;
@@ -112,6 +149,13 @@
       padding: 28px 24px;
       text-align: center;
     }
+    @media (max-width: 640px) {
+      .banner h1 { font-size: 34px; }
+      .container { padding: 36px 18px; }
+      .cluster-header { align-items: flex-start; }
+      .cluster-title { font-size: 24px; }
+      .page-card { padding: 21px 22px; }
+    }
   </style>
 </head>
 <body>
@@ -123,69 +167,100 @@
   </div>
 
   <div class="container">
-    <div class="page-list">
-      <a href="article-outline-template/" class="page-card">
-        <div class="page-num">Page #001</div>
-        <div class="page-title">LifeUSA Article Outline Template</div>
-      </a>
+    <section class="cluster-group" aria-labelledby="reference-heading">
+      <div class="cluster-header">
+        <div>
+          <span class="cluster-kicker">Reference</span>
+          <h2 class="cluster-title" id="reference-heading">Planning Reference</h2>
+        </div>
+        <span class="cluster-count">1 outline</span>
+      </div>
+      <div class="page-list">
+        <a href="article-outline-template/" class="page-card">
+          <div class="page-num">Outline #01</div>
+          <div class="page-title">LifeUSA Article Outline Template</div>
+        </a>
+      </div>
+    </section>
 
-      <a href="how-to-help-orphans/" class="page-card">
-        <div class="page-num">Page #002</div>
-        <div class="page-title">10 Ways To Help Orphans</div>
-      </a>
+    <section class="cluster-group" aria-labelledby="orphan-cluster-heading">
+      <div class="cluster-header">
+        <div>
+          <span class="cluster-kicker">Content cluster</span>
+          <h2 class="cluster-title" id="orphan-cluster-heading">Orphan Care Cluster</h2>
+        </div>
+        <span class="cluster-count">8 outlines</span>
+      </div>
+      <div class="page-list">
+        <a href="how-to-help-orphans/" class="page-card">
+          <div class="page-num">Outline #01</div>
+          <div class="page-title">10 Ways To Help Orphans</div>
+        </a>
 
-      <a href="can-zakat-be-used-to-sponsor-an-orphan/" class="page-card">
-        <div class="page-num">Page #003</div>
-        <div class="page-title">Can Zakat Be Used To Sponsor an Orphan?</div>
-        <div class="page-note">Decision: keep as internal reference only. Do not publish as a new standalone article; use the existing Zakat article if this topic needs to be addressed.</div>
-      </a>
+        <a href="can-zakat-be-used-to-sponsor-an-orphan/" class="page-card">
+          <div class="page-num">Outline #02</div>
+          <div class="page-title">Can Zakat Be Used To Sponsor an Orphan?</div>
+          <div class="page-note">Decision: keep as internal reference only. Do not publish as a new standalone article; use the existing Zakat article if this topic needs to be addressed.</div>
+        </a>
 
-      <a href="what-is-an-orphan-causes-statistics-how-you-can-help/" class="page-card">
-        <div class="page-num">Page #004</div>
-        <div class="page-title">What Is an Orphan? Causes, Statistics, and How You Can Help</div>
-      </a>
+        <a href="what-is-an-orphan-causes-statistics-how-you-can-help/" class="page-card">
+          <div class="page-num">Outline #03</div>
+          <div class="page-title">What Is an Orphan? Causes, Statistics, and How You Can Help</div>
+        </a>
 
-      <a href="what-does-orphan-sponsorship-cover/" class="page-card">
-        <div class="page-num">Page #005</div>
-        <div class="page-title">What Does Orphan Sponsorship Cover? A Guide for Donors</div>
-      </a>
+        <a href="what-does-orphan-sponsorship-cover/" class="page-card">
+          <div class="page-num">Outline #04</div>
+          <div class="page-title">What Does Orphan Sponsorship Cover? A Guide for Donors</div>
+        </a>
 
-      <a href="gaza-orphans-war-care-safety-support/" class="page-card">
-        <div class="page-num">Page #006</div>
-        <div class="page-title">Gaza Orphans: How War Leaves Children Without Care, Safety, and Support</div>
-        <div class="page-note">Existing article enrichment owned by Saiaf. Targets <code>war orphans</code> and <code>gaza orphans</code>.</div>
-      </a>
+        <a href="gaza-orphans-war-care-safety-support/" class="page-card">
+          <div class="page-num">Outline #05</div>
+          <div class="page-title">Gaza Orphans: How War Leaves Children Without Care, Safety, and Support</div>
+          <div class="page-note">Existing article enrichment owned by Saiaf. Targets <code>war orphans</code> and <code>gaza orphans</code>.</div>
+        </a>
 
-      <a href="why-gifts-for-orphans-matter/" class="page-card">
-        <div class="page-num">Page #007</div>
-        <div class="page-title">Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood</div>
-        <div class="page-note">Existing article enrichment owned by Saiaf. Targets <code>gifts for orphans</code> and <code>eid gifts for orphans</code>.</div>
-      </a>
+        <a href="why-gifts-for-orphans-matter/" class="page-card">
+          <div class="page-num">Outline #06</div>
+          <div class="page-title">Why Gifts for Orphans Matter: Joy, Dignity, and the Right to Childhood</div>
+          <div class="page-note">Existing article enrichment owned by Saiaf. Targets <code>gifts for orphans</code> and <code>eid gifts for orphans</code>.</div>
+        </a>
 
-      <a href="orphan-education-after-loss/" class="page-card">
-        <div class="page-num">Page #008</div>
-        <div class="page-title">Orphan Education After Loss: Why School Stability Matters</div>
-        <div class="page-note">New informational guide for Angela to draft. Saiaf owns SEO planning and review.</div>
-      </a>
+        <a href="orphan-education-after-loss/" class="page-card">
+          <div class="page-num">Outline #07</div>
+          <div class="page-title">Orphan Education After Loss: Why School Stability Matters</div>
+          <div class="page-note">New informational guide for Angela to draft. Saiaf owns SEO planning and review.</div>
+        </a>
 
-      <a href="mental-health-support-for-orphaned-children/" class="page-card">
-        <div class="page-num">Page #009</div>
-        <div class="page-title">Children and Orphans in Crisis: The Psychological Toll of Violence</div>
-        <div class="page-note">Angela-owned full rewrite of the existing article. Preserve the current Wix URL and combine both intents: the psychological toll of violence on children generally and the added mental-health needs of orphaned children.</div>
-      </a>
+        <a href="mental-health-support-for-orphaned-children/" class="page-card">
+          <div class="page-num">Outline #08</div>
+          <div class="page-title">Children and Orphans in Crisis: The Psychological Toll of Violence</div>
+          <div class="page-note">Angela-owned full rewrite of the existing article. Preserve the current Wix URL and combine both intents: the psychological toll of violence on children generally and the added mental-health needs of orphaned children.</div>
+        </a>
+      </div>
+    </section>
 
-      <a href="why-donate-to-charity-benefits-of-giving/" class="page-card">
-        <div class="page-num">Page #010</div>
-        <div class="page-title">Why Donate to Charity? Benefits of Giving and Generosity</div>
-        <div class="page-note">Hub of the U.S. charitable giving cluster. Angela-owned full pillar rewrite of <code>Why Giving Makes You Wealthier</code>, preserving the existing Wix slug. Absorbs the happiness article, corrects the unsupported wealth claims, covers the 2026 charitable deduction at reader level, and routes to every supporting page in the cluster.</div>
-      </a>
+    <section class="cluster-group" aria-labelledby="giving-cluster-heading">
+      <div class="cluster-header">
+        <div>
+          <span class="cluster-kicker">Content cluster</span>
+          <h2 class="cluster-title" id="giving-cluster-heading">Charitable Giving Cluster</h2>
+        </div>
+        <span class="cluster-count">2 outlines</span>
+      </div>
+      <div class="page-list">
+        <a href="why-donate-to-charity-benefits-of-giving/" class="page-card">
+          <div class="page-num">Outline #01</div>
+          <div class="page-title">Why Donate to Charity? Benefits of Giving and Generosity</div>
+          <div class="page-note">Hub of the U.S. charitable giving cluster. Angela-owned full pillar rewrite of <code>Why Giving Makes You Wealthier</code>, preserving the existing Wix slug. Absorbs the happiness article, corrects the unsupported wealth claims, covers the 2026 charitable deduction at reader level, and routes to every supporting page in the cluster.</div>
+        </a>
 
-      <a href="how-to-donate-stock-to-charity/" class="page-card">
-        <div class="page-num">Page #011</div>
-        <div class="page-title">How to Donate Stock to Charity: Tax Benefits, Steps, and Records</div>
-        <div class="page-note">Angela-owned full rewrite of the existing stock-donation article. Preserve the current Wix slug, replace stale 2024 tax content and overpromising language, and own the practical stock-transfer intent without duplicating the general charitable-deduction guide.</div>
-      </a>
-    </div>
+        <a href="how-to-donate-stock-to-charity/" class="page-card">
+          <div class="page-num">Outline #02</div>
+          <div class="page-title">How to Donate Stock to Charity: Tax Benefits, Steps, and Records</div>
+          <div class="page-note">Angela-owned full rewrite of the existing stock-donation article. Preserve the current Wix slug, replace stale 2024 tax content and overpromising language, and own the practical stock-transfer intent without duplicating the general charitable-deduction guide.</div>
+        </a>
+      </div>
+    </section>
   </div>
 
   <div class="footer">LifeUSA article planning</div>

@@ -63,6 +63,12 @@ PAGES = (
             "Children and Orphans in Crisis: The Psychological Toll of Violence",
             "Why Donate to Charity? Benefits of Giving and Generosity",
             "How to Donate Stock to Charity: Tax Benefits, Steps, and Records",
+            "Planning Reference",
+            "Orphan Care Cluster",
+            "Charitable Giving Cluster",
+            "1 outline",
+            "8 outlines",
+            "2 outlines",
         ),
     ),
     OutlinePage(
