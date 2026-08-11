@@ -134,6 +134,20 @@ outputs/019fa866-9acf-74f0-8379-305525f38efa/LifeUSA-USA-Charitable-Giving-Keywo
 
 The `Topic Gaps` tab in that workbook was added 2026-08-07 and records the cluster expansion from 5 owned pages to 10, grounded in the Google Ads pull stored at `Content Framework/80-Keywords/giving-cluster-gaps-2026-08-07/`. The Google Drive copy of that sheet is a separate file and does not update automatically; re-upload the local workbook when the tab needs to reach the client.
 
+For the stock-donation rewrite outline, the source of truth is:
+
+```text
+Content Framework/70-outputs/handoff/giving/how-to-donate-stock-to-charity.html
+```
+
+The live preview is:
+
+```text
+article-plans-and-outlines/how-to-donate-stock-to-charity/index.html
+```
+
+This is a supporting page in the U.S. charitable-giving cluster. It preserves the existing Wix article URL while replacing stale tax-year content and owning the practical stock-transfer workflow.
+
 The educational outline-template source is:
 
 ```text

@@ -62,6 +62,7 @@ PAGES = (
             "Orphan Education After Loss: Why School Stability Matters",
             "Children and Orphans in Crisis: The Psychological Toll of Violence",
             "Why Donate to Charity? Benefits of Giving and Generosity",
+            "How to Donate Stock to Charity: Tax Benefits, Steps, and Records",
         ),
     ),
     OutlinePage(
@@ -173,6 +174,18 @@ PAGES = (
             "IRS Topic 506",
             "Keywords This Page Must Not Target",
             *TEMPLATE_REQUIRED_TEXT,
+        ),
+    ),
+    OutlinePage(
+        name="how-to-donate-stock-to-charity",
+        source=Path("Content Framework/70-outputs/handoff/giving/how-to-donate-stock-to-charity.html"),
+        live=Path("article-plans-and-outlines/how-to-donate-stock-to-charity/index.html"),
+        required_text=(
+            "How to Donate Stock to Charity: Tax Benefits, Steps, and Records",
+            "donate stock",
+            "Stock Donation Readiness Checklist",
+            "Preserve current slug",
+            "Publication 561",
         ),
     ),
     OutlinePage(
