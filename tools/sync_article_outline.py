@@ -189,9 +189,12 @@ PAGES = (
         required_text=(
             "How to Donate Stock to Charity: Tax Benefits, Steps, and Records",
             "donate stock",
-            "Official tax source set",
+            "Official Tax Source Set",
             "Preserve current slug",
             "Publication 561",
+            "Six-Step Checklist",
+            "Finance confirms accepted asset types",
+            *TEMPLATE_REQUIRED_TEXT,
         ),
     ),
     OutlinePage(
