@@ -183,7 +183,7 @@ PAGES = (
         required_text=(
             "How to Donate Stock to Charity: Tax Benefits, Steps, and Records",
             "donate stock",
-            "Stock Donation Readiness Checklist",
+            "Official tax source set",
             "Preserve current slug",
             "Publication 561",
         ),
