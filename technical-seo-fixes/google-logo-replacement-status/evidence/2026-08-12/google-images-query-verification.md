@@ -18,6 +18,16 @@ This is an ad-hoc query comparison, not a complete scheduled monitoring run. It 
 | `LifeUSA logo` | No retired yellow-crescent LifeUSA logo was observed. Relevant leading results included current LifeUSA website, media, homepage, and Brand Resources assets. Unrelated same-name entities were also present. | **Query-level win** |
 | `Life for Relief and Development logo` | Retired yellow-crescent results remained visible, including Kids That Do Good and the old LifeUSA WordPress archive. Current LifeUSA and approved blue-globe results were also present. | **Still under monitoring** |
 
+## August 12 screenshots
+
+### `LifeUSA logo` — query-level win
+
+[![August 12 Google Images results for LifeUSA logo with no retired crescent visible](./google-images-lifeusa-logo-clean-2026-08-12.png)](./google-images-lifeusa-logo-clean-2026-08-12.png)
+
+### `Life for Relief and Development logo` — still under monitoring
+
+[![August 12 Google Images results for the benchmark query with retired crescent sources still visible](./google-images-life-for-relief-logo-monitoring-2026-08-12.png)](./google-images-life-for-relief-logo-monitoring-2026-08-12.png)
+
 Repeatable URLs:
 
 - `https://www.google.com/search?q=LifeUSA+logo&hl=en&gl=us&pws=0&udm=2`

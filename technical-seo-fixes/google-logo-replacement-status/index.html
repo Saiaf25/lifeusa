@@ -1224,22 +1224,24 @@
 
         <article class="proof-case">
           <div class="proof-case-head">
-            <div><h3>5. Google query status: one win, benchmark still open</h3><p>The original July 14 benchmark was reproduced on July 21. A controlled August 12 comparison now shows that <code>LifeUSA logo</code> is clean in its first visible result set, while <code>Life for Relief and Development logo</code> still exposes retired crescent sources.</p></div>
-            <span class="proof-status pending">Benchmark monitoring</span>
+            <div><h3>5. Google Images results captured today: August 12</h3><p>These are two separate Google Images queries captured on August 12 under the same English, United States, and personalization-disabled settings. The first query is a win; the benchmark query is still under monitoring.</p></div>
+            <span class="proof-status pending">1 win · 1 monitoring</span>
           </div>
           <div class="comparison-grid">
             <figure class="proof-frame">
-              <a href="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"><img src="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png" alt="Google Images benchmark reproduction showing retired yellow crescent LifeUSA logos in the results" loading="lazy"></a>
-              <figcaption><strong>Faulty result reproduced July 21</strong>The exact query <code>Life for Relief and Development logo</code>, with English, United States, and personalization disabled in the URL, visibly returns multiple retired yellow-crescent LifeUSA logos.</figcaption>
+              <a href="./evidence/2026-08-12/google-images-lifeusa-logo-clean-2026-08-12.png"><img src="./evidence/2026-08-12/google-images-lifeusa-logo-clean-2026-08-12.png" alt="August 12 Google Images results for LifeUSA logo with no retired yellow-crescent LifeUSA logo visible" loading="eager"></a>
+              <figcaption><strong>August 12 · Query win</strong>The exact query <code>LifeUSA logo</code> shows no retired yellow-crescent LifeUSA logo in the visible result set. Current LifeUSA website and Brand Resources results are prominent.</figcaption>
             </figure>
-            <div class="proof-frame">
-              <div class="proof-placeholder"><div><strong>After screenshot pending</strong>No Google refresh is claimed yet. A new screenshot belongs here only after a clean public check proves the change.</div></div>
-            </div>
+            <figure class="proof-frame">
+              <a href="./evidence/2026-08-12/google-images-life-for-relief-logo-monitoring-2026-08-12.png"><img src="./evidence/2026-08-12/google-images-life-for-relief-logo-monitoring-2026-08-12.png" alt="August 12 Google Images results for Life for Relief and Development logo still showing retired yellow-crescent sources" loading="eager"></a>
+              <figcaption><strong>August 12 · Still monitoring</strong>The exact benchmark query <code>Life for Relief and Development logo</code> still shows retired crescent results from Kids That Do Good and the old WordPress archive.</figcaption>
+            </figure>
           </div>
           <p class="proof-result"><strong>What is proved now:</strong> the exact <code>LifeUSA logo</code> query is a query-level win, but the benchmark <code>Life for Relief and Development logo</code> query still surfaces the retired crescent and the same mark remains live on discoverable source pages. <strong>What is not proved:</strong> a complete Google refresh. The program remains open until the sources are corrected and three stable Google checks show no regression.</p>
           <div class="proof-links">
             <a href="https://www.google.com/search?q=LifeUSA+logo&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the clean-query check</a>
             <a href="https://www.google.com/search?q=Life+for+Relief+and+Development+logo&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the exact faulty-logo query</a>
+            <a href="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png">Historical benchmark: July 21</a>
             <a href="./evidence/2026-07-15/baseline.md">Read the baseline protocol</a>
             <a href="./evidence/2026-08-09/monitoring-check.md">Read the latest scheduled check</a>
             <a href="./evidence/2026-08-12/google-images-query-verification.md">Read the August 12 query comparison</a>
@@ -1424,7 +1426,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.39</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.40</footer>
   </main>
 
   <script>
@@ -1440,6 +1442,7 @@
       ];
       const DEFAULT_OVERVIEW_TEXT = document.getElementById("overviewText").textContent.trim();
       const PREVIOUS_OVERVIEW_TEXTS = [
+        "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. Four of 20 new directory profiles are live, including ProvenExpert, and Idealist is submitted for moderation. On August 12, the exact Google Images query LifeUSA logo showed no retired crescent in the first visible result set, a query-level win. The benchmark query Life for Relief and Development logo still showed retired results from Kids That Do Good and the old WordPress archive, so it remains under monitoring. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Four of 20 new directory profiles are live, and Idealist is submitted for moderation. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Four of 20 new directory profiles are live. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Three of 20 new directory profiles are live. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
@@ -1665,7 +1668,7 @@
       ];
 
       const defaultState = () => ({
-        version: 31,
+        version: 32,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -2151,7 +2154,7 @@
         save("Status prepared for export");
         const payload = {
           project: PROJECT_NAME,
-          version: 17,
+          version: 18,
           exportedAt: new Date().toISOString(),
           startDate: START_DATE,
           data: state
