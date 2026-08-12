@@ -226,3 +226,11 @@ The user created a new ProvenExpert profile at `https://www.provenexpert.com/lif
 The profile is recorded as `DIR-042` and **Done**. Qualified new-directory progress advances from **3 of 20** to **4 of 20**. This ad hoc directory publication does not increment the scheduled stable-check count, which remains **0 of 3**.
 
 Full evidence: [August 12 ProvenExpert profile verification](../2026-08-12/provenexpert-profile-verification.md).
+
+## August 12 Idealist submission update
+
+The user completed Idealist's required human verification and final authorization steps. Idealist accepted a new Life for Relief and Development organization profile and confirmed that it was submitted for approval, with review expected within two business days.
+
+The authenticated preview shows the approved current square Life logo, the canonical `https://www.lifeusa.org/` backlink, the correct Southfield address, mission, organization description, and five relevant cause areas. The profile is recorded as `DIR-004` and **Moderation pending**. It does not yet count toward the 20-profile goal because a logged-out public organization page has not been verified. Qualified progress remains **4 of 20**, and the scheduled stable-check count remains **0 of 3**.
+
+Full evidence: [August 12 Idealist submission verification](../2026-08-12/idealist-submission-verification.md).

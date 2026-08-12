@@ -26,7 +26,7 @@ No credential or password is stored in this tracker. Paid plans, memberships, fu
 |---|---|---|---|---:|
 | DIR-001 | Every.org | Existing | EIN `95-4402149` resolves to `https://www.every.org/lifeusa`; Every.org says the profile already has an administrator | No |
 | DIR-003 | Benevity Causes | Existing | Public profile `https://causes.benevity.org/causes/840-954402149` is already registered to a masked `lifeusa.org` owner; it exposes stale mission copy and an HTTP website link | No |
-| DIR-004 | Idealist | CAPTCHA blocked | Exact organization-plus-Southfield search returned zero results. On July 24, the email signup route accepted the approved mailbox and then required reCAPTCHA. The CAPTCHA has not been completed | No |
+| DIR-004 | Idealist | Moderation pending | On August 12, the user completed the required human verification and final authorization steps. Idealist accepted a new Life for Relief and Development organization profile and displayed: “Thank you! Your organization has been submitted for approval and will be reviewed within two business days.” The authenticated preview at `https://www.idealist.org/admin/84024db349af45aeaa5856427e3a25f4/preview` shows the approved current square logo, canonical HTTPS LifeUSA backlink, Southfield address, mission, description, and five relevant cause areas. A logged-out public profile has not yet been verified. Evidence: `../2026-08-12/idealist-submission-verification.md` | No |
 | DIR-005 | VolunteerMatch | Existing platform merged | VolunteerMatch now routes organization onboarding through Idealist and is not a second independent directory | No |
 | DIR-006 | Yelp for Business | Existing | Google returned the established public record at `https://www.yelp.com/biz/life-for-relief-and-development-southfield`; Yelp's device-verification screen prevented a deeper logged-out field audit | No |
 | DIR-007 | Manta | Existing data record | Manta-indexed category results already reference “Life For Relief And Development Inc.” in Southfield, so a new listing would risk duplication; the direct record still needs owner-route resolution | No |
@@ -96,7 +96,7 @@ This is a quality-controlled research pool, not a claim that every route is alre
 
 | ID | Platform | Profile type | Current state | Gate before submission |
 |---|---|---|---|---|
-| NEW-001 | Idealist | Nonprofit and volunteer organization | New candidate, access blocked | Working mailbox authentication and email verification |
+| NEW-001 | Idealist | Nonprofit and volunteer organization | Moderation pending | Wait for approval, then verify a logged-out public profile with the approved logo and canonical HTTPS backlink |
 | NEW-002 | Apple Business Connect | Local business and brand profile | Existing | Exact Apple Maps record and claim ID found; correct the existing stale HTTP link rather than create a duplicate |
 | NEW-003 | Bing Places | Local business profile | Existing, verified | Exact verified Bing Maps record found; resolve ownership and correct the stale HTTP link rather than duplicate it |
 | NEW-004 | Yelp for Business | Local business profile | Existing | Established Southfield record found; resolve its owner route instead of creating a duplicate |
@@ -175,7 +175,7 @@ Qualified progress is **4 of 20**. Find-Us-Here, A-Z Business Finder, Nextdoor, 
 
 The July 24 approved batch reached these human gates:
 
-- Idealist and Alignable require reCAPTCHA completion.
+- Idealist is submitted and awaiting moderation; Alignable still requires reCAPTCHA completion.
 - Cylex, Brownbook, and EZlocal require Cloudflare human verification.
 - AARP Create the Good requires an account owner's name, birthday, postal code, and security challenge.
 - Taproot account verification, nonprofit onboarding, and the approved logo upload are complete. A logged-out public organization URL has not been exposed.
