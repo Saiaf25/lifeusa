@@ -50,6 +50,22 @@ p, li, blockquote, figcaption { text-wrap: pretty; }
 .on-dark .button-ghost { color: oklch(1 0 0); border-color: oklch(1 0 0 / .6); }
 .action-pair { display: flex; flex-wrap: wrap; gap: .8rem; }
 .evidence-note { color: var(--muted); font-size: .72rem; line-height: 1.55; max-width: 68ch; }
+.cta-note { flex-basis: 100%; max-width: 58ch; margin: .35rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.55; }
+.on-dark .cta-note { color: oklch(0.789 0.028 251.713); }
+.sponsorship-section { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr); gap: clamp(2rem, 7vw, 7rem); align-items: end; padding: clamp(4rem, 8vw, 7rem) max(1.5rem, calc((100vw - var(--max)) / 2)); }
+.sponsorship-copy h2 { max-width: 18ch; margin: .8rem 0 1.2rem; font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 5rem); font-weight: 500; line-height: .98; letter-spacing: -.04em; }
+.sponsorship-copy > p:last-child { max-width: 62ch; margin: 0; line-height: 1.7; }
+.sponsorship-action { display: flex; flex-direction: column; align-items: flex-start; gap: .65rem; }
+.sponsorship-action .cta-note { margin: 0; }
+.sponsorship-dark { background: var(--blue); color: var(--navy); }
+.sponsorship-dark .section-kicker { color: var(--navy); }
+.sponsorship-dark .sponsorship-copy > p:last-child { color: oklch(0.205 0.045 251.374); }
+.sponsorship-dark .button-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.sponsorship-dark .cta-note { color: oklch(0.205 0.045 251.374); }
+.sponsorship-light { background: var(--cream); color: var(--ink); }
+.sponsorship-light .section-kicker { color: var(--blue-dark); }
+.sponsorship-light .sponsorship-copy > p:last-child { color: var(--muted); }
+.sponsorship-light .button-primary { background: var(--navy); color: var(--white); border-color: var(--navy); }
 .site-footer { background: var(--navy); color: oklch(1 0 0); padding: 2.5rem max(1.25rem, calc((100vw - var(--max)) / 2)); display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
 .site-footer div { display: flex; align-items: center; }
 .site-footer img { display: block; width: min(190px, 48vw); height: auto; }
@@ -126,6 +142,7 @@ html[data-embed="wix"] .a-hero { min-height: 680px; }
 .action-steps p { color: oklch(0.789 0.028 251.713); line-height: 1.5; }
 .a-action .action-pair { justify-content: center; }
 .a-action .button-ghost { color: oklch(1 0 0); border-color: oklch(1 0 0 / .55); }
+.variant-a .sponsorship-section { border-block: 1px solid oklch(1 0 0 / .15); }
 
 /* Variant B: a graphic split-screen song poster, not a full-bleed title card. */
 .variant-b { background: var(--cream); color: var(--ink); }
@@ -240,6 +257,7 @@ html:is([data-variant="B"], [data-variant="C"]) .prototype-switcher { left: auto
   .c-credit-label { margin-bottom: -2rem; }
   .lyrics-section { grid-template-columns: 1fr; }
   .lyrics-heading { position: static; }
+  .sponsorship-section { grid-template-columns: 1fr; align-items: start; }
 }
 
 @media (max-width: 620px) {
@@ -249,6 +267,7 @@ html:is([data-variant="B"], [data-variant="C"]) .prototype-switcher { left: auto
   .a-hero h1 { font-size: clamp(3.7rem, 18vw, 6rem); }
   .a-actions { align-items: stretch; }
   .action-pair, .action-pair .button { width: 100%; }
+  .cta-note { width: 100%; }
   .round-play { width: 100%; }
   .statement-grid, .action-steps { grid-template-columns: 1fr; }
   .action-steps article { border-right: 0; border-bottom: 1px solid oklch(1 0 0 / .2); }
@@ -281,6 +300,9 @@ html:is([data-variant="B"], [data-variant="C"]) .prototype-switcher { left: auto
   .lyrics-transcript { grid-template-columns: 1fr; gap: 0; }
   .lyrics-stanza { font-size: 1rem; line-height: 1.7; margin-bottom: 2.25rem; }
   .lyrics-play { width: 100%; justify-content: center; }
+  .sponsorship-section { padding-inline: 1rem; }
+  .sponsorship-copy h2 { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .sponsorship-action, .sponsorship-action .button { width: 100%; }
   .site-footer { padding-bottom: 7rem; flex-direction: column; align-items: flex-start; }
   .prototype-switcher { grid-template-columns: 44px 1fr 44px; border-radius: 18px; }
   html:is([data-variant="B"], [data-variant="C"]) .prototype-switcher { left: 50%; right: auto; transform: translateX(-50%); }

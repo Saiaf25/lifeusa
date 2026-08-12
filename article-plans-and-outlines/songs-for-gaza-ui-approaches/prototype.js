@@ -1,7 +1,10 @@
 const VIDEO_ID = "eCHh-iVZW2Q";
 const VIDEO_URL = `https://www.youtube.com/watch?v=${VIDEO_ID}`;
 const CTA_URL = "https://donate.lifeusa.org/donorportal/project-designations?Program=11WVy000001QlE5MAK";
-const CTA_LABEL = "Sponsor An Orphan";
+const CTA_LABEL = "Sponsor an Orphan";
+const SPONSORSHIP_TITLE = "Help Change a Child’s Future for just $65 a Month";
+const SPONSORSHIP_COPY = "Give the orphans of Gaza greater stability and opportunity for the future. For $65/month or $720/year, sponsorship helps provide an orphan in Gaza with healthy food, clean water, safe shelter, education, clothing, and psychological support.";
+const SPONSORSHIP_CTA_NOTE = "For $65/month or $720/year, sponsorship helps provide healthy food, clean water, safe shelter, education, clothing, and psychological support.";
 const THUMBNAIL = "./video-thumbnail.jpg";
 const LOGO = "./lifeusa-logo-horizontal.png";
 
@@ -50,11 +53,27 @@ function ActionPair({ dark = false } = {}) {
     <div class="action-pair ${dark ? "on-dark" : ""}">
       <a class="button button-primary" href="${CTA_URL}">${CTA_LABEL} ${icons.arrow}</a>
       <a class="button button-ghost" href="${VIDEO_URL}" target="_blank" rel="noreferrer">Listen on YouTube</a>
+      <p class="cta-note">${SPONSORSHIP_CTA_NOTE}</p>
     </div>`;
 }
 
 function EvidenceNote() {
   return `<p class="evidence-note"><strong>500K+ views and counting.</strong> The song is reaching people around the world. Help it reach one more.</p>`;
+}
+
+function SponsorshipSection({ dark = true } = {}) {
+  return `
+    <section class="sponsorship-section ${dark ? "sponsorship-dark" : "sponsorship-light"}" id="sponsorship" aria-labelledby="sponsorship-title">
+      <div class="sponsorship-copy">
+        <p class="section-kicker">Orphan sponsorship</p>
+        <h2 id="sponsorship-title">${SPONSORSHIP_TITLE}</h2>
+        <p>${SPONSORSHIP_COPY}</p>
+      </div>
+      <div class="sponsorship-action">
+        <a class="button button-primary" href="${CTA_URL}">${CTA_LABEL} ${icons.arrow}</a>
+        <p class="cta-note">${SPONSORSHIP_CTA_NOTE}</p>
+      </div>
+    </section>`;
 }
 
 function LyricsSection() {
@@ -175,6 +194,8 @@ function VariantA() {
 
         ${LyricsSection()}
 
+        ${SponsorshipSection()}
+
         <section class="a-action" id="take-action">
           <p class="section-kicker">Do not let the final note be the end</p>
           <h2>When the song ends, let compassion keep moving.</h2>
@@ -224,6 +245,8 @@ function VariantB() {
 
         ${LyricsSection()}
 
+        ${SponsorshipSection({ dark: false })}
+
         <section class="b-frames" id="story">
           <div class="b-frame-lead">
             <p class="section-kicker">Three ways to carry the story</p>
@@ -264,6 +287,8 @@ function VariantC() {
         </section>
 
         ${LyricsSection()}
+
+        ${SponsorshipSection()}
 
         <section class="c-credits" id="story">
           <p class="c-credit-label">When the song ends</p>
