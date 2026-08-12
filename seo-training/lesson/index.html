@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 1: Find One Page to Improve</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 1 · GOOGLE SEARCH CONSOLE</p>
+      <h1>Find one page worth improving</h1>
+      <p class="subtitle">You do not need to understand every Search Console report. Today you will use three numbers to make one useful content decision.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>Beginner</span><span>One practical output</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can choose one page that already appears in Google but may deserve a better title, description, or answer.</div>
+      <h2>First, learn only these three numbers</h2>
+      <div class="metric-grid">
+        <div class="metric"><strong>Impressions</strong><span>How often Google showed the page.</span></div>
+        <div class="metric"><strong>CTR</strong><span>What percentage of those views became clicks.</span></div>
+        <div class="metric"><strong>Position</strong><span>Where the page appeared on average.</span></div>
+      </div>
+      <p class="formula">CTR = clicks ÷ impressions × 100</p>
+      <div class="remember"><strong>The pattern to remember:</strong> useful visibility + near page one + weak clicking = an opportunity worth inspecting.</div>
+      <p class="source">Primary source: Google’s official guide explains how to identify top queries and low-CTR pages in the <a href="https://support.google.com/webmasters/answer/17010961?hl=en" target="_blank" rel="noreferrer">Search results Performance report</a>.</p>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>Which page would you inspect first?</h2>
+      <p>Do not calculate anything. Look for the pattern you just learned.</p>
+      <div style="overflow-x:auto">
+        <table class="practice-table">
+          <thead><tr><th>Page</th><th>Impressions</th><th>CTR</th><th>Position</th></tr></thead>
+          <tbody>
+            <tr><td><strong>A</strong></td><td>12,400</td><td>1.0%</td><td>8.2</td></tr>
+            <tr><td><strong>B</strong></td><td>430</td><td>9.5%</td><td>2.6</td></tr>
+            <tr><td><strong>C</strong></td><td>15,100</td><td>0.3%</td><td>41.7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="answers">
+        <button class="answer" data-answer="A" aria-pressed="false">Choose Page A</button>
+        <button class="answer" data-answer="B" aria-pressed="false">Choose Page B</button>
+        <button class="answer" data-answer="C" aria-pressed="false">Choose Page C</button>
+      </div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE LIFEUSA DATA</p>
+      <h2>Repeat the decision in Search Console</h2>
+      <p>If your access is not working, finish the practice above and tell Saiaf where you were blocked. Do not use a different property.</p>
+      <ol class="steps">
+        <li>Open Google Search Console and select the exact <strong>lifeusa.org</strong> property.</li>
+        <li>Open <strong>Performance → Search results</strong>. Set the date to <strong>Last 3 months</strong>.</li>
+        <li>Turn on <strong>Clicks</strong>, <strong>Impressions</strong>, <strong>Average CTR</strong>, and <strong>Average position</strong>.</li>
+        <li>Open the <strong>Pages</strong> tab. Look for a page with meaningful impressions, an average position roughly between 4 and 15, and CTR that looks weak beside pages in a similar position.</li>
+        <li>Click that page, then open <strong>Queries</strong>. Choose one query that clearly matches what the page should answer.</li>
+        <li>Record the evidence below. Do not edit the live page yet.</li>
+      </ol>
+      <p class="source">Need help finding the report? Use Google’s <a href="https://support.google.com/webmasters/answer/10268906?hl=en" target="_blank" rel="noreferrer">official Performance report introduction</a>.</p>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one opportunity card</h2>
+      <div class="record-card">
+        <label>Page URL<input data-label="Page URL" type="url" placeholder="https://www.lifeusa.org/..."></label>
+        <label>Query<input data-label="Query" type="text" placeholder="The exact query from Search Console"></label>
+        <label>Impressions<input data-label="Impressions" type="text" inputmode="numeric" placeholder="Example: 1,240"></label>
+        <label>CTR<input data-label="CTR" type="text" placeholder="Example: 1.2%"></label>
+        <label>Average position<input data-label="Average position" type="text" inputmode="decimal" placeholder="Example: 8.4"></label>
+        <label>What does the searcher probably want?<textarea data-label="Searcher intent" placeholder="One plain-English sentence"></textarea></label>
+        <label>What is one improvement you would test?<textarea data-label="Proposed improvement" placeholder="Example: rewrite the title so it answers the query more directly"></textarea></label>
+      </div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed card</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK</p>
+      <h2>Explain your choice without looking back</h2>
+      <div class="pass-box">
+        <p>Say this aloud using your own numbers:</p>
+        <p><strong>“I chose this page because it received ___ impressions at position ___, but its CTR was ___. I would first test ___.”</strong></p>
+      </div>
+      <ul class="checklist">
+        <li>I can explain impressions, CTR, and position in plain English.</li>
+        <li>I chose a page because of evidence, not because I personally like the topic.</li>
+        <li>I recorded one test, not a complete rewrite.</li>
+        <li>I did not change the live page.</li>
+      </ul>
+      <p><strong>If any box is unclear, ask Saiaf or Codex a follow-up question before moving on.</strong> Include the page, the numbers you saw, and the choice that confused you.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-opportunity-card.html">Open the quick-reference card</a>
+        <a class="button" href="../">Finish and return home</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 1 · Search Console · One page, one decision, one saved output.</footer>
+  </main>
+</body>
+</html>
