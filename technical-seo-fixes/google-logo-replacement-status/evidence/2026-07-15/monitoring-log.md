@@ -218,3 +218,11 @@ The first loaded Google Images result set still includes Kids That Do Good and t
 ## Next scheduled check
 
 Sunday, August 16, 2026 at 10:00 Europe/Istanbul. The run will repeat reply, source, authority-profile, canonical-asset, Google Search, Images, Business Profile, paid-result, favicon, and Maps checks without executing pending approval items.
+
+## August 12 directory publication update
+
+The user created a new ProvenExpert profile at `https://www.provenexpert.com/lifeusa/`. A fresh logged-out check confirmed the public LifeUSA identity, approved current square logo, Southfield contact details, and a direct canonical HTTPS backlink to `https://www.lifeusa.org/`.
+
+The profile is recorded as `DIR-042` and **Done**. Qualified new-directory progress advances from **3 of 20** to **4 of 20**. This ad hoc directory publication does not increment the scheduled stable-check count, which remains **0 of 3**.
+
+Full evidence: [August 12 ProvenExpert profile verification](../2026-08-12/provenexpert-profile-verification.md).
