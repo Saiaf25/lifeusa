@@ -921,7 +921,7 @@
         <h2>Current status</h2>
         <p>LifeUSA's website logo work is complete. Outside websites, Google accounts, and weekly checks still need work.</p>
       </div>
-      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Four of 20 new directory profiles are live, and Idealist is submitted for moderation. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.</p>
+      <p id="overviewText" class="overview-text" data-pretext contenteditable="true" spellcheck="true" aria-label="Editable status overview">The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. Four of 20 new directory profiles are live, including ProvenExpert, and Idealist is submitted for moderation. On August 12, the exact Google Images query <code>LifeUSA logo</code> showed no retired crescent in the first visible result set, a query-level win. The benchmark query <code>Life for Relief and Development logo</code> still showed retired results from Kids That Do Good and the old WordPress archive, so it remains under monitoring. Stable weekly checks: 0 of 3.</p>
       <div class="metrics" aria-label="Status summary">
         <div class="metric"><strong id="metricDone">7</strong><span>actions done</span></div>
         <div class="metric"><strong id="metricProgress">8</strong><span>actions in progress</span></div>
@@ -935,6 +935,10 @@
         <div id="progressLabel" class="progress-label">0%</div>
       </div>
       <div id="statusAnnouncement" class="visually-hidden" aria-live="polite"></div>
+      <div class="principles" aria-label="Google Images query status on August 12, 2026">
+        <div class="principle"><strong><code>LifeUSA logo</code>: query win</strong><p>English, United States, and personalization-disabled Google Images showed no retired crescent in the first visible result set. Current LifeUSA website and brand-resource results led the relevant results.</p></div>
+        <div class="principle"><strong><code>Life for Relief and Development logo</code>: monitoring</strong><p>The same controlled Google Images check still showed retired crescent results from Kids That Do Good and the old WordPress archive. Source correction and Google refresh work remain open.</p></div>
+      </div>
       <div class="principles">
         <div class="principle"><strong>Fix the source first</strong><p>Remove the retired logo from the website that publishes it before asking Google to update.</p></div>
         <div class="principle"><strong>Use approved logos</strong><p>Use the yellow-ray square for new profiles. The blue-globe logo is also approved and does not need replacement.</p></div>
@@ -1220,8 +1224,8 @@
 
         <article class="proof-case">
           <div class="proof-case-head">
-            <div><h3>5. Google benchmark: faulty crescent result reproduced</h3><p>The original July 14 screenshot was not saved, but the same documented Google Images query was repeated on July 21 and still showed the retired crescent logo. The capture below records that faulty result without pretending it is the missing original.</p></div>
-            <span class="proof-status pending">Benchmark reproduced</span>
+            <div><h3>5. Google query status: one win, benchmark still open</h3><p>The original July 14 benchmark was reproduced on July 21. A controlled August 12 comparison now shows that <code>LifeUSA logo</code> is clean in its first visible result set, while <code>Life for Relief and Development logo</code> still exposes retired crescent sources.</p></div>
+            <span class="proof-status pending">Benchmark monitoring</span>
           </div>
           <div class="comparison-grid">
             <figure class="proof-frame">
@@ -1232,11 +1236,13 @@
               <div class="proof-placeholder"><div><strong>After screenshot pending</strong>No Google refresh is claimed yet. A new screenshot belongs here only after a clean public check proves the change.</div></div>
             </div>
           </div>
-          <p class="proof-result"><strong>What is proved now:</strong> Google Images still surfaces the retired crescent, and the same mark remains live on discoverable source pages. <strong>What is not proved:</strong> a clean Google refresh. The program remains open until the sources are corrected and three stable Google checks show no regression.</p>
+          <p class="proof-result"><strong>What is proved now:</strong> the exact <code>LifeUSA logo</code> query is a query-level win, but the benchmark <code>Life for Relief and Development logo</code> query still surfaces the retired crescent and the same mark remains live on discoverable source pages. <strong>What is not proved:</strong> a complete Google refresh. The program remains open until the sources are corrected and three stable Google checks show no regression.</p>
           <div class="proof-links">
+            <a href="https://www.google.com/search?q=LifeUSA+logo&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the clean-query check</a>
             <a href="https://www.google.com/search?q=Life+for+Relief+and+Development+logo&amp;hl=en&amp;gl=us&amp;pws=0&amp;udm=2">Repeat the exact faulty-logo query</a>
             <a href="./evidence/2026-07-15/baseline.md">Read the baseline protocol</a>
             <a href="./evidence/2026-08-09/monitoring-check.md">Read the latest scheduled check</a>
+            <a href="./evidence/2026-08-12/google-images-query-verification.md">Read the August 12 query comparison</a>
           </div>
         </article>
       </div>
@@ -1418,7 +1424,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.38</footer>
+    <footer class="footer">LifeUSA technical fixes · Google logo replacement status · Version 1.39</footer>
   </main>
 
   <script>
@@ -1434,6 +1440,7 @@
       ];
       const DEFAULT_OVERVIEW_TEXT = document.getElementById("overviewText").textContent.trim();
       const PREVIOUS_OVERVIEW_TEXTS = [
+        "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Four of 20 new directory profiles are live, and Idealist is submitted for moderation. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Four of 20 new directory profiles are live. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Three of 20 new directory profiles are live. The August 9 check found no publisher reply or source correction. Google Search showed approved current favicon, paid, and entity signals, but Google Images still ranked a retired source. Stable weekly checks: 0 of 3.",
         "The official logo files, Brand Resources page, website logo information, header, footer, and browser icon are complete. The old WordPress site, Kids That Do Good, and Arab Info Mall still show the retired logo. Three of 20 new directory profiles are live. The August 2 check found no publisher reply or source correction; Google Search and Images were inconclusive, while Maps still showed the stale HTTP link. Stable weekly checks: 0 of 3.",
@@ -1658,7 +1665,7 @@
       ];
 
       const defaultState = () => ({
-        version: 30,
+        version: 31,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -2144,7 +2151,7 @@
         save("Status prepared for export");
         const payload = {
           project: PROJECT_NAME,
-          version: 16,
+          version: 17,
           exportedAt: new Date().toISOString(),
           startDate: START_DATE,
           data: state

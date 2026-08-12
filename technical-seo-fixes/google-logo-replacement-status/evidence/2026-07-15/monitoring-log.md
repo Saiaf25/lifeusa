@@ -234,3 +234,14 @@ The user completed Idealist's required human verification and final authorizatio
 The authenticated preview shows the approved current square Life logo, the canonical `https://www.lifeusa.org/` backlink, the correct Southfield address, mission, organization description, and five relevant cause areas. The profile is recorded as `DIR-004` and **Moderation pending**. It does not yet count toward the 20-profile goal because a logged-out public organization page has not been verified. Qualified progress remains **4 of 20**, and the scheduled stable-check count remains **0 of 3**.
 
 Full evidence: [August 12 Idealist submission verification](../2026-08-12/idealist-submission-verification.md).
+
+## August 12 Google Images query update
+
+A controlled Google Images comparison used English, United States, and personalization-disabled URL parameters.
+
+- The exact query `LifeUSA logo` showed no retired yellow-crescent LifeUSA mark in the first visible result set. This is recorded as a **query-level win**.
+- The exact benchmark query `Life for Relief and Development logo` still showed retired crescent results from Kids That Do Good and the old LifeUSA WordPress archive. It remains **under monitoring**.
+
+This ad-hoc comparison does not prove a complete Google refresh and does not increment the scheduled stability counter. The count remains **0 of 3** because retired source references are still live and the benchmark query remains contaminated.
+
+Full evidence: [August 12 Google Images query verification](../2026-08-12/google-images-query-verification.md).
