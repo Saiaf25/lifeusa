@@ -20,6 +20,12 @@ This is an ad-hoc query comparison, not a complete scheduled monitoring run. It 
 
 ## August 12 screenshots
 
+### July 21 historical benchmark
+
+[![July 21 Google Images benchmark showing multiple retired yellow-crescent LifeUSA logos](../2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png)](../2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png)
+
+This benchmark remains part of the evidence so the August 12 results can be compared with the earlier state.
+
 ### `LifeUSA logo` — query-level win
 
 [![August 12 Google Images results for LifeUSA logo with no retired crescent visible](./google-images-lifeusa-logo-clean-2026-08-12.png)](./google-images-lifeusa-logo-clean-2026-08-12.png)
