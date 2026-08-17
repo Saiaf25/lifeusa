@@ -2,24 +2,22 @@ document.addEventListener('click', (event) => {
   const answer = event.target.closest('[data-answer]');
   if (answer) {
     const group = answer.closest('[data-quiz]');
-    const feedback = group.querySelector('[data-feedback]');
+    const feedback = group.querySelector('.feedback[data-feedback]');
     group.querySelectorAll('[data-answer]').forEach((button) => button.setAttribute('aria-pressed', 'false'));
     answer.setAttribute('aria-pressed', 'true');
     const correct = answer.dataset.answer === group.dataset.correct;
     feedback.className = `feedback show ${correct ? 'correct' : 'try-again'}`;
-    feedback.innerHTML = correct
-      ? '<strong>Correct.</strong> Page A is already close to page one, has substantial visibility, and earns few clicks. That makes it a practical improvement candidate.'
-      : answer.dataset.answer === 'B'
-        ? '<strong>Try again.</strong> Page B already performs strongly. Its low impressions may simply reflect limited demand, so it is not the clearest first opportunity.'
-        : '<strong>Try again.</strong> Page C has visibility, but position 41.7 is far from page one. A title change alone is unlikely to solve the larger ranking problem.';
+    const explanation = answer.dataset.feedback || group.dataset.feedback || '';
+    feedback.innerHTML = `<strong>${correct ? 'Correct.' : 'Try again.'}</strong> ${explanation}`;
   }
 
   const copyButton = event.target.closest('[data-copy-card]');
   if (copyButton) {
-    const card = document.querySelector('.record-card');
+    const section = copyButton.closest('.paper');
+    const card = section.querySelector('.record-card');
     const fields = [...card.querySelectorAll('input, textarea')];
     const output = fields.map((field) => `${field.dataset.label}: ${field.value || '[not completed]'}`).join('\n');
-    const status = document.querySelector('[data-copy-status]');
+    const status = section.querySelector('[data-copy-status]');
     const confirmCopy = () => {
       status.textContent = 'Copied. Paste it into the shared learning sheet.';
     };

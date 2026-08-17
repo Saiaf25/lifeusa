@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 3: Compare Two Equal Date Ranges</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 3 · GOOGLE SEARCH CONSOLE</p>
+      <h1>Compare two equal periods before judging change</h1>
+      <p class="subtitle">A single number has no direction. You need a fair before-and-after comparison to say whether search performance moved.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>Beginner</span><span>One trend statement</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can compare the last 28 complete days with the previous 28 days and write one careful conclusion from clicks and impressions.</div>
+      <h2>Make the comparison fair</h2>
+      <div class="comparison">
+        <div class="period"><strong>Previous 28 days</strong><span>Your baseline</span></div>
+        <div class="versus">VERSUS</div>
+        <div class="period"><strong>Last 28 days</strong><span>Your recent result</span></div>
+      </div>
+      <div class="decision-grid">
+        <div class="decision"><strong>Impressions show visibility</strong><p>Did Google show the page more or less often?</p></div>
+        <div class="decision"><strong>Clicks show visits</strong><p>Did more or fewer searchers choose the result?</p></div>
+      </div>
+      <div class="remember"><strong>Use cautious language:</strong> “rose,” “fell,” or “stayed similar.” A comparison shows a change, but it does not prove what caused it.</div>
+      <p class="source">Primary sources: Google explains equal-period comparisons in <a href="https://support.google.com/webmasters/answer/17011165?hl=en" target="_blank" rel="noreferrer">Advanced filtering and comparison</a> and notes that recent data can be preliminary in <a href="https://support.google.com/webmasters/answer/17011364?hl=en" target="_blank" rel="noreferrer">About Performance report data</a>.</p>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>What can you safely conclude?</h2>
+      <div class="table-scroll">
+        <table class="practice-table">
+          <thead><tr><th>Period</th><th>Clicks</th><th>Impressions</th><th>CTR</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Previous 28 days</strong></td><td>800</td><td>40,000</td><td>2.0%</td></tr>
+            <tr><td><strong>Last 28 days</strong></td><td>880</td><td>44,000</td><td>2.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="answers">
+        <button class="answer" data-answer="A" data-feedback="Clicks and impressions both rose by 10%, while CTR stayed the same. The page gained visibility and visits at similar rates." aria-pressed="false">Visibility and clicks rose together</button>
+        <button class="answer" data-answer="B" data-feedback="These totals do not prove that rankings improved for every query. You would need to inspect query-level trends before making that claim." aria-pressed="false">Rankings improved across every query</button>
+        <button class="answer" data-answer="C" data-feedback="The data does not show an urgent content problem. Clicks increased, and CTR did not fall." aria-pressed="false">Content now needs immediate rewriting</button>
+      </div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE LIFEUSA DATA</p>
+      <h2>Compare one page fairly</h2>
+      <p>Use the same page you investigated in Lessons 1 and 2. Keeping the page fixed makes the new time skill easier to learn.</p>
+      <ol class="steps">
+        <li>Open <strong>Performance → Search results</strong> in the exact <strong>lifeusa.org</strong> property.</li>
+        <li>Add or confirm the filter for your chosen page.</li>
+        <li>Open the <strong>Date</strong> filter, choose <strong>Compare</strong>, then select <strong>Compare last 28 days to previous period</strong>.</li>
+        <li>Turn on <strong>Clicks</strong> and <strong>Impressions</strong>. Leave average position aside for this first comparison.</li>
+        <li>Read the totals for both periods. Check whether clicks and impressions moved in the same direction.</li>
+        <li>Write one conclusion using “rose,” “fell,” or “stayed similar.” Add one context note if a campaign or seasonal event may have influenced demand.</li>
+      </ol>
+      <div class="caution"><strong>Avoid partial-day comparisons.</strong> Search Console normally uses complete days, and the newest data may still be preliminary.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one comparison card</h2>
+      <div class="record-card">
+        <label>Page URL<input data-label="Page URL" type="url" placeholder="https://www.lifeusa.org/..."></label>
+        <label>Previous-period clicks<input data-label="Previous-period clicks" type="text" inputmode="numeric" placeholder="Example: 315"></label>
+        <label>Recent-period clicks<input data-label="Recent-period clicks" type="text" inputmode="numeric" placeholder="Example: 348"></label>
+        <label>Previous-period impressions<input data-label="Previous-period impressions" type="text" inputmode="numeric" placeholder="Example: 18,900"></label>
+        <label>Recent-period impressions<input data-label="Recent-period impressions" type="text" inputmode="numeric" placeholder="Example: 20,100"></label>
+        <label>What changed?<textarea data-label="Trend conclusion" placeholder="Clicks rose, fell, or stayed similar; impressions rose, fell, or stayed similar"></textarea></label>
+        <label>What context should we check?<textarea data-label="Context to check" placeholder="Campaign timing, seasonality, publication changes, or none known"></textarea></label>
+      </div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed card</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK</p>
+      <h2>Report the trend without overstating it</h2>
+      <div class="pass-box">
+        <p><strong>“Compared with the previous 28 days, clicks ___ from ___ to ___, while impressions ___ from ___ to ___. This shows ___. It does not yet prove ___.”</strong></p>
+      </div>
+      <ul class="checklist">
+        <li>I compared equal periods for the same page.</li>
+        <li>I used clicks and impressions before interpreting position.</li>
+        <li>I described the change without claiming a cause.</li>
+        <li>I noted any known campaign or seasonal context.</li>
+      </ul>
+      <p><strong>If the two metrics move in opposite directions, ask Saiaf or Codex before deciding what it means.</strong> Include both periods and all four totals.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-comparison-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-4-google-search-console-read-url-inspection-indexed-vs-live/">Continue to Lesson 4 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 3 · Search Console · Same page, equal periods, careful conclusion.</footer>
+  </main>
+</body>
+</html>

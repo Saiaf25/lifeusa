@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 4: Read URL Inspection, Indexed vs Live</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 4 · GOOGLE SEARCH CONSOLE</p>
+      <h1>Read URL Inspection without mixing up indexed and live</h1>
+      <p class="subtitle">Search Console can show what Google stored earlier and what it can access now. Those are two different questions.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>Beginner</span><span>One inspection record</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can distinguish the Google Index result from a Live Test and record the correct status without assuming that either guarantees rankings.</div>
+      <h2>Two views, two moments</h2>
+      <div class="status-grid">
+        <div class="status-card"><strong>Google Index</strong><p>What Google knows from the page version it most recently indexed.</p></div>
+        <div class="status-card"><strong>Live Test</strong><p>Whether Google can access and process the page version available right now.</p></div>
+      </div>
+      <div class="remember"><strong>Remember:</strong> “URL can be indexed” is not the same as “the current version is indexed,” and neither result guarantees that the page will appear or rank for a query.</div>
+      <p class="source">Primary source: Google’s official <a href="https://support.google.com/webmasters/answer/9012289?hl=en" target="_blank" rel="noreferrer">URL Inspection guide</a> explains the indexed result, Live Test, canonical fields, and the limits of requesting indexing.</p>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>What does the Live Test prove?</h2>
+      <p>The indexed result says <strong>URL is on Google</strong> and shows a last crawl on August 3. The page was edited on August 14. A Live Test now says <strong>URL can be indexed</strong>.</p>
+      <div class="answers">
+        <button class="answer" data-answer="A" data-feedback="The Live Test confirms that Google can access and process the current page. It does not say that Google has stored the August 14 changes." aria-pressed="false">Google can access current page</button>
+        <button class="answer" data-answer="B" data-feedback="The indexed result is from the August 3 crawl. A successful Live Test does not replace that stored version or prove the new changes are indexed." aria-pressed="false">Google indexed the current changes</button>
+        <button class="answer" data-answer="C" data-feedback="URL Inspection tests access and indexability, not future ranking. Search visibility still depends on many other conditions." aria-pressed="false">The page will rank higher</button>
+      </div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE LIFEUSA DATA</p>
+      <h2>Inspect one page safely</h2>
+      <p>Inspect the same LifeUSA page from the earlier lessons. This lesson is observation only: do not request indexing.</p>
+      <ol class="steps">
+        <li>Open the exact <strong>lifeusa.org</strong> property in Search Console.</li>
+        <li>Paste the complete page URL into the inspection bar at the top and press Enter.</li>
+        <li>Read the main <strong>Google Index</strong> verdict. Record whether the URL is on Google.</li>
+        <li>Open <strong>Page indexing</strong>. Record the <strong>Last crawl</strong> date and <strong>Google-selected canonical</strong>.</li>
+        <li>If the page changed after the last crawl, select <strong>Test live URL</strong>. Record the Live Test verdict separately.</li>
+        <li>Compare the two views. Write whether Google’s stored version may predate the current page.</li>
+      </ol>
+      <div class="caution"><strong>Stop before “Request indexing.”</strong> It uses a limited request queue, does not fix page problems, and does not guarantee inclusion. Discuss it with Saiaf first.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one URL inspection record</h2>
+      <div class="record-card">
+        <label>Inspected URL<input data-label="Inspected URL" type="url" placeholder="https://www.lifeusa.org/..."></label>
+        <label>Google Index verdict<input data-label="Google Index verdict" type="text" placeholder="Copy the exact verdict"></label>
+        <label>Last crawl<input data-label="Last crawl" type="text" placeholder="Copy the date and time shown"></label>
+        <label>Google-selected canonical<input data-label="Google-selected canonical" type="url" placeholder="Copy the exact URL shown"></label>
+        <label>Live Test verdict<input data-label="Live Test verdict" type="text" placeholder="Copy the verdict, or write Not run"></label>
+        <label>What is the difference between the two views?<textarea data-label="Indexed versus live interpretation" placeholder="One sentence explaining what Google stored and what it can access now"></textarea></label>
+        <label>Is any follow-up needed?<textarea data-label="Follow-up" placeholder="Ask Saiaf, investigate a mismatch, or no action yet"></textarea></label>
+      </div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK</p>
+      <h2>Explain the two views from memory</h2>
+      <div class="pass-box">
+        <p><strong>“The Google Index result tells me ___. The Live Test tells me ___. Neither result guarantees ___.”</strong></p>
+      </div>
+      <ul class="checklist">
+        <li>I recorded the indexed and live verdicts separately.</li>
+        <li>I checked the last crawl before judging recent changes.</li>
+        <li>I checked the Google-selected canonical.</li>
+        <li>I did not request indexing during the lesson.</li>
+      </ul>
+      <p><strong>If the canonical differs from the URL you entered, ask Saiaf or Codex before taking action.</strong> Include both URLs, the verdict, and the last crawl date.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-url-inspection-card.html">Open the quick-reference card</a>
+        <a class="button" href="../">Finish the Search Console track →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 4 · Search Console · Indexed view, live view, no assumptions.</footer>
+  </main>
+</body>
+</html>
