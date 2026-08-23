@@ -8,6 +8,31 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## August 23 scheduled check
+
+The fifth recorded scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or reliable current Google result-set classification was proved.
+
+### Verified state
+
+- Zoho Mail: exact sender, exact subject, spam, trash, and broader domain searches found no publisher reply to SENT-001 or SENT-002. Historical delivery records remain intact.
+- Retired-crescent sources: the old WordPress archive, Kids That Do Good, and Arab Info Mall still reference their documented retired files. Each direct image returned `200` and had decoded-pixel absolute error `0` against the July evidence.
+- Owned signals: the canonical square and horizontal Wix assets returned `200` with unchanged dimensions and checksums. The homepage organization node and Brand Resources references remain current; two `WebSite` nodes remain.
+- Authority profiles: GreatNonprofits, Candid/GuideStar, LinkedIn, YouTube, and X expose approved current variants. Linktree exposes a current Life-branded campaign avatar but still sends its Facebook destination to the Somali profile. ReliefWeb still exposes no logo and an HTTP website link. Facebook and Instagram were inconclusive in logged-out retrieval.
+- Directory profiles: Find-Us-Here, A-Z Business Finder, Nextdoor, and ProvenExpert remain public with current identity signals. Idealist still has no verified logged-out public profile and does not count.
+
+### Google limitation
+
+The exact Search, Images, Arabic candidate, and Maps URLs were requested with the documented language, country, and personalization controls. Google returned HTTP `200` shells without a reliable visible result payload. Ranked Images, organic favicon, paid logo, entity/Business Profile, Knowledge Panel, and Maps presentation are therefore **inconclusive**, not clean.
+
+Full dated measurements, checksums, page references, and interpretation: [August 23 monitoring check](../2026-08-23/monitoring-check.md).
+
+### Decision
+
+- No action status advanced and no approval item was executed.
+- RESUME-001, RESUME-002, and RESUME-003 are ready for human decisions; RESUME-004 remains available for the missing exact Arabic query.
+- Stable-check count remains **0 of 3** because the retired sources remain live and Google presentation was not reliably observable.
+- Next scheduled check: Sunday, August 30, 2026 at 10:00 Europe/Istanbul.
+
 ## August 9 scheduled check
 
 The fourth scheduled weekly check is complete. No publisher reply, retired-source correction, account change, or complete Google refresh was proved.
