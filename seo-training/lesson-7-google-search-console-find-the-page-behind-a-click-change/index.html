@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 7: Find the page behind a click change</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 7 · Google Search Console</p>
+      <h1>Find the page behind a click change</h1>
+      <p class="subtitle">Sitewide clicks can rise or fall for many reasons. The Pages table helps you find where the visible movement occurred.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One triage note</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can compare equal periods, sort the Pages table by Clicks Difference, and select one displayed page for review without claiming why it changed.</div>
+      <h2>Movement first, explanation later</h2>
+      <div class="decision-grid"><div class="decision"><strong>Difference</strong><p>The recent-period value minus the previous-period value for a displayed row.</p></div><div class="decision"><strong>Cause</strong><p>The reason for the movement. Search Console’s Difference column does not supply it.</p></div></div>
+      <div class="remember"><strong>Sort in the direction of the sitewide movement.</strong> For a decline, inspect the most negative differences; for a gain, inspect the most positive.</div>
+      <div class="source"><strong>Official sources:</strong><ul class="source-list"><li><a href="https://support.google.com/webmasters/answer/17010961?hl=en" target="_blank" rel="noreferrer">Google: Performance report common tasks</a></li><li><a href="https://support.google.com/webmasters/answer/17011165?hl=en" target="_blank" rel="noreferrer">Google: Comparisons and the Difference column</a></li><li><a href="https://support.google.com/webmasters/answer/17011364?hl=en" target="_blank" rel="noreferrer">Google: Complete versus preliminary data</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>Which page had the largest click decline?</h2>
+      <p class="example-note"><strong>Practice data only:</strong> compare the displayed differences.</p><div class="table-scroll"><table class="practice-table"><thead><tr><th>Page</th><th>Previous clicks</th><th>Recent clicks</th><th>Difference</th></tr></thead><tbody><tr><td>Emergency appeal</td><td>610</td><td>420</td><td>−190</td></tr><tr><td>Orphan guide</td><td>320</td><td>250</td><td>−70</td></tr><tr><td>Donation page</td><td>480</td><td>495</td><td>+15</td></tr></tbody></table></div>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="The emergency appeal page fell by 190 clicks, the largest displayed decline. It is a review candidate, not a confirmed cause." aria-pressed="false">Emergency appeal page lost the most clicks.</button><button class="answer" data-answer="B" data-feedback="The orphan guide declined, but its 70-click loss is smaller than the emergency appeal’s loss." aria-pressed="false">Orphan guide page lost the most clicks.</button><button class="answer" data-answer="C" data-feedback="The donation page gained 15 clicks. It did not decline." aria-pressed="false">Donation page lost the most clicks here.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Trace one sitewide movement to a page</h2>
+      <p>Start without a page, query, or device filter so you can see the property-level direction first.</p>
+      <ol class="steps"><li>Open the exact <strong>lifeusa.org</strong> property and <strong>Performance → Search results</strong>.</li><li>Clear page, query, and device filters. Set <strong>Date → Compare → Last 28 days to previous period</strong>.</li><li>Turn on <strong>Clicks</strong> and <strong>Impressions</strong>. Read whether total site clicks rose or fell.</li><li>Open the <strong>Pages</strong> tab. Sort <strong>Clicks Difference</strong> most negative first for a decline or most positive first for a gain.</li><li>Choose one displayed page with a meaningful movement. Record its recent and previous clicks and impressions.</li><li>Write what changed. Leave the reason unknown until another source supports it.</li></ol>
+      <div class="caution"><strong>Use complete periods.</strong> Do not substitute current-day preliminary data, and do not attribute a change to an event, update, title, or campaign without supporting evidence.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one click-change triage note</h2>
+      <div class="record-card"><label>Comparison<input data-label="Comparison" placeholder="Example: Last 28 days vs previous period" type="text"></label><label>Site clicks rose or fell<input data-label="Site clicks rose or fell" placeholder="State the direction" type="text"></label><label>Page URL<input data-label="Page URL" placeholder="https://www.lifeusa.org/..." type="url"></label><label>Previous-period clicks<input data-label="Previous-period clicks" placeholder="Copy the row value" type="text"></label><label>Recent-period clicks<input data-label="Recent-period clicks" placeholder="Copy the row value" type="text"></label><label>Clicks difference<input data-label="Clicks difference" placeholder="Include + or −" type="text"></label><label>Previous-period impressions<input data-label="Previous-period impressions" placeholder="Copy the row value" type="text"></label><label>Recent-period impressions<input data-label="Recent-period impressions" placeholder="Copy the row value" type="text"></label><label>Impressions difference<input data-label="Impressions difference" placeholder="Include + or −" type="text"></label><label>What changed<textarea data-label="What changed" placeholder="One evidence sentence"></textarea></label><label>What remains unknown<textarea data-label="What remains unknown" placeholder="Name the cause you cannot yet explain"></textarea></label><label>Next question to review<textarea data-label="Next question to review" placeholder="One question for Saiaf"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>Recall what Difference can and cannot do</h2>
+      <div class="pass-box"><p><strong>“The Difference column tells me ___. It does not tell me ___. For a decline, I sort toward ___. For a gain, I sort toward ___.”</strong></p></div>
+      <ul class="checklist"><li>I cleared old filters before reading the sitewide direction.</li><li>I used equal, complete date ranges.</li><li>I sorted in the same direction as the movement.</li><li>I did not turn a change into a cause.</li></ul>
+      <p><strong>If the comparison or sort is blocked, ask Saiaf.</strong> Include the property, ranges, active filters, and the exact column you expected to see.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-segment-compare-export-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-8-google-search-console-export-a-filtered-report-for-review/">Continue to Lesson 8 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 7 · Google Search Console · The Difference column finds movement; investigation finds cause.</footer>
+  </main>
+</body>
+</html>

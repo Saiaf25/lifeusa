@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 8: Export a filtered report for review</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 8 · Google Search Console</p>
+      <h1>Export a filtered report for review</h1>
+      <p class="subtitle">An export is useful only when another person can tell exactly what view it contains and what question it should answer.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One export handoff</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can confirm the report context and create one focused export that a reviewer can understand without guessing.</div>
+      <h2>The export keeps the current view</h2>
+      <div class="decision-grid"><div class="decision"><strong>Scope</strong><p>Property, report, search type, dates, filters, and table grouping define what the file contains.</p></div><div class="decision"><strong>Limit</strong><p>A direct report export contains the shown view and up to 1,000 representative rows; it is not a complete raw dataset.</p></div></div>
+      <div class="remember"><strong>Confirm context before clicking Export.</strong> A clear filename cannot repair the wrong property, dates, filters, or grouping.</div>
+      <div class="source"><strong>Official sources:</strong><ul class="source-list"><li><a href="https://support.google.com/webmasters/answer/12919797?hl=en" target="_blank" rel="noreferrer">Google: Export data directly from a Search Console report</a></li><li><a href="https://support.google.com/webmasters/answer/17011364?hl=en" target="_blank" rel="noreferrer">Google: Performance-data limitations</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>Which report is ready to export?</h2>
+      <p>Search Console will export the view currently shown. Choose the view another reviewer could reconstruct.</p>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="The current view has been checked before export, so the file has a reconstructable scope." aria-pressed="false">Correct property, dates, filters, and table confirmed.</button><button class="answer" data-answer="B" data-feedback="An export without clear dates and filters cannot answer a specific review question." aria-pressed="false">Correct property, unclear dates, and filters missing.</button><button class="answer" data-answer="C" data-feedback="Correct filters do not rescue an export from the wrong property." aria-pressed="false">Wrong property, dates, filters, and table confirmed.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Create one reviewable export</h2>
+      <p>Start with the page selected in Lesson 7. Do not change sharing permissions during this lesson.</p>
+      <ol class="steps"><li>Confirm the exact <strong>lifeusa.org</strong> property and <strong>Performance → Search results</strong>.</li><li>Keep <strong>Search type: Web</strong> and the equal 28-day date comparison.</li><li>Add the selected page as a page filter. Open the <strong>Queries</strong> tab and keep Clicks and Impressions active.</li><li>Read the property, dates, page filter, and Queries grouping aloud before exporting.</li><li>Select <strong>Export → Google Sheets</strong>. Use CSV only if Google Sheets is unavailable.</li><li>Rename the file descriptively, such as <code>lifeusa-gsc-orphan-guide-2026-08-01-to-2026-08-28</code>. Save the link or path and its context below.</li></ol>
+      <div class="caution"><strong>Never fabricate a file link.</strong> If export access fails, record “File not created — access blocked” and preserve the intended report context. An exported zero can represent a UI value that was “~” or “−”, not a measured zero.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one export handoff</h2>
+      <div class="record-card"><label>File name<input data-label="File name" placeholder="Use a descriptive, date-bounded name" type="text"></label><label>File link or local path<input data-label="File link or local path" placeholder="Paste the real link/path or record the access block" type="text"></label><label>Search type<input data-label="Search type" placeholder="Example: Web" type="text"></label><label>Date comparison<input data-label="Date comparison" placeholder="Copy both ranges" type="text"></label><label>Page filter<input data-label="Page filter" placeholder="Copy the exact URL" type="url"></label><label>Query filter<input data-label="Query filter" placeholder="Copy it, or write None" type="text"></label><label>Table grouping<input data-label="Table grouping" placeholder="Example: Queries" type="text"></label><label>Question this export helps answer<textarea data-label="Question this export helps answer" placeholder="One specific review question"></textarea></label><label>One observation<textarea data-label="One observation" placeholder="One cautious sentence"></textarea></label><label>Important limitation<textarea data-label="Important limitation" placeholder="Name the row or unavailable-value limitation"></textarea></label><label>Follow-up for Saiaf<textarea data-label="Follow-up for Saiaf" placeholder="What should be reviewed next?"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>Reconstruct the export context</h2>
+      <div class="pass-box"><p><strong>“Before exporting, I confirm the property, report, date, filters, and grouping. The export keeps the current view, but it is not ___.”</strong></p></div>
+      <ul class="checklist"><li>I checked the exact property before exporting.</li><li>I can state both date ranges and every active filter.</li><li>The filename describes the focus and dates.</li><li>I did not change sharing permissions or invent a link.</li></ul>
+      <p><strong>Bring this handoff to the Wednesday review before starting Ahrefs.</strong> The next tool uses estimates, so the evidence boundary must stay clear.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-segment-compare-export-card.html">Open the quick-reference card</a>
+        <a class="button" href="../">Review before starting Ahrefs →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 8 · Google Search Console · Export the question and context, not just the rows.</footer>
+  </main>
+</body>
+</html>

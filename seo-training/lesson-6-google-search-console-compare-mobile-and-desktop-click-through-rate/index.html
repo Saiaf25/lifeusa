@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 6: Compare mobile and desktop click-through rate</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 6 · Google Search Console</p>
+      <h1>Compare mobile and desktop click-through rate</h1>
+      <p class="subtitle">A device comparison can show where clicking differs. It cannot explain why the difference exists.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One device check</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can compare mobile and desktop CTR for the same page and flag a difference for review without claiming the device caused it.</div>
+      <h2>Compare like with like</h2>
+      <div class="decision-grid"><div class="decision"><strong>Same scope</strong><p>Keep the same property, page, search type, and date range for both devices.</p></div><div class="decision"><strong>Observation only</strong><p>CTR describes clicking. It does not reveal user feelings, page quality, or the cause of a difference.</p></div></div>
+      <div class="remember"><strong>Read CTR and total clicks separately.</strong> A device can have lower CTR yet still produce more clicks because it had many more impressions.</div>
+      <div class="source"><strong>Official sources:</strong><ul class="source-list"><li><a href="https://support.google.com/webmasters/answer/17011165?hl=en" target="_blank" rel="noreferrer">Google: Advanced filtering and device comparisons</a></li><li><a href="https://support.google.com/webmasters/answer/17011259?hl=en" target="_blank" rel="noreferrer">Google: Performance dimensions and data groupings</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>What is the safest conclusion?</h2>
+      <p class="example-note"><strong>Practice data only:</strong> Mobile has 480 clicks, 24,000 impressions, and 2.0% CTR. Desktop has 200 clicks, 4,000 impressions, and 5.0% CTR.</p>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="Mobile CTR is 2.0% and desktop CTR is 5.0%. The difference deserves review, but it does not identify the cause." aria-pressed="false">Mobile earns lower CTR for this page.</button><button class="answer" data-answer="B" data-feedback="The comparison does not reveal user feelings and applies only to the filtered page, not the entire website." aria-pressed="false">Mobile users dislike this entire website now.</button><button class="answer" data-answer="C" data-feedback="Desktop CTR is higher, but mobile produced 480 clicks versus 200 desktop clicks." aria-pressed="false">Desktop sends more clicks for this page.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Run one device comparison</h2>
+      <p>Use the same LifeUSA page and Last 3 months date range from Lesson 5.</p>
+      <ol class="steps"><li>Open <strong>Performance → Search results</strong> in the exact <strong>lifeusa.org</strong> property.</li><li>Keep <strong>Search type: Web</strong>, <strong>Date: Last 3 months</strong>, and the same page filter.</li><li>Remove any existing comparison. Search Console permits only one comparison at a time.</li><li>Turn on <strong>Clicks</strong>, <strong>Impressions</strong>, and <strong>Average CTR</strong>.</li><li>Add <strong>Device → Compare → Mobile versus Desktop</strong>. Record clicks, impressions, and CTR for both.</li><li>State whether mobile CTR is lower, higher, or similar. Add one question to investigate later; do not diagnose a cause.</li></ol>
+      <div class="caution"><strong>If a device shows “~”, write “Not enough data shown.”</strong> Do not turn an unavailable value into a measured zero.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one device CTR check</h2>
+      <div class="record-card"><label>Date range<input data-label="Date range" placeholder="Use the same range for both devices" type="text"></label><label>Page URL<input data-label="Page URL" placeholder="https://www.lifeusa.org/..." type="url"></label><label>Mobile clicks<input data-label="Mobile clicks" placeholder="Copy the displayed total" type="text"></label><label>Mobile impressions<input data-label="Mobile impressions" placeholder="Copy the displayed total" type="text"></label><label>Mobile CTR<input data-label="Mobile CTR" placeholder="Example: 2.0%" type="text"></label><label>Desktop clicks<input data-label="Desktop clicks" placeholder="Copy the displayed total" type="text"></label><label>Desktop impressions<input data-label="Desktop impressions" placeholder="Copy the displayed total" type="text"></label><label>Desktop CTR<input data-label="Desktop CTR" placeholder="Example: 5.0%" type="text"></label><label>Safe observation<textarea data-label="Safe observation" placeholder="Describe the difference only"></textarea></label><label>What this does not prove<textarea data-label="What this does not prove" placeholder="Name the cause you cannot claim"></textarea></label><label>Question for Saiaf<textarea data-label="Question for Saiaf" placeholder="One next investigation question"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>Separate observation from diagnosis</h2>
+      <div class="pass-box"><p><strong>“Mobile CTR was ___. Desktop CTR was ___. This tells me ___. It does not prove ___.”</strong></p></div>
+      <ul class="checklist"><li>I kept the scope identical for both devices.</li><li>I recorded clicks, impressions, and CTR.</li><li>I distinguished CTR from total clicks.</li><li>I wrote a question, not a diagnosis.</li></ul>
+      <p><strong>If comparison access fails, ask Saiaf.</strong> Include the property, page, date range, and the filter step that failed.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/search-console-segment-compare-export-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-7-google-search-console-find-the-page-behind-a-click-change/">Continue to Lesson 7 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 6 · Google Search Console · A device difference is a clue to investigate, not a diagnosis.</footer>
+  </main>
+</body>
+</html>

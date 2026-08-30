@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 14: Separate facts from suggestions</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 14 · Codex</p>
+      <h1>Separate facts from suggestions</h1>
+      <p class="subtitle">A source can report what happened. Interpretation and suggestions may be useful, but they must not be presented as confirmed facts.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One source map</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can decide whether each sentence is a confirmed fact, interpretation, suggestion, or missing information.</div>
+      <h2>Four labels prevent accidental certainty</h2>
+      <div class="decision-grid"><div class="decision"><strong>Confirmed fact</strong><p>Directly supported by a named field or statement in the supplied source.</p></div><div class="decision"><strong>Interpretation</strong><p>A cautious explanation consistent with the evidence but not proven by it.</p></div><div class="decision"><strong>Suggestion</strong><p>A change or test proposed for review, not a guaranteed result.</p></div><div class="decision"><strong>Missing information</strong><p>A question the current source cannot answer.</p></div></div>
+      <div class="remember"><strong>Check every “confirmed fact” yourself.</strong> Codex can classify text, but the human reviewer must compare each fact with the original source.</div>
+      <div class="source"><strong>Official source:</strong><ul class="source-list"><li><a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noreferrer">OpenAI: Add useful context and flag missing information</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>Which statement belongs under “Confirmed fact”?</h2>
+      <p class="example-note"><strong>Practice source:</strong> a selected page has 2,400 impressions. The source says nothing about reader feelings or future clicks.</p>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="It reports a supplied Search Console value without adding a cause." aria-pressed="false">Search Console reports 2,400 impressions for this selected page.</button><button class="answer" data-answer="B" data-feedback="The source contains no evidence about how readers feel." aria-pressed="false">Readers dislike the headline because it sounds too formal.</button><button class="answer" data-answer="C" data-feedback="The source cannot prove a future result or guarantee an increase." aria-pressed="false">A warmer headline will certainly double next month’s clicks.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Create one corrected source map</h2>
+      <p>Reuse the approved source card and Codex response from Lesson 13.</p>
+      <div class="example-block"><p class="step-label">COPYABLE EXAMPLE · PRACTICE OR ADAPT</p><p class="muted">Classification prompt</p><pre class="prompt-block"><code>Using only the SOURCE below, sort the information into four sections:
+1. Confirmed facts
+2. Interpretations
+3. Suggestions to test
+4. Missing information
+
+For every confirmed fact, name the exact source field that supports it.
+Do not treat an interpretation or recommendation as a fact.
+Do not add information, browse, edit, send, or publish.
+
+SOURCE
+[Paste the approved Search Console card.]</code></pre></div>
+      <ol class="steps"><li>Paste the source card into Codex with the classification prompt.</li><li>Ask Codex to sort the statements without rewriting or adding information.</li><li>For every item under <strong>Confirmed facts</strong>, compare it with the exact source field yourself.</li><li>Move any unsupported statement to <strong>Interpretation</strong>, <strong>Suggestion</strong>, or <strong>Missing information</strong>.</li><li>Save the corrected source map. Keep the original source attached for review.</li></ol>
+      <div class="caution"><strong>A plausible sentence is not automatically supported.</strong> If no exact source field supports it, it cannot stay under Confirmed facts.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one source map</h2>
+      <div class="record-card"><label>Page or source name<input data-label="Page or source name" placeholder="Name the approved source" type="text"></label><label>Confirmed fact<textarea data-label="Confirmed fact" placeholder="One statement copied from the source"></textarea></label><label>Exact source field<input data-label="Exact source field" placeholder="Field, row, or heading" type="text"></label><label>Interpretation<textarea data-label="Interpretation" placeholder="What might the fact mean?"></textarea></label><label>Why it is not proven<textarea data-label="Why it is not proven" placeholder="Name the missing causal evidence"></textarea></label><label>Suggestion to test<textarea data-label="Suggestion to test" placeholder="Label it as a test"></textarea></label><label>Evidence that makes it worth testing<textarea data-label="Evidence that makes it worth testing" placeholder="Point to the source"></textarea></label><label>Missing information<textarea data-label="Missing information" placeholder="What the source cannot answer"></textarea></label><label>Source needed<textarea data-label="Source needed" placeholder="What evidence would answer it?"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>Separate evidence from advice aloud</h2>
+      <div class="pass-box"><p><strong>“One confirmed fact is ___. One suggestion is ___. Only the first is evidence because ___.”</strong></p></div>
+      <ul class="checklist"><li>Every fact points to an exact source field.</li><li>Interpretations are labeled as interpretations.</li><li>Suggestions are labeled as tests.</li><li>Missing information stayed visible.</li></ul>
+      <p><strong>If a statement could fit two labels, ask Saiaf.</strong> Include the source field and the sentence you are classifying.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/codex-source-review-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-15-codex-check-every-claim-against-evidence/">Continue to Lesson 15 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 14 · Codex · Label facts, interpretations, suggestions, and unknowns separately.</footer>
+  </main>
+</body>
+</html>

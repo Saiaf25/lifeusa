@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 15: Check every claim against its evidence</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 15 · Codex</p>
+      <h1>Check every claim against its evidence</h1>
+      <p class="subtitle">Confident wording can hide an unsupported claim. A claim check makes the source and status visible before revision.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One claim review</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can decide whether a Codex draft is safe to use by checking each factual claim against the original source.</div>
+      <h2>Three claim statuses</h2>
+      <div class="metric-grid"><div class="metric"><strong>Supported</strong><p>The supplied source directly supports the factual claim.</p></div><div class="metric"><strong>Unsupported</strong><p>The source contradicts the claim or does not establish it.</p></div><div class="metric"><strong>Needs more evidence</strong><p>The claim may be testable, but the current source cannot confirm it.</p></div></div>
+      <div class="remember"><strong>Ask Codex for a check, then review the check yourself.</strong> The final readiness decision remains human.</div>
+      <div class="source"><strong>Official source:</strong><ul class="source-list"><li><a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noreferrer">OpenAI: Ask for a final check, then review important work</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>The source shows lower CTR but gives no reason. How should “The title caused the lower CTR” be marked?</h2>
+      <p>Search performance shows the outcome. It does not automatically establish a cause.</p>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="Performance data shows an outcome, but it does not establish that specific cause." aria-pressed="false">Unsupported: the source does not explain the cause.</button><button class="answer" data-answer="B" data-feedback="The source contains no causal evidence." aria-pressed="false">Supported: the source directly proves that exact cause.</button><button class="answer" data-answer="C" data-feedback="Confident wording does not make a claim reliable." aria-pressed="false">Ready: a confident sentence needs no source check.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Review the draft before rewriting it</h2>
+      <p>Reuse the source card and draft from Lessons 13–14.</p>
+      <div class="example-block"><p class="step-label">COPYABLE EXAMPLE · PRACTICE OR ADAPT</p><p class="muted">Claim-check prompt</p><pre class="prompt-block"><code>Review DRAFT against SOURCE. Do not rewrite the draft yet.
+
+Create a claim-check table with:
+- Draft claim
+- Exact source evidence
+- Status: Supported, Unsupported, or Needs more evidence
+- Safe correction
+
+A recommendation must be labeled as a recommendation, not a fact.
+If the source does not prove a cause, mark the causal claim Unsupported.
+Do not browse, edit, send, or publish.
+
+SOURCE
+[Paste the approved source card.]
+
+DRAFT
+[Paste the Codex brief.]</code></pre></div>
+      <ol class="steps"><li>Paste both the approved source and draft into Codex.</li><li>Ask for a claim check only—not a rewrite.</li><li>For every factual claim, inspect the exact source evidence and proposed status.</li><li>Correct any status Codex assigned incorrectly. A cause needs causal evidence; a prediction needs explicit uncertainty.</li><li>Mark the draft <strong>Ready</strong> or <strong>Not ready</strong> and save the claim-review card.</li></ol>
+      <div class="caution"><strong>Do not let Codex certify its own draft without human review.</strong> If the original source is missing, the draft is not ready.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one claim-review card</h2>
+      <div class="record-card"><label>Claim 1<textarea data-label="Claim 1" placeholder="Copy the factual claim exactly"></textarea></label><label>Exact source evidence 1<textarea data-label="Exact source evidence 1" placeholder="Field or row that supports it"></textarea></label><label>Status 1<input data-label="Status 1" placeholder="Supported / Unsupported / Needs more evidence" type="text"></label><label>Safe correction 1<textarea data-label="Safe correction 1" placeholder="Remove, qualify, or label as a test"></textarea></label><label>Claim 2<textarea data-label="Claim 2" placeholder="Copy another factual claim"></textarea></label><label>Exact source evidence 2<textarea data-label="Exact source evidence 2" placeholder="Field or row that supports it"></textarea></label><label>Status 2<input data-label="Status 2" placeholder="Supported / Unsupported / Needs more evidence" type="text"></label><label>Safe correction 2<textarea data-label="Safe correction 2" placeholder="Remove, qualify, or label as a test"></textarea></label><label>Readiness decision<input data-label="Readiness decision" placeholder="Ready / Not ready" type="text"></label><label>Reason<textarea data-label="Reason" placeholder="Explain the decision"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>State the readiness rule</h2>
+      <div class="pass-box"><p><strong>“A factual claim is ready only when ___. A recommendation must be labeled as ___.”</strong></p></div>
+      <ul class="checklist"><li>I kept the original source beside the draft.</li><li>I checked every factual claim myself.</li><li>I rejected unsupported causal language.</li><li>I recorded an explicit readiness decision.</li></ul>
+      <p><strong>If you cannot find the exact evidence, mark “Needs more evidence” and ask Saiaf.</strong> Do not soften uncertainty into a fact.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/codex-source-review-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-16-codex-refine-one-seo-brief/">Continue to Lesson 16 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 15 · Codex · A confident sentence still needs direct source support.</footer>
+  </main>
+</body>
+</html>

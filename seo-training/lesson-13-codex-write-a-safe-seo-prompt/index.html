@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Lesson 13: Write a safe, specific SEO prompt</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/lesson.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="lesson-head">
+      <a class="back" href="../">← Course home</a>
+      <p class="step-label">LESSON 13 · Codex</p>
+      <h1>Write a safe, specific SEO prompt</h1>
+      <p class="subtitle">Codex works best when the requested result, supplied evidence, output shape, and stopping boundaries are clear.</p>
+      <div class="lesson-meta"><span>10–15 minutes</span><span>SEO beginner</span><span>One prompt card</span></div>
+    </header>
+
+    <section class="paper">
+      <div class="objective"><strong>By the end:</strong> you can decide what Codex should produce, what evidence it may use, and what it must not do.</div>
+      <h2>Four useful prompt parts</h2>
+      <div class="decision-grid"><div class="decision"><strong>Goal</strong><p>The result you want Codex to produce.</p></div><div class="decision"><strong>Context</strong><p>The relevant source material and facts that can change the result.</p></div><div class="decision"><strong>Output</strong><p>The format, length, audience, or sections you need.</p></div><div class="decision"><strong>Boundaries</strong><p>What must stay unchanged and which actions or assumptions are prohibited.</p></div></div>
+      <div class="remember"><strong>Codex output is not SEO evidence.</strong> The Search Console or Ahrefs artifact remains the source; Codex helps organize and question it.</div>
+      <div class="source"><strong>Official source:</strong><ul class="source-list"><li><a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noreferrer">OpenAI: Prompting for Chat, Work, and Codex</a></li></ul></div>
+    </section>
+
+    <section class="paper" data-quiz data-correct="A">
+      <p class="step-label">PRACTICE · GET IMMEDIATE FEEDBACK</p>
+      <h2>Which prompt gives Codex the safest beginner task?</h2>
+      <p>Choose the prompt with one output, named evidence, and a clear action boundary.</p>
+      <div class="answers"><button class="answer" data-answer="A" data-feedback="It names one output, points to evidence, and states an action boundary." aria-pressed="false">Draft one title from this evidence; do not publish.</button><button class="answer" data-answer="B" data-feedback="The goal and success test are vague, and “completely” expands the task." aria-pressed="false">Improve this page completely and make everything perform better.</button><button class="answer" data-answer="C" data-feedback="It provides no source, no output shape, and no safe stopping point." aria-pressed="false">Use your judgment to fix whatever seems important online.</button></div>
+      <div class="feedback" data-feedback aria-live="polite">Choose an answer to see feedback.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">NOW USE A LIFEUSA WORKFLOW</p>
+      <h2>Build one bounded SEO task</h2>
+      <p>Reuse an approved Search Console opportunity card. If none is available, use the practice-only example and label it clearly.</p>
+      <div class="example-block"><p class="step-label">COPYABLE EXAMPLE · PRACTICE OR ADAPT</p><p class="muted">Practice prompt — replace the practice-only figures with an approved card</p><pre class="prompt-block"><code>GOAL
+Turn this Search Console opportunity card into one short content-improvement brief for our Wednesday review.
+
+CONTEXT
+Page: https://www.lifeusa.org/example-page
+Query: donate to orphans
+Search Console evidence: 2,400 impressions, 1.1% CTR, average position 8.6
+These are practice-only numbers.
+
+OUTPUT
+Return four short sections: Evidence, Interpretation, Test, and Missing information.
+
+BOUNDARIES
+Use only the supplied card. Do not invent causes, opinions, or figures.
+Do not browse, edit the website, send, or publish anything.</code></pre></div>
+      <ol class="steps"><li>Open a new Codex task and complete the simulated quiz before submitting anything.</li><li>Write the <strong>Goal</strong>: one result for the Wednesday review.</li><li>Add <strong>Context</strong>: name and paste the approved source, including its property, date, page, and metrics.</li><li>Define the <strong>Output</strong>: short sections, audience, and length.</li><li>Add <strong>Boundaries</strong>: use only the supplied source; flag missing information; do not browse, edit, send, or publish.</li><li>Submit the prompt and save the filled prompt card. Do not act on the recommendation yet.</li></ol>
+      <div class="caution"><strong>Do not attach private or sensitive material that is unnecessary for the task.</strong> Use only the approved SEO artifact and keep the task in review-only scope.</div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">YOUR DELIVERABLE</p>
+      <h2>Complete one safe SEO prompt card</h2>
+      <div class="record-card"><label>Goal<textarea data-label="Goal" placeholder="What one reviewable result should Codex produce?"></textarea></label><label>Context<textarea data-label="Context" placeholder="Name the approved source, page, query, dates, and metrics"></textarea></label><label>Output<textarea data-label="Output" placeholder="Format, sections, audience, and length"></textarea></label><label>Boundaries<textarea data-label="Boundaries" placeholder="Use only / Do not assume / Do not act"></textarea></label></div>
+      <div class="copy-row"><button class="mini-button" data-copy-card>Copy completed record</button><span class="copy-status" data-copy-status aria-live="polite"></span></div>
+    </section>
+
+    <section class="paper">
+      <p class="step-label">PASS CHECK · RETRIEVE, DON’T REREAD</p>
+      <h2>Name the four prompt parts</h2>
+      <div class="pass-box"><p><strong>“A useful prompt can include Goal, Context, Output, and Boundaries. One boundary that prevents a live change is ___.”</strong></p></div>
+      <ul class="checklist"><li>I requested one reviewable result.</li><li>I named the exact supplied source.</li><li>I defined the output shape.</li><li>I prohibited browsing, editing, sending, and publishing.</li></ul>
+      <p><strong>If Codex asks for permission or expands the scope, stop and ask Saiaf.</strong> Share the prompt and the action Codex proposed.</p>
+      <div class="lesson-nav">
+        <a class="button secondary" href="../reference/codex-source-review-card.html">Open the quick-reference card</a>
+        <a class="button" href="../lesson-14-codex-separate-facts-from-suggestions/">Continue to Lesson 14 →</a>
+      </div>
+    </section>
+
+    <footer class="footer">Lesson 13 · Codex · A safe prompt names the result, evidence, output, and boundaries.</footer>
+  </main>
+</body>
+</html>
