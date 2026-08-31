@@ -256,7 +256,12 @@ p, li, .subtitle, .hero-copy { text-wrap: pretty; }
 }
 
 .tool-mark { display: block; inline-size: 1.75rem; block-size: 1.75rem; object-fit: contain; }
-.tool-mark.tool-mark-wide { inline-size: 2.25rem; }
+.tool-mark-frame-wide {
+  inline-size: 10rem;
+  block-size: 3rem;
+  padding: .5rem .7rem;
+}
+.tool-mark.tool-mark-wide { inline-size: 100%; block-size: 100%; }
 
 .course-intro-grid {
   display: grid;
@@ -501,6 +506,7 @@ p, li, .subtitle, .hero-copy { text-wrap: pretty; }
 }
 
 .lesson-art-brand { display: flex; align-items: center; gap: .75rem; color: var(--tool-deep); }
+.lesson-art-brand .tool-mark-frame-wide { inline-size: min(100%, 10.75rem); }
 .lesson-art-brand strong { display: block; font-size: var(--type-caption); line-height: 1.25; }
 .lesson-art-brand small { display: block; color: var(--muted); font-size: var(--type-label); }
 .lesson-art svg { inline-size: 100%; block-size: auto; margin-block: auto; }
@@ -815,6 +821,9 @@ code { padding: .12em .35em; border-radius: .35rem; background: oklch(92% .012 2
   .track { border-radius: 1.125rem; }
   .track-head { grid-template-columns: auto minmax(0, 1fr); gap: .875rem; padding: 1.5rem 1.25rem 1rem; }
   .track-head .tool-badge { grid-column: 2; justify-self: start; }
+  .track-head > .tool-mark-frame-wide,
+  .track-head > .tool-mark-frame-wide + div,
+  .track-head > .tool-mark-frame-wide + div + .tool-badge { grid-column: 1 / -1; }
   .track-intro { padding: 0 1.25rem 1.25rem; }
   .lesson-list { padding-inline: 1.25rem; }
   .lesson-list li { grid-template-columns: 2.25rem minmax(0, 1fr) 2.5rem; min-block-size: 5rem; }

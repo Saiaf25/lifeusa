@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">Codex terminal course mark</title>
-  <rect x="6" y="6" width="52" height="52" rx="15" fill="oklch(94% .03 173)"/>
-  <path d="m18 24 9 8-9 8M33 43h13" fill="none" stroke="oklch(31% .06 173)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="46" cy="19" r="4" fill="oklch(48% .085 173)"/>
-</svg>
