@@ -385,6 +385,116 @@
     .cadence p { margin: 0; color: var(--muted); }
     .cadence strong { color: var(--green-dark); white-space: nowrap; }
 
+    .work-history {
+      margin: 46px 0 0;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      scroll-margin-top: 88px;
+    }
+
+    .work-history > summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+      min-height: 44px;
+      padding: 24px 26px;
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .work-history > summary::-webkit-details-marker { display: none; }
+    .work-history > summary:hover { background: var(--surface-soft); }
+
+    .work-summary-label {
+      display: block;
+      color: var(--green-dark);
+      font-size: 1.28rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .work-history > summary small {
+      display: block;
+      max-width: 72ch;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .95rem;
+      font-weight: 400;
+    }
+
+    .work-history > summary::after {
+      content: "+";
+      color: var(--green);
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    .work-history[open] > summary {
+      background: var(--surface-soft);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .work-history[open] > summary::after { content: "−"; }
+
+    .work-history-body { padding: 8px 26px 28px; }
+
+    .work-stream {
+      display: grid;
+      grid-template-columns: minmax(180px, .7fr) minmax(0, 2fr);
+      gap: 30px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .work-stream:last-child { border-bottom: 0; }
+
+    .work-stream h3 {
+      margin: 0;
+      font-size: 1.14rem;
+      line-height: 1.3;
+    }
+
+    .work-stream-copy > p { margin: 0 0 12px; color: var(--muted); }
+
+    .work-list {
+      display: grid;
+      gap: 9px;
+      margin: 0;
+      padding-inline-start: 20px;
+    }
+
+    .work-list li::marker { color: var(--green); }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin: 14px 0 0;
+    }
+
+    .profile-links a { white-space: nowrap; }
+
+    .history-dates {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .history-dates span {
+      padding: 5px 9px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .82rem;
+    }
+
     .source-list {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -418,7 +528,7 @@
       h1 { font-size: clamp(2.55rem, 14vw, 3.7rem); }
       .meta { display: grid; gap: 10px; }
       .meta span, .meta span + span { padding: 0; margin: 0; border: 0; }
-      .nav { position: static; grid-template-columns: repeat(3, minmax(0, 1fr)); display: grid; }
+      .nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); display: grid; }
       .nav a { justify-content: center; text-align: center; }
       .snapshot-row { grid-template-columns: 1fr; gap: 5px; }
       .snapshot-state { grid-row: 1; justify-self: end; }
@@ -429,6 +539,9 @@
       .actions li { grid-template-columns: 34px minmax(0, 1fr); }
       .action-state { grid-column: 2; }
       .cadence { grid-template-columns: 1fr; }
+      .work-history > summary { padding: 20px; }
+      .work-history-body { padding: 4px 20px 22px; }
+      .work-stream { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
       .source-list { grid-template-columns: 1fr; }
       .source-list li:nth-child(odd), .source-list li:nth-child(even) { padding-inline: 0; border-inline-start: 0; }
     }
@@ -467,6 +580,7 @@
       <a href="#status">Status</a>
       <a href="#serp-evidence">Search proof</a>
       <a href="#next-actions">Next actions</a>
+      <a href="#previous-work">Previous work</a>
     </nav>
 
     <section id="status" class="section">
@@ -571,6 +685,91 @@
       <div class="cadence"><p><strong>Next scheduled review:</strong> Recheck the sources and controlled queries, then record only changes that can be verified publicly.</p><strong>September 13, 2026</strong></div>
     </section>
 
+    <details id="previous-work" class="work-history">
+      <summary>
+        <span>
+          <span class="work-summary-label">Previous work and evidence</span>
+          <small>Website fixes, directory profiles, source outreach, Google findings, and the monitoring history.</small>
+        </span>
+      </summary>
+
+      <div class="work-history-body">
+        <section class="work-stream">
+          <h3>Website and brand foundation</h3>
+          <div class="work-stream-copy">
+            <p>LifeUSA's owned identity signals were corrected before work shifted to outside sources.</p>
+            <ul class="work-list">
+              <li>The approved square and horizontal logo files are live and stable.</li>
+              <li>The public <a href="https://www.lifeusa.org/brand-resources">Brand Resources page</a> presents the current identity for partners and publishers.</li>
+              <li>The homepage organization data now points to the approved colored square logo.</li>
+              <li>The header, footer, and browser icon use approved assets with descriptive logo text.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work-stream">
+          <h3>Verified directory profiles</h3>
+          <div class="work-stream-copy">
+            <p>Four new public profiles were independently verified with an approved logo and a LifeUSA website link.</p>
+            <div class="profile-links">
+              <a href="https://www.find-us-here.com/businesses/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">Find-Us-Here</a>
+              <a href="https://www.a-zbusinessfinder.com/business-directory/Life-for-Relief-and-Development-Southfield-Michigan-USA/34560214/">A-Z Business Finder</a>
+              <a href="https://nextdoor.com/pages/life-for-relief-and-development-southfield-mi/">Nextdoor</a>
+              <a href="https://www.provenexpert.com/lifeusa/">ProvenExpert</a>
+            </div>
+            <ul class="work-list">
+              <li>Idealist was submitted and showed the approved identity in its submission preview, but an independent public page has not been verified.</li>
+              <li>Callupcontact and Opendi were investigated but did not meet the public logo and verification requirements.</li>
+              <li>Additional directories were assessed and paused where public proof, logo support, or a suitable publication route was unavailable.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work-stream">
+          <h3>Outside-source correction</h3>
+          <div class="work-stream-copy">
+            <ul class="work-list">
+              <li>Correction requests were delivered to Kids That Do Good and Arab Info Mall on September 8.</li>
+              <li>Google received result feedback for the Kids That Do Good, Arab Info Mall, and old WordPress results.</li>
+              <li>The old WordPress archive remains public and continues to expose the retired image.</li>
+              <li>GreatNonprofits, Candid, LinkedIn, YouTube, X, and Linktree were reviewed. Their blue-globe logo variants are accepted current identity, not retired-logo defects.</li>
+              <li>Some public profiles still expose old HTTP website links or an incorrect social destination. Those are secondary profile-cleanup items.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work-stream">
+          <h3>Google findings</h3>
+          <div class="work-stream-copy">
+            <ul class="work-list">
+              <li>The organic LifeUSA result and public local profile show current branding.</li>
+              <li>The most recently observed LifeUSA paid result used an accepted current logo.</li>
+              <li>No separate LifeUSA Knowledge Panel has been verified. The visible organization surface is the established Southfield local profile.</li>
+              <li>The short-name English query and exact Arabic query have clean first viewports.</li>
+              <li>The full organization-name logo benchmark still surfaces the retired crescent and remains the pass-or-fail blocker.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="work-stream">
+          <h3>Monitoring history</h3>
+          <div class="work-stream-copy">
+            <p>Scheduled checks have kept source changes, Google changes, and stable weeks separate. No source correction has yet been verified, so the stability count remains 0 of 3.</p>
+            <div class="history-dates" aria-label="Recorded monitoring dates">
+              <span>July 19</span>
+              <span>July 26</span>
+              <span>August 2</span>
+              <span>August 9</span>
+              <span>August 23</span>
+              <span>August 30</span>
+              <span>September 6</span>
+              <span>Arabic query: September 8</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </details>
+
     <section id="public-sources" class="section">
       <p class="section-kicker">Public verification links</p>
       <h2>Open the sources directly.</h2>
@@ -584,7 +783,7 @@
       </ul>
     </section>
 
-    <footer class="footer">LifeUSA technical fixes · Retired logo removal · Executive status version 3.0</footer>
+    <footer class="footer">LifeUSA technical fixes · Retired logo removal · Executive status version 3.1</footer>
   </main>
 </body>
 </html>
