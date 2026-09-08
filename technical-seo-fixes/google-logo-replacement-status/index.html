@@ -1490,15 +1490,15 @@
           <div class="comparison-grid">
             <figure class="proof-frame">
               <a href="./evidence/2026-07-21/current-wordpress-retired-logo-page.png"><img src="./evidence/2026-07-21/current-wordpress-retired-logo-page.png" alt="Current screenshot of the old LifeUSA WordPress archive still showing the retired crescent logo" loading="lazy"></a>
-              <figcaption><strong>Current: old WordPress archive</strong>The retired crescent logo remains in the site header. Account recovery and a decision on the archive are required.</figcaption>
+              <figcaption><strong>Current: old WordPress archive</strong>The retired crescent logo remains in the site header. No owner or access is known, so the source stays in monitoring without an active recovery request.</figcaption>
             </figure>
             <figure class="proof-frame">
               <a href="./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png"><img src="./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png" alt="Current screenshot of Kids That Do Good still showing the retired LifeUSA crescent logo" loading="lazy"></a>
-              <figcaption><strong>Current: Kids That Do Good</strong>The publisher page still displays the retired logo. A correction request was sent, but no public change is verified.</figcaption>
+              <figcaption><strong>Current: Kids That Do Good</strong>The publisher page still displays the retired logo. The second correction is approved and ready to send; Google accepted separate result-quality feedback on September 8.</figcaption>
             </figure>
             <figure class="proof-frame">
               <a href="./evidence/2026-07-21/current-arab-info-mall-retired-logo-page.png"><img src="./evidence/2026-07-21/current-arab-info-mall-retired-logo-page.png" alt="Current screenshot of Arab Info Mall still showing the retired LifeUSA crescent logo" loading="lazy"></a>
-              <figcaption><strong>Current: Arab Info Mall</strong>The retired logo and outdated organization details remain public. Publisher contact requires approval.</figcaption>
+              <figcaption><strong>Current: Arab Info Mall</strong>The retired logo and outdated organization details remain public. The publisher correction is approved and ready to send.</figcaption>
             </figure>
           </div>
           <p class="proof-result"><strong>Required after state:</strong> each source must publicly show an approved current logo or be removed. A sent message alone does not count as fixed.</p>
@@ -1710,7 +1710,7 @@
           <div><h4>Linktree Facebook mismatch</h4><p>The English Linktree opens the Somali-language Facebook page. Its blue-globe logo is acceptable; the destination mismatch is the defect.</p><a href="https://linktr.ee/LIFEUSA">Verify the English directory</a></div>
         </article>
       </div>
-      <p class="evidence-protocol"><strong>Capture protocol:</strong> Desktop, United States, and <code>pws=0</code>. English benchmarks and the August 19 candidate Arabic query are tracked separately. The claim-state capture publishes only Google's masked manager address, and no access request was sent. <a href="./evidence/2026-07-15/baseline.md">Read the evidence record</a>.</p>
+      <p class="evidence-protocol"><strong>Capture protocol:</strong> Desktop, United States, and <code>pws=0</code>. The English benchmarks and exact Arabic query <code>لايف للإغاثة والتنمية</code> are tracked separately. The claim-state capture publishes only Google's masked manager address, and no access request was sent. <a href="./evidence/2026-07-15/baseline.md">Read the evidence record</a>.</p>
     </section>
 
     <section id="sources" class="section">
@@ -1870,6 +1870,7 @@
           ["Current screenshot", "./evidence/2026-07-21/current-kids-that-do-good-retired-logo-page.png"],
           ["Live source", "https://kidsthatdogood.com/causes/life-relief-development/"],
           ["Approval record", "./evidence/2026-07-15/outreach-approval-queue.md"],
+          ["September 8 Google feedback", "./evidence/2026-09-08/google-search-feedback-record.md"],
           ["August 30 monitoring", "./evidence/2026-08-30/monitoring-check.md"]
         ],
         "LOGO-009": [
@@ -1978,7 +1979,7 @@
       ];
 
       const approvals = [
-        { id: "SENT-001", title: "Kids That Do Good first correction", description: "The first source-correction email was sent in July. It received no verified reply and did not change the public source.", effect: "External email already sent", route: "info@kidsthatdogood.com", routeUrl: "mailto:info@kidsthatdogood.com", copy: "Subject: Please update the Life for Relief and Development logo\nZoho message ID: 1784122643723013500\nResult: no verified reply; the public page and retired image remain unchanged.", status: "sent", note: "Rechecked through September 6. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 is separately approval-gated." },
+        { id: "SENT-001", title: "Kids That Do Good first correction", description: "The first source-correction email was sent in July. It received no verified reply and did not change the public source.", effect: "External email already sent", route: "info@kidsthatdogood.com", routeUrl: "mailto:info@kidsthatdogood.com", copy: "Subject: Please update the Life for Relief and Development logo\nZoho message ID: 1784122643723013500\nResult: no verified reply; the public page and retired image remain unchanged.", status: "sent", note: "Rechecked through September 6. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 was approved September 8 and is ready to send." },
         { id: "SENT-002", title: "GreatNonprofits historical correction", description: "A correction email was sent in July, but later brand guidance confirmed that the blue-globe image is an approved current variant.", effect: "External email already sent; no follow-up required", route: "support@greatnonprofits.org", routeUrl: "mailto:support@greatnonprofits.org", copy: "Subject: Please update the Life for Relief and Development profile logo\nZoho message ID: 1784122678410013500\nDisposition: close as an unnecessary correction. The public blue-globe image is approved.", status: "sent", note: "No verified reply was found through September 6. The email remains historical, and GreatNonprofits remains an approved current-logo source with no follow-up required." },
         { id: "RESUME-001", title: "Kids That Do Good second correction attempt", description: "Send the approved second request covering the visible logo and both social-preview images through the verified public email address.", effect: "Sends one follow-up email", route: "info@kidsthatdogood.com, verified on the public contact page", routeUrl: "https://kidsthatdogood.com/contact/", copy: "Reference the exact profile and retired image URLs, provide the approved replacement URL, request replacement of the visible, Open Graph, and X/Twitter images, and ask for confirmation when the public page is updated. The exact approved copy and attachments are linked below.", status: "approved", note: "Approved September 8. Ready to send; not yet sent. A separate Google result-quality feedback report was submitted and confirmed the same day." },
         { id: "RESUME-004", title: "Recover the exact Arabic query", description: "The user supplied the exact query directly, so no clarification message is needed.", effect: "No external message", route: "Cancelled", routeUrl: "./evidence/2026-09-08/arabic-query-check.md", copy: "Exact query: لايف للإغاثة والتنمية. Do not contact Dr. Hany about this item.", status: "declined", note: "Cancelled September 8. The exact Arabic query was supplied and reproduced; no message will be sent to Dr. Hany." },
@@ -1993,7 +1994,7 @@
       ];
 
       const defaultState = () => ({
-        version: 39,
+        version: 40,
         updatedAt: null,
         heroSummary: DEFAULT_HERO_SUMMARY,
         overviewText: DEFAULT_OVERVIEW_TEXT,
@@ -2009,7 +2010,7 @@
       const mergeState = raw => {
         const base = defaultState();
         if (!raw || typeof raw !== "object") return base;
-        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 39;
+        const isPreviousVersion = !Number.isFinite(raw.version) || raw.version < 40;
         base.updatedAt = typeof raw.updatedAt === "string" ? raw.updatedAt : null;
         if (!(isPreviousVersion && PREVIOUS_HERO_SUMMARIES.includes(raw.heroSummary))) {
           base.heroSummary = cleanText(raw.heroSummary || base.heroSummary, 1200);
@@ -2167,7 +2168,8 @@
             { status: "sent", note: "Rechecked August 2 in Zoho Mail. No verified publisher reply was found; the public page and retired image remain unchanged." },
             { status: "sent", note: "Rechecked through August 19. No verified publisher reply was found; the public page and retired image remain unchanged. A second route is separately approval-gated." },
             { status: "sent", note: "Rechecked through August 23. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 is separately approval-gated." },
-            { status: "sent", note: "Rechecked through August 30. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 is separately approval-gated." }
+            { status: "sent", note: "Rechecked through August 30. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 is separately approval-gated." },
+            { status: "sent", note: "Rechecked through September 6. No verified publisher reply was found; the public page and retired image remain unchanged. RESUME-001 is separately approval-gated." }
           ],
           "SENT-002": [
             { status: "sent", note: "Sent July 15, 2026, from hello@saiaf.me." },
