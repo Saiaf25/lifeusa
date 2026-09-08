@@ -1000,6 +1000,94 @@
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
     }
+    .serp-evidence-section h2 { max-width: 24ch; }
+    .serp-primary-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+    .serp-proof {
+      display: grid;
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--line-strong);
+      border-radius: 14px;
+    }
+    .serp-proof--benchmark { grid-row: 1 / span 2; }
+    .serp-proof a {
+      display: block;
+      min-width: 0;
+      background: var(--surface-muted);
+      border-bottom: 1px solid var(--line);
+    }
+    .serp-proof img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      object-fit: cover;
+      object-position: top;
+    }
+    .serp-proof--benchmark img { min-height: 470px; }
+    .serp-proof figcaption { padding: 18px 20px 20px; }
+    .serp-proof h3 {
+      margin: 8px 0 7px;
+      font-size: 1.12rem;
+      line-height: 1.25;
+      letter-spacing: -.012em;
+    }
+    .serp-proof p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .serp-proof code[dir="rtl"] {
+      display: inline-block;
+      direction: rtl;
+      unicode-bidi: isolate;
+      font-family: "Noto Naskh Arabic", ui-sans-serif, system-ui, sans-serif;
+      font-size: 1.12em;
+    }
+    .serp-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--green-dark);
+      font-size: .78rem;
+      font-weight: 750;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .serp-status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      flex: 0 0 auto;
+      background: var(--green);
+      border-radius: 50%;
+    }
+    .serp-status--attention { color: var(--red-dark); }
+    .serp-status--attention::before { background: var(--red); }
+    .serp-context-label {
+      margin: 34px 0 12px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .serp-context-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .serp-context-strip .serp-proof img {
+      aspect-ratio: 4 / 3;
+      min-height: 0;
+    }
+    .serp-context-strip .serp-proof figcaption { padding: 14px 15px 16px; }
+    .serp-context-strip .serp-proof h3 { margin: 0 0 5px; font-size: .98rem; }
+    .serp-context-strip .serp-proof p { font-size: .88rem; }
     .priority-list { margin: 34px 0 0; padding: 0; list-style: none; counter-reset: priorities; }
     .priority-list li {
       counter-increment: priorities;
@@ -1024,7 +1112,7 @@
     .decision-panel {
       margin-top: 34px;
       background: oklch(0.955 0.014 82);
-      border-left: 4px solid var(--gold);
+      border: 1px solid oklch(0.84 0.018 82);
       padding: clamp(24px, 4vw, 38px);
     }
     .decision-list { margin: 0; padding: 0; list-style: none; }
@@ -1130,6 +1218,13 @@
       .nav a { text-align: center; }
       .snapshot-row { grid-template-columns: 1fr; gap: 5px; }
       .snapshot-value { grid-row: 1; justify-self: end; }
+      .serp-primary-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .serp-proof--benchmark { grid-row: auto; }
+      .serp-proof--benchmark img { min-height: 0; aspect-ratio: 16 / 10; }
+      .serp-proof img { min-height: 0; aspect-ratio: 16 / 10; }
+      .serp-context-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .priority-list li { grid-template-columns: 34px minmax(0, 1fr); }
       .priority-state { grid-column: 2; }
       .decision-list li { grid-template-columns: 1fr; gap: 5px; }
@@ -1138,6 +1233,9 @@
       .record-summary small { max-width: 36ch; }
       .full-record > .section { padding: 26px 20px; }
       .full-record .section-heading h2 { font-size: 1.35rem; }
+    }
+    @media (max-width: 440px) {
+      .serp-context-strip { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1171,6 +1269,61 @@
         <div class="snapshot-row"><strong>Outside websites</strong><p>WordPress, Kids That Do Good, and Arab Info Mall still publish the retired logo.</p><span class="snapshot-value">3 open</span></div>
         <div class="snapshot-row"><strong>Google results</strong><p>One English search improved. The full organization-name search still showed retired sources.</p><span class="snapshot-value">Not stable</span></div>
         <div class="snapshot-row"><strong>Weekly proof</strong><p>Closure requires three clean weekly checks across the approved English and Arabic searches.</p><span class="snapshot-value">0 of 3</span></div>
+      </div>
+    </section>
+
+    <section id="serp-evidence" class="executive-section serp-evidence-section">
+      <p class="executive-kicker">Search evidence · visible by default</p>
+      <h2>The benchmark is still wrong. Two controlled queries are clean.</h2>
+      <p class="executive-lede">These result pages are the proof behind the status. The full organization-name query still exposes the retired crescent, while the exact Arabic query and the shorter <code>LifeUSA logo</code> query show current Life branding in their first visible results.</p>
+
+      <div class="serp-primary-grid">
+        <figure class="serp-proof serp-proof--benchmark">
+          <a href="./evidence/2026-08-12/google-images-life-for-relief-logo-monitoring-2026-08-12.png"><img src="./evidence/2026-08-12/google-images-life-for-relief-logo-monitoring-2026-08-12.png" alt="Google Images results for Life for Relief and Development logo showing retired crescent sources" loading="eager"></a>
+          <figcaption>
+            <span class="serp-status serp-status--attention">English benchmark · still failing</span>
+            <h3><code>Life for Relief and Development logo</code></h3>
+            <p>The retired crescent remains visible from outside sources. This is the result set that keeps the campaign open.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="serp-proof">
+          <a href="./evidence/2026-09-08/google-images-arabic-lifeusa-query-2026-09-08.png"><img src="./evidence/2026-09-08/google-images-arabic-lifeusa-query-2026-09-08.png" alt="Arabic Google Images results for لايف للإغاثة والتنمية showing current LifeUSA imagery" loading="eager"></a>
+          <figcaption>
+            <span class="serp-status">Exact Arabic query · clean first viewport</span>
+            <h3><code dir="rtl" lang="ar">لايف للإغاثة والتنمية</code></h3>
+            <p>The September 8 capture shows current Life branding and campaign imagery, with no retired crescent in the first visible results.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="serp-proof">
+          <a href="./evidence/2026-08-12/google-images-lifeusa-logo-clean-2026-08-12.png"><img src="./evidence/2026-08-12/google-images-lifeusa-logo-clean-2026-08-12.png" alt="Google Images results for LifeUSA logo with current branding and no retired crescent visible" loading="eager"></a>
+          <figcaption>
+            <span class="serp-status">English short name · clean first viewport</span>
+            <h3><code>LifeUSA logo</code></h3>
+            <p>The shorter brand query shows current LifeUSA sources prominently. It is a query-level win, not campaign completion.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p class="serp-context-label">Historical and entity context, also visible</p>
+      <div class="serp-context-strip">
+        <figure class="serp-proof">
+          <a href="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png"><img src="./evidence/2026-07-21/google-images-retired-crescent-benchmark-reproduction-2026-07-21.png" alt="July 21 Google Images benchmark showing multiple retired LifeUSA crescent logos" loading="eager"></a>
+          <figcaption><h3>July benchmark</h3><p>The preserved before-state for comparison.</p></figcaption>
+        </figure>
+        <figure class="serp-proof">
+          <a href="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-desktop.jpg" alt="General Google Search results for LifeUSA" loading="eager"></a>
+          <figcaption><h3>General Search context</h3><p>Broad name results and similarly named entities.</p></figcaption>
+        </figure>
+        <figure class="serp-proof">
+          <a href="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg"><img src="./evidence/2026-07-15/google-images-lifeusa-desktop.jpg" alt="General Google Images results for LifeUSA" loading="eager"></a>
+          <figcaption><h3>General Images context</h3><p>The original first-20 source audit.</p></figcaption>
+        </figure>
+        <figure class="serp-proof">
+          <a href="./evidence/2026-07-15/google-search-lifeusa-entity-surface-2026-07-15.jpg"><img src="./evidence/2026-07-15/google-search-lifeusa-entity-surface-2026-07-15.jpg" alt="Google entity results for LifeUSA showing a sponsored result and the Southfield Business Profile" loading="eager"></a>
+          <figcaption><h3>Entity surface</h3><p>Sponsored branding and the Southfield profile.</p></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -1730,7 +1883,7 @@
     </section>
     </details>
 
-    <footer class="footer">LifeUSA technical fixes · Retired logo removal · Version 2.0</footer>
+    <footer class="footer">LifeUSA technical fixes · Retired logo removal · Version 2.1</footer>
   </main>
 
   <script>

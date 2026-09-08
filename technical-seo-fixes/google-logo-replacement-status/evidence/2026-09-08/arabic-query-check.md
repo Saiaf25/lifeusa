@@ -6,6 +6,12 @@
 **Parameters:** `hl=ar`, `gl=us`, `pws=0`, `udm=2`  
 **Google account state:** Signed in as `sgamal2593@gmail.com`; personalization disabled by query parameter
 
+**Screenshot:** [`google-images-arabic-lifeusa-query-2026-09-08.png`](./google-images-arabic-lifeusa-query-2026-09-08.png)
+
+**Dimensions:** 1440 by 1000 pixels
+
+**SHA-256:** `643e2a825a62f6d06ff37d18294eef5dbee02a13c11dca16510a491f391055cf`
+
 ## Observed result
 
 The first visible viewport was clean for the retired yellow-crescent mark. It showed current blue Life branding and current Arabic campaign or organizational imagery. Visible sources included LifeUSA Arabic social content and other pages using current Life identity assets.
