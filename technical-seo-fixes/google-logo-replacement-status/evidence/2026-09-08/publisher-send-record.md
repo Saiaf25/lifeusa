@@ -24,3 +24,5 @@
 - Next check: Monitor both recipients for a reply and verify the public logo, HTTPS website link, profile fields, and direct image URL before claiming correction.
 
 Sending and delivery do not prove source correction. The public sources remain open until independently verified.
+
+**September 13 read-only check:** Both sent records retained Zoho delivery state `success`. No verified publisher reply or delivery-failure notice was found for either message.

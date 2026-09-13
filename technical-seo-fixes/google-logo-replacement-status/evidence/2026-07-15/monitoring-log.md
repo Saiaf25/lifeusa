@@ -8,6 +8,38 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## September 13 scheduled check
+
+The eighth recorded scheduled weekly check is complete. No publisher reply or retired-source correction was proved. All three tracked retired sources remain live, and the benchmark Google Images result still shows their retired crescents.
+
+### Verified state
+
+- Zoho Mail: RESUME-001 and RESUME-002 retain successful delivery states, with no verified reply or delivery failure. The historical SENT-001 and SENT-002 threads also have no verified reply.
+- Retired-crescent sources: the old WordPress archive, Kids That Do Good, and Arab Info Mall still publish their documented retired files. Each direct image returned `200` and had decoded-pixel absolute error `0` against the July evidence.
+- Kids That Do Good re-encoded its PNG to 12,523 bytes and SHA-256 `22591875a477835091e32614b06482bdce8e89ffae49625dde13cbed5e614c49`; decoded pixels remain unchanged.
+- Owned signals: the canonical square and horizontal Wix assets returned `200` with unchanged dimensions, checksums, and decoded pixels. The homepage organization node and Brand Resources references remain current; two `WebSite` nodes remain.
+- Authority profiles: GreatNonprofits, Candid/GuideStar, LinkedIn, YouTube, X, Instagram, and Linktree expose approved current identity. Facebook remained inconclusive logged out. Linktree still points Facebook to the Somali profile, and Candid and ReliefWeb retain HTTP website links.
+- Directory profiles: Find-Us-Here, A-Z Business Finder, Nextdoor, and ProvenExpert remain public current-profile signals. Idealist still has no verified logged-out public profile and does not count.
+
+### Google Search, Images, entity, paid, favicon, and Maps
+
+- Organic Search displayed the approved current blue `Life` favicon.
+- No LifeUSA sponsored result served, so paid-logo presentation was not classifiable.
+- The Southfield Business Profile showed current campaign imagery, 4.3 stars, 20 reviews, the correct address and phone, and a public LifeUSA website link. No separate Knowledge Panel was observed.
+- The benchmark Images query ranked Kids That Do Good, Arab Info Mall, and the old WordPress archive at positions 5, 8, and 11 in the first loaded result set. Their retired crescents were visible in the initial viewport.
+- The context `LifeUSA logo` and exact Arabic `لايف للإغاثة والتنمية` loaded sets contained no tracked retired-source result, and their initial viewports showed no retired crescent.
+- Maps showed current Life branding with no retired crescent in the inspected state.
+- The browser showed a signed-in Google account despite the `pws=0` URL control, and the main Search state exposed a personalized-recommendations label. The observations are not represented as a strictly signed-out baseline.
+
+Full dated measurements, checksums, page references, and interpretation: [September 13 monitoring check](../2026-09-13/monitoring-check.md).
+
+### Decision
+
+- No action status advanced and no external action was executed.
+- RESUME-001 and RESUME-002 remain delivered with no verified reply or source correction. RESUME-003 remains outside the active queue, and RESUME-004 remains cancelled.
+- Stable-check count remains **0 of 3** because the retired sources remain live and the benchmark Google Images result still shows retired crescents.
+- Next scheduled check: Sunday, September 20, 2026 at 10:00 Europe/Istanbul.
+
 ## September 6 scheduled check
 
 The seventh recorded scheduled weekly check is complete. No publisher reply or retired-source correction was proved, and the benchmark Google Images result now ranks all three tracked retired-source pages among the first eight loaded results.
