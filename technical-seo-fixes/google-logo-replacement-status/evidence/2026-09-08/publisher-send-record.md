@@ -26,3 +26,5 @@
 Sending and delivery do not prove source correction. The public sources remain open until independently verified.
 
 **September 13 read-only check:** Both sent records retained Zoho delivery state `success`. No verified publisher reply or delivery-failure notice was found for either message.
+
+**September 20 read-only check:** Both exact sent-message IDs still returned Zoho delivery state `success`. Exact sender and subject searches, including spam and trash, found no verified publisher reply or related delivery failure. The three retired public source files remained pixel-identical to their July captures.

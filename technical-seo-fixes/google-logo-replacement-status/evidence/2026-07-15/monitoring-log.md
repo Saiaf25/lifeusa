@@ -8,6 +8,20 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## September 20 scheduled check
+
+The ninth recorded scheduled weekly check is complete. The three established retired-source pages and direct images are unchanged at the decoded-pixel level. No verified publisher reply or related delivery failure was found in Zoho Mail.
+
+- The English Google Images benchmark ranked Kids That Do Good 5, Arab Info Mall 7, and the old WordPress archive 10 in the first loaded set. The exact Arabic query `لايف للإغاثة والتنمية` and contextual `LifeUSA logo` query showed no tracked retired source in their loaded sets.
+- The canonical Wix square and horizontal assets returned `200` with their documented dimensions and checksums. GreatNonprofits, Candid, LinkedIn, Instagram, X, YouTube, Linktree, and the qualifying directory profiles retained current identity signals. English and Somali Facebook remained inconclusive logged out.
+- The organic favicon, a serving paid-result icon, the Southfield Business Profile, and inspected Maps media showed current Life branding. The Business Profile website link still uses HTTP; no separate Knowledge Panel was observed.
+- The browser was signed in, although the Search footer said results were not personalized. This check is not represented as a strictly logged-out baseline.
+- GitHub Pages had still not published the September 13 commit at the start of this run: the live HTML differed from `origin/main`, the September 13 evidence URL returned `404`, and the Pages API showed the build as `building`.
+
+Full dated measurements and public links: [September 20 monitoring check](../2026-09-20/monitoring-check.md).
+
+No action status advanced. RESUME-001 and RESUME-002 remain delivered with no verified reply or source correction; RESUME-003 remains deferred and RESUME-004 cancelled. Stable checks remain **0 of 3**. Next scheduled check: **Sunday, September 27, 2026 at 10:00 Europe/Istanbul**.
+
 ## September 13 scheduled check
 
 The eighth recorded scheduled weekly check is complete. No publisher reply or retired-source correction was proved. All three tracked retired sources remain live, and the benchmark Google Images result still shows their retired crescents.
