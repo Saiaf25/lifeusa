@@ -62,4 +62,6 @@ The browser displayed the signed-in `sgamal2593@gmail.com` account while Google 
 
 At the start of this run, `origin/main` contained the September 13 update (`ebc2fed`), but the cache-busted GitHub Pages status HTML differed from that commit and its September 13 evidence URL returned `404`. GitHub's Pages API still reported that build as `building`, with no new Pages run after September 9. The repository state and public state must be reported separately until the deployment is verified.
 
+The September 20 scoped commit `f3af2e0` triggered Pages run `35502144694`, which completed successfully. The Pages API reported `built` at that commit. Cache-busted live status HTML and this evidence file both returned `200` and matched their committed local files byte for byte. The previous publication gap is resolved for the current version.
+
 RESUME-001 and RESUME-002 remain delivered, without verified reply or source correction. RESUME-003 remains outside the active action queue because no authorized WordPress owner is known. RESUME-004 remains cancelled. The September 15 Kids escalation remains unapproved and was not executed. No action status advanced. Stable checks remain **0 of 3**.

@@ -16,7 +16,7 @@ The ninth recorded scheduled weekly check is complete. The three established ret
 - The canonical Wix square and horizontal assets returned `200` with their documented dimensions and checksums. GreatNonprofits, Candid, LinkedIn, Instagram, X, YouTube, Linktree, and the qualifying directory profiles retained current identity signals. English and Somali Facebook remained inconclusive logged out.
 - The organic favicon, a serving paid-result icon, the Southfield Business Profile, and inspected Maps media showed current Life branding. The Business Profile website link still uses HTTP; no separate Knowledge Panel was observed.
 - The browser was signed in, although the Search footer said results were not personalized. This check is not represented as a strictly logged-out baseline.
-- GitHub Pages had still not published the September 13 commit at the start of this run: the live HTML differed from `origin/main`, the September 13 evidence URL returned `404`, and the Pages API showed the build as `building`.
+- GitHub Pages had still not published the September 13 commit at the start of this run. The September 20 scoped commit triggered a successful Pages build; cache-busted live HTML and dated evidence returned `200` and matched the committed bytes.
 
 Full dated measurements and public links: [September 20 monitoring check](../2026-09-20/monitoring-check.md).
 
