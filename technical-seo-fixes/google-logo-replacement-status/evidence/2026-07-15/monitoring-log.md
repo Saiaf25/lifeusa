@@ -8,6 +8,19 @@ The program is not complete until the approved current logo is consistently show
 
 Current stable-check count: **0 of 3**. Source corrections are still incomplete.
 
+## September 27 scheduled check
+
+The tenth recorded scheduled weekly check is complete. The three established retired sources remain live, and Zoho Mail contained no verified publisher reply or related delivery failure.
+
+- The English Google Images benchmark ranked Kids That Do Good 5, Arab Info Mall 8, and the old WordPress archive 11 in the first loaded set. The exact Arabic query `لايف للإغاثة والتنمية` and contextual `LifeUSA logo` query contained no tracked retired source in their first 40 loaded results.
+- The canonical Wix square and horizontal assets returned `200` with their documented dimensions and checksums. Checked authority and directory profiles retained current identity signals. Both public Facebook pages and Instagram displayed approved blue-globe avatars in the browser.
+- The organic result, a serving paid-result icon, the Southfield Business Profile, and Maps showed current Life branding. The Business Profile retained 4.3 stars, 20 reviews, the correct address and phone, and no separate Knowledge Panel appeared.
+- The Google browser was signed in, although branded Search stated `Results are not personalized`. The run is not represented as a strictly logged-out baseline.
+
+Full dated measurements and public links: [September 27 monitoring check](../2026-09-27/monitoring-check.md).
+
+No action status advanced. RESUME-001 and RESUME-002 remain delivered with no verified reply or source correction; RESUME-003 remains deferred and RESUME-004 cancelled. Stable checks remain **0 of 3**. Next scheduled check: **Sunday, October 4, 2026 at 10:00 Europe/Istanbul**.
+
 ## September 20 scheduled check
 
 The ninth recorded scheduled weekly check is complete. The three established retired-source pages and direct images are unchanged at the decoded-pixel level. No verified publisher reply or related delivery failure was found in Zoho Mail.
